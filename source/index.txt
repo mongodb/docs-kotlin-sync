@@ -6,15 +6,11 @@
    :titlesonly:
    :maxdepth: 1
 
-   /quick-start
-   /quick-reference
-   /whats-new
-   /usage-examples
    /faq
    /connection-troubleshooting
    /issues-and-help
    /compatibility
-   View the Source <https://github.com/mongodb/mongo-java-driver>
+   View the Source <https://github.com/mongodb/mongo-java-driver/tree/master/driver-kotlin-sync>
 
 Introduction
 ------------
@@ -27,12 +23,12 @@ runnable project by following our Quick Start guide.
 .. tip:: Other Kotlin Platforms for MongoDB
 
    If your Kotlin application requires asynchronous processing, use the
-   :driver:`Coroutine Driver </kotlin/coroutine/currenet>`, which uses coroutines for
+   :driver:`Coroutine Driver </kotlin/coroutine/current>`, which uses coroutines for
    server-side applications.
    
    If you are developing an Android or Kotlin Multiplatform (KMP)
    application, you can use the :realm:`MongoDB Atlas Device Kotlin SDK </sdk/kotlin/>` 
-   to access Atlas App Services and to manage your Realm data.
+   to implement Device Sync and to manage your Realm data.
 
 Quick Start
 -----------
@@ -51,12 +47,6 @@ Quick Reference
 
 See driver syntax examples for common MongoDB commands in the
 :ref:`Quick Reference <kotlin-sync-quick-reference>` section.
-
-Usage Examples
---------------
-
-For fully runnable code snippets and explanations for common
-methods, see the :ref:`Usage Examples <kotlin-sync-usage-examples>` section.
 
 FAQ
 ---
@@ -80,9 +70,8 @@ asking questions and receiving help in the :ref:`Issues & Help <kotlin-sync-issu
 Compatibility
 -------------
 
-For the compatibility charts that show the recommended Kotlin
-Driver version for each MongoDB Server version, see the
-:ref:`Compatibility <kotlin-sync-compatibility>` section.
+For the compatibility charts that show the recommended {+driver-short+} version for each
+MongoDB Server version, see the :ref:`Compatibility <kotlin-sync-compatibility>` section.
 
 Learn
 ------

@@ -29,6 +29,7 @@ jobs:
             cp tdbx-vale-rules/.vale.ini .vale.ini
             mkdir -p .github/styles/
             cp -rf tdbx-vale-rules/.github/styles/ .github/
+
       - name: run-vale
         uses: errata-ai/vale-action@reviewdog
         with:
