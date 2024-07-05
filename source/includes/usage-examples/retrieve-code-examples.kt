@@ -1,8 +1,8 @@
 // start-find
 val filter = <filter>
 val results = collection.find(filter)
-results.forEach {
-    print(it)
+results.forEach { result ->
+    print(result)
 }
 // end-find
 
