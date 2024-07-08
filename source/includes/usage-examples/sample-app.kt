@@ -2,9 +2,7 @@ import com.mongodb.ConnectionString
 import com.mongodb.MongoClientSettings
 import com.mongodb.kotlin.client.*
 import com.mongodb.client.model.Filters.*
-
-// Update with the object representation of your collection's documents
-data class Document(val id: String)
+import org.bson.Document
 
 fun main() {
     val uri = "<connection string URI>"
