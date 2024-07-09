@@ -1,0 +1,138 @@
+.. _kotlin-sync-count:
+
+===============
+Count Documents
+===============
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta::
+   :keywords: number, amount, estimation, code example
+
+Overview
+---------
+
+In this guide, you can learn how to retrieve accurate and estimated counts of the
+number of documents in a collection.
+
+.. _kotlin-sync-accurate-count:
+
+Retrieve an Accurate Count
+--------------------------
+
+Use the ``countDocuments()`` method to count the number of documents that are in a
+collection. To count the number of documents that match specified search
+critera, pass a query filter to the ``countDocuments()`` method.
+
+.. To learn more about specifying a query, see :ref:`kotlin-sync-specify-query`.
+
+Count All Documents
+~~~~~~~~~~~~~~~~~~~
+
+To return a count of all documents in the collection, call the ``countDocuments()`` method
+with no arguments, as shown in the following example:
+
+.. code-block:: kotlin
+
+   collection.countDocuments()
+
+Count Specific Documents
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+To return a count of documents that match specific search criteria, specify your query
+in the ``countDocuments()`` method, as shown in the following example:
+
+.. code-block:: kotlin
+   
+   collection.countDocuments(eq("author", "Leslie"))
+
+Customize Count Behavior
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``countDocuments()`` method accepts optional parameters in the form of a
+``CountOptions`` object, which represents options you can use to configure the count
+operation. If you don't specify any options, the driver does not customize the count
+operation.
+
+The following table describes the options you can set to customize ``countDocuments()``:
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Property
+     - Description
+
+   * - ``comment``
+     - | A comment to attach to the operation.
+   
+   * - ``skip``
+     - | The number of documents to skip before returning results.
+
+   * - ``limit``
+     - | The maximum number of documents to count. Must be a positive integer.
+
+   * - ``maxTime``
+     - | The maximum amount of time to allow the operation to run, in milliseconds.
+
+   * - ``collection``
+     - | An instance of ``Collation``.
+
+   * - ``hint``
+     - | Gets or sets the index to scan for documents.
+
+.. _kotlin-sync-estimated-count:
+
+Retrieve an Estimated Count
+---------------------------
+
+You can get an estimate of the number of documents in a collection by calling
+the ``estimatedDocumentCount()`` method. The method estimates the amount of
+documents based on collection metadata, which can be faster than performing an 
+accurate count.
+
+The following example estimates the number of documents in a collection:
+
+.. code-block:: kotlin
+
+   collection.estimatedDocumentCount()
+
+Customize Estimated Count Behavior
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``estimatedDocumentDount()`` method accepts optional parameters in the form of an
+``EstimatedDocumentCountOptions`` object, which represents options you can use to configure
+the count operation. If you don't specify any options, the driver does not customize the
+count operation.
+
+The following table describes the options you can set to customize ``estimatedDocumentCount()``:
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Property
+     - Description
+
+   * - ``comment``
+     - | A comment to attach to the operation.
+
+   * - ``maxTime``
+     - | The maximum amount of time to allow the operation to run, in milliseconds.
+
+API Documentation
+-----------------
+
+To learn more about any of the methods or types discussed in this
+guide, see the following API documentation:
+
+- `countDocuments() <{+api+}/com.mongodb.kotlin.client/-mongo-collection/count-documents.html>`__
+- `estimatedDocumentCount() <{+api+}/com.mongodb.kotlin.client/-mongo-collection/estimated-document-count.html>`__
