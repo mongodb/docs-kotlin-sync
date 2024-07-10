@@ -23,6 +23,14 @@ Overview
 In this guide, you can learn how to retrieve accurate and estimated counts of the
 number of documents in a collection.
 
+Sample Data
+~~~~~~~~~~~
+
+The examples in this guide use the ``movies`` collection in the ``sample_mflix``
+database from the :atlas:`Atlas sample datasets </sample-data>`. To learn how to create a
+free MongoDB Atlas cluster and load the sample datasets, see the
+:atlas:`Get Started with Atlas </getting-started>` guide.
+
 .. _kotlin-sync-accurate-count:
 
 Retrieve an Accurate Count
@@ -32,7 +40,7 @@ Use the ``countDocuments()`` method to count the number of documents that are in
 collection. To count the number of documents that match specified search
 critera, pass a query filter to the ``countDocuments()`` method.
 
-.. To learn more about specifying a query, see :ref:`kotlin-sync-specify-query`.
+.. TODO: To learn more about specifying a query, see :ref:`kotlin-sync-specify-query`.
 
 Count All Documents
 ~~~~~~~~~~~~~~~~~~~
@@ -48,19 +56,30 @@ Count Specific Documents
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 To return a count of documents that match specific search criteria, specify your query
-in the ``countDocuments()`` method, as shown in the following example:
+in the ``countDocuments()`` method. The following example prints a count of all documents
+in the ``movies`` collection with a ``year`` field value equal to ``1930``:
 
-.. code-block:: kotlin
+.. io-code-block::
    
-   collection.countDocuments(eq("author", "Leslie"))
+   .. input::
+       :language: kotlin
+
+       print(collection.countDocuments(eq("year", "1930")))
+   
+   .. output::
+      :visible: false
+
+      10
 
 Customize Count Behavior
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``countDocuments()`` method accepts optional parameters in the form of a
 ``CountOptions`` object, which represents options you can use to configure the count
-operation. If you don't specify any options, the driver does not customize the count
-operation.
+operation. You can set these options by instantiating a new ``CountOptions`` object,
+setting the object's fields using the corresponding setter methods, and passing it to the
+``countDocuments()`` method. If you don't specify any options, the driver does not
+customize the count operation.
 
 The following table describes the options you can set to customize ``countDocuments()``:
 
@@ -68,7 +87,7 @@ The following table describes the options you can set to customize ``countDocume
    :widths: 30 70
    :header-rows: 1
 
-   * - Property
+   * - Option
      - Description
 
    * - ``comment``
@@ -83,21 +102,27 @@ The following table describes the options you can set to customize ``countDocume
    * - ``maxTime``
      - | The maximum amount of time to allow the operation to run, in milliseconds.
 
-   * - ``collection``
-     - | An instance of ``Collation``.
+   * - ``collation``
+     - | The collation to use for the operation.
 
    * - ``hint``
      - | Gets or sets the index to scan for documents.
+
+The following example uses a ``CountOptions`` object to add a comment to the
+``countDocuments()`` operation:
+
+.. code-block:: kotlin
+   val options = CountOptions().comment("Retrieving count")
+   collection.countDocuments(options)
 
 .. _kotlin-sync-estimated-count:
 
 Retrieve an Estimated Count
 ---------------------------
 
-You can get an estimate of the number of documents in a collection by calling
-the ``estimatedDocumentCount()`` method. The method estimates the amount of
-documents based on collection metadata, which can be faster than performing an 
-accurate count.
+Use the ``estimatedDocumentCount()`` method to retrieve an estimate of the number of
+documents in a collection. The method estimates the amount of documents based on
+collection metadata, which can be faster than performing an accurate count.
 
 The following example estimates the number of documents in a collection:
 
@@ -108,10 +133,12 @@ The following example estimates the number of documents in a collection:
 Customize Estimated Count Behavior
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``estimatedDocumentDount()`` method accepts optional parameters in the form of an
+The ``estimatedDocumentCount()`` method accepts optional parameters in the form of an
 ``EstimatedDocumentCountOptions`` object, which represents options you can use to configure
-the count operation. If you don't specify any options, the driver does not customize the
-count operation.
+the count operation. You can set these options by instantiating a new
+``EstimatedDocumentCountOptions`` object, setting the object's fields using the
+corresponding setter methods, and passing it to the ``estimatedDocumentCount()`` method.
+If you don't specify any options, the driver does not customize the count operation.
 
 The following table describes the options you can set to customize ``estimatedDocumentCount()``:
 
@@ -119,7 +146,7 @@ The following table describes the options you can set to customize ``estimatedDo
    :widths: 30 70
    :header-rows: 1
 
-   * - Property
+   * - Option
      - Description
 
    * - ``comment``
@@ -127,6 +154,14 @@ The following table describes the options you can set to customize ``estimatedDo
 
    * - ``maxTime``
      - | The maximum amount of time to allow the operation to run, in milliseconds.
+
+The following example uses an ``EstimatedDocumentCountOptions`` object to add a comment to
+the ``estimatedDocumentCount()`` operation:
+
+.. code-block:: kotlin
+
+   val options = EstimatedDocumentCountOptions().comment("Retrieving count")
+   print(collection.estimatedDocumentCount(options))
 
 API Documentation
 -----------------
