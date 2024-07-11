@@ -3,7 +3,12 @@ import com.mongodb.MongoClientSettings
 import com.mongodb.kotlin.client.*
 import com.mongodb.client.model.Filters.*
 
-data class Restaurant(val name: String, val cuisine: String)
+// start-data-class
+data class Restaurant(
+    val name: String,
+    val cuisine: String
+)
+// end-data-class
 
 fun main() {
     val uri = "<connection string URI>"
@@ -18,11 +23,11 @@ fun main() {
     val collection = database.getCollection<Restaurant>("restaurants")
 
     // start-find
-    val results = collection.find(eq("cuisine", "Spanish"))
+    val results = collection.find(eq(Restaurant::cuisine.name, "Spanish"))
     // end-find
 
     // start-find-iterate
-    val results = collection.find(eq("cuisine", "Spanish"))
+    val results = collection.find(eq(Restaurant::cuisine.name, "Spanish"))
     results.forEach { result ->
         println(result)
     }
@@ -34,7 +39,7 @@ fun main() {
 
     // start-modified-find
     val results = collection
-        .find(eq("cuisine", "Spanish"))
+        .find(eq(Restaurant::cuisine.name, "Spanish"))
         .limit(10)
         .maxTime(10000)
     // end-modified-find
