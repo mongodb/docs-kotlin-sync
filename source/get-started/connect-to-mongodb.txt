@@ -46,10 +46,10 @@ Connect to MongoDB
 
       The preceding step demonstrates how to run a query on a sample
       collection to retrieve data by using a {+language+} data class. This section
-      shows how to use the `Document <{+api+}/apidocs/bson/org/bson/Document.html>`__ class 
+      shows how to use the `Document <{+core-api+}/bson/org/bson/Document.html>`__ class  
       to store and retrieve data from MongoDB.
 
-      In a new file called ``DemoDocumentExample.kt``, paste the following sample
+      In a file called ``DemoDocumentExample.kt``, paste the following sample
       code to run a query on your sample dataset in MongoDB Atlas. Replace the
       value of the ``<connection URI string>`` placeholder with your
       MongoDB Atlas connection string:
@@ -62,7 +62,7 @@ Connect to MongoDB
       of a movie document that matches the query, as shown in the
       following output:
 
-      .. code-block:: json
+      .. code-block:: none
          :copyable: false
       
          Document{{_id=..., plot=A young man and woman ..., genres=[Drama, Romance], ...}}
