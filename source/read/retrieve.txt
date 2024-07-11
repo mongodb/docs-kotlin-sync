@@ -42,7 +42,7 @@ method takes a **query filter** and returns all matching documents. A query filt
 document that specifies the criteria that the driver uses to match documents from the
 collection.
 
-.. To learn more about query filters, see :ref:`kotlin-sync-specify-query`.
+.. TODO: To learn more about query filters, see :ref:`kotlin-sync-specify-query`.
 
 Find Documents Example
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -61,12 +61,21 @@ The ``find()`` operation in the preceding example returns a ``FindIterable`` obj
 which you can iterate through by using the ``forEach()`` method, as shown in the following
 example:
 
-.. literalinclude:: /includes/read/retrieve.kt
-   :start-after: start-find-iterate
-   :end-before: end-find-iterate
-   :language: kotlin
-   :copyable:
-   :dedent:
+.. io-code-block::
+   :copyable: true
+
+   .. input:: /includes/read/retrieve.kt
+      :start-after: start-find-iterate
+      :end-before: end-find-iterate
+      :language: kotlin
+      :dedent:
+   
+   .. output::
+      
+      Restaurant(name=Tropicoso Club, cuisine=Spanish)
+      Restaurant(name=Beso, cuisine=Spanish)
+      Restaurant(name=Sabor Latino Restaurant, cuisine=Spanish)
+      ...
 
 .. note:: Find All Documents
  
@@ -99,28 +108,28 @@ modifying queries:
          in the MongoDB Server manual.
 
    * - ``collation()`` 
-     - | An instance of the ``Collation`` class that sets the collation options. 
+     - | Sets the collation options for the query. 
 
    * - ``comment()`` 
-     - | A string to attach to the query. This can help you trace and interpret the
+     - | Specifies a string to attach to the query. This can help you trace and interpret the
          operation in the server logs and in profile data. To learn more about query comments, 
          see :manual:`$comment </reference/operator/query/comment/>` in the MongoDB Server
          manual.
    
    * - ``hint()`` 
-     - | The index to use for the query.
+     - | Specifies the index to use for the query.
 
    * - ``limit()``
      - | Limits the number of documents to be returned from the query.
 
    * - ``maxTime()`` 
-     - | The maximum execution time on the server for this operation.
+     - | Sets the maximum execution time on the server for this operation.
 
    * - ``skip()``
-     - | The number of documents to skip.
+     - | Sets the number of documents to skip.
 
    * - ``sort()``
-     - | The sort criteria to apply to the query.
+     - | Defines the sort criteria to apply to the query.
 
 The following example chains the ``limit()`` and ``maxTime()`` methods to limit the
 number of documents returned by the query to ``10`` and set a maximum execution time of
@@ -141,7 +150,7 @@ Additional Information
 
 .. TODO: To learn more about query filters, see :ref:`kotlin-sync-specify-query`.
 
-For runnable code examples of retrieving documents with the {+driver-short+}, see
+To view runnable code examples that retrieve documents by using the {+driver-short+}, see
 :ref:`kotlin-sync-read`.
 
 API Documentation
