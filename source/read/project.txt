@@ -46,8 +46,8 @@ Projection Types
 You can use a projection to specify which fields to include in a return
 document, or to specify which fields to exclude.
 
-When specifying certain fields to include in a projection, all other fields (except the
-``_id`` field, which is included by default) are implicitly excluded. You cannot combine
+When specifying certain fields to include in a projection, all other fields are implicitly
+excluded (except the ``_id`` field, which is included by default). You cannot combine
 inclusion and exclusion statements in a single projection, unless you are excluding the
 ``_id`` field.
 
