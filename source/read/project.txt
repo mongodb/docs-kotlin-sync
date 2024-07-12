@@ -44,9 +44,14 @@ Projection Types
 ----------------
 
 You can use a projection to specify which fields to include in a return
-document, or to specify which fields to exclude. You cannot combine inclusion and
-exclusion statements in a single projection, unless you are excluding the
-``_id`` field.
+document, or to specify which fields to exclude.
+
+When specifying certain fields to include in a projection, all other fields (except the
+``_id`` field) are implicitly excluded. You cannot combine inclusion and exclusion
+statements in a single projection, unless you are excluding the ``_id`` field.
+
+To remove the ``_id`` field from the returned document, you must
+:ref:`explicitly exclude it <kotlin-sync-project-exclude-id>`.
 
 Specify Fields to Include
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -56,7 +61,7 @@ Use the following syntax to specify the fields to include in the result:
 .. code-block:: kotlin
 
    val projection = Projection.fields(
-       Projections.include(<fieldName1>, <fieldName2>, ...),
+       Projections.include(<fieldName1>, <fieldName2>, ...)
    )
 
 The following example uses the ``find()`` method to find all restaurants with
@@ -79,11 +84,6 @@ documents.
       Restaurant(id=5eb3d668b31de5d588f429e2, name=Emerald Pub, borough=Manhattan, cuisine=American)
       Restaurant(id=5eb3d668b31de5d588f432dd, name=Emerald Pub, borough=Queens, cuisine=American)
 
-When you use a projection to specify fields to include in the return
-document, the ``_id`` field is also included by default. All other fields are
-implicitly excluded. To remove the ``_id`` field from the return
-document, you must :ref:`explicitly exclude it <kotlin-sync-project-exclude-id>`.
-
 .. _kotlin-sync-project-exclude-id:
 
 Exclude the ``_id`` Field
@@ -92,7 +92,7 @@ Exclude the ``_id`` Field
 When specifying fields to include, you can also exclude the ``_id`` field from
 the returned document.
 
-The following example performs the same query as the preceding example, but
+The following example runs the same query as the preceding example, but
 excludes the ``_id`` field from the projection:
 
 .. io-code-block::
