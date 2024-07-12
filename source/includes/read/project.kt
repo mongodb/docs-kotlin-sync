@@ -33,6 +33,7 @@ fun main() {
     val projection = Projections.fields(
         Projections.include("name", "cuisine", "borough"),
     )
+
     val results = collection
         .find(eq("name", "Emerald Pub"))
         .projection(projection)
@@ -47,6 +48,7 @@ fun main() {
         Projections.excludeId(),
         Projections.include("name", "cuisine", "borough")
     )
+
     val results = collection
         .find(eq("name", "Emerald Pub"))
         .projection(projection)
