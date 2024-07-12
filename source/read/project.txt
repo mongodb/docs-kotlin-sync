@@ -54,8 +54,9 @@ Specify Fields to Include
 Use the following syntax to specify the fields to include in the result:
 
 .. code-block:: kotlin
+
    val projection = Projection.fields(
-       Projections.include("fieldName1", "fieldName2", ...),
+       Projections.include(<fieldName1>, <fieldName2>, ...),
    )
 
 The following example uses the ``find()`` method to find all restaurants with

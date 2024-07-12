@@ -31,7 +31,11 @@ fun main() {
 
     // start-project
     val projection = Projections.fields(
-        Projections.include("name", "cuisine", "borough"),
+        Projections.include(
+            Restaurant::name.name,
+            Restaurant::cuisine.name,
+            Restaurant::borough.name
+        )
     )
 
     val results = collection
@@ -46,7 +50,11 @@ fun main() {
     // start-project-exclude
     val projection = Projections.fields(
         Projections.excludeId(),
-        Projections.include("name", "cuisine", "borough")
+        Projections.include(
+            Restaurant::name.name,
+            Restaurant::cuisine.name,
+            Restaurant::borough.name
+        )
     )
 
     val results = collection
