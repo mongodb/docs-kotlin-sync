@@ -4,6 +4,10 @@
 Download and Install
 ====================
 
+This guide demonstrates how to create a project and add the
+{+driver-short+} dependencies by using `Gradle <https://gradle.org/>`__
+or `Maven <https://maven.apache.org/>`__.
+
 .. procedure::
    :style: connected
 
@@ -12,19 +16,12 @@ Download and Install
       First, make sure that your system has {+language+} installed and
       running on JDK 1.8 or later.
 
-      This guide shows you how to create a project and add the
-      {+driver-short+} dependencies by using Gradle or Maven. We
-      recommend that you use an integrated development
+      We recommend that you use an integrated development
       environment (IDE) such as IntelliJ IDEA or Eclipse IDE to
       configure Gradle or Maven to build and run your project.
 
-      For more information on getting started with
-      {+language+} and creating your first project, see `Get started with Kotlin/JVM
-      <{+kotlin-docs+}/docs/jvm-get-started.html>`__ in the {+language+}
-      language documentation.
-
       .. tip::
-
+      
          If you are not using an IDE, see the
          `Creating New Gradle Builds
          <https://guides.gradle.org/creating-new-gradle-builds/>`__ guide 
@@ -32,15 +29,20 @@ Download and Install
          <https://maven.apache.org/guides/development/guide-building-maven.html>`__ guide
          for more information on how to set up your project.
 
+      For more information on getting started with
+      {+language+} and creating your first project, see `Get started with Kotlin/JVM
+      <{+kotlin-docs+}/docs/jvm-get-started.html>`__ in the {+language+}
+      language documentation.
+
    .. step:: Add MongoDB as a Dependency
 
-      If you are using `Gradle <https://gradle.org/>`__ to manage your
+      If you are using Gradle to manage your
       packages, add the following entry to your ``build.gradle.kts``
       dependencies list:
 
       .. include:: /includes/kotlin-sync-driver-gradle-versioned.rst
 
-      If you are using `Maven <https://maven.apache.org/>`__ to manage your
+      If you are using Maven to manage your
       packages, add the following entry to your ``pom.xml`` dependencies list:
       
       .. include:: /includes/kotlin-sync-driver-maven-versioned.rst
