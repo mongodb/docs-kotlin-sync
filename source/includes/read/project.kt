@@ -39,7 +39,7 @@ fun main() {
     )
 
     val results = collection
-        .find(eq("name", "Emerald Pub"))
+        .find(eq(Restaurant::name.name, "Emerald Pub"))
         .projection(projection)
 
     results.forEach { result ->
@@ -58,7 +58,7 @@ fun main() {
     )
 
     val results = collection
-        .find(eq("name", "Emerald Pub"))
+        .find(eq(Restaurant::name.name, "Emerald Pub"))
         .projection(projection)
 
     results.forEach { result ->
