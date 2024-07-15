@@ -14,7 +14,7 @@ data class Restaurant(
 // end-data-class
 
 fun main() {
-    val uri = "<connection string uri>"
+    val uri = "<connection string URI>"
 
     val settings = MongoClientSettings.builder()
         .applyConnectionString(ConnectionString(uri))
