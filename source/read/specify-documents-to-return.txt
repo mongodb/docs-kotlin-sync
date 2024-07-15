@@ -23,9 +23,9 @@ Overview
 In this guide, you can learn how to specify which documents to return from a read
 operation by using the following methods:
 
-- ``limit()``: Specifies the maximum number of documents to return from a query.
-- ``sort()``: Specifies the sort order for the returned documents.
-- ``skip()``: Specifies the number of documents to skip before returning query results.
+- ``limit()``: Specifies the maximum number of documents to return from a query
+- ``sort()``: Specifies the sort order for the returned documents
+- ``skip()``: Specifies the number of documents to skip before returning query results
 
 Sample Data
 ~~~~~~~~~~~
@@ -75,8 +75,8 @@ of ``"Italian"`` and limits the results to 5 documents:
 .. tip::
 
    The preceding example returns the first five documents returned by the query in
-   no particular order. The following section describes how to return the documents
-   in a specified sort order.
+   :manual:`natural order </reference/glossary/#std-term-natural-order>`. The following
+   section describes how to return the documents in a specified sort order.
 
 .. _kotlin-sync-sort:
 
@@ -85,10 +85,10 @@ Sort
 
 To return documents in a specified order, call the ``sort()`` method. The ``sort()``
 method takes a sort direction as a parameter. To specify the sort direction,
-use the ``Sorts.ascending()`` or ``Sorts.descending()`` methods. ``ascending()``
-sorts values from lowest to highest, and ``descending()`` sorts values from highest
-to lowest. If you don't specify either direction, ``sort()`` defaults to sorting in
-ascending order.
+use the ``Sorts.ascending()`` or ``Sorts.descending()`` method. The ``Sorts.ascending()``
+method sorts values from lowest to highest, and the ``Sorts.descending()`` method sorts
+values from highest to lowest. If you don't specify a sort direction, ``sort()`` returns
+the documents in ascending order.
 
 The following example returns all documents with a ``cuisine`` field value of
 ``"Italian"``, sorted by the value of the ``name`` field in ascending order:
@@ -190,7 +190,7 @@ API Documentation
 ~~~~~~~~~~~~~~~~~
 
 To learn more about any of the methods or types discussed in this
-guide, see the following API Documentation:
+guide, see the following API documentation:
 
 - `find() <{+api+}/mongodb-driver-kotlin-sync/com.mongodb.kotlin.client/-mongo-collection/find.html>`__
 - `limit() <{+api+}/mongodb-driver-kotlin-sync/com.mongodb.kotlin.client/-find-iterable/limit.html>`__
