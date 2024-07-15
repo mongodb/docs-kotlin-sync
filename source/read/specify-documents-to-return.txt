@@ -85,13 +85,13 @@ Sort
 
 To return documents in a specified order, call the ``sort()`` method. The ``sort()``
 method takes a sort direction as a parameter. To specify the sort direction,
-use the ``Sorts.ascending()`` or ``Sorts.descending()`` methods. ``Sorts.ascending()``
-sorts values from lowest to highest, and ``Sorts.descending()`` sorts values from highest
+use the ``Sorts.ascending()`` or ``Sorts.descending()`` methods. ``ascending()``
+sorts values from lowest to highest, and ``descending()`` sorts values from highest
 to lowest. If you don't specify either direction, ``sort()`` defaults to sorting in
 ascending order.
 
 The following example returns all documents with a ``cuisine`` field value of
-``"Italian"``, sorted in ascending order:
+``"Italian"``, sorted by the value of the ``name`` field in ascending order:
 
 .. io-code-block::
    :copyable: true
