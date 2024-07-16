@@ -66,7 +66,7 @@ Exact Match
 Literal value queries return documents with an exact match to your query filter.
 
 The following example specifies a query filter as a parameter to the ``find()``
-method. The code returns all documents with a ``color`` field value of ``"yellow"``:
+method. The code returns all documents with a ``color`` field value of ``"yellow"``.
 
 .. io-code-block::
    :copyable: true
@@ -98,7 +98,7 @@ To view a full list of comparison operators, see the :manual:`Comparison Query O
 
 The following example specifies a comparison operator in a query filter as a
 parameter to the ``find()`` method. The code returns all documents with a
-``rating`` field value greater than ``2``:
+``rating`` field value greater than ``2``.
 
 .. io-code-block::
    :copyable: true
@@ -133,7 +133,7 @@ To learn more about logical operators, see the :manual:`Logical Query Operators
 The following example specifies a logical operator in a query filter as a
 parameter to the ``find()`` method. The code returns all documents with a
 ``quantity`` field value greater than ``5`` **or** a ``color`` field value of
-``"yellow"``:
+``"yellow"``.
 
 .. io-code-block::
    :copyable: true
@@ -166,7 +166,7 @@ To learn more about array operators, see the :manual:`Array Query Operators
 
 The following example specifies an array operator in a query filter as a
 parameter to the ``find()`` method. The code returns all documents with a
-``type`` array field containing exactly ``2`` elements:
+``type`` array field containing exactly ``2`` elements.
 
 .. io-code-block::
    :copyable: true
@@ -193,7 +193,7 @@ To learn more about element operators, see the :manual:`Element Query Operators
 
 The following example specifies an element operator in a query filter as a
 parameter to the ``find()`` method. The code returns all documents that have a
-``color`` field:
+``color`` field.
 
 .. io-code-block::
    :copyable: true
@@ -221,8 +221,9 @@ The following is a list of common evaluation operators:
 
 - ``$text``, which performs a text search on the documents
 - ``$regex``, which returns documents that match a specified regular expression
-- ``$mod``, which performs a modulo operation on the value of a field and
-  returns documents where the remainder is a specified value
+- ``$mod``, which performs a :wikipedia:`modulo <w/index.php?title=Modulo&oldid=1226348145>`
+  operation on the value of a field and returns documents where the remainder is a specified
+  value
 
 To view a full list of evaluation operators, see the :manual:`Evaluation Query Operators
 </reference/operator/query-evaluation/>` guide in the MongoDB Server manual.
@@ -230,7 +231,7 @@ To view a full list of evaluation operators, see the :manual:`Evaluation Query O
 The following example specifies an evaluation operator in a query filter as a
 parameter to the ``find()`` method. The code uses a regular expression to return
 all documents with a ``name`` field value that has at least two consecutive
-``"p"`` characters:
+``"p"`` characters.
 
 .. io-code-block::
    :copyable: true
