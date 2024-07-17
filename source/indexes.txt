@@ -1,8 +1,8 @@
 .. _kotlin-sync-indexes:
 
-=============================
-Optimize Queries with Indexes
-=============================
+=================================
+Optimize Queries by Using Indexes
+=================================
 
 .. contents:: On this page
    :local:
@@ -15,7 +15,7 @@ Optimize Queries with Indexes
    :values: reference
  
 .. meta::
-   :description: Learn how to use indexes with the MongoDB {+driver-short+} driver.
+   :description: Learn how to use indexes by using the MongoDB Kotlin Sync driver.
    :keywords: query, optimization, efficiency, usage example, code example
 
 .. TODO
@@ -28,8 +28,8 @@ Optimize Queries with Indexes
 Overview
 --------
 
-On this page, you can see copyable code examples that show how to work with common
-types of indexes that you can use with the {+driver-short+}.
+On this page, you can see copyable code examples that show how to manage different
+types of indexes by using the {+driver-short+}.
 
 .. TODO
 .. .. tip::
@@ -86,8 +86,7 @@ The following example creates a compound index on the specified fields:
 Multikey Index
 --------------
 
-The following example creates a multikey index on the specified field that contains
-array values:
+The following example creates a multikey index on the specified array-valued field:
 
 .. literalinclude:: /includes/usage-examples/index-code-examples.kt
    :start-after: start-multikey
@@ -97,87 +96,6 @@ array values:
    :dedent:
 
 .. TODO To learn more about multikey indexes, see the :ref:`kotlin-sync-multikey-index`
-.. guide.
-
-Atlas Search Index
-------------------
-
-.. TODO: To learn more about Atlas search indexes, see the :ref:`kotlin-sync-atlas-search-index`
-.. guide.
-
-Create Search Index
-~~~~~~~~~~~~~~~~~~~
-
-The following example creates an Atlas search index on the specified field:
-
-.. literalinclude:: /includes/usage-examples/index-code-examples.kt
-   :start-after: start-search-create
-   :end-before: end-search-create
-   :language: kotlin
-   :copyable:
-   :dedent:
-
-.. TODO: To learn more about creating serach indexes, see the :ref:`kotlin-sync-atlas-search-index-create`
-.. guide.
-
-List Search Indexes
-~~~~~~~~~~~~~~~~~~~
-
-The following example prints a list of Atlas search indexes in the specified collection:
-
-.. literalinclude:: /includes/usage-examples/index-code-examples.kt
-   :start-after: start-search-list
-   :end-before: end-search-list
-   :language: kotlin
-   :copyable:
-   :dedent:
-
-.. TODO: To learn more about listing search indexes, see the :ref:`kotlin-sync-atlas-search-index-list`
-.. guide.
-
-Update Search Indexes
-~~~~~~~~~~~~~~~~~~~~~
-
-The following example updates an existing Atlas search index:
-
-.. literalinclude:: /includes/usage-examples/index-code-examples.kt
-   :start-after: start-search-update
-   :end-before: end-search-update
-   :language: kotlin
-   :copyable:
-   :dedent:
-
-.. TODO: To learn more about updating search indexes, see the :ref:`kotlin-sync-atlas-search-index-update`
-.. guide.
-
-Delete Search Indexes
-~~~~~~~~~~~~~~~~~~~~~
-
-The following example deletes an Atlas search index with the specified name:
-
-.. literalinclude:: /includes/usage-examples/index-code-examples.kt
-   :start-after: start-search-delete
-   :end-before: end-search-delete
-   :language: kotlin
-   :copyable:
-   :dedent:
-
-.. TODO: To learn more about deleting search indexes, see the :ref:`kotlin-sync-atlas-search-index-drop`
-.. guide.
-
-Text Index
-----------
-
-The following example creates a text index on the specified field:
-
-.. literalinclude:: /includes/usage-examples/index-code-examples.kt
-   :start-after: start-text
-   :end-before: end-text
-   :language: kotlin
-   :copyable:
-   :dedent:
-
-.. TODO: To learn more about text indexes, see the :ref:`kotlin-sync-text-index`
 .. guide.
 
 Geospatial Index
@@ -242,7 +160,92 @@ field:
 .. TODO: To learn more about wildcard indexes, see the :ref:`kotlin-sync-clustered-index`
 .. guide.
 
-Remove an Index
+Atlas Search Index Management
+-----------------------------
+
+The following sections contain code examples that describe how to manage Atlas Search
+indexes.
+
+.. TODO: To learn more about Atlas search indexes, see the :ref:`kotlin-sync-atlas-search-index`
+.. guide.
+
+Create Search Index
+~~~~~~~~~~~~~~~~~~~
+
+The following example creates an Atlas search index on the specified field:
+
+.. literalinclude:: /includes/usage-examples/index-code-examples.kt
+   :start-after: start-search-create
+   :end-before: end-search-create
+   :language: kotlin
+   :copyable:
+   :dedent:
+
+.. TODO: To learn more about creating serach indexes, see the :ref:`kotlin-sync-atlas-search-index-create`
+.. guide.
+
+List Search Indexes
+~~~~~~~~~~~~~~~~~~~
+
+The following example prints a list of Atlas search indexes in the specified collection:
+
+.. literalinclude:: /includes/usage-examples/index-code-examples.kt
+   :start-after: start-search-list
+   :end-before: end-search-list
+   :language: kotlin
+   :copyable:
+   :dedent:
+
+.. TODO: To learn more about listing search indexes, see the :ref:`kotlin-sync-atlas-search-index-list`
+.. guide.
+
+Update Search Indexes
+~~~~~~~~~~~~~~~~~~~~~
+
+The following example updates an existing Atlas search index with the specified
+new index definition:
+
+.. literalinclude:: /includes/usage-examples/index-code-examples.kt
+   :start-after: start-search-update
+   :end-before: end-search-update
+   :language: kotlin
+   :copyable:
+   :dedent:
+
+.. TODO: To learn more about updating search indexes, see the :ref:`kotlin-sync-atlas-search-index-update`
+.. guide.
+
+Delete Search Indexes
+~~~~~~~~~~~~~~~~~~~~~
+
+The following example deletes an Atlas search index with the specified name:
+
+.. literalinclude:: /includes/usage-examples/index-code-examples.kt
+   :start-after: start-search-delete
+   :end-before: end-search-delete
+   :language: kotlin
+   :copyable:
+   :dedent:
+
+.. TODO: To learn more about deleting search indexes, see the :ref:`kotlin-sync-atlas-search-index-drop`
+.. guide.
+
+Text Index
+----------
+
+The following example creates a text index on the specified string field:
+
+.. literalinclude:: /includes/usage-examples/index-code-examples.kt
+   :start-after: start-text
+   :end-before: end-text
+   :language: kotlin
+   :copyable:
+   :dedent:
+
+.. TODO: To learn more about text indexes, see the :ref:`kotlin-sync-text-index`
+.. guide.
+
+Delete an Index
 ---------------
 
 The following example deletes an index with the specified name:
