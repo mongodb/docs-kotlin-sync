@@ -115,29 +115,13 @@ Enable TLS
 .. To learn more about enabling TLS, see :ref:`kotlin-sync-enable-tls` in
 .. the TLS configuration guide.
 
-Allow Insecure TLS
-~~~~~~~~~~~~~~~~~~
-
-.. include:: /includes/connect/insecure-tls-tabs.rst
-
-.. To learn more about allowing insecure TLS, see :ref:`kotlin-sync-insecure-tls` in
-.. the TLS configuration guide.
-
-Disable Certificate Validation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. include:: /includes/connect/disable-cert-validation-tabs.rst
-
-To learn more about disabling certificate validation, see :ref:`kotlin-sync-insecure-tls` in
-the TLS configuration guide.
-
 Disable Hostname Verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. include:: /includes/connect/disable-host-verification-tabs.rst
 
-To learn more about disabling hostname verification, see :ref:`kotlin-sync-insecure-tls` in
-the TLS configuration guide.
+.. To learn more about disabling hostname verification, see :ref:`kotlin-sync-insecure-tls` in
+.. the TLS configuration guide.
 
 Network Compression
 -------------------
@@ -147,8 +131,8 @@ Compression Algorithms
 
 .. include:: /includes/connect/compression-tabs.rst
 
-To learn more about specifying compression algorithms, see
-:ref:`kotlin-sync-enable-compression` in the Network Compression guide.
+.. To learn more about specifying compression algorithms, see
+.. :ref:`kotlin-sync-enable-compression` in the Network Compression guide.
 
 zlib Compression Level
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -160,42 +144,57 @@ zlib Compression Level
 
       .. code-block:: kotlin
 
-         client = pymongo.MongoClient("mongodb://<username>:<password>@<hostname>:<port>",
-                                      compressors = "zlib",
-                                      zlibCompressionLevel=<zlib compression level>)
+         val zlib = MongoCompressor.createZlibCompressor()
+
+         val settings = MongoClientSettings.builder()
+             .applyConnectionString(ConnectionString(uri))
+             .compressorList(listOf(zlib.withProperty(MongoCompressor.LEVEL, <level>)))
+             .build()
+
+         val mongoClient = MongoClient.create(settings)
 
    .. tab:: Connection String
       :tabid: connectionstring
 
       .. code-block:: kotlin
 
-         uri = ("mongodb://<username>:<password>@<hostname>:<port>/?"
-                "compressors=zlib"
-                "zlibCompressionLevel=<zlib compression level>")
-         client = pymongo.MongoClient(uri)
+         val uri = "mongodb://<username>:<password>@<hostname>:<port>/?" +
+                   "compressors=zlib" +
+                   "zlibCompressionLevel=<zlib compression level>"
+         
+         val mongoClient = MongoClient.create(uri)
 
-To learn more about setting the zlib compression level, see
-:ref:`kotlin-sync-enable-compression` in the Network Compression guide.
+.. To learn more about setting the zlib compression level, see
+.. :ref:`kotlin-sync-enable-compression` in the Network Compression guide.
 
 Server Selection
 ----------------
 
 .. code-block:: kotlin
 
-   client = pymongo.MongoClient("mongodb://<username>:<password>@<hostname>:<port>",
+   val client = MongoClient.create("mongodb://<username>:<password>@<hostname>:<port>",
                                 server_selector=<selector function>)
 
-To learn more about customizing server selection, see
-:ref:`kotlin-sync-server-selection`.
+.. To learn more about customizing server selection, see
+.. :ref:`kotlin-sync-server-selection`.
 
 {+stable-api+}
 --------------
 
 .. code-block:: kotlin
 
-   from pymongo.server_api import ServerApi
+   val serverApi = ServerApi.builder()
+       .version(ServerApiVersion.V1)
+       .build()
+   
+   val uri = "<connection string>"
+   
+   val settings = MongoClientSettings.builder()
+       .applyConnectionString(ConnectionString(uri))
+       .serverApi(serverApi)
+       .build()
+   
+   val client = MongoClient.create(settings)
 
-   client = pymongo.MongoClient("mongodb://<username>:<password>@<hostname:<port>",
-                                server_api=ServerApi("<{+stable-api+} version>"))
 
-To learn more about the {+stable-api+}, see :ref:`kotlin-sync-stable-api`.
+.. To learn more about the {+stable-api+}, see :ref:`kotlin-sync-stable-api`.
