@@ -63,6 +63,7 @@ The following example creates an ascending index on the specified field:
    :end-before: end-single-field
    :language: kotlin
    :copyable:
+   :dedent:
 
 .. TODO: To learn more about single field indexes, see the
 .. :ref:`kotlin-sync-single-field-index` guide.
@@ -77,6 +78,7 @@ The following example creates a compound index on the specified fields:
    :end-before: end-compound
    :language: kotlin
    :copyable:
+   :dedent:
 
 .. TODO: To learn more about compound indexes, see the :ref:`kotlin-sync-compound-index`
 .. guide.
@@ -84,11 +86,15 @@ The following example creates a compound index on the specified fields:
 Multikey Index
 --------------
 
+The following example creates a multikey index on the specified field that contains
+array values:
+
 .. literalinclude:: /includes/usage-examples/index-code-examples.kt
    :start-after: start-multikey
    :end-before: end-multikey
    :language: kotlin
    :copyable:
+   :dedent:
 
 .. TODO To learn more about multikey indexes, see the :ref:`kotlin-sync-multikey-index`
 .. guide.
@@ -102,11 +108,14 @@ Atlas Search Index
 Create Search Index
 ~~~~~~~~~~~~~~~~~~~
 
+The following example creates an Atlas search index on the specified field:
+
 .. literalinclude:: /includes/usage-examples/index-code-examples.kt
    :start-after: start-search-create
    :end-before: end-search-create
    :language: kotlin
    :copyable:
+   :dedent:
 
 .. TODO: To learn more about creating serach indexes, see the :ref:`kotlin-sync-atlas-search-index-create`
 .. guide.
@@ -114,11 +123,14 @@ Create Search Index
 List Search Indexes
 ~~~~~~~~~~~~~~~~~~~
 
+The following example returns a list of Atlas search indexes in the specified collection:
+
 .. literalinclude:: /includes/usage-examples/index-code-examples.kt
    :start-after: start-search-list
    :end-before: end-search-list
    :language: kotlin
    :copyable:
+   :dedent:
 
 .. TODO: To learn more about listing search indexes, see the :ref:`kotlin-sync-atlas-search-index-list`
 .. guide.
@@ -126,11 +138,14 @@ List Search Indexes
 Update Search Indexes
 ~~~~~~~~~~~~~~~~~~~~~
 
+The following example updates an existing Atlas search index:
+
 .. literalinclude:: /includes/usage-examples/index-code-examples.kt
    :start-after: start-search-update
    :end-before: end-search-update
    :language: kotlin
    :copyable:
+   :dedent:
 
 .. TODO: To learn more about updating search indexes, see the :ref:`kotlin-sync-atlas-search-index-update`
 .. guide.
@@ -138,11 +153,14 @@ Update Search Indexes
 Delete Search Indexes
 ~~~~~~~~~~~~~~~~~~~~~
 
+The following example deletes an Atlas search index with the specified name:
+
 .. literalinclude:: /includes/usage-examples/index-code-examples.kt
    :start-after: start-search-delete
    :end-before: end-search-delete
    :language: kotlin
    :copyable:
+   :dedent:
 
 .. TODO: To learn more about deleting search indexes, see the :ref:`kotlin-sync-atlas-search-index-drop`
 .. guide.
@@ -150,11 +168,14 @@ Delete Search Indexes
 Text Index
 ----------
 
+The following example creates a text index on the specified field:
+
 .. literalinclude:: /includes/usage-examples/index-code-examples.kt
    :start-after: start-text
    :end-before: end-text
    :language: kotlin
    :copyable:
+   :dedent:
 
 .. TODO: To learn more about text indexes, see the :ref:`kotlin-sync-text-index`
 .. guide.
@@ -162,11 +183,15 @@ Text Index
 Geospatial Index
 ----------------
 
+The following example creates a 2dsphere index on the specified field that contains
+GeoJSON objects:
+
 .. literalinclude:: /includes/usage-examples/index-code-examples.kt
    :start-after: start-geo
    :end-before: end-geo
    :language: kotlin
    :copyable:
+   :dedent:
 
 .. TODO: To learn more about geospatial indexes, see the :ref:`kotlin-sync-geospatial-index`
 .. guide.
@@ -174,11 +199,14 @@ Geospatial Index
 Unique Index
 ------------
 
+The following example creates a unique index on the specified field:
+
 .. literalinclude:: /includes/usage-examples/index-code-examples.kt
    :start-after: start-unique
    :end-before: end-unique
    :language: kotlin
    :copyable:
+   :dedent:
 
 .. TODO: To learn more about unique indexes, see the :ref:`kotlin-sync-unique-index`
 .. guide.
@@ -186,11 +214,14 @@ Unique Index
 Wildcard Index
 --------------
 
+The following example creates a wildcard index in the specified collection:
+
 .. literalinclude:: /includes/usage-examples/index-code-examples.kt
    :start-after: start-wildcard
    :end-before: end-wildcard
    :language: kotlin
    :copyable:
+   :dedent:
 
 .. TODO: To learn more about wildcard indexes, see the :ref:`kotlin-sync-wildcard-index`
 .. guide.
@@ -198,11 +229,15 @@ Wildcard Index
 Clustered Index
 ---------------
 
+The following example creates a new collection with a clustered index on the ``_id``
+field:
+
 .. literalinclude:: /includes/usage-examples/index-code-examples.kt
    :start-after: start-clustered
    :end-before: end-clustered
    :language: kotlin
    :copyable:
+   :dedent:
 
 .. TODO: To learn more about wildcard indexes, see the :ref:`kotlin-sync-clustered-index`
 .. guide.
@@ -210,11 +245,14 @@ Clustered Index
 Remove an Index
 ---------------
 
+The following example deletes an index with the specified name:
+
 .. literalinclude:: /includes/usage-examples/index-code-examples.kt
    :start-after: start-remove
    :end-before: end-remove
    :language: kotlin
    :copyable:
+   :dedent:
 
 .. TODO: To learn more about removing indexes, see :ref:`kotlin-sync-indexes-remove`
 .. in the Work with Indexes guide.

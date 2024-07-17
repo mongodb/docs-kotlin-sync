@@ -5,6 +5,7 @@ import com.mongodb.client.model.ClusteredIndexOptions
 import com.mongodb.client.model.Filters.*
 import com.mongodb.client.model.IndexOptions
 import com.mongodb.client.model.Indexes
+import com.mongodb.client.*
 import com.mongodb.kotlin.client.MongoClient
 import org.bson.Document
 
