@@ -78,23 +78,19 @@ instance of MongoDB:
 Atlas
 ~~~~~
 
+The following code shows the connection string to connect to a
+deployment hosted on Atlas.
+
 .. code-block:: kotlin
 
-   val uri = "<Atlas connection string>"
-   
-   val serverApi = ServerApi.builder()
-       .version(ServerApiVersion.V1)
-       .build()
-
-   val settings = MongoClientSettings.builder()
-       .applyConnectionString(ConnectionString(uri))
-       .serverApi(serverApi)
-       .build()
-
-   val mongoClient = MongoClient.create(settings)
+   val uri = "mongodb+srv://<username>:<password>@<hostname/port>/?<options>"
+   val mongoClient = MongoClient.create(uri)
 
 Replica Set
 ~~~~~~~~~~~
+
+The following code shows the connection string to connect to a
+replica set.
 
 .. code-block:: kotlin
    
@@ -110,6 +106,8 @@ while enabling the TLS protocol.
 Enable TLS
 ~~~~~~~~~~
 
+The following tabs demonstrate how to enable TLS on a connection:
+
 .. include:: /includes/connect/tls-tabs.rst
 
 .. To learn more about enabling TLS, see :ref:`kotlin-sync-enable-tls` in
@@ -117,6 +115,9 @@ Enable TLS
 
 Disable Hostname Verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following tabs demonstrate how to disable hostname verification when
+connecting by using TLS:
 
 .. include:: /includes/connect/disable-host-verification-tabs.rst
 
@@ -126,8 +127,14 @@ Disable Hostname Verification
 Network Compression
 -------------------
 
+The following sections describe how to connect to MongoDB
+while specifying network compression algorithms.
+
 Compression Algorithms
 ~~~~~~~~~~~~~~~~~~~~~~
+
+The following tabs demonstrate how to specify all available compressors
+while connecting to MongoDB:
 
 .. include:: /includes/connect/compression-tabs.rst
 
@@ -137,38 +144,19 @@ Compression Algorithms
 zlib Compression Level
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. tabs::
+The following tabs demonstrate how to specify a compression level for
+the ``zlib`` compressor:
 
-   .. tab:: MongoClient
-      :tabid: mongoclient
-
-      .. code-block:: kotlin
-
-         val zlib = MongoCompressor.createZlibCompressor()
-
-         val settings = MongoClientSettings.builder()
-             .applyConnectionString(ConnectionString(uri))
-             .compressorList(listOf(zlib.withProperty(MongoCompressor.LEVEL, <level>)))
-             .build()
-
-         val mongoClient = MongoClient.create(settings)
-
-   .. tab:: Connection String
-      :tabid: connectionstring
-
-      .. code-block:: kotlin
-
-         val uri = "mongodb://<username>:<password>@<hostname>:<port>/?" +
-                   "compressors=zlib" +
-                   "zlibCompressionLevel=<zlib compression level>"
-         
-         val mongoClient = MongoClient.create(uri)
+.. include:: /includes/connect/zlib-level-tabs.rst
 
 .. To learn more about setting the zlib compression level, see
 .. :ref:`kotlin-sync-enable-compression` in the Network Compression guide.
 
 Server Selection
 ----------------
+
+The following code shows a connection string that specifies a server
+selection function:
 
 .. code-block:: kotlin
 
@@ -180,6 +168,9 @@ Server Selection
 
 {+stable-api+}
 --------------
+
+The following code shows how to specify Stable API settings within a
+``MongoClientSettings`` instance:
 
 .. code-block:: kotlin
 
@@ -195,6 +186,5 @@ Server Selection
        .build()
    
    val client = MongoClient.create(settings)
-
 
 .. To learn more about the {+stable-api+}, see :ref:`kotlin-sync-stable-api`.
