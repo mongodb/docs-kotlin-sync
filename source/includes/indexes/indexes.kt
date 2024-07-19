@@ -34,6 +34,10 @@ fun main() {
     collection.dropIndex("_title_")
     // end-remove-index
 
+    // start-remove-all-indexes
+    collection.dropIndexes()
+    // end-remove-all-indexes
+
     // start-index-single
     collection.createIndex(Indexes.ascending(Movie::title.name))
     // end-index-single

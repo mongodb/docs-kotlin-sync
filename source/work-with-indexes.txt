@@ -25,8 +25,8 @@ Overview
 --------
 
 In this guide, you can learn how to use **indexes** with the {+driver-short+}.
-Indexes can improve the efficiency of queries and add additional functionality
-to querying and storing documents.
+Indexes can improve the efficiency of queries and add functionality to querying and
+storing documents.
 
 Without indexes, MongoDB must scan every document in a collection to find the
 documents that match each query. These collection scans are slow and can negatively affect
@@ -94,6 +94,7 @@ collection:
    :language: kotlin
    :start-after: start-remove-index
    :end-before: end-remove-index
+   :dedent:
 
 .. note::
 
@@ -107,9 +108,11 @@ Delete All Indexes
 Starting with MongoDB 4.2, you can drop all indexes by calling the
 ``dropIndexes()`` method on your collection:
 
-.. code-block:: kotlin
-
-   collection.dropIndexes()
+.. literalinclude:: /includes/indexes/indexes.kt
+   :language: kotlin
+   :start-after: start-remove-all-indexes
+   :end-before: end-remove-all-indexes
+   :dedent:
 
 API Documentation
 ~~~~~~~~~~~~~~~~~
