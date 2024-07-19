@@ -1,7 +1,7 @@
 import com.mongodb.ConnectionString
 import com.mongodb.MongoClientSettings
-import com.mongodb.kotlin.client.*
 import com.mongodb.client.model.*
+import com.mongodb.kotlin.client.*
 import org.bson.Document
 
 fun main() {
