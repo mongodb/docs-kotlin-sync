@@ -13,7 +13,7 @@ data class Movie(
     val id: ObjectId,
     val title: String? = "",
     val type: String? = "",
-    val genre: String? = "",
+    val genres: List<String>? = null,
     val cast: List<String>? = null,
     val plot: String? = "",
 )

@@ -23,7 +23,7 @@ Overview
 :manual:`Compound indexes </core/index-compound/>` hold references to multiple
 fields within a collection's documents, improving query and sort performance.
 
-When creating a single-field index, you must specify the following:
+When creating a compound index, you must specify the following:
 
 - The fields on which to create the index
 - The sort order for each field (ascending or descending)
@@ -47,7 +47,8 @@ The following {+language+} data class models the documents in this collection:
 Create a Compound Index
 -----------------------
 
-The following example creates a compound index on the ``type`` and ``genre`` fields:
+The following example creates a compound index on the ``type`` and ``genre`` fields, with
+both fields indexed in ascending order:
 
 .. literalinclude:: /includes/indexes/indexes.kt
    :start-after: start-index-compound
@@ -87,8 +88,8 @@ in the {+mdb-server+} manual.
 API Documentation
 ~~~~~~~~~~~~~~~~~
 
-To learn more about any of the methods or types discussed in this
-guide, see the following API Documentation:
+To learn more about any of the methods discussed in this guide, see the following API
+documentation:
 
 - `find() <{+api+}/mongodb-driver-kotlin-sync/com.mongodb.kotlin.client/-mongo-collection/find.html>`__
 - `filter() <{+api+}/mongodb-driver-kotlin-sync/com.mongodb.kotlin.client/-find-iterable/filter.html>`__
