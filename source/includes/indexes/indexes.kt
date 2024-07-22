@@ -69,5 +69,4 @@ fun main() {
         println(result)
     }
     // end-index-compound-query
-
 }
