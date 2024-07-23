@@ -41,11 +41,9 @@ Sample Data
 ~~~~~~~~~~~
 
 The examples in this guide use the ``sample_restaurants.restaurants`` collection
-from the :atlas:`Atlas sample datasets </sample-data>`.
-
-.. TODO To learn how to create a
-.. free MongoDB Atlas cluster and load the sample datasets, see the
-.. :ref:`<kotlin-sync-get-started>` tutorial.
+from the :atlas:`Atlas sample datasets </sample-data>`. To learn how to create a
+free MongoDB Atlas cluster and load the sample datasets, see the
+:atlas:`Get Started with Atlas </getting-started>` guide.
 
 The documents in this collection are modeled by the following {+language+} data class:
 
@@ -66,9 +64,7 @@ You can perform delete operations in MongoDB by using the following methods:
 
 Each delete method requires a **query filter** document, which specifies the
 search criteria that determine which documents to select for removal.
-For more information about query filters, see the 
-:manual:`Query Filter Documents section </core/document/#query-filter-documents>` in
-the {+mdb-server+} manual.
+To learn more about query filters, see the :ref:`kotlin-sync-specify-query` guide.
 
 Delete One Document
 ~~~~~~~~~~~~~~~~~~~
@@ -102,7 +98,7 @@ Customize the Delete Operation
 
 The ``deleteOne()`` and ``deleteMany()`` methods optionally accept a
 ``DeleteOptions`` parameter, which represents options you can use to
-configure the delete operation. If you don't specify any additional
+configure the delete operation. If you don't specify any
 options, the driver performs the delete operation with default settings.
 
 The following table describes the setter methods that you can use to

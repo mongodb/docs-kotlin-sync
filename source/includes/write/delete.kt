@@ -20,7 +20,7 @@ fun main() {
 
     // start-delete-many
     val filter = and(
-        eq(Restaurant::name.name, "Happy Garden"),
+        eq(Restaurant::borough.name, "Brooklyn"),
         eq(Restaurant::name.name, "Starbucks")
     )
     val result = collection.deleteMany(filter)
