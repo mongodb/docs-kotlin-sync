@@ -20,8 +20,8 @@ Atlas Search Indexes
 Overview
 --------
 
-The Atlas Search feature enables you to perform full-text searches on
-collections hosted on MongoDB Atlas. The indexes specify the behavior of
+:atlas:`Atlas Search </atlas-search>` enables you to perform full-text searches on
+collections hosted on MongoDB Atlas. Atlas Search indexes specify the behavior of
 the search and which fields to index.
 
 You can call the following methods on a collection to manage your Atlas Search
@@ -35,10 +35,9 @@ indexes:
 
 .. note::
 
-   The Atlas Search Index management methods run asynchronously. The
-   driver methods can return before confirming that they ran
-   successfully. To determine the current status of the indexes, call the
-   ``listSearchIndexes()`` method.
+   The Atlas Search index management methods run asynchronously, and might return before
+   confirming that they ran successfully. To determine the current status of the indexes,
+   call the ``listSearchIndexes()`` method.
 
 The following sections provide code examples that demonstrate how to use
 each of the preceding methods.
@@ -50,7 +49,7 @@ Create a Search Index
 
 You can use the `createSearchIndex() <{+api+}/mongodb-driver-kotlin-sync/com.mongodb.kotlin.client/-mongo-collection/create-search-index.html>`__
 and the `createSearchIndexes() <{+api+}/mongodb-driver-kotlin-sync/com.mongodb.kotlin.client/-mongo-collection/create-search-indexes.html>`__
-methods to create Atlas Search indexes.
+methods to create one or more Atlas Search indexes.
 
 The following code example shows how to create a single index:
 
@@ -68,6 +67,10 @@ The following code example shows how to create multiple indexes:
    :end-before: end-create-search-indexes
    :dedent:
 
+To learn more about the syntax used when defining Atlas Search indexes, see the
+:atlas:`Review Atlas Search Index Syntax </atlas-search/index-definitions>` guide
+in the Atlas manual.
+
 .. _kotlin-sync-atlas-search-index-list:
 
 List Search Indexes
@@ -75,9 +78,9 @@ List Search Indexes
 
 You can use the
 `listSearchIndexes() <{+api+}/mongodb-driver-kotlin-sync/com.mongodb.kotlin.client/-mongo-collection/list-search-indexes.html>`__
-method to return the Atlas Search indexes of a collection.
+method to return all Atlas Search indexes in a collection.
 
-The following code example shows how to print a list of the search indexes of
+The following code example shows how to print a list of the search indexes in
 a collection:
 
 .. literalinclude:: /includes/indexes/indexes.kt
