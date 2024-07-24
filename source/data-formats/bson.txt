@@ -35,12 +35,12 @@ MongoDB and BSON
 ----------------
 
 You can use BSON data with your {+driver-short+} application by using one of the
-following object types that implements the `BSON interface <{+api+}/apidocs/bson/org/bson/conversions/Bson.html>`__:
+following object types that implements the `BSON interface <{+java-api+}/apidocs/bson/org/bson/conversions/Bson.html>`__:
 
-- `Document <{+api+}/apidocs/bson/org/bson/Document.html>`__ (BSON library package)
-- `BsonDocument <{+api+}/apidocs/bson/org/bson/BsonDocument.html>`__ (BSON library package)
-- `RawBsonDocument <{+api+}/apidocs/bson/org/bson/RawBsonDocument.html>`__ (BSON library package)
-- `JsonObject <{+api+}/apidocs/bson/org/bson/json/JsonObject.html>`__ (BSON library package)
+- `Document <{+java-api+}/apidocs/bson/org/bson/Document.html>`__ (BSON library package)
+- `BsonDocument <{+java-api+}/apidocs/bson/org/bson/BsonDocument.html>`__ (BSON library package)
+- `RawBsonDocument <{+java-api+}/apidocs/bson/org/bson/RawBsonDocument.html>`__ (BSON library package)
+- `JsonObject <{+java-api+}/apidocs/bson/org/bson/json/JsonObject.html>`__ (BSON library package)
 
 .. _install-bson-library:
 
@@ -48,9 +48,13 @@ Install the BSON Library
 ------------------------
 
 These instructions detail how to add the BSON library as a dependency to
-your project. If you added the MongoDB Kotlin driver as a dependency to your
-project, you can skip this step since the BSON library is already included
-as a required dependency of the driver.
+your project.
+
+.. note::
+
+   If you have already added the {+driver-short+} as a dependency to your
+   project, then you can skip this step. This is because the BSON library is already
+   included as a required dependency of the driver.
 
 .. TODO: For instructions on how to add the
 .. MongoDB Kotlin driver as a dependency to your project, see the
@@ -58,8 +62,8 @@ as a required dependency of the driver.
 .. guide.
 
 We recommend that you use the `Maven <https://maven.apache.org/>`__ or
-`Gradle <https://gradle.org/>`__ build automation tool to manage your project's
-dependencies. Select from the following tabs to see the dependency declaration
+`Gradle <https://gradle.org/>`__ build automation tool to manage your {+language+}
+project's dependencies. Select from the following tabs to see the dependency declaration
 for that tool:
 
 .. tabs::
@@ -80,6 +84,6 @@ for that tool:
 
       .. include:: /includes/data-formats/bson-gradle-versioned.rst
 
-If you are not using one of the preceding tools, you can include it in
-your project by downloading the JAR file directly from the
+If you are not using either of the preceding tools, then you can include the BSON dependency
+in your project by downloading the JAR file directly from the
 `sonatype repository <https://repo1.maven.org/maven2/org/mongodb/bson/>`__.
