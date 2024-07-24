@@ -121,10 +121,11 @@ The following example inserts a list of documents into the
 Modify Insert Behavior
 ----------------------
 
-The ``insertOne()`` method optionally accepts a parameter
-that sets options to configure the insert operation.
+The ``insertOne()`` method optionally accepts an ``InsertOneOptions``
+parameter that sets options to configure the insert operation.
 If you don't specify any options, the driver performs the insert
-operation with default settings.
+operation with default settings. Pass options as the last parameter to
+the ``insertOne()`` method.
 
 The following table describes the setter methods that you can use to
 configure an ``InsertOneOptions`` instance:
@@ -133,7 +134,7 @@ configure an ``InsertOneOptions`` instance:
    :widths: 30 70
    :header-rows: 1
 
-   * - Property
+   * - Method
      - Description
 
    * - ``bypassDocumentValidation()``
@@ -149,16 +150,28 @@ configure an ``InsertOneOptions`` instance:
 You can set the preceding settings on the ``insertMany()`` method
 by configuring an ``InsertManyOptions`` instance. You can also use the
 ``ordered()`` method setter method to specify the order in which the driver
-inserts documents into MongoDB. If set to ``true``, the driver sends documents to the
-server in the order provided. If an error occurs, the driver and server
-cancel all remaining insert operations. The driver performs ordered
-inserts by default.
+inserts documents into MongoDB:
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Method
+     - Description
+
+   * - ``ordered()``
+     - | If set to ``true``, the driver sends documents to the
+         server in the order provided. If an error occurs, the driver
+         cancels all remaining insert operations. 
+       | Defaults to ``true``.
+
+Pass options as the last parameter to the ``insertMany()`` method.
 
 Modify Insert Example
 ~~~~~~~~~~~~~~~~~~~~~
 
-The following code creates options and uses the ``bypassDocumentValidation()`` method to
-ignore document validation rules. Then, the example uses the
+The following code uses the ``bypassDocumentValidation()`` method to
+set the option to ignore document validation rules. Then, the example uses the
 ``insertMany()`` method to add new documents to the ``restaurants``
 collection.
 
@@ -178,16 +191,34 @@ the ``insertMany()`` method returns an ``InsertManyResult`` instance.
 You can use the following methods to retrieve information from
 an ``InsertOneResult`` instance:
 
-- ``getInsertedId()``, which indicates the ``_id`` value of the inserted document
-- ``wasAcknowledged()``, which returns ``true`` if the server
-  acknowledges the result
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Method
+     - Description
+
+   * - ``getInsertedId()``
+     - Indicates the ``_id`` value of the inserted document.
+
+   * - ``wasAcknowledged()``
+     - Returns ``true`` if the server acknowledges the result.
 
 You can use the following methods to retrieve information from
 an ``InsertOneResult`` instance:
 
-- ``getInsertedIds()``, which indicates the ``_id`` values of the inserted documents
-- ``wasAcknowledged()``, which returns ``true`` if the server
-  acknowledges the result
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Method
+     - Description
+
+   * - ``getInsertedIds()``
+     - Indicates the ``_id`` values of the inserted documents.
+
+   * - ``wasAcknowledged()``
+     - Returns ``true`` if the server acknowledges the result.
 
 .. note::
 
