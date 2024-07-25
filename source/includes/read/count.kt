@@ -1,4 +1,3 @@
-package org.example
 import com.mongodb.ConnectionString
 import com.mongodb.MongoClientSettings
 import com.mongodb.client.model.*
