@@ -14,7 +14,8 @@ data class Movie(
     @BsonId
     val id: ObjectId,
     val title: String? = "",
-    val genre: String? = "",
+    val type: String? = "",
+    val genres: List<String>? = null,
     val cast: List<String>? = null,
     val plot: String? = "",
 )
@@ -54,6 +55,23 @@ fun main() {
     }
     // end-index-single-query
 
+    // start-index-compound
+    collection.createIndex(Indexes.ascending(Movie::type.name, Movie::genres.name))
+    // end-index-compound
+
+    // start-index-compound-query
+    val filter = and(
+        eq(Movie::type.name, "movie"),
+        `in`(Movie::genres.name, "Drama")
+    )
+    val sort = Sorts.ascending(Movie::type.name, Movie::genres.name)
+    val results = collection.find(filter).sort(sort)
+
+    results.forEach { result ->
+        println(result)
+    }
+    // end-index-compound-query
+    
     // start-create-search-index
     val index = Document("mappings", Document("dynamic", true))
     collection.createSearchIndex("<index name>", index)
@@ -81,5 +99,4 @@ fun main() {
     // start-drop-search-index
     collection.dropIndex("<index to delete>")
     // end-drop-search-index
-
 }
