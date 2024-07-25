@@ -54,8 +54,9 @@ Each update method requires the following parameters:
 - **Query filter**, which matches which documents to update. To learn
   more about query filters, see the :ref:`kotlin-sync-specify-query`
   guide.
+
 - **Update document**, which specifies the update operator, or the kind of update to
-  perform, and the fields and values that should change. For a list of update
+  perform, and the fields and values to be updated. For a list of update
   operators and their usages, see the :manual:`Field Update Operators
   guide page</reference/operator/update-field/>` in the {+mdb-server+} manual.
 
@@ -71,6 +72,7 @@ House"``:
    :end-before: end-update-one
    :language: kotlin
    :copyable:
+   :dedent:
 
 Update Many Documents
 ~~~~~~~~~~~~~~~~~~~~~
@@ -84,6 +86,7 @@ in which the ``name`` value is ``"Starbucks"``. The update renames the
    :end-before: end-update-many
    :language: kotlin
    :copyable:
+   :dedent:
 
 Customize the Update Operation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -124,11 +127,11 @@ configure an ``UpdateOptions`` instance:
          in the {+mdb-server+} manual.
 
    * - ``arrayFilters()``
-     - | Contains a list of filters that specifies which array elements an update applies
-         to.
+     - | Provides a list of filters that you specify to select which
+         array elements the update applies to.
 
    * - ``hint()``
-     - | Gets or sets the index to scan for documents. 
+     - | Sets the index to use when matching documents. 
          For more information, see the :manual:`hint statement </reference/command/update/#std-label-update-command-hint>`
          in the {+mdb-server+} manual.
 
@@ -150,19 +153,20 @@ Modify Update Example
 `````````````````````
 
 The following code uses the ``updateOne()`` method to match documents
-in which the ``name`` field has the value ``"Sunrise Pizzeria"``. It then
-sets the ``borough`` value in these documents to ``"Queens"`` and the
-``cuisine`` value to ``"Italian"``.
+in which the ``name`` field value is ``"Sunrise Pizzeria"``. It then
+sets the ``borough`` value in the first matching document to
+``"Queens"`` and the ``cuisine`` value to ``"Italian"``.
 
 Because the ``upsert`` option is set to ``true``, the driver inserts a
-new document that has the fields and values in the update document if
-the query filter doesn't match any existing documents.
+new document that has the fields and values specified in the update
+document if the query filter doesn't match any existing documents.
 
 .. literalinclude:: /includes/write/update.kt
    :start-after: start-update-options
    :end-before: end-update-options
    :language: kotlin
    :copyable:
+   :dedent:
 
 Return Value
 ~~~~~~~~~~~~
