@@ -4,6 +4,6 @@
        <dependency>
            <groupId>org.mongodb</groupId>
            <artifactId>bson</artifactId>
-           <version>{+patch-version-number+}</version>
+           <version>{+full-version+}</version>
        </dependency>
    </dependencies>

@@ -1,5 +1,5 @@
 .. code-block:: kotlin
 
    dependencies {
-      implementation("org.mongodb:bson:{+patch-version-number+}")
+      implementation("org.mongodb:bson:{+full-version+}")
    }
