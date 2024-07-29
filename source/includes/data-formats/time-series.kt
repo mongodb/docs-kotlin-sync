@@ -20,8 +20,8 @@ fun main() {
     // start-create-time-series
     val database = mongoClient.getDatabase("fall_weather")
 
-    val timeSeriesOptions = TimeSeriesOptions("timestamp")
-    val collectionOptions = CreateCollectionOptions().timeSeriesOptions(timeSeriesOptions)
+    val tsOptions = TimeSeriesOptions("timestamp")
+    val collectionOptions = CreateCollectionOptions().timeSeriesOptions(tsOptions)
 
     database.createCollection("october2024", collectionOptions)
     // end-create-time-series
