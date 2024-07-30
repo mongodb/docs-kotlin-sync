@@ -21,7 +21,7 @@ Overview
 --------
 
 Within a collection, different documents might contain different values for a single field.
-For example, one ``restaurant`` document has a ``borough`` value of ``"Manhattan"``, and
+For example, one document in the ``restaurant`` collection has a ``borough`` value of ``"Manhattan"``, and
 another has a ``borough`` value of ``"Queens"``. With the {+driver-short+}, you can
 retrieve all the distinct values that a field contains across multiple documents
 in a collection.
@@ -34,7 +34,7 @@ database from the :atlas:`Atlas sample datasets </sample-data>`. To learn how to
 free MongoDB Atlas cluster and load the sample datasets, see the
 :atlas:`Get Started with Atlas </getting-started>` guide.
 
-The following {+language+} data class models the document in this collection:
+The following {+language+} data class models the documents in this collection:
 
 .. literalinclude:: /includes/read/distinct.kt
    :start-after: start-data-class
