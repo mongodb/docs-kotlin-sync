@@ -28,9 +28,10 @@ fun main() {
 
     // start-print-time-series
     val results = database.listCollections()
+    val jsonSettings = JsonWriterSettings.builder().indent(true).build()
 
     results.forEach { result ->
-        println(result.toJson(JsonWriterSettings.builder().indent(true).build()))
+        println(result.toJson(jsonSettings))
     }
     // end-print-time-series
 
