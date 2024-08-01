@@ -1,0 +1,110 @@
+.. _kotlin-sync-builders:
+
+================
+Use Builders API
+================
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+.. .. toctree::
+
+..    /fundamentals/builders/aggregates
+..    /fundamentals/builders/filters
+..    /fundamentals/builders/indexes
+..    /fundamentals/builders/projections
+..    /fundamentals/builders/sort
+..    /fundamentals/builders/updates
+
+Overview
+--------
+
+This page describes how to use the builders API and demonstrates the utility provided by
+{+driver-short+} builder classes.
+
+The {+driver-short+} provides classes and methods that enable developers to efficiently
+build queries and aggregations.
+
+Why Use Builders?
+-----------------
+
+When using the MongoDB shell or plain Kotlin to construct BSON documents, you are not
+able to identify errors in your code until runtime.
+
+With builder classes, you can write operators as methods and any syntax errors will be
+caught at compile time.
+
+Example
+-------
+
+This section describes three methods of fetching the ``email`` field values of documents
+in the ``users`` collection that meet the following criteria:
+
+- Users that identify as ``female``
+- Users that are older than ``29``
+
+The following data class models the documents in the ``users`` collection:
+
+.. literalinclude:: /includes/builders/builders.kt
+   :start-after: start-user-class
+   :end-before: end-user-class
+   :language: kotlin
+   :copyable:
+   :dedent:
+
+The following data class models the results returned by our query:
+
+.. literalinclude:: /includes/builders/builders.kt
+   :start-after: start-result-class
+   :end-before: end-result-class
+   :language: kotlin
+   :copyable:
+   :dedent:
+
+Using the MongoDB Shell
+~~~~~~~~~~~~~~~~~~~~~~~
+
+The following sample executes the previously defined query using the MongoDB shell:
+
+.. code-block:: js
+
+   collection.find({ "gender": "female", "age" : { "$gt": 29 }}, { "_id": 0, "email": 1 })
+
+Without Using Builders
+~~~~~~~~~~~~~~~~~~~~~~
+
+The following example executes the previously defined query using plain {+language+}:
+
+.. literalinclude:: /includes/builders/builders.kt
+   :start-after: start-find
+   :end-before: end-find
+   :language: kotlin
+   :copyable:
+   :dedent:
+
+Using Builders
+~~~~~~~~~~~~~~
+
+The following example executes the previously defined query using the builders API:
+
+.. literalinclude:: /includes/builders/builders.kt
+   :start-after: start-find-builders
+   :end-before: end-find-builders
+   :language: kotlin
+   :copyable:
+   :dedent:
+
+.. TODO: Uncomment as pages get built
+
+.. Available Builders
+.. ------------------
+
+.. - :ref:`Aggregates <aggregates-builders>` for building aggregation pipelines.
+.. - :ref:`Filters <filters-builders>` for building query filters.
+.. - :ref:`Indexes <indexes-builders>` for creating index keys.
+.. - :ref:`Projections <projections-builders>` for building projections. 
+.. - :ref:`Sorts <sorts-builders>` for building sort criteria.
+.. - :ref:`Updates <updates-builders>` for building updates.
