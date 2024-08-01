@@ -3,7 +3,11 @@ import com.mongodb.client.model.Filters.*
 import com.mongodb.kotlin.client.MongoClient
 
 // start-data-class
-data class Restaurant(val name: String, val borough: String, val cuisine: String)
+data class Restaurant(
+    val name: String,
+    val borough: String,
+    val cuisine: String
+)
 // end-data-class
 
 fun main() {

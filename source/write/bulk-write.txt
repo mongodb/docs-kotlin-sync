@@ -178,8 +178,8 @@ The following example creates an instance of ``DeleteMany``:
 
 .. _kotlin-sync-bulkwrite-method:
 
-Call the bulkWrite() Method
----------------------------
+Perform the Bulk Operation
+--------------------------
 
 After you define a class instance for each operation you want to perform,
 pass a list of these instances to the ``bulkWrite()`` method.
@@ -213,8 +213,8 @@ operation that failed, and details about the exception.
    target collection. The driver reports all write concern errors after
    attempting all operations, regardless of execution order.
 
-Customize Bulk Write Operations
--------------------------------
+Customize Bulk Write Operation
+------------------------------
 
 The ``bulkWrite()`` method optionally accepts a parameter which
 specifies options you can use to configure the bulk write
@@ -256,7 +256,7 @@ configure a ``BulkWriteOptions`` instance:
          variables for the operation. Values must be constant or closed
          expressions that don't reference document fields.
 
-The following code creates options and uses the ``ordered()`` method to
+The following code creates options and uses the ``ordered(false)`` option to
 specify an unordered bulk write. Then, the example uses the
 ``bulkWrite()`` method to perform a bulk operation:
 
@@ -271,8 +271,8 @@ reports the errors only after attempting all operations.
 
 .. note::
 
-   Unordered bulk operations do not guarantee an order of execution. The order can
-   differ from the way you list them to optimize the runtime.
+   Unordered bulk operations do not guarantee an order of execution. The
+   order can differ from the way you list them to optimize the runtime.
 
 Return Value
 ------------
@@ -332,3 +332,5 @@ guide, see the following API Documentation:
 - `ReplaceOneModel <{+core-api+}/com/mongodb/client/model/ReplaceOneModel.html>`__
 - `UpdateManyModel <{+core-api+}/com/mongodb/client/model/UpdateManyModel.html>`__
 - `UpdateOneModel <{+core-api+}/com/mongodb/client/model/UpdateOneModel.html>`__
+- `BulkWriteOptions <{+core-api+}/com/mongodb/client/model/BulkWriteOptions.html>`__
+- `BulkWriteResult <{+core-api+}/com/mongodb/bulk/BulkWriteResult.html>`__
