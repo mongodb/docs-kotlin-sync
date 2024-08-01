@@ -81,6 +81,7 @@ The following example creates an instance of ``InsertOneModel``:
    :end-before: end-bulk-insert-one
    :language: kotlin
    :copyable:
+   :dedent:
 
 To insert multiple documents, create an instance of ``InsertOneModel``
 for each document.
@@ -113,6 +114,7 @@ The following example creates an instance of ``UpdateOneModel``:
    :end-before: end-bulk-update-one
    :language: kotlin
    :copyable:
+   :dedent:
 
 To update multiple documents, create an instance of ``UpdateManyModel`` and pass
 the same arguments as for ``UpdateOneModel``. The ``UpdateManyModel``
@@ -126,6 +128,7 @@ The following example creates an instance of ``UpdateManyModel``:
    :end-before: end-bulk-update-many
    :language: kotlin
    :copyable:
+   :dedent:
 
 Replace Operations
 ~~~~~~~~~~~~~~~~~~
@@ -143,6 +146,7 @@ The following example creates an instance of ``ReplaceOneModel``:
    :end-before: end-bulk-replace-one
    :language: kotlin
    :copyable:
+   :dedent:
 
 To replace multiple documents, you must create an instance of
 ``ReplaceOneModel`` for each document.
@@ -162,6 +166,7 @@ The following example creates an instance of ``DeleteOneModel``:
    :end-before: end-bulk-delete-one
    :language: kotlin
    :copyable:
+   :dedent:
 
 To delete multiple documents, create an instance of ``DeleteManyModel`` and pass a
 query filter specifying the document you want to delete. An instance of
@@ -175,6 +180,7 @@ The following example creates an instance of ``DeleteMany``:
    :end-before: end-bulk-delete-many
    :language: kotlin
    :copyable:
+   :dedent:
 
 .. _kotlin-sync-bulkwrite-method:
 
@@ -195,6 +201,7 @@ The following example performs multiple write operations by using the
       :start-after: start-bulk-write-mixed
       :end-before: end-bulk-write-mixed
       :language: kotlin
+      :dedent:
 
    .. output::
       
@@ -265,6 +272,7 @@ specify an unordered bulk write. Then, the example uses the
    :end-before: end-bulk-write-unordered
    :language: kotlin
    :copyable:
+   :dedent:
 
 If any of the write operations in an unordered bulk write fail, the {+driver-short+}
 reports the errors only after attempting all operations.
