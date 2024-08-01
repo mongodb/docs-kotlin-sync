@@ -50,7 +50,7 @@ The documents in this collection are modeled by the following {+language+} data 
 Define the Write Operations
 ---------------------------
 
-For each write operation you want to perform, create a correspinding
+For each write operation you want to perform, create a corresponding
 instance of one of the following operation classes that inherit from the
 generic ``WriteModel`` class:
 
@@ -65,7 +65,8 @@ Then, pass a list of these instances to the ``bulkWrite()`` method.
 
 The following sections show how to create and use instances of the
 preceding classes. The :ref:`kotlin-sync-bulkwrite-method` section
-demonstrates how to pass a list of models to the ``bulkWrite()`` method.
+demonstrates how to pass a list of models to the ``bulkWrite()`` method
+to perform the bulk operation.
 
 Insert Operations
 ~~~~~~~~~~~~~~~~~
@@ -73,7 +74,7 @@ Insert Operations
 To perform an insert operation, create an ``InsertOneModel`` instance and specify
 the document you want to insert.
 
-The following example creates an instance of ``InsertOne``:
+The following example creates an instance of ``InsertOneModel``:
 
 .. literalinclude:: /includes/write/bulk.kt
    :start-after: start-bulk-insert-one
@@ -81,12 +82,20 @@ The following example creates an instance of ``InsertOne``:
    :language: kotlin
    :copyable:
 
-To insert multiple documents, create an instance of ``InsertOne`` for each document.
+To insert multiple documents, create an instance of ``InsertOneModel``
+for each document.
+
+.. important::
+
+   When performing a bulk operation, the ``InsertOneModel`` cannot
+   insert a document with an ``_id`` that already exists in the
+   collection. In this situation, the driver throws a
+   ``MongoBulkWriteException``.
 
 Update Operations
 ~~~~~~~~~~~~~~~~~
 
-To update a document, create an instance of ``UpdateOne`` and pass in
+To update a document, create an instance of ``UpdateOneModel`` and pass
 the following arguments:
 
 - A **query filter** that specifies the criteria used to match documents in your collection
@@ -94,9 +103,10 @@ the following arguments:
   operations, see the :manual:`Field Update Operators
   </reference/operator/update-field/>` guide in the {+mdb-server+} manual.
 
-``UpdateOne`` updates *the first* document that matches your query filter.
+An ``UpdateOneModel`` instance specifies an update for *the first*
+document that matches your query filter.
 
-The following example creates an instance of ``UpdateOne``:
+The following example creates an instance of ``UpdateOneModel``:
 
 .. literalinclude:: /includes/write/bulk.kt
    :start-after: start-bulk-update-one
@@ -104,11 +114,12 @@ The following example creates an instance of ``UpdateOne``:
    :language: kotlin
    :copyable:
 
-To update multiple documents, create an instance of ``UpdateMany`` and pass in
-the same arguments. ``UpdateMany`` updates *all* documents that match your query
+To update multiple documents, create an instance of ``UpdateManyModel`` and pass
+the same arguments as for ``UpdateOneModel``. The ``UpdateManyModel``
+class specifies updates for *all* documents that match your query
 filter.
 
-The following example creates an instance of ``UpdateMany``:
+The following example creates an instance of ``UpdateManyModel``:
 
 .. literalinclude:: /includes/write/bulk.kt
    :start-after: start-bulk-update-many
@@ -120,11 +131,12 @@ Replace Operations
 ~~~~~~~~~~~~~~~~~~
 
 A replace operation removes all fields and values of a specified document and
-replaces them with new ones. To perform a replace operation, create an instance
-of ``ReplaceOne`` and pass it a query filter and the fields and values you want
-to store in the matching document.
+replaces them with new fields and values that you specify. To perform a
+replace operation, create an instance of ``ReplaceOneModel`` and pass a
+query filter and the fields and values you want to replace the matching
+document with.
 
-The following example creates an instance of ``ReplaceOne``:
+The following example creates an instance of ``ReplaceOneModel``:
 
 .. literalinclude:: /includes/write/bulk.kt
    :start-after: start-bulk-replace-one
@@ -132,16 +144,18 @@ The following example creates an instance of ``ReplaceOne``:
    :language: kotlin
    :copyable:
 
-To replace multiple documents, you must create an instance of ``ReplaceOne`` for each document.
+To replace multiple documents, you must create an instance of
+``ReplaceOneModel`` for each document.
 
 Delete Operations
 ~~~~~~~~~~~~~~~~~
 
-To delete a document, create an instance of ``DeleteOne`` and pass in a
-query filter specifying the document you want to delete. ``DeleteOne`` removes
+To delete a document, create an instance of ``DeleteOneModel`` and pass a
+query filter specifying the document you want to delete. A
+``DeleteOneModel`` instance provides instructions to delete
 only *the first* document that matches your query filter.
 
-The following example creates an instance of ``DeleteOne``:
+The following example creates an instance of ``DeleteOneModel``:
 
 .. literalinclude:: /includes/write/bulk.kt
    :start-after: start-bulk-delete-one
@@ -149,9 +163,10 @@ The following example creates an instance of ``DeleteOne``:
    :language: kotlin
    :copyable:
 
-To delete multiple documents, create an instance of ``DeleteMany`` and pass in a
-query filter specifying the document you want to delete. ``DeleteMany`` removes
-*all* documents that match your query filter.
+To delete multiple documents, create an instance of ``DeleteManyModel`` and pass a
+query filter specifying the document you want to delete. An instance of
+``DeleteMany`` provides instructions to remove *all* documents that
+match your query filter.
 
 The following example creates an instance of ``DeleteMany``:
 
@@ -163,16 +178,16 @@ The following example creates an instance of ``DeleteMany``:
 
 .. _kotlin-sync-bulkwrite-method:
 
-Call the ``bulk_write()`` Method
---------------------------------
+Call the bulkWrite() Method
+---------------------------
 
 After you define a class instance for each operation you want to perform,
-pass a list of these instances to the ``bulk_write()`` method.
+pass a list of these instances to the ``bulkWrite()`` method.
 By default, the method runs the operations in the order
-they're defined in the list.
+that specified by the list of models.
 
 The following example performs multiple write operations by using the
-``bulk_write()`` method:
+``bulkWrite()`` method:
 
 .. io-code-block::
 
@@ -183,7 +198,7 @@ The following example performs multiple write operations by using the
 
    .. output::
       
-      BulkWriteResult({'writeErrors': [], 'writeConcernErrors': [], 'nInserted': 2, 'nUpserted': 0, 'nMatched': 2, 'nModified': 2, 'nRemoved': 1, 'upserted': []}, acknowledged=True)
+      
 
 If any of the write operations fail, {+driver-short+} raises a
 ``BulkWriteError`` and does not perform any further operations.
@@ -192,17 +207,20 @@ that failed, and details about the exception.
 
 .. note::
 
-   When {+driver-short+} runs a bulk operation, it uses the ``write_concern`` of the
-   collection in which the operation is running. The driver reports all write
-   concern errors after attempting all operations, regardless of execution order. 
+   When the driver runs a bulk operation, it uses the write concern of the
+   target collection. The driver reports all write concern errors after
+   attempting all operations, regardless of execution order.
 
 Customize Bulk Write Operations
 -------------------------------
 
-The ``bulk_write()`` method optionally accepts additional
-parameters, which represent options you can use to configure the bulk write
-operation. If you don't specify any additional options, the driver does not customize
-the bulk write operation.
+The ``bulkWrite()`` method optionally accepts a parameter which
+specifies options you can use to configure the bulk write
+operation. If you don't specify any options, the driver performs the
+bulk operation with default settings.
+
+The following table describes the setter methods that you can use to
+configure a ``BulkWriteOptions`` instance:
 
 .. list-table::
    :widths: 30 70
@@ -211,40 +229,34 @@ the bulk write operation.
    * - Property
      - Description
 
-   * - ``ordered``
-     - | If ``True``, the driver performs the write operations in the order
+   * - ``ordered()``
+     - | If ``true``, the driver performs the write operations in the order
          provided. If an error occurs, the remaining operations are not
          attempted. 
        |
-       | If ``False``, the driver performs the operations in an
+       | If ``false``, the driver performs the operations in an
          arbitrary order and attempts to perform all operations.
-       | Defaults to ``True``.
+       | Defaults to ``true``.
 
-   * - ``bypass_document_validation``
-     - | Specifies whether the operation bypasses document-level validation. For more
-         information, see :manual:`Schema
+   * - ``bypassDocumentValidation()``
+     - | Specifies whether the update operation bypasses document validation. This lets you 
+         update documents that don't meet the schema validation requirements, if any 
+         exist. For more information about schema validation, see :manual:`Schema
          Validation </core/schema-validation/#schema-validation>` in the MongoDB
          Server manual.
-       | Defaults to ``False``.
+       | Defaults to ``false``.
 
-   * - ``session``
-     - | An instance of ``ClientSession``. For more information, see the `API
-         documentation <{+api-root+}pymongo/client_session.html#pymongo.client_session.ClientSession>`__.
+   * - ``comment()``
+     - | Sets a comment to attach to the operation.
 
-   * - ``comment``
-     - | A comment to attach to the operation. For more information, see the :manual:`delete command
-         fields </reference/command/delete/#command-fields>` guide in the
-         {+mdb-server+} manual.
+   * - ``let()``
+     - | Provides a map of parameter names and values to set top-level
+         variables for the operation. Values must be constant or closed
+         expressions that don't reference document fields.
 
-   * - ``let``
-     - | A map of parameter names and values. Values must be constant or closed
-         expressions that don't reference document fields. For more information,
-         see the :manual:`let statement
-         </reference/command/delete/#std-label-delete-let-syntax>` in the
-         {+mdb-server+} manual.
-
-The following example calls the ``bulk_write()`` method from the preceding example, with the ``ordered`` option set
-to ``False``:
+The following code creates options and uses the ``ordered()`` method to
+specify an unordered bulk write. Then, the example uses the
+``bulkWrite()`` method to perform a bulk operation:
 
 .. literalinclude:: /includes/write/bulk.kt
    :start-after: start-bulk-write-unordered
@@ -252,19 +264,19 @@ to ``False``:
    :language: kotlin
    :copyable:
 
-If any of the write operations in an unordered bulk write fail, {+driver-short+}
+If any of the write operations in an unordered bulk write fail, the {+driver-short+}
 reports the errors only after attempting all operations.
 
 .. note::
 
-   Unordered bulk operations do not guarantee order of execution. The order can
+   Unordered bulk operations do not guarantee an order of execution. The order can
    differ from the way you list them to optimize the runtime.
 
 Return Value
 ------------
 
-The ``bulk_write()`` method returns a ``BulkWriteResult`` object. The
-``BulkWriteResult`` object contains the following properties:
+The ``bulkWrite()`` method returns a ``BulkWriteResult`` object. You can
+access the following information from a ``BulkWriteResult`` instance:
 
 .. list-table::
    :widths: 30 70
@@ -273,40 +285,37 @@ The ``bulk_write()`` method returns a ``BulkWriteResult`` object. The
    * - Property
      - Description
 
-   * - ``acknowledged``
+   * - ``wasAcknowledged()``
      - | Indicates if the server acknowledged the write operation.
-
-   * - ``bulk_api_result``
-     - | The raw bulk API result returned by the server.
          
-   * - ``deleted_count``
+   * - ``getDeletedCount()``
      - | The number of documents deleted, if any.
 
-   * - ``inserted_count``
+   * - ``getInsertedCount()``
      - | The number of documents inserted, if any.
 
-   * - ``matched_count``
+   * - ``getInserts()``
+     - | The list of inserted documents, if any.
+
+   * - ``getMatchedCount()``
      - | The number of documents matched for an update, if applicable.
 
-   * - ``modified_count``
+   * - ``getModifiedCount()``
      - | The number of documents modified, if any.
 
-   * - ``upserted_count``
-     - | The number of documents upserted, if any.
-
-   * - ``upserted_ids``
-     - | A map of the operation's index to the ``_id`` of the upserted documents, if
-         applicable.
+   * - ``getUpserts()``
+     - | The list of upserted documents, if any.
 
 Additional Information
 ----------------------
 
 To learn how to perform individual write operations, see the following guides:
 
-- :ref:`pymongo-write-insert`
-- :ref:`pymongo-write-update`
-- :ref:`pymongo-write-replace`
-- :ref:`pymongo-write-delete`
+- :ref:`kotlin-sync-write-insert`
+- :ref:`kotlin-sync-write-update`
+- :ref:`kotlin-sync-write-delete`
+
+.. - :ref:`kotlin-sync-write-replace`
 
 API Documentation
 ~~~~~~~~~~~~~~~~~
@@ -314,12 +323,10 @@ API Documentation
 To learn more about any of the methods or types discussed in this
 guide, see the following API Documentation:
 
-- `bulk_write() <{+api-root+}pymongo/collection.html#pymongo.collection.Collection.bulk_write>`__
-- `InsertOne <{+api-root+}pymongo/operations.html#pymongo.operations.InsertOne>`__
-- `UpdateOne <{+api-root+}pymongo/operations.html#pymongo.operations.UpdateOne>`__
-- `UpdateMany <{+api-root+}pymongo/operations.html#pymongo.operations.UpdateMany>`__
-- `ReplaceOne <{+api-root+}pymongo/operations.html#pymongo.operations.ReplaceOne>`__
-- `DeleteOne <{+api-root+}pymongo/operations.html#pymongo.operations.DeleteOne>`__
-- `DeleteMany <{+api-root+}pymongo/operations.html#pymongo.operations.DeleteMany>`__
-- `BulkWriteResult <{+api-root+}pymongo/results.html#pymongo.results.BulkWriteResult>`__
-- `BulkWriteError <{+api-root+}pymongo/errors.html#pymongo.errors.BulkWriteError>`__
+- `bulkWrite() <{+api+}/mongodb-driver-kotlin-sync/com.mongodb.kotlin.client/-mongo-collection/bulk-write.html>`__
+- `DeleteManyModel <{+core-api+}/com/mongodb/client/model/DeleteManyModel.html>`__
+- `DeleteOneModel <{+core-api+}/com/mongodb/client/model/DeleteOneModel.html>`__
+- `InsertOneModel <{+core-api+}/com/mongodb/client/model/InsertOneModel.html>`__
+- `ReplaceOneModel <{+core-api+}/com/mongodb/client/model/ReplaceOneModel.html>`__
+- `UpdateManyModel <{+core-api+}/com/mongodb/client/model/UpdateManyModel.html>`__
+- `UpdateOneModel <{+core-api+}/com/mongodb/client/model/UpdateOneModel.html>`__
