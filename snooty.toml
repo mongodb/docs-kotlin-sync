@@ -7,11 +7,13 @@ intersphinx = [ "https://www.mongodb.com/docs/manual/objects.inv",
               ]
 
 toc_landing_pages = [
+    "/write-operations",
     "/get-started",
     "/read",
     "/connect",
     "/indexes",
     "work-with-indexes",
+    "/data-formats"
 ]
 
 sharedinclude_root = "https://raw.githubusercontent.com/10gen/docs-shared/main/"
@@ -26,5 +28,6 @@ version = "v{+version-number+}"
 mdb-server = "MongoDB Server"
 stable-api = "Stable API"
 api = "https://mongodb.github.io/mongo-java-driver/{+version-number+}/apidocs/mongodb-driver-kotlin-sync"
+java-api = "https://mongodb.github.io/mongo-java-driver/{+version-number+}"
+core-api = "{+java-api+}/apidocs/mongodb-driver-core/"
 kotlin-docs = "https://kotlinlang.org"
-core-api = "https://mongodb.github.io/mongo-java-driver/{+version-number+}/apidocs/mongodb-driver-core"
