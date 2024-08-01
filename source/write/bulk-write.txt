@@ -54,12 +54,12 @@ For each write operation you want to perform, create a corresponding
 instance of one of the following operation classes that inherit from the
 generic ``WriteModel`` class:
 
-- ``DeleteManyModel``
-- ``DeleteOneModel``
 - ``InsertOneModel``
-- ``ReplaceOneModel``
-- ``UpdateManyModel``
 - ``UpdateOneModel``
+- ``UpdateManyModel``
+- ``ReplaceOneModel``
+- ``DeleteOneModel``
+- ``DeleteManyModel``
 
 Then, pass a list of these instances to the ``bulkWrite()`` method.
 
@@ -170,10 +170,10 @@ The following example creates an instance of ``DeleteOneModel``:
 
 To delete multiple documents, create an instance of ``DeleteManyModel`` and pass a
 query filter specifying the document you want to delete. An instance of
-``DeleteMany`` provides instructions to remove *all* documents that
+``DeleteManyModel`` provides instructions to remove *all* documents that
 match your query filter.
 
-The following example creates an instance of ``DeleteMany``:
+The following example creates an instance of ``DeleteManyModel``:
 
 .. literalinclude:: /includes/write/bulk.kt
    :start-after: start-bulk-delete-many
@@ -187,10 +187,10 @@ The following example creates an instance of ``DeleteMany``:
 Perform the Bulk Operation
 --------------------------
 
-After you define a class instance for each operation you want to perform,
+After you define a model instance for each operation you want to perform,
 pass a list of these instances to the ``bulkWrite()`` method.
 By default, the method runs the operations in the order
-that specified by the list of models.
+specified by the list of models.
 
 The following example performs multiple write operations by using the
 ``bulkWrite()`` method:
@@ -333,12 +333,12 @@ API Documentation
 To learn more about any of the methods or types discussed in this
 guide, see the following API Documentation:
 
-- `bulkWrite() <{+api+}/mongodb-driver-kotlin-sync/com.mongodb.kotlin.client/-mongo-collection/bulk-write.html>`__
-- `DeleteManyModel <{+core-api+}/com/mongodb/client/model/DeleteManyModel.html>`__
-- `DeleteOneModel <{+core-api+}/com/mongodb/client/model/DeleteOneModel.html>`__
+- `bulkWrite() <{+api+}/com.mongodb.kotlin.client/-mongo-collection/bulk-write.html>`__
 - `InsertOneModel <{+core-api+}/com/mongodb/client/model/InsertOneModel.html>`__
-- `ReplaceOneModel <{+core-api+}/com/mongodb/client/model/ReplaceOneModel.html>`__
-- `UpdateManyModel <{+core-api+}/com/mongodb/client/model/UpdateManyModel.html>`__
 - `UpdateOneModel <{+core-api+}/com/mongodb/client/model/UpdateOneModel.html>`__
+- `UpdateManyModel <{+core-api+}/com/mongodb/client/model/UpdateManyModel.html>`__
+- `ReplaceOneModel <{+core-api+}/com/mongodb/client/model/ReplaceOneModel.html>`__
+- `DeleteOneModel <{+core-api+}/com/mongodb/client/model/DeleteOneModel.html>`__
+- `DeleteManyModel <{+core-api+}/com/mongodb/client/model/DeleteManyModel.html>`__
 - `BulkWriteOptions <{+core-api+}/com/mongodb/client/model/BulkWriteOptions.html>`__
 - `BulkWriteResult <{+core-api+}/com/mongodb/bulk/BulkWriteResult.html>`__
