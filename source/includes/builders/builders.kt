@@ -9,8 +9,7 @@ import org.bson.types.ObjectId
 
 // start-user-class
 data class User(
-    @BsonId
-    val id: ObjectId,
+    @BsonId val id: ObjectId,
     val gender: String,
     val age: Int,
     val email: String
@@ -18,7 +17,7 @@ data class User(
 // end-user-class
 
 // start-result-class
-data class Result(
+data class Email(
     val email: String
 )
 // end-result-class
@@ -38,7 +37,7 @@ fun main() {
     // start-find
     val filter = Document("gender", "female").append("age", Document("\$gt", 29))
     val projection = Document("_id", 0).append("email", 1)
-    val results = collection.find<Result>(filter).projection(projection)
+    val results = collection.find<Email>(filter).projection(projection)
     // end-find
 
     // start-find-builders
@@ -52,7 +51,7 @@ fun main() {
         Projections.include("email")
     )
 
-    val results = collection.find<Result>(filter).projection(projection)
+    val results = collection.find<Email>(filter).projection(projection)
     // end-find-builders
 }
 
