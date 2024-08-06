@@ -20,10 +20,10 @@ Monitor Data Changes
 Overview
 --------
 
-In this guide, you can learn how to use a **change stream** to monitor real-time
-changes to your database. A change stream is a {+mdb-server+} feature that
-allows your application to subscribe to data changes on a collection, database,
-or deployment.
+In this guide, you can learn how to use the {+driver-short+} to monitor a  **change stream**,
+allowing you to view real-time changes to your database. A change stream is a {+mdb-server+} feature that
+publishes data changes on a collection, database, or deployment. Your application can
+subscribe to a change stream and use events to perform other actions.
 
 Sample Data
 ~~~~~~~~~~~
@@ -46,12 +46,15 @@ Open a Change Stream
 
 To open a change stream, call the ``watch()`` method. The instance on which you
 call the ``watch()`` method on determines the scope of events that the change
-stream listens for. You can call the ``watch()`` method on the following
+stream listens for. You can call the ``watch()`` method on instances of the following
 classes:
 
 - ``MongoClient``: To monitor all changes in the MongoDB deployment
 - ``MongoDatabase``: To monitor changes in all collections in the database
 - ``MongoCollection``: To monitor changes in the collection
+
+Open a Change Stream Example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following example opens a change stream on the ``restaurants`` collection
 and prints changes as they occur:
@@ -64,8 +67,8 @@ and prints changes as they occur:
    :dedent:
 
 To begin watching for changes, run the application. Then, in a separate
-application or shell, modify the ``restaurants`` collection. The following
-example updates a document with a ``name`` field value of ``Blarney Castle``:
+application or shell, perform a write operation on the ``restaurants`` collection. The
+following example updates a document in which the value of the ``name`` is ``"Blarney Castle"``:
 
 .. _kotlin-sync-change-stream-update:
 
@@ -113,7 +116,7 @@ Modify the Change Stream Output
 
 You can pass the ``pipeline`` parameter to the ``watch()`` method to modify the
 change stream output. This parameter allows you to watch for only specified
-change events. Format the parameter as a list of objects that each represent an
+change events. Format the parameter as a list of objects that each represents an
 aggregation stage.
 
 You can specify the following stages in the ``pipeline`` parameter:
@@ -126,6 +129,9 @@ You can specify the following stages in the ``pipeline`` parameter:
 - ``$redact``
 - ``$set``
 - ``$unset``
+
+Open a Change Stream with a Pipeline Example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following example uses the ``pipeline`` parameter to open a change stream
 that records only update operations:
@@ -142,10 +148,10 @@ To learn more about modifying your change stream output, see the
 </changeStreams/#modify-change-stream-output>` section in the {+mdb-server+}
 manual.
 
-Modify ``watch()`` Behavior
----------------------------
+Modify watch() Behavior
+-----------------------
 
-The ``watch()`` method can be modified by chaining methods to the ``ChangeStreamIterable``
+You can modify the ``watch()`` by chaining methods to the ``ChangeStreamIterable``
 object returned by the ``watch()`` method call. If you don't specify any options, the
 driver does not customize the operation.
 
@@ -186,7 +192,7 @@ of ``watch()``:
          milliseconds.
 
    * - ``toCollection()``
-     - | Appends all elements to the given destination collection.
+     - | Inserts all elements into the given destination collection.
 
 For a complete list of methods you can use to configure the ``watch()`` method, see
 the `ChangeStreamIterable <{+api+}/com.mongodb.kotlin.client/-change-stream-iterable/index.html>`__
