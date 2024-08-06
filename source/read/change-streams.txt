@@ -61,6 +61,7 @@ and prints changes as they occur:
    :end-before: end-open-change-stream
    :language: kotlin
    :copyable:
+   :dedent:
 
 To begin watching for changes, run the application. Then, in a separate
 application or shell, modify the ``restaurants`` collection. The following
@@ -73,6 +74,7 @@ example updates a document with a ``name`` field value of ``Blarney Castle``:
    :end-before: end-update-for-change-stream
    :language: kotlin
    :copyable:
+   :dedent:
 
 When you update the collection, the change stream application prints the change
 as it occurs. The printed change event resembles the
@@ -133,6 +135,7 @@ that records only update operations:
    :end-before: end-change-stream-pipeline
    :language: kotlin
    :copyable:
+   :dedent:
 
 To learn more about modifying your change stream output, see the
 :manual:`Modify Change Stream Output
@@ -216,7 +219,7 @@ one of the following parameters:
   driver raises an error.
 
 The **post-image** is the full version of a document *after* a change. To include the
-post-image in the change stream event, pass the ``fullDocument`` method one of the
+post-image in the change stream event, pass the ``fullDocument()`` method one of the
 following parameters:
 
 - ``FullDocument.UPDATE_LOOKUP``: The change event includes a copy of the entire changed
@@ -235,6 +238,7 @@ of updated documents by specifying the ``fullDocument`` parameter:
    :end-before: end-change-stream-post-image
    :language: kotlin
    :copyable:
+   :dedent:
 
 With the change stream application running, updating a document in the
 ``restaurants`` collection by using the :ref:`preceding update example
@@ -243,7 +247,7 @@ With the change stream application running, updating a document in the
 
 .. code-block:: sh
    
-   Received a change: ChangeStreamDocument{ operationType=update, resumeToken={"_data": "..."},
+   ChangeStreamDocument{ operationType=update, resumeToken={"_data": "..."},
    namespace=sample_restaurants.restaurants, destinationNamespace=null, fullDocument=Restaurant(name=Blarney Castle, cuisine=Irish),
    fullDocumentBeforeChange=null, documentKey={"_id": {"$oid": "..."}},
    clusterTime=Timestamp{value=..., seconds=..., inc=...},
