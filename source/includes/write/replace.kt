@@ -1,8 +1,5 @@
 import com.mongodb.client.model.Filters
-import com.mongodb.client.model.Filters.*
 import com.mongodb.client.model.ReplaceOptions
-import com.mongodb.client.model.UpdateOptions
-import com.mongodb.client.model.Updates.*
 import com.mongodb.kotlin.client.MongoClient
 
 // start-data-class
