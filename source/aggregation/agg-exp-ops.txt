@@ -490,8 +490,8 @@ using the methods described in this section.
 
 .. tip::
 
-   The ``cond()`` method is similar to the ternary operator in Java and you
-   should use it for simple branches based on a boolean value. You should use
+   The ``cond()`` method is similar to the ternary operator in {+language+} and you
+   can use it for simple branches based on boolean values. Use
    the ``switchOn()`` methods for more complex comparisons such as performing
    pattern matching on the value type or other arbitrary checks on the value.
 
@@ -585,7 +585,7 @@ can be one of a few different types, and you want to create a standardized value
 indicating their membership level.
 
 The ``switchOn()`` method checks each clause in order. If the value matches the
-type indicated by the clause, that clause determines the string value
+type indicated by the clause, then the clause determines the string value
 corresponding to the membership level. If the original value is a string, it
 represents the membership level and that value is used. If the data type is a
 boolean, it returns either ``Gold`` or ``Guest`` for the membership level. If
@@ -678,12 +678,12 @@ how the values compare:
    One advantage of using the ``passTo()`` method is that you can reuse
    your custom methods for other aggregations. You could
    use the ``gradeAverage()`` method to find the average of grades for
-   groups of students filtered by, for example, entry year or district, not just their
-   class. You could use the ``evaluate()`` method to evaluate, for
+   groups of students filtered by entry year or district, not just their
+   class, for example. You could use the ``evaluate()`` method to evaluate, for
    example, an individual student's performance, or an entire school's or
    district's performance.
 
-The ``passArrayTo()`` method takes all of the students and calculates the
+The ``passArrayTo()`` method takes an array of all students and calculates the
 average score by using the ``gradeAverage()`` method. Then, the
 ``passNumberTo()`` method uses the ``evaluate()`` method to determine how the
 classes are performing. This example stores the result as the ``evaluation``
@@ -823,7 +823,7 @@ using the methods described in this section.
    * - `year() <{+core-api+}/com/mongodb/client/model/mql/MqlDate.html#year(com.mongodb.client.model.mql.MqlString)>`__
      - :manual:`$year </reference/operator/aggregation/year/>`
 
-Suppose you have data about package deliveries and need to match
+Suppose you have data about package deliveries and want to match
 deliveries that occurred on any Monday in the ``"America/New_York"`` time
 zone.
 
@@ -900,7 +900,7 @@ using the methods described in this section.
 
 Suppose you have a collection of legacy customer data which includes
 addresses as child documents under the ``mailing.address`` field. You want
-to find all the customers who currently live in Washington state. A
+to find all the customers who live in Washington state. A
 document in this collection might resemble the following:
 
 .. code-block:: json
@@ -956,7 +956,7 @@ You can perform a map operation on a value of either type ``MqlMap`` or
 
 .. tip::
 
-   You should represent data as a map if the data maps
+   Represent data as a map if the data maps
    arbitrary keys such as dates or item IDs to values.
 
 .. list-table::
@@ -998,7 +998,7 @@ You can perform a map operation on a value of either type ``MqlMap`` or
 
 Suppose you have a collection of inventory data where each document represents
 an individual item you're responsible for supplying. Each document contains a
-field that is a map of all your warehouses and how many copies they currently
+field that is a map of all your warehouses and how many copies they
 have in their inventory of the item. You want to determine the total number of
 copies of items you have across all of your warehouses. A document in this
 collection might resemble the following:
@@ -1079,7 +1079,7 @@ using the methods described in this section.
    * - `toUpper() <{+core-api+}/com/mongodb/client/model/mql/MqlString.html#toUpper()>`__
      - :manual:`$toUpper </reference/operator/aggregation/toUpper/>`
 
-Suppose you need to generate lowercase usernames for employees of a
+Suppose you want to generate lowercase usernames for employees of a
 company from the employees' last names and employee IDs.
 
 The ``append()`` method combines the ``lastName`` and ``employeeID`` fields into
