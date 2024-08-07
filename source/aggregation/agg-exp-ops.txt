@@ -48,9 +48,9 @@ in your code:
    import com.mongodb.client.model.Filters
    import com.mongodb.client.model.mql.MqlValues
 
-To access document fields in an expression, you need to reference the
-current document being processed by the aggregation pipeline. Use the
-``current()`` method to refer to this document. To access the value of a
+To access document fields in an expression, you must reference the
+current document being processed by the aggregation pipeline by using the
+``current()`` method. To access the value of a
 field, you must use the appropriately typed method, such as
 ``getString()`` or ``getDate()``. When you specify the type for a field,
 you ensure that the driver provides only those methods which are
@@ -72,7 +72,7 @@ value of ``1.0``:
    of(1.0)
 
 To create an operation, chain a method to your field or value reference.
-You can build more complex operations by chaining additional methods.
+You can build more complex operations by chaining other methods.
 
 The following example creates an operation to find patients in New
 Mexico who have visited the doctor’s office at least once. The operation
@@ -204,7 +204,7 @@ expected parameters and implementation.
 .. important::
 
    The driver does not provide methods for all aggregation pipeline operators in
-   the Query API. If you need to use an unsupported operation in an
+   the Query API. To use an unsupported operation in an
    aggregation, you must define the entire expression using the BSON ``Document``
    type.
    
@@ -395,7 +395,7 @@ with ``lt()``. The ``project()`` method stores these filtered results as a new
 .. tip::
 
    You must specify the type of the array that you retrieve with the
-   ``getArray()`` method if you need to work with the values of the
+   ``getArray()`` method if you work with the values of the
    array as their specific type.
 
    In this example, we specify that the ``seats`` array contains values
@@ -629,7 +629,7 @@ You can apply custom functions to values of type
 ``MqlValue`` using the methods described in this section.
 
 To improve readability and allow for code reuse, you can move redundant
-code into static methods. However, it is not possible to directly chain
+code into static methods. However, you cannot directly chain
 static methods in {+language+}. The ``passTo()`` method lets you chain values
 into custom static methods.
 
@@ -654,7 +654,7 @@ into custom static methods.
 
      - *No corresponding operator*
 
-Suppose you need to determine how a class is performing against some
+Suppose you want to determine how a class is performing against some
 benchmarks. You want to find the average final grade for each class and
 compare it against the benchmark values.
 
