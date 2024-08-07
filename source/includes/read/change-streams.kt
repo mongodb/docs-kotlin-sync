@@ -18,7 +18,6 @@ fun main() {
 
     val settings = MongoClientSettings.builder()
         .applyConnectionString(ConnectionString(uri))
-        .retryWrites(true)
         .build()
 
     val mongoClient = MongoClient.create(settings)
