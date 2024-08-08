@@ -1,0 +1,209 @@
+.. _kotlin-sync-mongoclient:
+
+====================
+Create a MongoClient
+====================
+
+.. facet::
+   :name: genre
+   :values: reference
+
+.. meta::
+   :keywords: connection string, URI, server, Atlas, settings, client
+
+.. contents:: On this page
+   :local:
+   :backlinks: none
+   :depth: 2
+   :class: singlecol
+
+Overview
+--------
+
+To connect to a MongoDB deployment, you need two things:
+
+- A **connection URI**, also known as a *connection string*, which tells {+driver-short+}
+  which MongoDB deployment to connect to.
+- A **MongoClient** object, which creates the connection to the MongoDB deployment
+  and lets you perform operations on it.
+
+You can also use either of these components to customize the way {+driver-short+} behaves
+while connected to MongoDB.
+
+This guide shows you how to create a connection string and use a ``MongoClient`` object
+to connect to MongoDB.
+
+.. _kotlin-sync-connection-uri:
+
+Connection URI
+--------------
+
+A standard connection string includes the following components:
+.. Any ref for authentication? Are we planning on making a page for authentication?
+
+.. list-table::
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Component
+     - Description
+
+   * - ``mongodb://``
+
+     - Required. A prefix that identifies this as a string in the
+       standard connection format.
+
+   * - ``username:password``
+
+     - Optional. Authentication credentials. If you include these, the client
+       authenticates the user against the database specified in ``authSource``.
+       For more information about the ``authSource`` connection option, see
+       :ref:`pymongo-auth`. 
+
+   * - ``host[:port]``
+
+     - Required. The host and optional port number where MongoDB is running. If you don't
+       include the port number, the driver uses the default port, ``27017``.
+
+   * - ``/defaultauthdb``
+     
+     - Optional. The authentication database to use if the
+       connection string includes ``username:password@``
+       authentication credentials but not the ``authSource`` option. If you don't include 
+       this component, the client authenticates the user against the ``admin`` database.
+
+   * - ``?<options>``
+
+     - Optional. A query string that specifies connection-specific
+       options as ``<name>=<value>`` pairs. See
+       :ref:`kotlin-sync-connection-options` for a full description of
+       these options.
+
+.. Is there relevant connection string content for kotlin sync to ref to? Only see for java sync.
+
+For more information about creating a connection string, see
+:manual:`Connection Strings </reference/connection-string?tck=docs_driver_kotlin>` in the
+MongoDB Server documentation.
+
+Atlas Connection Example
+------------------------
+
+To connect to a MongoDB deployment on Atlas, create a client. You can create a 
+client that uses your connection string and other client options by passing a 
+``MongoClientSettings`` object to the ``MongoClient.create()`` method.
+
+To instantiate a ``MongoClientSettings`` object, use the builder method to 
+specify your connection string and any other client options, and then call 
+the ``build()`` method. Chain the ``applyConnectionString()``` method to the 
+builder to specify your connection URI.
+
+You can set the Stable API version client option to avoid breaking changes when 
+you upgrade to a new server version. To learn more about the Stable API feature, 
+see the :ref:`Stable API page <kotlin-sync-stable-api>`. 
+
+The following code shows how you can specify the connection string and the 
+Stable API client option when connecting to a MongoDB deployment on Atlas 
+and verify that the connection is successful:
+
+.. literalinclude:: /includes/connect/mongoclient.kt
+   :start-after: start-connect-to-atlas
+   :end-before: end-connect-to-atlas
+   :language: kotlin
+   :copyable:
+   :dedent:
+
+Other Ways to Connect to MongoDB
+--------------------------------
+
+If you are connecting to a single MongoDB server instance or replica set that 
+is not hosted on Atlas, see the following sections to find out how to connect.
+
+.. _connect-local-kotlin-sync-driver:
+
+Connect to a MongoDB Server on Your Local Machine
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you need to run a MongoDB server on your local machine for development 
+purposes instead of using an Atlas cluster, you need to complete the following:
+
+1. Download the `Community <https://www.mongodb.com/try/download/community>`__
+   or `Enterprise <https://www.mongodb.com/try/download/enterprise>`__ version
+   of MongoDB Server.
+
+#. :ref:`Install and configure <tutorials-installation>`
+   MongoDB Server.
+
+#. Start the server.
+
+.. important::
+
+   Always secure your MongoDB server from malicious attacks. See our
+   :manual:`Security Checklist </administration/security-checklist/>` for a
+   list of security recommendations.
+
+After you successfully start your MongoDB server, specify your connection
+string in your driver connection code.
+
+If your MongoDB Server is running locally, you can use the connection string
+``"mongodb://localhost:<port>"`` where ``<port>`` is the port number you
+configured your server to listen for incoming connections. If the port number 
+is not specified, the default port ``27017`` is used.
+
+If you need to specify a different hostname or IP address, see our Server
+Manual entry on :manual:`Connection Strings </reference/connection-string/>`.
+
+.. _connect-replica-set:
+
+Connect to a Replica Set
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+A MongoDB replica set deployment is a group of connected instances that
+store the same set of data. This configuration of instances provides data
+redundancy and high data availability.
+
+To connect to a replica set deployment, specify the hostnames (or IP
+addresses) and port numbers of the members of the replica set. 
+
+If you are not able to provide a full list of hosts in the replica set,
+you can specify a single or subset of the hosts in the replica and
+instruct the driver to perform automatic discovery in one of the following
+ways:
+
+- Specify the name of the replica set as the value of the ``replicaSet``
+  parameter
+- Specify ``false`` as the value of the ``directConnection`` parameter
+- Specify more than one host in the replica set
+
+.. tip::
+
+   Although you can specify a subset of the hosts in a replica set,
+   include all the hosts in the replica set to ensure the driver is able to 
+   establish the connection if one of the hosts are unreachable.
+   
+.. _mongo-client-settings-multiple-hosts:
+
+The following examples show how to specify multiple hosts to a ``MongoClient``
+instance using either the ``ConnectionString`` or ``MongoClientSettings`` 
+class. Select the tab that corresponds to your preferred class.
+
+.. tabs::
+
+   .. tab:: ConnectionString
+      :tabid: connectionstring
+
+      .. literalinclude:: /includes/connect/mongoclient.kt
+        :start-after: start-replica-set-connection-string
+        :end-before: end-replica-set-connection-string
+        :language: kotlin
+        :copyable:
+        :dedent:
+      
+
+   .. tab:: MongoClientSettings
+      :tabid: mongoclientsettings
+      .. literalinclude:: /includes/connect/mongoclient.kt
+        :start-after: start-replica-set-client-settings
+        :end-before: end-replica-set-client-settings
+        :language: kotlin
+        :copyable:
+        :dedent:
