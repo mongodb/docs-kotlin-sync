@@ -22,12 +22,12 @@ Overview
 
 To connect to a MongoDB deployment, you need two things:
 
-- A **connection URI**, also known as a *connection string*, which tells {+driver-short+}
+- A **connection URI**, also known as a *connection string*, which tells the {+driver-short+}
   which MongoDB deployment to connect to.
-- A **MongoClient** object, which creates the connection to the MongoDB deployment
-  and lets you perform operations on it.
+- A **MongoClient** object, which creates the connection to and perform 
+  opertions on the MongoDB deployment.
 
-You can also use either of these components to customize the way {+driver-short+} behaves
+You can also use either of these components to customize the way the {+driver-short+} behaves
 while connected to MongoDB.
 
 This guide shows you how to create a connection string and use a ``MongoClient`` object
@@ -39,6 +39,7 @@ Connection URI
 --------------
 
 A standard connection string includes the following components:
+
 .. Any ref for authentication? Are we planning on making a page for authentication?
 
 .. list-table::
@@ -200,7 +201,7 @@ class. Select the tab that corresponds to your preferred class.
 
    .. tab:: MongoClientSettings
       :tabid: mongoclientsettings
-      
+
       .. literalinclude:: /includes/connect/mongoclient.kt
         :start-after: start-replica-set-client-settings
         :end-before: end-replica-set-client-settings
