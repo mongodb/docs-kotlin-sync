@@ -42,7 +42,8 @@ Then, pass your connection string to the ``MongoClient`` constructor.
 
 When you connect to Atlas, we recommend using the {+stable-api+} client option to avoid
 breaking changes when Atlas upgrades to a new version of {+mdb-server+}.
-To learn more about the {+stable-api+} feature, see :ref:`<kotlin-sync-stable-api>`.
+To learn more about the {+stable-api+} feature, see the :ref:`<kotlin-sync-stable-api>`
+guide.
 
 The following code shows how to use the {+driver-short+} to connect to an Atlas cluster. The
 code also uses the ``serverApi()`` method to specify a {+stable-api+} version.
@@ -84,9 +85,9 @@ automatic discovery, perform one of the following actions:
 - Specify ``false`` as the value of the ``directConnection`` parameter.
 - Specify more than one host in the replica set.
 
-The following examples show how to specify multiple hosts to a ``MongoClient`` instance
-using either the ``ConnectionString`` or ``MongoClientSettings`` class. Select the tab
-that corresponds to your preferred class.
+The following examples show how to connect to a MongoDB replica set running on port
+``27017`` of three different hosts by using either the ``ConnectionString`` or
+``MongoClientSettings`` class. Select the tab that corresponds to your preferred class.
 
 .. tabs::
 
