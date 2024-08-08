@@ -10,10 +10,12 @@ fun main() {
     // start-connect
     val connectionString = ConnectionString("<connection string URI>")
 
+    // Defines Stable API version
     val serverApi = ServerApi.builder()
         .version(ServerApiVersion.V1)
         .build()
 
+    // Uses MongoClientSettings to apply connection string and specify the Stable API version
     val settings = MongoClientSettings.builder()
         .applyConnectionString(connectionString)
         .serverApi(serverApi)
