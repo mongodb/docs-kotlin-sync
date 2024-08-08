@@ -1,4 +1,4 @@
-.. _kotlin-sync-sync-aggregation-expression-operations:
+.. _kotlin-sync-aggregation-expression-operations:
 
 =================================
 Aggregation Expression Operations
@@ -72,13 +72,13 @@ value of ``1.0``:
    of(1.0)
 
 To create an operation, chain a method to your field or value reference.
-You can build more complex operations by chaining other methods.
+You can build more complex operations by chaining multiple methods.
 
 The following example creates an operation to find patients in New
 Mexico who have visited the doctor’s office at least once. The operation
 performs the following actions:
 
-- Checks if the size of the ``visitDates`` array is greater than ``0``
+- Checks if the size of the ``visitDates`` array value is greater than ``0``
   by using the ``gt()`` method
 - Checks if the ``state`` field value is “New Mexico” by using the
   ``eq()`` method
@@ -112,11 +112,7 @@ how to include your expression in common aggregates builder methods:
 - ``group(<expression>)``
 
 .. TODO To learn more about these methods, see the
-.. :ref:`kotlin-sync-sync-aggregation`.
-
-The examples use the ``listOf()`` method to create a list of
-aggregation stages. Then, the examples pass the pipeline to the
-``aggregate()`` method of ``MongoCollection``.
+.. :ref:`kotlin-sync-aggregation`.
 
 Constructor Methods
 -------------------
@@ -195,6 +191,10 @@ the Server manual documentation. While each method is effectively
 equivalent to the corresponding Query API expression, they may differ in
 expected parameters and implementation.
 
+The example in each section uses the ``listOf()`` method to create a
+pipeline from the aggregation stage. Then, each example passes the
+pipeline to the ``aggregate()`` method of ``MongoCollection``.
+
 .. note::
 
    The driver generates a Query API expression that may be different
@@ -250,8 +250,8 @@ You can perform an arithmetic operation on a value of type ``MqlInteger`` or
      - :manual:`$subtract </reference/operator/aggregation/subtract/>`
 
 Suppose you have weather data for a specific year that includes the
-precipitation measurement (in inches) for each day. You want find the average
-precipitation, in millimeters, for each month.
+precipitation measurement (in inches) for each day. You want to find the
+average precipitation, in millimeters, for each month.
 
 The ``multiply()`` operator multiplies the ``precipitation`` field by
 ``25.4`` to convert the value to millimeters. The ``avg()`` accumulator method
@@ -389,18 +389,20 @@ following:
 The ``filter()`` method displays only the results matching the provided
 predicate. In this case, the predicate uses ``sum()`` to calculate the
 total number of seats and compares that value to the number of ``ticketsBought``
-with ``lt()``. The ``project()`` method stores these filtered results as a new
-``availableShowtimes`` array.
+by using the ``lt()`` method. The ``project()`` method stores these
+filtered results as a new ``availableShowtimes`` array field.
 
 .. tip::
 
-   You must specify the type of the array that you retrieve with the
-   ``getArray()`` method if you work with the values of the
-   array as their specific type.
+   You must specify the type of values that an array contains when using
+   the ``getArray()`` method to work with the values as any specific
+   type. For example, you must specify that an array contains integers
+   if you want to perform calculations with those integers elsewhere in
+   your application.
 
-   In this example, we specify that the ``seats`` array contains values
-   of type ``MqlDocument`` so that we can extract nested fields from
-   each array entry.
+   The example in this section specifies that the ``seats`` array
+   contains values of type ``MqlDocument`` so that it can extract nested
+   fields from each array entry.
 
 The following code shows the pipeline for this aggregation:
 
@@ -414,8 +416,8 @@ The following code shows the pipeline for this aggregation:
 .. note::
 
    To improve readability, the previous example assigns intermediary values to
-   the ``totalSeats`` and ``isAvailable`` variables. If you don't pull
-   out these intermediary values into variables, the code still produces
+   the ``totalSeats`` and ``isAvailable`` variables. If you don't assign
+  these intermediary values to variables, the code still produces
    equivalent results.
 
 The following code provides an equivalent aggregation pipeline in
@@ -459,8 +461,9 @@ Suppose you want to classify very low or high weather temperature
 readings (in degrees Fahrenheit) as extreme.
 
 The ``or()`` operator checks to see if temperatures are extreme by comparing
-the ``temperature`` field to predefined values with ``lt()`` and ``gt()``.
-The ``project()`` method records this result in the ``extremeTemp`` field.
+the ``temperature`` field to predefined values by using the ``lt()`` and
+``gt()`` methods. The ``project()`` method records this result in the
+``extremeTemp`` field.
 
 The following code shows the pipeline for this aggregation:
 
@@ -675,13 +678,12 @@ how the values compare:
 
 .. tip::
 
-   One advantage of using the ``passTo()`` method is that you can reuse
-   your custom methods for other aggregations. You could
+   Using the ``passTo()`` method allows you to reuse
+   your custom methods for other aggregations. For example, you can
    use the ``gradeAverage()`` method to find the average of grades for
    groups of students filtered by entry year or district, not just their
-   class, for example. You could use the ``evaluate()`` method to evaluate, for
-   example, an individual student's performance, or an entire school's or
-   district's performance.
+   class. Similarly, you could use the ``evaluate()`` method to evaluate
+   an individual student's performance or an entire school's performance.
 
 The ``passArrayTo()`` method takes an array of all students and calculates the
 average score by using the ``gradeAverage()`` method. Then, the
@@ -832,10 +834,10 @@ valid dates, such as ``"2018-01-15T16:00:00Z"`` or ``"Jan 15, 2018, 12:00
 PM EST"``, you can use the ``parseDate()`` method to convert the strings
 into date types.
 
-The ``dayOfWeek()`` method determines which day of the week it is and converts
-it to a number based on which day is a Monday according to the
-``"America/New_York"`` parameter. The ``eq()`` method compares this value to
-``2``, which corresponds to Monday based on the provided timezone parameter.
+The ``dayOfWeek()`` method determines which day of the week that a date
+is, then converts it to a number. The number assignment uses ``0`` to mean
+Sunday when using the ``"America/New_York"`` timezone. The ``eq()``
+method compares this value to ``2``, or Monday.
 
 The following code shows the pipeline for this aggregation:
 
