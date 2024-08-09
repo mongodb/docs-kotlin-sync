@@ -4,8 +4,7 @@ import org.bson.BsonInt64
 import org.bson.Document
 
 fun main() {
-
-
+    
     // start-connect-to-atlas
     // Replace the placeholder with your Atlas connection string
     val uri = "<connection string>"
@@ -32,27 +31,4 @@ fun main() {
         System.err.println(me)
     }
     // end-connect-to-atlas
-
-    // Replication set connection options
-
-    // Using ConnectionString class
-    // start-replica-set-connection-string
-    val connectionString = ConnectionString("mongodb://host1:27017,host2:27017,host3:27017/")
-    val mongoClient = MongoClient.create(connectionString)
-    // end-replica-set-connection-string
-
-    //  Using MongoClientSettings class 
-    // start-replica-set-client-settings
-    val seed1 = ServerAddress("host1", 27017)
-    val seed2 = ServerAddress("host2", 27017)
-    val seed3 = ServerAddress("host3", 27017)
-    val settings = MongoClientSettings.builder()
-        .applyToClusterSettings { builder ->
-            builder.hosts(
-                listOf(seed1, seed2, seed3)
-            )
-        }
-        .build()
-    val mongoClient = MongoClient.create(settings)
-    // end-replica-set-client-settings
 }
