@@ -8,8 +8,6 @@ import com.mongodb.kotlin.client.MongoClient
 
 fun main() {
     // start-connect
-    val connectionString = ConnectionString("<connection string URI>")
-
     // Defines Stable API version
     val serverApi = ServerApi.builder()
         .version(ServerApiVersion.V1)
@@ -17,7 +15,7 @@ fun main() {
 
     // Uses MongoClientSettings to apply connection string and specify the Stable API version
     val settings = MongoClientSettings.builder()
-        .applyConnectionString(connectionString)
+        .applyConnectionString("<connection string URI>")
         .serverApi(serverApi)
         .build()
 
@@ -25,18 +23,15 @@ fun main() {
     // end-connect
 
     // start-connect-local
-    val connectionString = ConnectionString("mongodb://localhost:27017")
-
     val settings = MongoClientSettings.builder()
-        .applyConnectionString(connectionString)
+        .applyConnectionString("mongodb://localhost:27017")
         .build()
 
     val mongoClient = MongoClient.create(settings)
     // end-connect-local
 
     // start-connect-rs-connection-string
-    val connectionString = ConnectionString("mongodb://host1:27017,host2:27017,host3:27017/")
-    val mongoClient = MongoClient.create(connectionString)
+    val mongoClient = MongoClient.create("mongodb://host1:27017,host2:27017,host3:27017/")
     // end-connect-rs-connection-string
 
     // start-connect-rs-settings
