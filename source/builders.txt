@@ -22,20 +22,18 @@ Use Builders Code Pattern
 Overview
 --------
 
-This page describes how to implement the builders pattern in your code and describes
-benefits of using builder classes.
+This page describes how to the various available builders in your code and describes
+benefits of using the provided builders.
 
 The {+driver-short+} provides type-safe builder classes and methods that enable developers to
-efficiently build queries and aggregations. To learn more about the builders pattern,
-see `Type-safe builders <https://kotlinlang.org/docs/type-safe-builders.html>`__ in the
-{+language+} documentation.
+efficiently build queries and aggregations.
 
-Why Use the Builders Code Pattern?
-----------------------------------
+Why Use Builders?
+-----------------
 
 If you use only plain {+language+} to construct BSON query documents, you are not
-able to identify errors in your code until runtime. When you use builder classes, you can
-write operators as methods and any syntax errors will be caught at compile time.
+able to identify syntax errors until runtime. The builders help ensure the corretness of
+syntax and can be less verbose than constructing BSON documents.
 
 Example
 -------
@@ -89,10 +87,10 @@ query filter:
    :copyable:
    :dedent:
 
-Builders Pattern
-~~~~~~~~~~~~~~~~
+Builders
+~~~~~~~~
 
-The following example performs the query by using the builders pattern:
+The following example performs the query by using the builder helpers:
 
 .. literalinclude:: /includes/builders/builders.kt
    :start-after: start-find-builders
