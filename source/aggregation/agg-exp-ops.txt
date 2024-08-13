@@ -188,7 +188,7 @@ available in the driver and corresponding expression operators in the
 Query API. The method names link to API documentation and the
 aggregation pipeline operator names link to descriptions and examples in
 the Server manual documentation. While each method is effectively
-equivalent to the corresponding Query API expression, they may differ in
+equivalent to the corresponding aggregation operator, they may differ in
 expected parameters and implementation.
 
 The example in each section uses the ``listOf()`` method to create a
@@ -254,7 +254,7 @@ precipitation measurement (in inches) for each day. You want to find the
 average precipitation, in millimeters, for each month.
 
 The ``multiply()`` operator multiplies the ``precipitation`` field by
-``25.4`` to convert the value to millimeters. The ``avg()`` accumulator method
+``25.4`` to convert the field value to millimeters. The ``avg()`` accumulator method
 returns the average as the ``avgPrecipMM`` field. The ``group()`` method
 groups the values by month given in each document's ``date`` field.
 
@@ -955,11 +955,6 @@ Map Operations
 
 You can perform a map operation on a value of either type ``MqlMap`` or
 ``MqlEntry`` using the methods described in this section.
-
-.. tip::
-
-   Represent data as a map if the data maps
-   arbitrary keys such as dates or item IDs to values.
 
 .. list-table::
    :header-rows: 1
