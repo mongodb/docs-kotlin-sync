@@ -84,31 +84,23 @@ as it occurs. The printed change event resembles the
 following:
 
 .. code-block:: json
-   :emphasize-lines: 14-20
 
    {
-     "cursor": {
-       "nextBatch": [
-         {
-           "_id": { ... },
-           "operationType": "update",
-           "clusterTime": { ... },
-           ...
-           "ns": {
-             "db": "sample_restaurants",
-             "coll": "restaurants"
-           },
-           ...
-           "updateDescription": {
-             "updatedFields": {
-               "cuisine": "Irish"
-             },
-             "removedFields": [],
-             "truncatedArrays": []
-           }
-         }
-       ],
-       ...
+     "_id": { ... },
+     "operationType": "update",
+     "clusterTime": { ... },
+     ...
+     "ns": {
+       "db": "sample_restaurants",
+       "coll": "restaurants"
+     },
+     ...
+     "updateDescription": {
+       "updatedFields": {
+         "cuisine": "Irish"
+       },
+       "removedFields": [],
+       "truncatedArrays": []
      }
    }
 
@@ -177,9 +169,6 @@ of ``watch()``:
    * - ``comment()``
      - | Specifies a comment to attach to the operation.
 
-   * - ``forEach()``
-     - | Performs the given action on each element and safely closes the cursor.
-
    * - ``fullDocument()``
      - | Sets the ``fullDocument`` value. To learn more, see the
          :ref:`<kotlin-sync-change-stream-pre-post-image>` section of this document.
@@ -191,9 +180,6 @@ of ``watch()``:
    * - ``maxAwaitTime()``
      - | Sets the maximum await execution time on the server for this operation, in
          milliseconds.
-
-   * - ``toCollection()``
-     - | Inserts all elements into the given destination collection.
 
 For a complete list of methods you can use to configure the ``watch()`` method, see
 the `ChangeStreamIterable <{+api+}/com.mongodb.kotlin.client/-change-stream-iterable/index.html>`__
