@@ -24,14 +24,6 @@ In this guide, you can learn how to use the
 :wikipedia:`TLS <w/index.php?title=Transport_Layer_Security&oldid=1239598620>`
 security protocol when connecting to MongoDB by using the {+driver-short+}.
 
-.. note:: Debugging TLS
-
-   If you experience trouble setting up your TLS connection, you can
-   use the ``-Djavax.net.debug=all`` system property to view helpful
-   log statements. See `Debugging SSL/TLS connections
-   <https://docs.oracle.com/javase/8/docs/technotes/guides/security/jsse/ReadDebug.html>`__
-   in the Java language documentation for more information.
-
 .. _kotlin-sync-tls-enable:
 
 Enable TLS
@@ -59,8 +51,8 @@ in the following ways:
    .. tab:: Connection String
       :tabid: connectionstring
 
-      To enable TLS on a connection by using a connection string, set the connection string
-      parameter ``tls`` to ``true`` in the connection string passed to
+      To enable TLS on a connection by using a connection string, set the
+      ``tls`` option to ``true`` in the options parameter and pass the string to
       ``MongoClient.create()``, as shown in the following code:
 
       .. literalinclude:: /includes/connect/tls.kt
@@ -84,6 +76,14 @@ in the following ways:
          :copyable:
          :dedent:
 
+.. note:: Debugging TLS
+
+   If you experience trouble setting up your TLS connection, you can
+   use the ``-Djavax.net.debug=all`` system property to view helpful
+   log statements. See `Debugging SSL/TLS connections
+   <https://docs.oracle.com/javase/8/docs/technotes/guides/security/jsse/ReadDebug.html>`__
+   in the Java language documentation for more information.
+
 .. _tls_configure-certificates:
 
 Configure Certificates
@@ -106,7 +106,7 @@ Configure the JVM Trust Store
 
    By default, the JRE includes many commonly used public certificates
    from signing authorities such as `Let's Encrypt
-   <https://letsencrypt.org/>`__. As a result, you can connect to a
+   <https://letsencrypt.org/>`__. As a result, you can enable TLS when connecting to a
    :atlas:`MongoDB Atlas </>` instance, or any other
    server whose certificate is signed by an authority in the JRE's default
    certificate store, with TLS enabled without configuring the trust store.
@@ -147,11 +147,6 @@ Configure the JVM Key Store
    validation. You must configure the key store if you configured your MongoDB
    instance to validate client certificates.
 
-The JVM key store saves certificates that securely identify your {+language+}
-application to other applications. By using these certificates, other
-applications can prove that the connection to your application is
-genuine and secure from tampering by third parties.
-
 An application that initiates TLS requests must set the following JVM system
 properties to ensure that the client presents a TLS certificate to
 the MongoDB server:
@@ -180,7 +175,7 @@ You can configure a client-specific trust store and key store by using the
 ``init()`` method of the ``SSLContext`` class.
 
 Find an example showing how to configure a client to use an ``SSLContext``
-instance in the :ref:`Customize TLS Configuration with an SSLContext section of this guide <kotlin-sync-tls-custom-sslContext>`.
+instance in the :ref:`<kotlin-sync-tls-custom-sslContext>` section of this guide.
 
 Disable Hostname Verification
 -----------------------------
@@ -210,7 +205,7 @@ Restrict Connections to TLS 1.2 Only
 ------------------------------------
 
 To restrict your application to use only the TLS 1.2 protocol, set the
-``jdk.tls.client.protocols`` system property to "TLSv1.2".
+``jdk.tls.client.protocols`` system property to ``"TLSv1.2"``.
 
 .. note::
 
