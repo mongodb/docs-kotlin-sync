@@ -1,8 +1,8 @@
-.. _kotlin-sync-enable-tls:
+.. _kotlin-sync-tls:
 
-==============================
-Enable TLS/SSL on a Connection
-==============================
+==========================
+Enable TLS on a Connection
+==========================
 
 .. facet::
    :name: genre
@@ -20,52 +20,48 @@ Enable TLS/SSL on a Connection
 Overview
 --------
 
-In this guide, you can learn how to connect to MongoDB instances with the
-`TLS/SSL <https://en.wikipedia.org/wiki/Transport_Layer_Security>`__
-security protocol using the underlying TLS/SSL support in the JDK. To
-configure your connection to use TLS/SSL, enable the TLS/SSL settings in
-either the `ConnectionString <{+core-api+}/com/mongodb/ConnectionString.html>`__
-or `MongoClientSettings <{+core-api+}/com/mongodb/MongoClientSettings.html>`__.
+In this guide, you can learn how to use the 
+:wikipedia:`TLS <w/index.php?title=Transport_Layer_Security&oldid=1239598620>`
+security protocol when connecting to MongoDB by using the {+driver-short+}.
 
-.. note:: Debugging TLS/SSL
+.. note:: Debugging TLS
 
-   If you experience trouble setting up your TLS/SSL connection, you can
-   use the ``-Djavax.net.debug=all`` system property to view more
-   log statements. See `the Oracle guide to debugging TLS/SSL connections
+   If you experience trouble setting up your TLS connection, you can
+   use the ``-Djavax.net.debug=all`` system property to view helpful
+   log statements. See `Debugging SSL/TLS connections
    <https://docs.oracle.com/javase/8/docs/technotes/guides/security/jsse/ReadDebug.html>`__
-   for more information.
+   in the Java language documentation for more information.
 
-.. _tls-enable:
+.. _kotlin-sync-tls-enable:
 
-Enable TLS/SSL
---------------
+Enable TLS
+----------
 
-You can enable TLS/SSL for the connection to your MongoDB instance
-in two different ways: through a parameter in your connection string, or
-using a method in the ``MongoClientSettings.Builder`` class.
+You can enable TLS on a connection to your MongoDB instance
+in the following ways:
+
+- Setting the ``tls`` parameter in your connection string
+- Using the ``enabled()`` method from the ``SslSettings.Builder`` class when creating a
+  ``MongoClientSettings`` instance
 
 .. note:: DNS Seedlist Protocol Enables TLS
 
    If you connect by using the DNS seedlist protocol, indicated by the
    ``mongodb+srv`` prefix in your connection string, the driver
-   automatically enables TLS/SSL. To disable it, set the ``tls``
-   parameter value to ``false`` in your connection string, or set the
-   ``enabled`` property to ``false`` in the ``SslSettings.Builder``
-   block when creating a ``MongoClientSettings`` instance.
+   automatically enables TLS.
 
    To learn more about connection behavior when you use a DNS seedlist,
-   see the :manual:`SRV Connection Format </reference/connection-string/#std-label-connections-dns-seedlist>`
-   section in the Server manual.
+   see the :manual:`SRV Connection Format </reference/connection-string/#srv-connection-format>`
+   section of the Connection Strings guide in the Server manual.
 
 .. tabs::
 
-   .. tab:: ConnectionString
+   .. tab:: Connection String
       :tabid: connectionstring
 
-      To enable TLS/SSL on a connection with a `ConnectionString
-      <{+api+}/apidocs/mongodb-driver-core/com/mongodb/ConnectionString.html>`__, assign the connection string
-      parameter ``tls`` a value of ``true`` in the connection string passed to
-      ``MongoClient.create()``:
+      To enable TLS on a connection by using a connection string, set the connection string
+      parameter ``tls`` to ``true`` in the connection string passed to
+      ``MongoClient.create()``, as shown in the following code:
 
       .. literalinclude:: /includes/connect/tls.kt
          :start-after: start-tls-connection-string
@@ -77,11 +73,9 @@ using a method in the ``MongoClientSettings.Builder`` class.
    .. tab:: MongoClientSettings
       :tabid: mongoclientsettings
 
-      To configure your ``MongoClient``'s TLS/SSL connection options using the
-      ``MongoClientSettings.Builder`` class, call the
-      `applyToSslSettings() <{+api+}/apidocs/mongodb-driver-core/com/mongodb/MongoClientSettings.Builder.html#applyToSslSettings(com.mongodb.Block)>`__
-      method. Set the ``enabled`` property to ``true`` in the ``SslSettings.Builder``
-      block to enable TLS/SSL:
+      To enable TLS within a ``MongoClientSettings`` instance, use the
+      ``applyToSslSettings()`` builder method. Set the ``enabled`` property to ``true``
+      in the ``SslSettings.Builder`` block, as shown in the following code:
 
       .. literalinclude:: /includes/connect/tls.kt
          :start-after: start-tls-mongo-client-settings
@@ -95,22 +89,15 @@ using a method in the ``MongoClientSettings.Builder`` class.
 Configure Certificates
 ----------------------
 
-{+language+} applications that initiate TLS/SSL requests require access to
-cryptographic certificates that prove identity for the application
-itself and other applications with which the application
-interacts. You can configure access to these certificates in your application with
-the following mechanisms:
+{+language+} applications that initiate TLS requests require access to
+cryptographic certificates that prove the application's identity and verify
+other applications with which the {+language+} application interacts. You can configure
+access to these certificates in your application in the following ways:
 
-- The JVM trust store and JVM key store
-- A client-specific trust store and key store
+- Using a JVM trust store and JVM key store
+- Using a client-specific trust store and key store
 
-.. note::
-
-   The following sections are based on the documentation for Oracle JDK,
-   so some parts may be inapplicable to your JDK or to the custom TLS/SSL
-   implementation you use.
-
-.. _tls-configure-jvm-truststore:
+.. _kotlin-sync-tls-configure-jvm-truststore:
 
 Configure the JVM Trust Store
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -118,32 +105,33 @@ Configure the JVM Trust Store
 .. note::
 
    By default, the JRE includes many commonly used public certificates
-   from signing authorities like `Let's Encrypt
-   <https://letsencrypt.org/>`__. As a result, you can connect to
-   instances of :atlas:`MongoDB Atlas </?jmp=docs_driver_kotlin>` (or any other
+   from signing authorities such as `Let's Encrypt
+   <https://letsencrypt.org/>`__. As a result, you can connect to a
+   :atlas:`MongoDB Atlas </>` instance, or any other
    server whose certificate is signed by an authority in the JRE's default
-   certificate store) with TLS/SSL without configuring the trust store.
+   certificate store, with TLS enabled without configuring the trust store.
 
 The JVM trust store saves certificates that securely identify other
-applications with which your {+language+} application interacts. Using these
+applications with which your {+language+} application interacts. By using these
 certificates, your application can prove that the connection to another
 application is genuine and secure from tampering by third parties.
 
 If your MongoDB instance uses a certificate that is signed by an
 authority that is not present in the JRE's default certificate store,
-your application must configure two system properties to initiate
-SSL/TLS requests. These properties ensure that your application can
-validate the TLS/SSL certificate presented by a connected MongoDB instance.
+your application must configure the following system properties to initiate
+TLS requests.
 
-- ``javax.net.ssl.trustStore``: the path to a trust store containing the
-  certificate of the signing authority
+- ``javax.net.ssl.trustStore``: Path to a trust store containing the client's TLS
+  certificates
 
-- ``javax.net.ssl.trustStorePassword``: the password to access the trust
+- ``javax.net.ssl.trustStorePassword``: Password to access the trust
   store defined in ``javax.net.ssl.trustStore``
 
-You can create a trust store with the `keytool
-<https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html>`__
-command line tool provided as part of the JDK:
+These properties ensure that your application can
+validate the TLS certificate presented by a connected MongoDB instance.
+
+You can create a trust store by using the `keytool <https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html>`__
+command line tool from the JDK as shown in the following terminal command:
 
 .. code-block:: console
 
@@ -160,53 +148,48 @@ Configure the JVM Key Store
    instance to validate client certificates.
 
 The JVM key store saves certificates that securely identify your {+language+}
-application to other applications. Using these certificates, other
+application to other applications. By using these certificates, other
 applications can prove that the connection to your application is
 genuine and secure from tampering by third parties.
 
-An application that initiates TLS/SSL requests needs to set two JVM system
-properties to ensure that the client presents a TLS/SSL certificate to
+An application that initiates TLS requests must set the following JVM system
+properties to ensure that the client presents a TLS certificate to
 the MongoDB server:
 
-- ``javax.net.ssl.keyStore``: the path to a key store containing the client's
+- ``javax.net.ssl.keyStore``: Path to a key store containing the client's
   TLS/SSL certificates
 
-- ``javax.net.ssl.keyStorePassword``: the password to access the key store
+- ``javax.net.ssl.keyStorePassword``: Password to access the key store
   defined in ``javax.net.ssl.keyStore``
 
-You can create a key store with the `keytool
+You can create a key store by using the `keytool
 <https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html>`__
 or `openssl <https://www.openssl.org/docs/manmaster/man1/openssl.html>`__
 command line tool.
 
-For more information on configuring a {+language+} application to use TLS/SSL,
-please see the `JSSE Reference Guide
-<https://docs.oracle.com/javase/8/docs/technotes/guides/security/jsse/JSSERefGuide.html>`__.
+To learn more about configuring a {+language+} application to use TLS,
+see the `JSSE Reference Guide <https://docs.oracle.com/javase/8/docs/technotes/guides/security/jsse/JSSERefGuide.html>`__
+in the Java language documentation.
 
 .. _tls-disable-hostname-verification:
 
 Configure a Client-Specific Trust Store and Key Store
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can configure a client-specific trust store and key store using the
+You can configure a client-specific trust store and key store by using the
 ``init()`` method of the ``SSLContext`` class.
 
-You can find an example showing how to configure a client with an ``SSLContext``
-instance in the
-:ref:`Customize TLS/SSL Configuration with an SSLContext section of this guide <tls-custom-sslContext>`.
-
-For more information on the ``SSLContext`` class, see the API
-documentation for `SSL Context <https://docs.oracle.com/en/java/javase/16/docs/api/java.base/javax/net/ssl/SSLContext.html>`__.
+Find an example showing how to configure a client to use an ``SSLContext``
+instance in the :ref:`Customize TLS Configuration with an SSLContext section of this guide <kotlin-sync-tls-custom-sslContext>`.
 
 Disable Hostname Verification
 -----------------------------
 
 By default, the driver ensures that the hostname included in the server's
-TLS/SSL certificates matches the hostnames provided when constructing
+TLS certificates matches the hostnames provided when constructing
 a ``MongoClient``. To disable hostname verification for your
-application, you can explicitly disable this by setting the
-``invalidHostNameAllowed`` property of the builder to ``true`` in the
-``applytoSslSettings()`` builder lambda:
+application, set the ``invalidHostNameAllowed`` property of the builder to ``true`` in the
+``applytoSslSettings()`` builder block:
 
 .. literalinclude:: /includes/connect/tls.kt
    :start-after: start-disable-hostname-verification
@@ -217,12 +200,11 @@ application, you can explicitly disable this by setting the
 
 .. warning::
 
-   Disabling hostname verification can make your configuration
-   `insecure <https://tlseminar.github.io/docs/mostdangerous.pdf>`__.
-   Disable hostname verification only for testing purposes or
-   when there is no other alternative.
+   Disabling hostname verification makes your application insecure and potentially
+   vulnerable to expired certificates and foreign processes posing as valid client
+   instances.
 
-.. _tls-restrict-tls-1.2:
+.. _kotlin-sync-tls-restrict-tls-1.2:
 
 Restrict Connections to TLS 1.2 Only
 ------------------------------------
@@ -237,16 +219,16 @@ To restrict your application to use only the TLS 1.2 protocol, set the
    the TLS 1.2 protocol, upgrade to a later release to connect by using
    TLS 1.2.
 
-.. _tls-custom-sslContext:
+.. _kotlin-sync-tls-custom-sslContext:
 
-Customize TLS/SSL Configuration through the Java SE SSLContext
---------------------------------------------------------------
+Customize TLS Configuration through the Java SE SSLContext
+----------------------------------------------------------
 
-If your TLS/SSL configuration requires customization, you can
+If your TLS configuration requires customization, you can
 set the ``sslContext`` property of your ``MongoClient`` by
 passing an `SSLContext
 <https://docs.oracle.com/javase/8/docs/api/javax/net/ssl/SSLContext.html>`__
-object to the builder in the ``applyToSslSettings()`` lambda:
+object to the ``context()`` method builder in the ``applyToSslSettings()`` block:
 
 .. literalinclude:: /includes/connect/tls.kt
    :start-after: start-ssl-context
@@ -254,6 +236,9 @@ object to the builder in the ``applyToSslSettings()`` lambda:
    :language: kotlin
    :copyable:
    :dedent:
+
+For more information on the ``SSLContext`` class, see the API
+documentation for `SSL Context <https://docs.oracle.com/en/java/javase/16/docs/api/java.base/javax/net/ssl/SSLContext.html>`__.
 
 Online Certificate Status Protocol (OCSP)
 -----------------------------------------
@@ -263,12 +248,12 @@ revoked. A certificate authority can add an X.509 certificate to the
 Certificate Revocation List (CRL) before the expiry time to invalidate
 the certificate. When a client sends an X.509 certificate during the TLS
 handshake, the CA's revocation server checks the CRL and returns a status
-of "good", "revoked", or "unknown".
+of ``good``, ``revoked``, or ``unknown``.
 
 The driver supports the following variations of OCSP:
 
-- **Client-Driven OCSP**
-- **OCSP Stapling**
+- Client-Driven OCSP
+- OCSP Stapling
 
 The following sections describe the differences between them and how to enable
 them for your application.
@@ -338,3 +323,12 @@ For more information about OCSP, check out the following resources:
 
 - Oracle JDK 8 Documentation on `how to enable OCSP for an application <https://docs.oracle.com/javase/8/docs/technotes/guides/security/jsse/ocsp.html>`__
 - :rfc:`Official IETF specification for OCSP (RFC 6960) <6960>`
+
+API Documentation
+-----------------
+
+For more information about any of the methods or types discussed in this guide,
+see the following API documentation:
+
+- `ConnectionString <{+core-api+}/com/mongodb/ConnectionString.html>`__
+- `MongoClientSettings <{+core-api+}/com/mongodb/MongoClientSettings.html>`__
