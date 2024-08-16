@@ -59,9 +59,12 @@ The 5.1.1 driver patch release includes the following changes:
 
 - When using the ``MONGODB-OIDC`` authentication mechanism, you must not
   include comma characters in the ``authMechanismProperties`` connection
-  string value. To learn more about this behavior, see
-  `MongoCredential <{+core-api+}/com/mongodb/MongoCredential.html>`__ in the 
-  API documentation.
+  string value. 
+  
+.. TODO: Link to OIDC content once completed
+.. ex. To learn more about this behavior, see the
+  :ref:`MONGODB-OIDC <kotlin-sync-oidc>` section of the Enterprise
+  Authentication guide.
 
 .. _kotlin-sync-version-5.1:
 
@@ -98,9 +101,11 @@ Improvements in 5.1
   native applications by using the GraalVM native-image tool.
 
 - Enhanced support for the ``MONGODB-OIDC`` authentication mechanism.
-  To learn more about OIDC, see
-  `MongoCredential <{+core-api+}/com/mongodb/MongoCredential.html>`__ in the 
-  API documentation.
+
+.. TODO: Link to OIDC content once completed
+.. ex. To learn more about OIDC, see the
+  :ref:`MONGODB-OIDC <kotlin-sync-oidc>` section of the Enterprise
+  Authentication guide.
 
 - Fixes an issue in which operations used the incorrect codec when using
   a polymorphic ``MongoCollection`` instance. This ensures that
