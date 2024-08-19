@@ -71,7 +71,11 @@ Alternatively, use the ``use()`` method to implement a loop on the cursor:
    :copyable:
    :dedent:
 
+.. note::
 
+   By default, MongoDB closes a cursor when the client has exhausted all the
+   results in the cursor. The examples in this guide explicitly close cursors with the
+   ``close()`` method.
 
 Retrieve Documents Individually
 -------------------------------
