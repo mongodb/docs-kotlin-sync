@@ -55,7 +55,7 @@ fun main() {
         .cursor()
 
     resultCursor.use { cursor ->
-        println(if (resultCursor.hasNext()) resultCursor.next()
+        println(if (cursor.hasNext()) cursor.next()
                 else "No document matches the filter")
 
         cursor.close()
