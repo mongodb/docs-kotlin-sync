@@ -25,7 +25,8 @@ In this guide, you can learn how to access data from a **cursor** with the
 
 A cursor is a mechanism that returns the results of a read operation in iterable
 batches. Because a cursor holds only a subset of documents at any given time,
-cursors reduce both memory consumption and network bandwidth usage.
+cursors reduce both memory consumption and the number of requests the driver sends to
+the server.
 
 Whenever the {+driver-short+} performs a read operation that returns multiple
 documents, it automatically returns those documents in a cursor.
@@ -60,6 +61,17 @@ following example:
    :language: kotlin
    :copyable:
    :dedent:
+
+Alternatively, use the ``use()`` method to implement a loop on the cursor:
+
+.. literalinclude:: /includes/read/cursors.kt
+   :start-after: start-cursor-iterate-alternative
+   :end-before: end-cursor-iterate-alternative
+   :language: kotlin
+   :copyable:
+   :dedent:
+
+
 
 Retrieve Documents Individually
 -------------------------------
@@ -114,20 +126,6 @@ shown in the following example:
       Restaurant(id=5eb3d668b31de5d588f42cd7, name=Dunkin' Donuts)
       ...
 
-Close a Cursor
---------------
-
-By default, MongoDB closes a cursor when the client has exhausted all the
-results in the cursor. To explicitly close a cursor, call the ``close()`` method
-as shown in the following example:
-
-.. literalinclude:: /includes/read/cursors.kt
-   :start-after: start-cursor-close
-   :end-before: end-cursor-close
-   :language: kotlin
-   :copyable:
-   :dedent:
-
 Tailable Cursors
 ----------------
 
@@ -137,7 +135,7 @@ results in a cursor. To create a tailable cursor with capped collection,
 specify ``CursorType.TailableAwait`` to the ``cursorType`` method of a
 ``FindIterable`` object.
 
-The following example creates a tailable cursor on a collection:
+The following example creates a tailable cursor on a capped collection:
 
 .. literalinclude:: /includes/read/cursors.kt
    :start-after: start-tailable-cursor

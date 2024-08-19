@@ -6,6 +6,7 @@ import com.mongodb.client.model.Filters.eq
 import com.mongodb.kotlin.client.MongoClient
 import org.bson.codecs.pojo.annotations.BsonId
 import org.bson.types.ObjectId
+import org.bson.Document
 
 // start-data-class
 data class Restaurant(
@@ -28,17 +29,37 @@ fun main() {
     val collection = database.getCollection<Restaurant>("restaurants")
 
     // start-cursor-iterate
-   val results = collection.find()
+    val results = collection.find()
 
-   results.forEach { result ->
-       println(results)
-   }
+    results.forEach { result ->
+        println(result)
+    }
     // end-cursor-iterate
 
-    // start-cursor-next
-   val results = collection.find<Restaurant>(eq(Restaurant::name.name, "Dunkin' Donuts"))
+    // start-cursor-iterate-alternative
+    val resultCursor = collection.find().cursor()
 
-   println(results.cursor().next())
+    resultCursor.use { cursor ->
+        while (cursor.hasNext()) {
+            println(resultCursor.next())
+        }
+
+        // Safely close the cursor
+        cursor.close()
+    }
+    // end-cursor-iterate-alternative
+
+    // start-cursor-next
+    val resultCursor = collection
+        .find<Restaurant>(eq(Restaurant::name.name, "Dunkin' Donuts"))
+        .cursor()
+
+    resultCursor.use { cursor ->
+        println(if (resultCursor.hasNext()) resultCursor.next()
+        else "No document matches the filter")
+
+        cursor.close()
+    }
     // end-cursor-next
 
     // start-cursor-list
@@ -50,16 +71,7 @@ fun main() {
     }
     // end-cursor-list
 
-    // start-cursor-close
-    val results = collection.find<Restaurant>()
-
-    // Handle your results here
-
-    results.cursor().close()
-    // end-cursor-close
-
     // start-tailable-cursor
-    val results = collection.find<Restaurant>().cursorType(CursorType.TailableAwait)
+    val results = collection.find<Document>().cursorType(CursorType.TailableAwait)
     // end-tailable-cursor
 }
-
