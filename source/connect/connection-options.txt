@@ -71,7 +71,7 @@ Connection Options
 
 The following sections describe the connection options available in the
 {+driver-short+}. Each option shows the option-value pair you can use in a
-connection URI and the builder method to set it within a
+connection URI and, if available, the driver method to set it within a
 ``MongoClientSettings`` instance.
 
 Network Compression
@@ -89,7 +89,7 @@ Network Compression
          or received from the server. The driver uses the first of these compression types
          that the server supports.
        |
-       | **Data Type**: Comma-delimited string of compressors
+       | **Data Type**: comma-delimited string
        | **MongoClientSettings**: ``compressorList(listOf(<MongoCompressor>))``
        | **Connection URI**: ``compressors=snappy,zstd,zlib``
 
