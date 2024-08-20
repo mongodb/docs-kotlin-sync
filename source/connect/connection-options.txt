@@ -123,7 +123,14 @@ Timeouts
        |
        | **Data Type**: integer
        | **Default**: ``10000``
-       | **MongoClientSettings**: ``applyToSocketSettings{ builder -> builder.connectTimeout(10, TimeUnit.SECONDS)}``
+       | **MongoClientSettings**:
+       
+       .. code-block:: kotlin
+         
+          applyToSocketSettings{ builder ->
+              builder.connectTimeout(10, TimeUnit.SECONDS)
+          }
+
        | **Connection URI**: ``timeoutMs=10000``
 
    * - **socketTimeoutMS**
@@ -132,7 +139,14 @@ Timeouts
        |
        | **Data Type**: integer
        | **Default**: no timeout
-       | **MongoClientSettings**: ``applyToSocketSettings{ builder -> builder.readTimeout(5, TimeUnit.SECONDS)}``
+       | **MongoClientSettings**:
+
+       .. code-block:: kotlin
+         
+          applyToSocketSettings{ builder ->
+              builder.readTimeout(5, TimeUnit.SECONDS)
+          }
+
        | **Connection URI**: ``socketTimeoutMS=5000``
 
 Server Selection
@@ -152,7 +166,14 @@ Server Selection
        |
        | **Data Type**: integer
        | **Default**: ``30000``
-       | **MongoClientSettings**: ``applyToClusterSettings{ builder -> builder.serverSelectionTimeout(30, TimeUnit.SECONDS)}``
+       | **MongoClientSettings**:
+       
+       .. code-block:: kotlin
+         
+          applyToClusterSettings{ builder ->
+              builder.serverSelectionTimeout(30, TimeUnit.SECONDS)
+          }
+
        | **Connection URI**: ``serverSelectionTimeoutMS=30000``
 
 Authentication
@@ -174,7 +195,14 @@ Authentication
        | **Data Type**: string
        | **Default**: ``"SCRAM-SHA-256"`` when connecting to MongoDB
          v4.0 or later
-       | **MongoClientSettings**: ``credential(MongoCredential.createScramSha256Credential(...))``
+       | **MongoClientSettings**:
+
+       .. code-block:: kotlin
+         
+          credential(
+              MongoCredential.createScramSha256Credential(...)
+          )
+
        | **Connection URI**: ``authMechanism=SCRAM-SHA-256``
   
    * - **authMechanismProperties**
@@ -229,7 +257,14 @@ deployments, see the :ref:`kotlin-sync-connection-targets` guide.
        |
        | **Data Type**: boolean
        | **Default**: ``false``
-       | **MongoClientSettings**: ``applyToClusterSettings{ builder -> builder.mode(ClusterConnectionMode.SINGLE) }``
+       | **MongoClientSettings**:
+       
+       .. code-block:: kotlin
+         
+          applyToClusterSettings{ builder ->
+              builder.mode(ClusterConnectionMode.SINGLE)
+          }
+
        | **Connection URI**: ``directConnection=true``
    
    * - **readPreference**
@@ -262,7 +297,14 @@ deployments, see the :ref:`kotlin-sync-connection-targets` guide.
        |
        | **Data Type**: integer
        | **Default**: ``15``
-       | **MongoClientSettings**: ``applyToClusterSettings{ builder -> builder.localThreshold(35, TimeUnit.MILLISECONDS) }``
+       | **MongoClientSettings**:
+
+       .. code-block:: kotlin
+         
+          applyToClusterSettings{ builder ->
+              builder.localThreshold(35, TimeUnit.MILLISECONDS)
+          }
+
        | **Connection URI**: ``localThresholdMS=35``
 
 Additional Information
