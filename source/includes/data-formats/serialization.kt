@@ -108,7 +108,7 @@ fun main() {
         .firstOrNull()
     println(resultTeacher)
 
-    val resultStudent =collection.withDocumentClass<Student>()
+    val resultStudent = collection.withDocumentClass<Student>()
         .find(Filters.exists("grade"))
         .firstOrNull()
     println(resultStudent)
