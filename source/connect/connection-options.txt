@@ -268,7 +268,9 @@ deployments, see the :ref:`kotlin-sync-connection-targets` guide.
        | **Connection URI**: ``directConnection=true``
    
    * - **readPreference**
-     - | Specifies the client's read preference. For more information, see :manual:`</core/read-preference/>`.
+     - | Specifies the client's read preference. For more information,
+         see :manual:`Read Preference </core/read-preference/>` in the
+         Server manual.
        |
        | **Data Type**: string
        | **Default**: ``primary``
@@ -276,7 +278,9 @@ deployments, see the :ref:`kotlin-sync-connection-targets` guide.
        | **Connection URI**: ``readPreference=primary``
 
    * - **readConcern**
-     - | Specifies the client's read concern. For more information, see :manual:`</reference/read-concern/>`.
+     - | Specifies the client's read concern. For more information, see
+         :manual:`Read Concern </reference/read-concern/>` in the Server
+         manual.
        |
        | **Data Type**: string
        | **MongoClientSettings**: ``readConcern(ReadConcern.MAJORITY)``
@@ -284,7 +288,8 @@ deployments, see the :ref:`kotlin-sync-connection-targets` guide.
 
    * - **writeConcern**
      - | Specifies the client's write concern. For more information, see
-         :manual:`</reference/write-concern/>`.
+         :manual:`Write Concern </reference/write-concern/>` in the
+         Server manual.
        |
        | **Data Type**: string
        | **MongoClientSettings**: ``writeConcern(WriteConcern.MAJORITY)``
