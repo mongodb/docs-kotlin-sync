@@ -19,15 +19,15 @@ Connect to MongoDB
    :keywords: client, ssl, tls, localhost
 
 .. toctree::
-    :titlesonly:
-    :maxdepth: 1
+   :titlesonly:
+   :maxdepth: 1
     
-    /connect/stable-api
-.. 
-..    /connect/mongoclient
-..    /connect/connection-targets
-..    /connect/connection-options
-..    /connect/tls
+   /connect/mongoclient
+   /connect/connection-targets
+   /connect/connection-options
+   /connect/tls
+   /connect/stable-api
+
 ..    /connect/network-compression
 ..    /connect/server-selection
 ..    /connect/csot
@@ -84,7 +84,7 @@ deployment hosted on Atlas:
 
 .. code-block:: kotlin
 
-   val uri = "mongodb+srv://<username>:<password>@<hostname/port>/?<options>"
+   val uri = "mongodb+srv://<db_username>:<db_password>@<hostname/port>/?<options>"
    val mongoClient = MongoClient.create(uri)
 
 Replica Set
@@ -102,7 +102,8 @@ Transport Layer Security (TLS)
 ------------------------------
 
 The following sections describe how to connect to MongoDB
-while enabling the TLS protocol.
+while enabling the TLS protocol. To learn more about using TLS with the {+driver-short+},
+see :ref:`kotlin-sync-tls`.
 
 Enable TLS
 ~~~~~~~~~~
@@ -111,8 +112,8 @@ The following tabs demonstrate how to enable TLS on a connection:
 
 .. include:: /includes/connect/tls-tabs.rst
 
-.. To learn more about enabling TLS, see :ref:`kotlin-sync-enable-tls` in
-.. the TLS configuration guide.
+To learn more about enabling TLS, see :ref:`kotlin-sync-tls-enable` in
+the TLS configuration guide.
 
 Disable Hostname Verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -161,7 +162,7 @@ selection function:
 
 .. code-block:: kotlin
 
-   val client = MongoClient.create("mongodb://<username>:<password>@<hostname>:<port>",
+   val client = MongoClient.create("mongodb://<db_username>:<db_password>@<hostname>:<port>",
                                 server_selector=<selector function>)
 
 .. To learn more about customizing server selection, see
