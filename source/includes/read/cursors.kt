@@ -37,7 +37,7 @@ fun main() {
     // end-cursor-iterate
 
     // start-cursor-iterate-alternative
-    val result = collection.find()
+    val results = collection.find()
 
     results.cursor().use { cursor ->
         while (cursor.hasNext()) {
