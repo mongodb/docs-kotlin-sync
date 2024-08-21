@@ -37,28 +37,22 @@ fun main() {
     // end-cursor-iterate
 
     // start-cursor-iterate-alternative
-    val resultCursor = collection.find().cursor()
+    val result = collection.find()
 
-    resultCursor.use { cursor ->
+    results.cursor().use { cursor ->
         while (cursor.hasNext()) {
             println(resultCursor.next())
         }
-
-        // Safely close the cursor
-        cursor.close()
     }
     // end-cursor-iterate-alternative
 
     // start-cursor-next
-    val resultCursor = collection
+    val results = collection
         .find<Restaurant>(eq(Restaurant::name.name, "Dunkin' Donuts"))
-        .cursor()
 
-    resultCursor.use { cursor ->
+    results.cursor().use { cursor ->
         println(if (cursor.hasNext()) cursor.next()
                 else "No document matches the filter")
-
-        cursor.close()
     }
     // end-cursor-next
 
