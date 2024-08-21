@@ -52,19 +52,35 @@ the settings object to the ``MongoClient.create()`` method.
 Configuring the connection this way makes it easier to
 change settings at runtime and can help you catch errors at compile time.
 
-The following example shows how to set options when creating a
-``MongoClientSettings`` instance:
+The following example shows how to specify your connection target and
+set other options when creating a ``MongoClientSettings`` instance:
 
 .. code-block:: kotlin
 
-   val uri = "<connection string>"
-
    val settings = MongoClientSettings.builder()
-       .applyConnectionString(ConnectionString(uri))
-       .retryWrites(true)
+       .applyToClusterSettings { builder -> builder.hosts(listOf(ServerAddress("localhost", 27017))) }
+       .applyToSocketSettings { builder -> builder.connectTimeout(60000, TimeUnit.MILLISECONDS) }
+       .applyToSslSettings { builder -> builder.enabled(true) }
        .build()
 
     val mongoClient = MongoClient.create(settings)
+
+If you prefer to provide a connection string instead of specifying
+the hostname and port, you can use the ``applyConnectionString()``
+method, then set other options by using builder methods, as shown in the
+following code:
+
+.. code-block:: kotlin
+   :emphasize-lines: 1, 3
+
+   val uri = "<connection string>"
+   val settings = MongoClientSettings.builder()
+       .applyConnectionString(ConnectionString(uri))
+       .applyToSocketSettings { builder -> builder.connectTimeout(60000, TimeUnit.MILLISECONDS) }
+       .applyToSslSettings { builder -> builder.enabled(true) }
+       .build()
+   
+   val mongoClient = MongoClient.create(settings)
 
 Connection Options
 ------------------
