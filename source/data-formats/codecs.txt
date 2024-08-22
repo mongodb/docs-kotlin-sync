@@ -94,7 +94,7 @@ value from the BSON data. This method requires the following parameters:
    * - Parameter Type
      - Description
 
-   * - ``bsonReader``
+   * - ``reader``
      - An instance of a class that implements ``BsonReader``, an interface type
        that exposes methods for reading a BSON document. For example, the
        ``BsonBinaryReader`` implementation reads from a binary stream of data.
@@ -332,11 +332,11 @@ corresponding ``Codec`` to handle encoding and decoding:
 
 - ``powerStatus``: Describes whether the device light is ``"ON"`` or ``"OFF"``.
   For this field, use the :ref:`PowerStatusCodec
-  <kotlin-sync-powerstatus-codec>` that converts the ``PowerStatus``
+  <kotlin-sync-powerstatus-codec>` which converts the ``PowerStatus``
   enum values to BSON booleans.
 
 - ``colorTemperature``: Describes the color of the device light in
-  Kelvins as an ``Int`` value. For this field, use the ``IntegerCodec``
+  kelvins as an ``Int`` value. For this field, use the ``IntegerCodec``
   provided in the BSON library.
 
 The following code shows how to can implement a ``Codec`` for the
