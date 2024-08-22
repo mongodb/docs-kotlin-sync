@@ -168,11 +168,10 @@ types:
 The following code shows how to construct a ``CodecRegistry`` by using
 the ``fromCodecs()`` method:
 
-.. literalinclude:: /includes/data-formats/codecs.kt
-   :language: kotlin
-   :start-after: start-fromcodecs
-   :end-before: end-fromcodecs
-   :dedent:
+.. code-block:: kotlin
+
+   val codecRegistry = CodecRegistries
+       .fromCodecs(IntegerCodec(), PowerStatusCodec())
 
 The preceding example assigns the ``CodecRegistry`` the following ``Codec``
 implementations:
@@ -184,11 +183,10 @@ implementations:
 You can retrieve the ``Codec`` instances from the ``CodecRegistry`` instance
 by using the following code:
 
-.. literalinclude:: /includes/data-formats/codecs.kt
-   :language: kotlin
-   :start-after: start-retrieve-codecs
-   :end-before: end-retrieve-codecs
-   :dedent:
+.. code-block:: kotlin
+
+   val powerStatusCodec = codecRegistry.get(PowerStatus::class.java)
+   val integerCodec = codecRegistry.get(Integer::class.java)
 
 If you attempt to retrieve a ``Codec`` instance for a class that is not
 registered, the ``codecRegistry.get()`` method raises a
