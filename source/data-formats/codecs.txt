@@ -210,7 +210,7 @@ retrieved by the ``CodecProvider.get()`` method to convert between
 {+language+} and BSON data types.
 
 However, in cases that you add a class that contains fields requiring
-corresponding ``Codec`` objects, you need to ensure that you instantiate the
+corresponding ``Codec`` objects, ensure that you instantiate the
 ``Codec`` objects for the class' fields before you instantiate the
 ``Codec`` for the entire class. You can use the ``CodecRegistry`` parameter in
 the ``CodecProvider.get()`` method to pass any of the ``Codec``
@@ -232,7 +232,7 @@ unless you specify a different one.
 
 .. _kotlin-sync-codecs-override:
 
-If you need to override the behavior of one or more ``Codec`` classes, but
+To override the behavior of one or more ``Codec`` classes, but
 keep the behavior from the default codec registry for the other classes,
 you can specify the registries in order of precedence. For example,
 suppose you want to override the default provider behavior of a ``Codec`` for
