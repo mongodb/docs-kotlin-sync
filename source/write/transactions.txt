@@ -20,7 +20,7 @@ Transactions
 Overview
 --------
 
-In this guide, you can learn how to use the {+driver-short+} driver to perform
+In this guide, you can learn how to use the {+driver-short+} to perform
 **transactions**. Transactions allow you to run a series of operations that do 
 not change any data until the transaction is committed. If any operation in 
 the transaction returns an error, the driver cancels the transaction and discards 
@@ -53,8 +53,10 @@ Sample Data
 The examples in this guide use the ``sample_restaurants.restaurants`` collection
 from the :atlas:`Atlas sample datasets </sample-data>`. To learn how to create a
 free MongoDB Atlas cluster and load the sample datasets, see the
-:ref:`<pymongo-get-started>` tutorial.
+:atlas:`Get Started with Atlas </getting-started>` guide.
 
+Methods
+-------
 
 Create a ``ClientSession`` by using the ``startSession()`` method on your ``MongoClient``
 instance. You can then modify the session state by using the methods provided by
