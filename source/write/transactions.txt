@@ -109,9 +109,10 @@ through the following steps:
 
 1. Create a session from the client by using the ``startSession()`` method.
 #. Use the ``withTransaction()`` method to start a transaction.
-#. Insert multiple documents. The ``withTransaction()`` method runs the
-   insert operation and commits the transaction. If any operation results in
-   errors, ``withTransaction()`` cancels the transaction.
+#. Insert multiple documents into the ``restaurants`` collection. The 
+   ``withTransaction()`` method runs the insert operation and commits the 
+   transaction. If any operation results in errors, ``withTransaction()`` 
+   cancels the transaction.
 #. Close the connection to the server by using the ``client.close()`` method.
 
 .. literalinclude:: /includes/write/transaction.kt
@@ -121,6 +122,9 @@ through the following steps:
    :copyable:
    :dedent:
 
+If you require more control over your transactions, you can use the ``startTransaction()``
+method. You can use this method with the ``commitTransaction()`` and ``abortTransaction()``
+methods described in the preceding section to manually manage the transaction lifecycle. 
 
 Additional Information
 ----------------------
