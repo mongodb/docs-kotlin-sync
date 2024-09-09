@@ -38,7 +38,7 @@ fun main() {
                 .writeConcern(WriteConcern.MAJORITY)
                 .build()
 
-            // Use the withTransaction method to start a transaction and execute the lambda function
+            // Uses the withTransaction method to start a transaction and run the given function
             session.withTransaction({
                 insertDocuments(session)
                 println("Transaction succeeded")
