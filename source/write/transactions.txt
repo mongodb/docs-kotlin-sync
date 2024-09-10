@@ -55,6 +55,15 @@ from the :atlas:`Atlas sample datasets </sample-data>`. To learn how to create a
 free MongoDB Atlas cluster and load the sample datasets, see the
 :atlas:`Get Started with Atlas </getting-started>` guide.
 
+The documents in this collection are modeled by the following {+language+} data class:
+
+.. literalinclude:: /includes/write/transaction.kt
+   :start-after: start-data-class
+   :end-before: end-data-class
+   :language: kotlin
+   :copyable:
+   :dedent:
+
 Methods
 -------
 
@@ -77,7 +86,7 @@ manage your transaction:
          this method, see the :manual:`startTransaction() page
          </reference/method/Session.startTransaction/>`  in the Server manual.
        |
-       | **Parameter**: ``transactionOptions``
+       | **Parameter**: ``TransactionOptions``
 
    * - ``abortTransaction()``
      - | Ends the active transaction for this session. Returns an
@@ -98,7 +107,7 @@ manage your transaction:
      - | Starts a transaction on this session and runs the given function within 
          a transaction.
        |
-       | **Parameters**: ``transactionBody, options``
+       | **Parameters**: transaction body function, ``TransactionOptions``
 
 Example
 -------
