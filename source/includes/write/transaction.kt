@@ -9,28 +9,24 @@ data class Restaurant(val name: String, val cuisine: String)
 
 fun main() {
 // start-transaction
-    // Creates a new MongoClient with a connection string
+    // Creates a new MongoClient to manage your connection
     val client = MongoClients.create("<connection string>")
 
     // Gets the database and collection
     val database = client.getDatabase("sample_restaurants")
     val collection = database.getCollection<Restaurant>("restaurants")
     
-    // Defines options and inserts restaurants into the collection
+    // Inserts restaurants into the collection
     fun insertRestaurantsInTransaction(session: ClientSession) {
-        // Sets options for the collection operation within the transaction
-        val restaurantsCollectionWithOptions = collection
-            .withWriteConcern(WriteConcern("majority"))
-            .withReadConcern(ReadConcern.LOCAL)
 
         // Inserts restaurants within the transaction
-        restaurantsCollectionWithOptions.insertOne(
+        collection.insertOne(
             session,
-            Restaurant("name", "Kotlin Sync Pizza").append("cuisine", "Pizza")
+            Restaurant("Kotlin Sync Pizza", "Pizza")
         )
-        restaurantsCollectionWithOptions.insertOne(
+        collection.insertOne(
             session,
-            Restaurant("name", "Kotlin Sync Burger").append("cuisine", "Burger")
+            Restaurant("Kotlin Sync Burger", "Burger")
         )
     }
 

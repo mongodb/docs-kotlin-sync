@@ -117,11 +117,11 @@ transaction, and insert documents into a collection in one transaction
 through the following steps:
 
 1. Create a session from the client by using the ``startSession()`` method.
-#. Use the ``withTransaction()`` method to start a transaction.
-#. Insert multiple documents into the ``restaurants`` collection. The 
-   ``withTransaction()`` method runs the insert operation and commits the 
-   transaction. If any operation results in errors, ``withTransaction()`` 
-   cancels the transaction.
+#. Define the ``insertRestaurantsInTransaction`` method to insert multiple 
+   documents into the ``restaurants`` collection. 
+#. Use the ``withTransaction()`` method to start a transaction. The ``withTransaction()`` 
+   method runs the insert operation and commits the transaction. If any 
+   operation results in errors, ``withTransaction()`` cancels the transaction.
 #. Close the connection to the server by using the ``client.close()`` method.
 
 .. literalinclude:: /includes/write/transaction.kt
