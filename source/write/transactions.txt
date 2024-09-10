@@ -122,7 +122,7 @@ through the following steps:
 #. Use the ``withTransaction()`` method to start a transaction. The ``withTransaction()`` 
    method runs the insert operation and commits the transaction. If any 
    operation results in errors, ``withTransaction()`` cancels the transaction.
-#. Close the connection to the server by using the ``client.close()`` method.
+#. Close the connection to the server by using the ``MongoClient.close()`` method.
 
 .. literalinclude:: /includes/write/transaction.kt
    :start-after: start-transaction
@@ -149,7 +149,7 @@ To learn more about ACID compliance, see the :website:`What are ACID
 Properties in Database Management Systems? </basics/acid-transactions>`
 article on the MongoDB website.
 
-.. _api-docs-transaction:
+.. _kotlin-sync-api-docs-transaction:
 
 API Documentation
 ~~~~~~~~~~~~~~~~~

@@ -33,6 +33,7 @@ fun main() {
     // Starts a client session
     client.startSession().use { session ->
         try {
+            // Sets transaction options
             val txnOptions = TransactionOptions.builder()
                 .readConcern(ReadConcern.LOCAL)
                 .writeConcern(WriteConcern.MAJORITY)
