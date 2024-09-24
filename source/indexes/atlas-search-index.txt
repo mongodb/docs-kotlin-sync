@@ -47,9 +47,11 @@ Search and Vector Search indexes:
 
 .. note::
 
-   The Atlas Search index management methods run asynchronously and might return before
-   confirming that they ran successfully. To determine the current status of the indexes,
-   call the ``listSearchIndexes()`` method.
+   The Atlas Search and Vector Search index management methods run
+   asynchronously and might return before confirming that they ran
+   successfully. To determine the current status of the indexes, call
+   the ``listSearchIndexes()`` method or view the indexes list in the
+   :atlas:`Atlas UI </atlas-ui/indexes/>`.
 
 The following sections provide code examples that demonstrate how to use
 each of the preceding methods.
@@ -72,7 +74,7 @@ The following code example shows how to create an Atlas Search index:
    :end-before: end-create-search-index
    :dedent:
 
-The following code example shows how to create Search and
+The following code example shows how to create Atlas Search and
 Vector Search indexes in one call:
 
 .. literalinclude:: /includes/indexes/indexes.kt
