@@ -1,6 +1,5 @@
-import com.mongodb.*
-import com.mongodb.client.ClientSession
-import com.mongodb.client.MongoClients
+import com.mongodb.kotlin.client.ClientSession
+import com.mongodb.kotlin.client.MongoClient
 import org.bson.Document
 
 // start-data-class
@@ -10,7 +9,7 @@ data class Restaurant(val name: String, val cuisine: String)
 fun main() {
 // start-transaction
     // Creates a new MongoClient to manage your connection
-    val client = MongoClients.create("<connection string>")
+    val client = MongoClient.create("<connection string>")
 
     // Gets the database and collection
     val database = client.getDatabase("sample_restaurants")

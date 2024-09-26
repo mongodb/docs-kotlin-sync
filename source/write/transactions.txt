@@ -120,7 +120,7 @@ through the following steps:
 #. Define the ``insertRestaurantsInTransaction()`` method to insert multiple 
    documents into the ``restaurants`` collection. 
 #. Use the ``withTransaction()`` method to start a transaction. The ``withTransaction()`` 
-   method runs the insert operation and commits the transaction. If any 
+   method runs the insert operations and commits the transaction. If any 
    operation results in errors, ``withTransaction()`` cancels the transaction.
 #. Close the connection to the server by using the ``MongoClient.close()`` method.
 
