@@ -258,7 +258,7 @@ MONGODB-AWS Mechanism
 The ``MONGODB-AWS`` authentication mechanism uses your Amazon Web Services
 Identity and Access Management (AWS IAM) credentials to authenticate your
 user. To learn more about configuring MongoDB Atlas, see the
-:atlas:`Set Up Passwordless Authentication with AWS IAM Roles </security/aws-iam-authentication>`
+:atlas:`Set Up Authentication with AWS IAM </security/aws-iam-authentication>`
 guide.
 
 To instruct the driver to use this authentication mechanism, you can specify
@@ -435,7 +435,7 @@ Specify Your Credentials in a MongoCredential
 
 You can supply your AWS IAM credentials to a ``MongoClient`` by using a
 ``MongoCredential`` instance. To construct the ``MongoCredential`` instance
-for ``MONGODB-AWS`` authentication,  use the `createAwsCredential() <{+api+}/apidocs/mongodb-driver-core/com/mongodb/MongoCredential.html#createAwsCredential(java.lang.String,char%5B%5D)>`__
+for ``MONGODB-AWS`` authentication,  use the `createAwsCredential() <{+core-api+}/com/mongodb/MongoCredential.html#createAwsCredential(java.lang.String,char%5B%5D)>`__
 factory method.
 
 You can supply only programmatic access keys to the
