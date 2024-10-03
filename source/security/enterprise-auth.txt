@@ -32,9 +32,8 @@ Enterprise Edition:
 - :ref:`LDAP (PLAIN) <plain-auth-mechanism>`
 - :ref:`MONGODB-OIDC <kotlin-oidc>`
 
-For more
-information on establishing a connection to your MongoDB cluster, read our
-:doc:`Connection Guide </fundamentals/connection>`.
+For more information on establishing a connection to your MongoDB cluster, read our
+:ref:`Connection Guide <kotlin-sync-connect>`.
 
 
 Specify an Authentication Mechanism
@@ -67,10 +66,10 @@ authenticating using a ``MongoCredential``.
 For more information on these classes and methods, refer to the following API
 documentation:
 
-- `MongoClient.create() <{+api+}/apidocs/mongodb-driver-kotlin-coroutine/mongodb-driver-kotlin-coroutine/com.mongodb.kotlin.client.coroutine/-mongo-client/-factory/create.html>`__
-- `MongoClient <{+api+}/apidocs/mongodb-driver-kotlin-coroutine/mongodb-driver-kotlin-coroutine/com.mongodb.kotlin.client.coroutine/-mongo-client/index.html>`__
-- `MongoClientSettings.Builder <{+api+}/apidocs/mongodb-driver-core/com/mongodb/MongoClientSettings.Builder.html>`__
-- `MongoCredential <{+api+}/apidocs/mongodb-driver-core/com/mongodb/MongoCredential.html>`__
+- `MongoClient.create() <{+api+}/com.mongodb.kotlin.client/-mongo-client/-factory/index.html>`__
+- `MongoClient <{+api+}/com.mongodb.kotlin.client/-mongo-client/index.html>`__
+- `MongoClientSettings.Builder <{+java-api+}/apidocs/mongodb-driver-core/com/mongodb/MongoClientSettings.Builder.html>`__
+- `MongoCredential <{+java-api+}/apidocs/mongodb-driver-core/com/mongodb/MongoCredential.html>`__
 
 Mechanisms
 ----------
@@ -120,8 +119,11 @@ mechanism:
 
       Your code to instantiate a ``MongoClient`` should resemble the following:
 
-      .. literalinclude:: /examples/generated/EnterpriseAuthTest.snippet.gssapi-connection-string.kt
+      .. literalinclude:: /includes/security/enterprise-auth.kt
          :language: kotlin
+         :dedent:
+         :start-after:  start-gssapi-connect-string
+         :end-before: end-gssapi-connect-string
 
    .. tab::
       :tabid: MongoCredential
@@ -130,8 +132,11 @@ mechanism:
       ``MongoCredential`` class, use the ``createGSSAPICredential()``
       method. Your code to instantiate a ``MongoClient`` should resemble the following:
 
-      .. literalinclude:: /examples/generated/EnterpriseAuthTest.snippet.auth-creds-gssapi.kt
+      .. literalinclude:: /includes/security/enterprise-auth.kt
          :language: kotlin
+         :dedent:
+         :start-after:  start-gssapi-mongo-cred
+         :end-before: end-gssapi-mongo-cred
 
 In order to acquire a
 `Kerberos ticket <https://docs.oracle.com/en/java/javase/11/docs/api/java.security.jgss/javax/security/auth/kerberos/KerberosTicket.html>`__,
@@ -177,8 +182,11 @@ You may need to specify one or more of the following additional
       Your code to instantiate a ``MongoClient`` using GSSAPI and additional
       properties might resemble the following:
 
-      .. literalinclude:: /examples/generated/EnterpriseAuthTest.snippet.gssapi-properties-connection-string.kt
-         :language: kotlin      
+      .. literalinclude:: /includes/security/enterprise-auth.kt
+         :language: kotlin
+         :dedent:
+         :start-after: start-gssapi-properties-connect-string
+         :end-before: end-gssapi-properties-connect-string
 
    .. tab::
       :tabid: MongoCredential
@@ -203,14 +211,20 @@ You may need to specify one or more of the following additional
          .. tab::
             :tabid: SERVICE_NAME_KEY
 
-            .. literalinclude:: /examples/generated/EnterpriseAuthTest.snippet.service-name-key.kt
-               :language: kotlin            
+            .. literalinclude:: /includes/security/enterprise-auth.kt
+               :language: kotlin
+               :dedent:
+               :start-after: start-gssapi-service-name-key
+               :end-before: end-gssapi-service-name-key     
 
          .. tab::
             :tabid: JAVA_SUBJECT_KEY
 
-            .. literalinclude:: /examples/generated/EnterpriseAuthTest.snippet.java-subject-key.kt
-               :language: kotlin            
+            .. literalinclude:: /includes/security/enterprise-auth.kt
+               :language: kotlin
+               :dedent:
+               :start-after: start-gssapi-java-subject-key
+               :end-before: end-gssapi-java-subject-key      
 
 By default, the Kotlin driver caches Kerberos tickets by ``MongoClient`` instance.
 If your deployment needs to frequently create and destroy ``MongoClient`` instances,
@@ -237,8 +251,11 @@ to improve performance.
       in your ``MongoCredential`` instance. The code to configure the Kotlin driver to cache Kerberos tickets
       by process should resemble the following:
 
-      .. literalinclude:: /examples/generated/EnterpriseAuthTest.snippet.kerberos-subject-provider.kt
-         :language: kotlin   
+      .. literalinclude:: /includes/security/enterprise-auth.kt
+         :language: kotlin
+         :dedent:
+         :start-after: start-gssapi-java-subject-provider
+         :end-before: end-gssapi-java-subject-provider
 
 .. note::
 
@@ -251,7 +268,6 @@ to improve performance.
    - `JDK-8054026 <https://bugs.openjdk.java.net/browse/JDK-8054026>`__
    - `JDK-6722928 <https://bugs.openjdk.java.net/browse/JDK-6722928>`__
    - `SO 23427343 <https://stackoverflow.com/questions/23427343/cannot-retrieve-tgt-despite-allowtgtsessionkey-registry-entry>`__
-
 
 .. _plain-auth-mechanism:
 
@@ -303,8 +319,11 @@ mechanism:
 
       Your code to instantiate a ``MongoClient`` should resemble the following:
 
-      .. literalinclude:: /examples/generated/EnterpriseAuthTest.snippet.ldap-connection-string.kt
+      .. literalinclude:: /includes/security/enterprise-auth.kt
          :language: kotlin
+         :dedent:
+         :start-after: start-ldap-connect-string 
+         :end-before: end-ldap-connect-string
       
    .. tab::
       :tabid: MongoCredential
@@ -313,8 +332,11 @@ mechanism:
       ``MongoCredential`` class, use the ``createPlainCredential()``
       method. Your code to instantiate a ``MongoClient`` should resemble the following:
 
-      .. literalinclude:: /examples/generated/EnterpriseAuthTest.snippet.ldap-mongo-credential.kt
+      .. literalinclude:: /includes/security/enterprise-auth.kt
          :language: kotlin
+         :dedent:
+         :start-after: start-ldap-mongo-cred
+         :end-before: end-ldap-mongo-cred
 
 .. _kotlin-oidc:
 
@@ -366,8 +388,11 @@ see the corresponding syntax.
       You must specify values that contain commas in a ``MongoCredential`` instance, as
       demonstrated in the :guilabel:`MongoCredential` tab.
 
-      .. literalinclude:: /examples/generated/EnterpriseAuthTest.snippet.oidc-azure-connection-string.kt
+      .. literalinclude:: /includes/security/enterprise-auth.kt
          :language: kotlin
+         :dedent:
+         :start-after: start-oidc-azure-connect-str  
+         :end-before: end-oidc-azure-connect-str
 
    .. tab:: MongoCredential
       :tabid: mongodb-azure-mongo-credential
@@ -377,8 +402,11 @@ see the corresponding syntax.
       placeholder with the value of the
       ``audience`` server parameter configured on your MongoDB deployment.
       
-      .. literalinclude:: /examples/generated/EnterpriseAuthTest.snippet.oidc-azure-credential.kt
+      .. literalinclude:: /includes/security/enterprise-auth.kt
          :language: kotlin
+         :dedent:
+         :start-after: start-oidc-azure-mongo-cred
+         :end-before: end-oidc-azure-mongo-cred
 
 .. _kotlin-mongodb-oidc-gcp-imds:
 
@@ -412,8 +440,11 @@ see the corresponding syntax.
       You must specify values that contain commas in a ``MongoCredential`` instance, as
       demonstrated in the :guilabel:`MongoCredential` tab.
      
-      .. literalinclude:: /examples/generated/EnterpriseAuthTest.snippet.oidc-gcp-connection-string.kt
+      .. literalinclude:: /includes/security/enterprise-auth.kt
          :language: kotlin
+         :dedent:
+         :start-after: start-oidc-gcp-connect-str
+         :end-before: end-oidc-gcp-connect-str
 
    .. tab:: MongoCredential
       :tabid: mongodb-gcp-mongo-credential
@@ -421,8 +452,11 @@ see the corresponding syntax.
       Replace the ``<audience>`` placeholder with the value of the
       ``audience`` server parameter configured on your MongoDB deployment.
       
-      .. literalinclude:: /examples/generated/EnterpriseAuthTest.snippet.oidc-gcp-credential.kt
+      .. literalinclude:: /includes/security/enterprise-auth.kt
          :language: kotlin
+         :dedent:
+         :start-after: start-oidc-gcp-mongo-cred
+         :end-before: end-oidc-gcp-mongo-cred
 
 Custom Callback
 +++++++++++++++
@@ -433,8 +467,11 @@ must define a custom callback to use OIDC to authenticate from these platforms.
 To do so, use the ``"OIDC_CALLBACK"`` authentication property, as shown in the following
 code example:
 
-.. literalinclude:: /examples/generated/EnterpriseAuthTest.snippet.oidc-callback.kt
+.. literalinclude:: /includes/security/enterprise-auth.kt
    :language: kotlin
+   :dedent:
+   :start-after: start-oidc-custom-callback
+   :end-before: end-oidc-custom-callback
 
 The value of the ``"OIDC_CALLBACK"`` property must be a lambda or other implementation
 of the ``OidcCallback`` functional interface that accepts an ``OidcCallbackContext``
@@ -443,5 +480,8 @@ as a parameter and returns an ``OidcCallbackResult``.
 The following example uses an example callback to retrieve an OIDC token from a file
 named ``"access-token.dat"`` in the local file system:
 
-.. literalinclude:: /examples/generated/EnterpriseAuthTest.snippet.oidc-callback-file.kt
+.. literalinclude:: /includes/security/enterprise-auth.kt
    :language: kotlin
+   :dedent:
+   :start-after: start-oidc-custom-callback-ex
+   :end-before: end-oidc-custom-callback-ex

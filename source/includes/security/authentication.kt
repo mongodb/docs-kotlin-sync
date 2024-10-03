@@ -160,7 +160,7 @@ val credential = MongoCredential.createAwsCredential("<awsKeyId>", "<awsSecretKe
 
 val settings = MongoClientSettings.builder()
     .applyToClusterSettings { builder ->
-        builder.hosts(listOf(ServerAddress("<hostname>", "<port>")))
+        builder.hosts(listOf(ServerAddress("<hostname>", <port>)))
     }
     .credential(credential)
     .build()
@@ -193,7 +193,7 @@ val credential = MongoCredential.createMongoX509Credential()
 val settings = MongoClientSettings.builder()
     .applyToClusterSettings { builder ->
         builder.hosts(listOf(
-            ServerAddress("<hostname>", "<port>"))
+            ServerAddress("<hostname>", <port>))
         )
     }
     .applyToSslSettings { builder ->
