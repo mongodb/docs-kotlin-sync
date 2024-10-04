@@ -25,18 +25,9 @@ In this guide, you can learn how to authenticate with MongoDB using each
 Authentication mechanisms are processes by which the driver and server
 confirm identity and establish trust to ensure security.
 
-This guide describes the following authentication mechanisms:
-
-- :ref:`SCRAM-Based Mechanisms <kotlin-sync-auth-scram-mechanisms>`
-- :ref:`MONGODB-AWS Mechanism <kotlin-sync-auth-aws>`
-- :ref:`MONGODB-X509 Mechanism <kotlin-sync-auth-x509>`
-
 To select a specific authentication mechanism, you can specify the
 mechanism, your credentials, and other necessary information
 in the options of your connection string or in a ``Credential`` struct.
-
-In this guide, the examples demonstrate how to configure
-authentication in a ``Credential`` struct.
 
 To learn more about the connection string options for authentication,
 see the :manual:`Authentication Options
@@ -49,25 +40,21 @@ To authenticate using ``Kerberos`` or ``LDAP``, see the
 For more information on establishing a connection to your MongoDB cluster,
 see :ref:`Connect to MongoDB <kotlin-sync-connect>`.
 
-.. _kotlin-sync-auth-scram-mechanisms:
+.. _kotlin-sybc-auth-default:
 
-SCRAM-Based Mechanisms
-----------------------
+Default
+-------
 
-Salted challenge response authentication mechanism (SCRAM) refers to a
-group of authentication mechanisms that use a username and
-password to authenticate to a server.
+The default authentication mechanism setting uses one of the following
+authentication mechanisms depending on what your MongoDB server supports:
 
-MongoDB supports the following SCRAM-based authentication mechanisms:
+#. ``SCRAM-SHA-256``
+#. ``SCRAM-SHA-1``
 
-- :ref:`SCRAM-SHA-256 <kotlin-sync-auth-scramsha256>`: an authentication mechanism that
-  uses your database username and password, encrypted with the ``SHA-256``
-  algorithm
-- :ref:`SCRAM-SHA-1 <kotlin-sync-auth-scramsha1>`: an authentication mechanism that
-  uses your database username and password, encrypted with the ``SHA-1``
-  algorithm
+Server versions 4.0 and later use ``SCRAM-SHA-256`` as the default
+mechanism.
 
-The following code snippets show how to specify the authentication mechanism,
+The following code snippets show how to use the default authentication mechanism,
 using the following placeholders:
 
 * ``db_username`` - your MongoDB database username
@@ -81,8 +68,6 @@ using the following placeholders:
 Select the :guilabel:`Connection String` or the :guilabel:`MongoCredential`
 tab below for instructions and sample code for specifying this authentication
 mechanism:
-
-.. _mongo-client-setting-with-mongo-credential-example:
 
 .. tabs::
 
@@ -123,14 +108,15 @@ the Server manual.
 .. _kotlin-sync-auth-scramsha256:
 
 SCRAM-SHA-256
-~~~~~~~~~~~~~
+-------------
 
 .. note::
 
    ``SCRAM-SHA-256`` is the default authentication method for MongoDB starting
    in MongoDB 4.0.
 
-``SCRAM-SHA-256`` is a salted challenge-response authentication mechanism
+``SCRAM-SHA-256``, as defined by `RFC 7677 <https://www.rfc-editor.org/rfc/rfc7677>`__, 
+is a salted challenge-response authentication mechanism
 (SCRAM) that uses your username and password, encrypted with the ``SHA-256``
 algorithm, to authenticate your user.
 
@@ -186,13 +172,14 @@ mechanism:
 .. _kotlin-sync-auth-scramsha1:
 
 SCRAM-SHA-1
-~~~~~~~~~~~
+-----------
 
 .. note::
    ``SCRAM-SHA-1`` is the default authentication method for MongoDB versions
    3.0, 3.2, 3.4, and 3.6.
 
-``SCRAM-SHA-1`` is a salted challenge-response mechanism (SCRAM) that uses your
+``SCRAM-SHA-1``, as defined by `RFC 5802 <https://www.rfc-editor.org/rfc/rfc5802>`__, 
+is a salted challenge-response mechanism (SCRAM) that uses your
 username and password, encrypted with the ``SHA-1`` algorithm, to authenticate
 your user.
 
@@ -247,8 +234,8 @@ mechanism:
 
 .. _kotlin-sync-auth-aws:
 
-MONGODB-AWS Mechanism
----------------------
+MONGODB-AWS
+-----------
 
 .. note::
 
@@ -495,8 +482,8 @@ method:
 
 .. _kotlin-sync-auth-x509:
 
-MONGODB-X509 Mechanism
-----------------------
+MONGODB-X509
+------------
 
 The ``X.509`` authentication mechanism uses
 :wikipedia:`TLS <Transport_Layer_Security>` with X.509 certificates to
