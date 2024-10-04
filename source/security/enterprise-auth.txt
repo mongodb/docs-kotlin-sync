@@ -35,49 +35,10 @@ Enterprise Edition:
 For more information on establishing a connection to your MongoDB cluster, read our
 :ref:`Connection Guide <kotlin-sync-connect>`.
 
-
-Specify an Authentication Mechanism
------------------------------------
-
-You can specify your authentication mechanism and credentials when connecting
-to MongoDB using either of the following:
-
-- A connection string
-- A ``MongoCredential`` factory method
-
-A **connection string** (also known as a **connection URI**) specifies how to
-connect and authenticate to your MongoDB cluster.
-
-To authenticate using a connection string, include your settings in your
-connection string and pass it to the ``MongoClient.create()`` method to
-instantiate your ``MongoClient``. The :guilabel:`Connection String`
-tab in each section provides the syntax for authenticating using a 
-**connection string**.
-
-Alternatively, you can use the ``MongoCredential`` class to specify your
-authentication details. The ``MongoCredential`` class contains static factory
-methods that construct instances containing your authentication mechanism and
-credentials. When you use the ``MongoCredential`` helper class, you need
-to use the ``MongoClientSettings.Builder`` class to configure your
-connection settings when constructing your ``MongoClient``.  The
-:guilabel:`MongoCredential` tab in each section provides the syntax for 
-authenticating using a ``MongoCredential``.
-
-For more information on these classes and methods, refer to the following API
-documentation:
-
-- `MongoClient.create() <{+api+}/com.mongodb.kotlin.client/-mongo-client/-factory/index.html>`__
-- `MongoClient <{+api+}/com.mongodb.kotlin.client/-mongo-client/index.html>`__
-- `MongoClientSettings.Builder <{+java-api+}/apidocs/mongodb-driver-core/com/mongodb/MongoClientSettings.Builder.html>`__
-- `MongoCredential <{+java-api+}/apidocs/mongodb-driver-core/com/mongodb/MongoCredential.html>`__
-
-Mechanisms
-----------
-
 .. _gssapi-auth-mechanism:
 
 Kerberos (GSSAPI)
-~~~~~~~~~~~~~~~~~
+-----------------
 
 The Generic Security Services API (``GSSAPI``) authentication mechanism
 allows the user to authenticate to a Kerberos service using the user's
@@ -272,7 +233,7 @@ to improve performance.
 .. _plain-auth-mechanism:
 
 LDAP (PLAIN)
-~~~~~~~~~~~~
+------------
 
 *Available in MongoDB Enterprise Edition 3.4 and later.*
 
@@ -341,7 +302,7 @@ mechanism:
 .. _kotlin-oidc:
 
 MONGODB-OIDC
-~~~~~~~~~~~~
+------------
 
 .. important::
 
@@ -359,7 +320,7 @@ in the MongoDB Server manual.
 .. _kotlin-mongodb-oidc-azure-imds:
 
 Azure IMDS
-++++++++++
+~~~~~~~~~~
 
 If your application runs on an Azure VM, or otherwise uses the
 `Azure Instance Metadata Service <https://learn.microsoft.com/en-us/azure/virtual-machines/instance-metadata-service>`__
@@ -411,7 +372,7 @@ see the corresponding syntax.
 .. _kotlin-mongodb-oidc-gcp-imds:
 
 GCP IMDS
-++++++++
+~~~~~~~~
 
 If your application runs on a Google Compute Engine VM, or otherwise uses the
 `GCP Instance Metadata Service <https://cloud.google.com/compute/docs/metadata/querying-metadata>`__,
@@ -459,7 +420,7 @@ see the corresponding syntax.
          :end-before: end-oidc-gcp-mongo-cred
 
 Custom Callback
-+++++++++++++++
+~~~~~~~~~~~~~~~
 
 The {+driver-short+} doesn't offer built-in support for all platforms, including
 Azure Functions and Azure Kubernetes Service (AKS). Instead, you
@@ -485,3 +446,14 @@ named ``"access-token.dat"`` in the local file system:
    :dedent:
    :start-after: start-oidc-custom-callback-ex
    :end-before: end-oidc-custom-callback-ex
+
+API Documentation
+-----------------
+
+To learn more about the classes and methods for authenticating your application 
+with {+driver-short+}, see the following API documentation:
+
+- `MongoClient.create() <{+api+}/com.mongodb.kotlin.client/-mongo-client/-factory/index.html>`__
+- `MongoClient <{+api+}/com.mongodb.kotlin.client/-mongo-client/index.html>`__
+- `MongoClientSettings.Builder <{+java-api+}/apidocs/mongodb-driver-core/com/mongodb/MongoClientSettings.Builder.html>`__
+- `MongoCredential <{+java-api+}/apidocs/mongodb-driver-core/com/mongodb/MongoCredential.html>`__
