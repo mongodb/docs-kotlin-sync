@@ -232,6 +232,70 @@ mechanism:
          :start-after: start-scramsha1-mongo-cred
          :end-before: end-scramsha1-mongo-cred
 
+.. _kotlin-sync-auth-x509:
+
+MONGODB-X509
+------------
+
+The ``X.509`` authentication mechanism uses
+:wikipedia:`TLS <Transport_Layer_Security>` with X.509 certificates to
+authenticate your user, identified by the relative distinguished names
+(RDNs) of your client certificate. When you specify the ``X.509``
+authentication mechanism, the server authenticates the connection using
+the subject name of the client certificate.
+
+The following code snippets show how to specify the authentication mechanism,
+using the following placeholders:
+
+* ``hostname`` - network address of your MongoDB server, accessible by your client.
+* ``port`` - port number of your MongoDB server.
+* ``authenticationDb`` - MongoDB database that contains your user's
+  authentication data. If you omit this parameter, the driver uses the
+  default value ``admin``.
+
+Select the :guilabel:`Connection String` or the :guilabel:`MongoCredential`
+tab below for instructions and sample code for specifying this authentication
+mechanism:
+
+.. tabs::
+
+   .. tab::
+      :tabid: Connection String
+
+      To specify the ``X.509`` authentication mechanism using a connection
+      string, assign the ``authMechanism`` parameter the value ``MONGODB-X509``
+      and enable TLS by assigning the ``tls``
+      parameter a ``true`` value. Your code to instantiate a ``MongoClient``
+      should resemble the following:
+
+      .. literalinclude:: /includes/security/authentication.kt
+         :language: kotlin
+         :dedent:
+         :start-after:  start-x509-connect-string
+         :end-before: end-x509-connect-string
+      
+   .. tab::
+      :tabid: MongoCredential
+
+      To specify the ``X.509`` authentication mechanism using the
+      ``MongoCredential`` class, use the
+      `createMongoX509Credential() <{+api+}/apidocs/mongodb-driver-core/com/mongodb/MongoCredential.html#createMongoX509Credential(java.lang.String)>`__
+      method. Also, enable TLS by calling the
+      `applyToSslSettings() <{+api+}/apidocs/mongodb-driver-core/com/mongodb/MongoClientSettings.Builder.html#applyToSslSettings(com.mongodb.Block)>`__
+      method and setting the ``enabled`` property to ``true`` in the
+      `SslSettings.Builder <{+api+}/apidocs/mongodb-driver-core/com/mongodb/connection/SslSettings.Builder.html>`__
+      block. Your code to instantiate a ``MongoClient`` should resemble the following:
+
+      .. literalinclude:: /includes/security/authentication.kt
+         :language: kotlin
+         :dedent:
+         :start-after:  start-x509-mcred
+         :end-before: end-x509-mcred
+
+For additional information on configuring your application to use
+certificates as well as TLS/SSL options, see our
+:ref:`TLS/SSL guide <kotlin-sync-tls>`.
+
 .. _kotlin-sync-auth-aws:
 
 MONGODB-AWS
@@ -479,70 +543,6 @@ method:
    :start-after:  start-aws-apply-connect-string
    :end-before: end-aws-apply-connect-string
    :emphasize-lines: 2, 5
-
-.. _kotlin-sync-auth-x509:
-
-MONGODB-X509
-------------
-
-The ``X.509`` authentication mechanism uses
-:wikipedia:`TLS <Transport_Layer_Security>` with X.509 certificates to
-authenticate your user, identified by the relative distinguished names
-(RDNs) of your client certificate. When you specify the ``X.509``
-authentication mechanism, the server authenticates the connection using
-the subject name of the client certificate.
-
-The following code snippets show how to specify the authentication mechanism,
-using the following placeholders:
-
-* ``hostname`` - network address of your MongoDB server, accessible by your client.
-* ``port`` - port number of your MongoDB server.
-* ``authenticationDb`` - MongoDB database that contains your user's
-  authentication data. If you omit this parameter, the driver uses the
-  default value ``admin``.
-
-Select the :guilabel:`Connection String` or the :guilabel:`MongoCredential`
-tab below for instructions and sample code for specifying this authentication
-mechanism:
-
-.. tabs::
-
-   .. tab::
-      :tabid: Connection String
-
-      To specify the ``X.509`` authentication mechanism using a connection
-      string, assign the ``authMechanism`` parameter the value ``MONGODB-X509``
-      and enable TLS by assigning the ``tls``
-      parameter a ``true`` value. Your code to instantiate a ``MongoClient``
-      should resemble the following:
-
-      .. literalinclude:: /includes/security/authentication.kt
-         :language: kotlin
-         :dedent:
-         :start-after:  start-x509-connect-string
-         :end-before: end-x509-connect-string
-      
-   .. tab::
-      :tabid: MongoCredential
-
-      To specify the ``X.509`` authentication mechanism using the
-      ``MongoCredential`` class, use the
-      `createMongoX509Credential() <{+api+}/apidocs/mongodb-driver-core/com/mongodb/MongoCredential.html#createMongoX509Credential(java.lang.String)>`__
-      method. Also, enable TLS by calling the
-      `applyToSslSettings() <{+api+}/apidocs/mongodb-driver-core/com/mongodb/MongoClientSettings.Builder.html#applyToSslSettings(com.mongodb.Block)>`__
-      method and setting the ``enabled`` property to ``true`` in the
-      `SslSettings.Builder <{+api+}/apidocs/mongodb-driver-core/com/mongodb/connection/SslSettings.Builder.html>`__
-      block. Your code to instantiate a ``MongoClient`` should resemble the following:
-
-      .. literalinclude:: /includes/security/authentication.kt
-         :language: kotlin
-         :dedent:
-         :start-after:  start-x509-mcred
-         :end-before: end-x509-mcred
-
-For additional information on configuring your application to use
-certificates as well as TLS/SSL options, see our
-:ref:`TLS/SSL guide <kotlin-sync-tls>`.
 
 Additional Information
 ----------------------
