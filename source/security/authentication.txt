@@ -52,17 +52,17 @@ authentication mechanisms depending on what your MongoDB server supports:
    uses your database username and password, encrypted with the ``SHA-1``
    algorithm
 
-Server versions 4.0 and later use ``SCRAM-SHA-256`` as the default
-mechanism.
+{+mdb-server+} versions 4.0 and later use ``SCRAM-SHA-256`` as the default
+authentication mechanism.
 
 The following code snippets show how to use the default authentication mechanism by
 using the following placeholders:
 
-* ``db_username`` - your MongoDB database username
-* ``db_password`` - your MongoDB database user's password
-* ``hostname`` - network address of your MongoDB server, accessible by your client
-* ``port`` - port number of your MongoDB server
-* ``authenticationDb`` - MongoDB database that contains your user's
+* ``db_username``: your MongoDB database username
+* ``db_password``: your MongoDB database user's password
+* ``hostname``: network address of your MongoDB server, accessible by your client
+* ``port``: port number of your MongoDB server
+* ``authenticationDb``: MongoDB database that contains your user's
   authentication data. If you omit this parameter, the driver uses the
   default value ``admin``.
 
@@ -123,11 +123,11 @@ algorithm, to authenticate your user.
 The following code snippets show how to specify the authentication mechanism by
 using the following placeholders:
 
-* ``db_username`` - your MongoDB database username.
-* ``db_password`` - your MongoDB database user's password.
-* ``hostname`` - network address of your MongoDB server, accessible by your client.
-* ``port`` - port number of your MongoDB server.
-* ``authenticationDb`` - MongoDB database that contains your user's
+* ``db_username``: your MongoDB database username.
+* ``db_password``: your MongoDB database user's password.
+* ``hostname``: network address of your MongoDB server, accessible by your client.
+* ``port``: port number of your MongoDB server.
+* ``authenticationDb``: MongoDB database that contains your user's
   authentication data. If you omit this parameter, the driver uses the
   default value ``admin``.
 
@@ -186,11 +186,11 @@ your user.
 The following code snippets show how to specify the authentication mechanism 
 by using the following placeholders:
 
-* ``db_username`` - your MongoDB database username.
-* ``db_password`` - your MongoDB database user's password.
-* ``hostname`` - network address of your MongoDB server, accessible by your client.
-* ``port`` - port number of your MongoDB server.
-* ``authenticationDb`` - MongoDB database that contains your user's
+* ``db_username``: your MongoDB database username.
+* ``db_password``: your MongoDB database user's password.
+* ``hostname``: network address of your MongoDB server, accessible by your client.
+* ``port``: port number of your MongoDB server.
+* ``authenticationDb``: MongoDB database that contains your user's
   authentication data. If you omit this parameter, the driver uses the
   default value ``admin``.
 
@@ -247,9 +247,9 @@ the subject name of the client certificate.
 The following code snippets show how to specify the authentication mechanism 
 by using the following placeholders:
 
-* ``hostname`` - network address of your MongoDB server, accessible by your client.
-* ``port`` - port number of your MongoDB server.
-* ``authenticationDb`` - MongoDB database that contains your user's
+* ``hostname``: network address of your MongoDB deployment, accessible by your client.
+* ``port``: port number of your MongoDB server.
+* ``authenticationDb``: MongoDB database that contains your user's
   authentication data. If you omit this parameter, the driver uses the
   default value ``admin``.
 
@@ -321,12 +321,12 @@ provide your AWS IAM credentials in the next sections.
 
 These sections contain code examples that use the following placeholders:
 
-* ``awsKeyId`` - value of your AWS access key ID
-* ``awsSecretKey`` - value of your AWS secret access key
-* ``atlasUri`` - network address of your MongoDB Atlas deployment
-* ``hostname`` - hostname of your MongoDB Atlas deployment
-* ``port`` - port of your MongoDB Atlas deployment
-* ``awsSessionToken`` - value of your AWS session token
+* ``awsKeyId``: value of your AWS access key ID
+* ``awsSecretKey``: value of your AWS secret access key
+* ``atlasUri``: network address of your MongoDB Atlas deployment
+* ``hostname``: hostname of your MongoDB Atlas deployment
+* ``port``: port of your MongoDB Atlas deployment
+* ``awsSessionToken``: value of your AWS session token
 
 .. _kotlin-mongodb-aws-sdk:
 
