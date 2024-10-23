@@ -53,11 +53,11 @@ authentication mechanism.
 The following code snippets show how to use the default authentication mechanism by
 using the following placeholders:
 
-* ``db_username``: your MongoDB database username
-* ``db_password``: your MongoDB database user's password
-* ``hostname``: network address of your MongoDB server, accessible by your client
-* ``port``: port number of your MongoDB server
-* ``authenticationDb``: MongoDB database that contains your user's
+* ``db_username``: Your MongoDB database username.
+* ``db_password``: Your MongoDB database user's password.
+* ``hostname``: The network address of your MongoDB deployment, accessible by your client.
+* ``port``: The port number of your MongoDB deployment.
+* ``authenticationDb``: The MongoDB database that contains your user's
   authentication data. If you omit this parameter, the driver uses the
   default value ``admin``.
 
@@ -107,8 +107,8 @@ SCRAM-SHA-256
 
 .. note::
 
-   ``SCRAM-SHA-256`` is the default authentication method for MongoDB starting
-   in MongoDB 4.0.
+   ``SCRAM-SHA-256`` is the default authentication method for {+mdb-server+} 
+   versions 4.0 and later.
 
 ``SCRAM-SHA-256``, as defined by `RFC 7677 <https://www.rfc-editor.org/rfc/rfc7677>`__, 
 is a Salted Challenge Response Authentication Mechanism
@@ -118,11 +118,11 @@ algorithm, to authenticate your user.
 The following code snippets show how to specify the authentication mechanism by
 using the following placeholders:
 
-* ``db_username``: your MongoDB database username.
-* ``db_password``: your MongoDB database user's password.
-* ``hostname``: network address of your MongoDB server, accessible by your client.
-* ``port``: port number of your MongoDB server.
-* ``authenticationDb``: MongoDB database that contains your user's
+* ``db_username``: Your MongoDB database username.
+* ``db_password``: Your MongoDB database user's password.
+* ``hostname``: The network address of your MongoDB deployment, accessible by your client.
+* ``port``: The port number of your MongoDB deployment.
+* ``authenticationDb``: The MongoDB database that contains your user's
   authentication data. If you omit this parameter, the driver uses the
   default value ``admin``.
 
@@ -171,7 +171,7 @@ SCRAM-SHA-1
 
 .. note::
    ``SCRAM-SHA-1`` is the default authentication method for MongoDB versions
-   3.0, 3.2, 3.4, and 3.6.
+   {+mdb-server+} versions 3.6 and earlier.
 
 ``SCRAM-SHA-1``, as defined by `RFC 5802 <https://www.rfc-editor.org/rfc/rfc5802>`__, 
 is a Salted Challenge Response Authentication Mechanism (SCRAM) that uses your
@@ -181,11 +181,11 @@ your user.
 The following code snippets show how to specify the authentication mechanism 
 by using the following placeholders:
 
-* ``db_username``: your MongoDB database username.
-* ``db_password``: your MongoDB database user's password.
-* ``hostname``: network address of your MongoDB server, accessible by your client.
-* ``port``: port number of your MongoDB server.
-* ``authenticationDb``: MongoDB database that contains your user's
+* ``db_username``: Your MongoDB database username.
+* ``db_password``: Your MongoDB database user's password.
+* ``hostname``: The network address of your MongoDB deployment, accessible by your client.
+* ``port``: The port number of your MongoDB deployment.
+* ``authenticationDb``: The MongoDB database that contains your user's
   authentication data. If you omit this parameter, the driver uses the
   default value ``admin``.
 
@@ -232,10 +232,9 @@ mechanism:
 MONGODB-X509
 ------------
 
-The ``X.509`` authentication mechanism uses
+The ``MONGODB-X509`` authentication mechanism uses
 :wikipedia:`TLS <Transport_Layer_Security>` with X.509 certificates to
-authenticate your user, identified by the relative distinguished names
-(RDNs) of your client certificate. When you specify the ``X.509``
+authenticate your user. When you specify the ``X.509``
 authentication mechanism, the server authenticates the connection by using
 the subject name of the client certificate.
 
@@ -288,7 +287,7 @@ mechanism:
          :end-before: end-x509-mcred
 
 For additional information on configuring your application to use
-certificates as well as TLS/SSL options, see our
+certificates as well as TLS/SSL options, see the
 :ref:`TLS/SSL guide <kotlin-sync-tls>`.
 
 .. _kotlin-sync-auth-aws:
@@ -307,12 +306,12 @@ user. To learn more about configuring MongoDB Atlas, see the
 :atlas:`Set Up Authentication with AWS IAM </security/aws-iam-authentication>`
 guide.
 
-To instruct the driver to use this authentication mechanism, you can specify
-``MONGODB-AWS`` either as a parameter in the connection string or by using
+To instruct the driver to use this authentication mechanism, you can either
+specify ``MONGODB-AWS`` as a parameter in the connection string or call
 the ``MongoCredential.createAwsCredential()`` factory method.
 
-Learn how to specify this authentication mechanism and the various ways to
-provide your AWS IAM credentials in the next sections.
+In the following sections, you can learn different ways to specify the 
+``MONGODB-AWS`` authentication mechanism and provide your AWS IAM credentials.
 
 These sections contain code examples that use the following placeholders:
 
@@ -328,24 +327,32 @@ These sections contain code examples that use the following placeholders:
 AWS SDK 
 ~~~~~~~
 
-You can use one of the AWS SDK for Java v1 or v2 to specify your credentials.
-This method offers the following features:
+.. note:: End of Support for AWS SDK for Java v1
+
+   The AWS SDK for Java v1 will reach end of support on Decemeber 31, 2025. 
+   AWS recommends migrating to AWS SDK for Java v2. For more information, 
+   see the `end of support announcement 
+   <https://aws.amazon.com/blogs/developer/announcing-end-of-support-for-aws-sdk-for-java-v1-x-on-december-31-2025/>`__ 
+   on the AWS site.
+
+AWS provides software development kits (SDKs) for Java v1 and v2.
+The AWS SDK offers the following features:
 
 - Multiple options for obtaining credentials
-- Credential caching which helps your application avoid rate limiting
-- Credential provider management for use with the `Elastic Kubernetes Service <https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html>`__.
+- Credential caching, which helps your application avoid rate limiting
+- Credential provider management for use with the `Elastic Kubernetes Service <https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html>`__
 
-To use the AWS SDK for Java for ``MONGODB-AWS`` authentication, you must
-perform the following:
+To use the AWS SDK for ``MONGODB-AWS`` authentication, you must
+perform the following steps:
 
-1. Specify the authentication mechanism
-#. Add the SDK as a dependency to your project
+1. Specify the authentication mechanism.
+#. Add the SDK as a dependency to your project.
 #. Supply your credentials by using one of the methods in the credential
-   provider chain
+   provider chain.
 
-To specify the authentication mechanism by using a ``MongoCredential``,
-use the ``MongoCredential.createAwsCredential()`` factory method
-and add the ``MongoCredential`` instance to your ``MongoClient`` as shown
+To specify the ``MONGODB-AWS`` authentication mechanism by using a ``MongoCredential``
+object, call the ``MongoCredential.createAwsCredential()`` factory method
+and add the ``MongoCredential`` instance to your ``MongoClient``, as shown
 in the following example:
 
 .. literalinclude:: /includes/security/authentication.kt
@@ -355,8 +362,8 @@ in the following example:
    :end-before: end-aws-sdk-mcred
    :emphasize-lines: 1, 9
 
-To specify the authentication mechanism in the connection string, add
-it as a parameter as shown in the following example:
+To specify the ``MONGODB-AWS`` authentication mechanism in the connection string, 
+add it as a parameter, as shown in the following example:
 
 .. literalinclude:: /includes/security/authentication.kt
    :language: kotlin
@@ -416,15 +423,15 @@ appropriate environment variables.
 To use the environment variables to supply your credentials, you must perform
 the following:
 
-1. Specify the authentication mechanism
-#. Add the appropriate environment variables
+1. Specify the authentication mechanism.
+#. Add the appropriate environment variables.
 
-You can specify the authentication mechanism by using a ``MongoCredential``
-or on the connection string.
+You can specify the ``MONGODB-AWS`` authentication mechanism by using a 
+``MongoCredential`` object or in the connection string.
 
-To specify the authentication mechanism by using a ``MongoCredential``,
-use the ``MongoCredential.createAwsCredential()`` factory method and add the
-``MongoCredential`` instance to your ``MongoClient`` as shown in the following
+To specify the authentication mechanism by using a ``MongoCredential`` object,
+call the ``MongoCredential.createAwsCredential()`` factory method and add the
+``MongoCredential`` instance to your ``MongoClient``, as shown in the following
 example:
 
 .. literalinclude:: /includes/security/authentication.kt
@@ -434,8 +441,8 @@ example:
    :end-before: end-aws-env-mcred
    :emphasize-lines: 1, 9
 
-To specify the authentication mechanism in the connection string, add it as a
-parameter as shown in the following example:
+To specify the ``MONGODB-AWS`` authentication mechanism in the connection 
+string, add it as a parameter as shown in the following example:
 
 .. literalinclude:: /includes/security/authentication.kt
    :language: kotlin
@@ -464,7 +471,7 @@ session token for that role.
 
 To authenticate by using **ECS container credentials**, set the ECS
 endpoint relative URI in an environment variable by using ``bash`` or
-a similar shell as shown in the following example:
+a similar shell, as shown in the following example:
 
 .. code-block:: bash
 
@@ -481,23 +488,24 @@ Specify Your Credentials in a MongoCredential
 
 You can supply your AWS IAM credentials to a ``MongoClient`` by using a
 ``MongoCredential`` instance. To construct the ``MongoCredential`` instance
-for ``MONGODB-AWS`` authentication,  use the `createAwsCredential() <{+core-api+}/com/mongodb/MongoCredential.html#createAwsCredential(java.lang.String,char%5B%5D)>`__
+for ``MONGODB-AWS`` authentication, call the 
+`createAwsCredential() <{+core-api+}/com/mongodb/MongoCredential.html#createAwsCredential(java.lang.String,char%5B%5D)>`__
 factory method.
 
 You can supply only programmatic access keys to the
 ``MongoCredential.createAwsCredential()`` method. If you need to supply ECS
-or EC2 container credentials, use the instructions in
+or EC2 container credentials, follow the instructions in
 :ref:`<kotlin-mongodb-aws-env-variables>` or :ref:`<kotlin-mongodb-aws-sdk>`.
 
-To use the ``MongoCredential`` for ``MONGODB-AWS`` authentication, you
-must perform the following:
+To use a ``MongoCredential`` object for ``MONGODB-AWS`` authentication, you
+must perform the following steps:
 
-1. Specify the authentication mechanism
-#. Supply the credentials
+1. Specify the authentication mechanism.
+#. Supply the credentials.
 
-To specify the authentication mechanism by using a ``MongoCredential``,
-use the ``MongoCredential.createAwsCredential()`` factory method
-and add the ``MongoCredential`` instance to your ``MongoClient`` as shown
+To specify the authentication mechanism by using a ``MongoCredential`` object,
+call the ``MongoCredential.createAwsCredential()`` factory method
+and add the ``MongoCredential`` instance to your ``MongoClient``, as shown
 in the following example:
 
 .. literalinclude:: /includes/security/authentication.kt
@@ -509,7 +517,7 @@ in the following example:
 
 If you need to specify an AWS session token, pass it to the
 `withMechanismProperty() <{+core-api+}/com/mongodb/MongoCredential.html#withMechanismProperty(java.lang.String,T)>`__
-method as shown in the following example:
+method, as shown in the following example:
 
 .. literalinclude:: /includes/security/authentication.kt
    :language: kotlin
@@ -519,7 +527,7 @@ method as shown in the following example:
    :emphasize-lines: 1, 2, 10
 
 To refresh your credentials, you can declare a ``Supplier`` lambda expression
-that returns new credentials as shown in the following example:
+that returns new credentials, as shown in the following example:
 
 .. literalinclude:: /includes/security/authentication.kt
    :language: kotlin
@@ -529,7 +537,7 @@ that returns new credentials as shown in the following example:
    :emphasize-lines: 4-6, 9
 
 If you must provide AWS IAM credentials in a connection string, you can add 
-it to your ``MongoClientSettings`` by calling the `applyConnectionString() <{+core-api+}/com/mongodb/MongoClientSettings.Builder.html#applyConnectionString(com.mongodb.ConnectionString)>`__
+it to your ``MongoClientSettings`` object by calling the `applyConnectionString() <{+core-api+}/com/mongodb/MongoClientSettings.Builder.html#applyConnectionString(com.mongodb.ConnectionString)>`__
 method:
 
 .. literalinclude:: /includes/security/authentication.kt
@@ -543,7 +551,7 @@ Additional Information
 ----------------------
 
 To learn more about authenticating to MongoDB, see
-:manual:`Authentication </core/authentication/>` in the Server manual.
+:manual:`Authentication </core/authentication/>` in the {+mdb-server+} manual.
 
 To learn more about managing users of your MongoDB deployment, see
-:manual:`Users </core/security-users/>` in the Server manual.
+:manual:`Users </core/security-users/>` in the {+mdb-server+} manual.
