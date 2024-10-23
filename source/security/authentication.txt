@@ -86,9 +86,9 @@ mechanism:
       To specify the default authentication mechanism by using the
       ``MongoCredential`` class, use the ``createCredential()`` method.
       Also, enable TLS by calling the
-      `applyToSslSettings() <{+api+}/apidocs/mongodb-driver-core/com/mongodb/MongoClientSettings.Builder.html#applyToSslSettings(com.mongodb.Block)>`__
+      `applyToSslSettings() <{+core-api+}/com/mongodb/MongoClientSettings.Builder.html#applyToSslSettings(com.mongodb.Block)>`__
       method and setting the ``enabled`` property to ``true`` in the
-      `SslSettings.Builder <{+api+}/apidocs/mongodb-driver-core/com/mongodb/connection/SslSettings.Builder.html>`__
+      `SslSettings.Builder <{+core-api+}/com/mongodb/connection/SslSettings.Builder.html>`__
       block. Your code to instantiate a ``MongoClient`` should resemble the following:
 
       .. literalinclude:: /includes/security/authentication.kt
@@ -216,9 +216,9 @@ mechanism:
       ``MongoCredential`` class, use the
       `createScramSha1Credential() <{+core-api+}/com/mongodb/MongoCredential.html#createScramSha1Credential(java.lang.String,java.lang.String,char[])>`__
       method. Also, enable TLS by calling the
-      `applyToSslSettings() <{+api+}/com/mongodb/MongoClientSettings.Builder.html#applyToSslSettings(com.mongodb.Block)>`__
+      `applyToSslSettings() <{+core-api+}/com/mongodb/MongoClientSettings.Builder.html#applyToSslSettings(com.mongodb.Block)>`__
       method and setting the ``enabled`` property to ``true`` in the
-      `SslSettings.Builder <{+api+}/com/mongodb/connection/SslSettings.Builder.html>`__
+      `SslSettings.Builder <{+core-api+}/com/mongodb/connection/SslSettings.Builder.html>`__
       block. Your code to instantiate a ``MongoClient`` should resemble the following:
 
       .. literalinclude:: /includes/security/authentication.kt
@@ -273,11 +273,11 @@ mechanism:
 
       To specify the ``X.509`` authentication mechanism by using the
       ``MongoCredential`` class, use the
-      `createMongoX509Credential() <{+api+}/com/mongodb/MongoCredential.html#createMongoX509Credential(java.lang.String)>`__
+      `createMongoX509Credential() <{+core-api+}/com/mongodb/MongoCredential.html#createMongoX509Credential(java.lang.String)>`__
       method. Also, enable TLS by calling the
-      `applyToSslSettings() <{+api+}/com/mongodb/MongoClientSettings.Builder.html#applyToSslSettings(com.mongodb.Block)>`__
+      `applyToSslSettings() <{+core-api+}/com/mongodb/MongoClientSettings.Builder.html#applyToSslSettings(com.mongodb.Block)>`__
       method and setting the ``enabled`` property to ``true`` in the
-      `SslSettings.Builder <{+api+}/com/mongodb/connection/SslSettings.Builder.html>`__
+      `SslSettings.Builder <{+core-api+}/com/mongodb/connection/SslSettings.Builder.html>`__
       block. Your code to instantiate a ``MongoClient`` should resemble the following:
 
       .. literalinclude:: /includes/security/authentication.kt
