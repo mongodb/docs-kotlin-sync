@@ -241,9 +241,9 @@ the subject name of the client certificate.
 The following code snippets show how to specify the authentication mechanism 
 by using the following placeholders:
 
-* ``hostname``: network address of your MongoDB deployment, accessible by your client.
-* ``port``: port number of your MongoDB server.
-* ``authenticationDb``: MongoDB database that contains your user's
+* ``hostname``: The network address of your MongoDB deployment, accessible by your client.
+* ``port``: The port number of your MongoDB server.
+* ``authenticationDb``: The MongoDB database that contains your user's
   authentication data. If you omit this parameter, the driver uses the
   default value ``admin``.
 
@@ -315,12 +315,12 @@ In the following sections, you can learn different ways to specify the
 
 These sections contain code examples that use the following placeholders:
 
-* ``awsKeyId``: value of your AWS access key ID
-* ``awsSecretKey``: value of your AWS secret access key
-* ``atlasUri``: network address of your MongoDB Atlas deployment
-* ``hostname``: hostname of your MongoDB Atlas deployment
-* ``port``: port of your MongoDB Atlas deployment
-* ``awsSessionToken``: value of your AWS session token
+* ``awsKeyId``: The value of your AWS access key ID
+* ``awsSecretKey``: The value of your AWS secret access key
+* ``atlasUri``: The network address of your MongoDB Atlas deployment
+* ``hostname``: The hostname of your MongoDB Atlas deployment
+* ``port``: The port of your MongoDB Atlas deployment
+* ``awsSessionToken``: The value of your AWS session token
 
 .. _kotlin-mongodb-aws-sdk:
 
@@ -329,7 +329,7 @@ AWS SDK
 
 .. note:: End of Support for AWS SDK for Java v1
 
-   The AWS SDK for Java v1 will reach end of support on Decemeber 31, 2025. 
+   The AWS SDK for Java v1 will reach end of support on December 31, 2025. 
    AWS recommends migrating to AWS SDK for Java v2. For more information, 
    see the `end of support announcement 
    <https://aws.amazon.com/blogs/developer/announcing-end-of-support-for-aws-sdk-for-java-v1-x-on-december-31-2025/>`__ 
