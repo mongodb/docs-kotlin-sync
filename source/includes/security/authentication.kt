@@ -13,10 +13,6 @@ val mongoClient =
 val credential = MongoCredential.createCredential(
     "<db_username>", "<authenticationDb>", "<db_password>".toCharArray()
 )
-
-val credential = MongoCredential.createCredential(
-    "<db_username>", "<authenticationDb>", "<db_password>".toCharArray()
-)
 val settings = MongoClientSettings.builder()
         .applyToClusterSettings { builder: ClusterSettings.Builder ->
             builder.hosts(
@@ -67,7 +63,7 @@ val settings = MongoClientSettings.builder()
         }
         .credential(credential)
         .build()
-        
+
 val mongoClient = MongoClient.create(settings)
 // end-scramsha1-mongo-cred
 
