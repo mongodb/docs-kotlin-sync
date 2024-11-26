@@ -85,11 +85,7 @@ mechanism:
 
       To specify the default authentication mechanism by using the
       ``MongoCredential`` class, use the ``createCredential()`` method.
-      Also, enable TLS by calling the
-      `applyToSslSettings() <{+core-api+}/com/mongodb/MongoClientSettings.Builder.html#applyToSslSettings(com.mongodb.Block)>`__
-      method and setting the ``enabled`` property to ``true`` in the
-      `SslSettings.Builder <{+core-api+}/com/mongodb/connection/SslSettings.Builder.html>`__
-      block. Your code to instantiate a ``MongoClient`` should resemble the following:
+      Your code to instantiate a ``MongoClient`` should resemble the following:
 
       .. literalinclude:: /includes/security/authentication.kt
          :language: kotlin
@@ -152,11 +148,7 @@ mechanism:
       To specify the default authentication mechanism by using the
       ``MongoCredential`` class, use the
       `createScramSha256Credential() <{+core-api+}/com/mongodb/MongoCredential.html#createScramSha256Credential(java.lang.String,java.lang.String,char[])>`__
-      method. Also, enable TLS by calling the
-      `applyToSslSettings() <{+core-api+}/com/mongodb/MongoClientSettings.Builder.html#applyToSslSettings(com.mongodb.Block)>`__
-      method and setting the ``enabled`` property to ``true`` in the
-      `SslSettings.Builder <{+core-api+}/com/mongodb/connection/SslSettings.Builder.html>`__
-      block. Your code to instantiate a ``MongoClient`` should resemble the following:
+      method. Your code to instantiate a ``MongoClient`` should resemble the following:
 
       .. literalinclude:: /includes/security/authentication.kt
          :language: kotlin
@@ -215,11 +207,7 @@ mechanism:
       To specify the default authentication mechanism by using the
       ``MongoCredential`` class, use the
       `createScramSha1Credential() <{+core-api+}/com/mongodb/MongoCredential.html#createScramSha1Credential(java.lang.String,java.lang.String,char[])>`__
-      method. Also, enable TLS by calling the
-      `applyToSslSettings() <{+core-api+}/com/mongodb/MongoClientSettings.Builder.html#applyToSslSettings(com.mongodb.Block)>`__
-      method and setting the ``enabled`` property to ``true`` in the
-      `SslSettings.Builder <{+core-api+}/com/mongodb/connection/SslSettings.Builder.html>`__
-      block. Your code to instantiate a ``MongoClient`` should resemble the following:
+      method. Your code to instantiate a ``MongoClient`` should resemble the following:
 
       .. literalinclude:: /includes/security/authentication.kt
          :language: kotlin

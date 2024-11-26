@@ -6,7 +6,7 @@ import org.bson.Document
 // SCRAM Authentication
 // start-default-cred-string
 val mongoClient =
-    MongoClient.create("mongodb+srv://<db_username>:<db_password>@<hostname>:<port>/?authSource=<authenticationDb>")
+    MongoClient.create("mongodb://<db_username>:<db_password>@<hostname>:<port>/?authSource=<authenticationDb>")
 // end-default-cred-string
 
 // start-default-mongo-cred
@@ -14,63 +14,61 @@ val credential = MongoCredential.createCredential(
     "<db_username>", "<authenticationDb>", "<db_password>".toCharArray()
 )
 
+val credential = MongoCredential.createCredential(
+    "<db_username>", "<authenticationDb>", "<db_password>".toCharArray()
+)
 val settings = MongoClientSettings.builder()
-    .applyToClusterSettings { builder: ClusterSettings.Builder ->
-        builder.srvHost("<hostname>")
-    }
-    .credential(credential)
-    .applyToSslSettings { builder ->
-        builder.enabled(true)
-    }
-    .build()
+        .applyToClusterSettings { builder: ClusterSettings.Builder ->
+            builder.hosts(
+                listOf(ServerAddress("<hostname>", "<port>"))
+            )
+        }
+        .credential(credential)
+        .build()
 
 val mongoClient = MongoClient.create(settings)
 // end-default-mongo-cred
 
 // start-scramsha256-cred-string
 val mongoClient =  
-    MongoClient.create("mongodb+srv://<db_username>:<db_password>@<hostname>:<port>/?authSource=admin&authMechanism=SCRAM-SHA-256")
+    MongoClient.create("mongodb://<db_username>:<db_password>@<hostname>:<port>/?authSource=admin&authMechanism=SCRAM-SHA-256")
 // end-scramsha256-cred-string
 
 // start-scramsha256-mongo-cred
 val credential = MongoCredential.createScramSha256Credential(
-        "<db_username>", "<authenticationDb>", "<db_password>".toCharArray()
-    )
-
+    "<db_username>", "<authenticationDb>", "<db_password>".toCharArray()
+)
 val settings = MongoClientSettings.builder()
-    .applyToClusterSettings { builder: ClusterSettings.Builder ->
-        builder.srvHost("<hostname>")
-    }
-    .applyToSslSettings { builder ->
-        builder.enabled(true)
-    }
-    .credential(credential)
-    .build()
+        .applyToClusterSettings { builder: ClusterSettings.Builder ->
+            builder.hosts(
+                listOf(ServerAddress("<hostname>", "<port>"))
+            )
+        }
+        .credential(credential)
+        .build()
 
 val mongoClient = MongoClient.create(settings)
 // end-scramsha256-mongo-cred
 
 // start-scramsha1-cred-string
 val mongoClient =
-    MongoClient.create("mongodb+srv://<db_username>:<db_password>@<hostname>:<port>/?authSource=admin&authMechanism=SCRAM-SHA-1")
+    MongoClient.create("mongodb://<db_username>:<db_password>@<hostname>:<port>/?authSource=admin&authMechanism=SCRAM-SHA-1")
 // end-scramsha1-cred-string
 
 // start-scramsha1-mongo-cred
 val credential = MongoCredential.createScramSha1Credential(
-        "<db_username>", "<authenticationDb>", "<db_password>".toCharArray()
-    )
-
+    "<db_username>", "<authenticationDb>", "<db_password>".toCharArray()
+)
 val settings = MongoClientSettings.builder()
-    .applyToClusterSettings { builder: ClusterSettings.Builder ->
-        builder.srvHost("<hostname>")
-    }
-    .applyToSslSettings {  builder ->
-        builder.enabled(true)
-    }
-    .credential(credential)
-    .build()
-
-    val mongoClient = MongoClient.create(settings)
+        .applyToClusterSettings { builder: ClusterSettings.Builder ->
+            builder.hosts(
+                listOf(ServerAddress("<hostname>", "<port>"))
+            )
+        }
+        .credential(credential)
+        .build()
+        
+val mongoClient = MongoClient.create(settings)
 // end-scramsha1-mongo-cred
 
 // AWS Authentication
