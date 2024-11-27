@@ -16,7 +16,7 @@ val credential = MongoCredential.createCredential(
 val settings = MongoClientSettings.builder()
         .applyToClusterSettings { builder: ClusterSettings.Builder ->
             builder.hosts(
-                listOf(ServerAddress("<hostname>", "<port>"))
+                listOf(ServerAddress("<hostname>", <port>))
             )
         }
         .credential(credential)
@@ -37,7 +37,7 @@ val credential = MongoCredential.createScramSha256Credential(
 val settings = MongoClientSettings.builder()
         .applyToClusterSettings { builder: ClusterSettings.Builder ->
             builder.hosts(
-                listOf(ServerAddress("<hostname>", "<port>"))
+                listOf(ServerAddress("<hostname>", <port>))
             )
         }
         .credential(credential)
@@ -58,7 +58,7 @@ val credential = MongoCredential.createScramSha1Credential(
 val settings = MongoClientSettings.builder()
         .applyToClusterSettings { builder: ClusterSettings.Builder ->
             builder.hosts(
-                listOf(ServerAddress("<hostname>", "<port>"))
+                listOf(ServerAddress("<hostname>", <port>))
             )
         }
         .credential(credential)
