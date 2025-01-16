@@ -122,7 +122,7 @@ result. You can specify a sort in an ``UpdateOptions`` instance to apply
 an order to matched documents before the driver performs the update
 operation, as shown in the following code:
 
-.. code-block:: java
+.. code-block:: kotlin
 
    val opts = UpdateOptions().sort(Sorts.ascending(Restaurant::name.name))
 
@@ -164,7 +164,7 @@ result. You can specify a sort in a ``ReplaceOptions`` instance to apply
 an order to matched documents before the driver performs the replace
 operation, as shown in the following code:
 
-.. code-block:: java
+.. code-block:: kotlin
 
    val opts = ReplaceOptions().sort(Sorts.ascending(Restaurant::name.name))
 
