@@ -43,14 +43,14 @@ fun main() {
     val restaurantReplacement = ClientNamespacedWriteModel
         .replaceOne(
             MongoNamespace("sample_restaurants", "restaurants"),
-            eq("_id", 1),
+            Filters.eq("_id", 1),
             Restaurant("Smith Town Diner", "Brooklyn", "American")
         )
 
     val movieReplacement = ClientNamespacedWriteModel
         .replaceOne(
             MongoNamespace("sample_mflix", "movies"),
-            eq("_id", 1),
+            Filters.eq("_id", 1),
             Movie("Loving Sylvie", 1999)
         )
     // end-replace-models
@@ -68,7 +68,7 @@ fun main() {
         ClientNamespacedWriteModel
             .replaceOne(
                 movieNamespace,
-                eq("_id", 1),
+                Filters.eq("_id", 1),
                 Movie("Underneath It All", 2002)
             )
     )
