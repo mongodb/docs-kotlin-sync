@@ -124,7 +124,7 @@ You can use the following annotations on data classes:
 
    * - ``BsonRepresentation``
      - Specifies the BSON type MongoDB uses to store the value. Use this
-       annotation only when you need to store a value as a different
+       annotation only when you must store a value as a different
        BSON type than the data class property.
           
        :red:`WARNING:` Your code might throw an exception if you include the
@@ -159,7 +159,7 @@ You can insert a ``NetworkDevice`` instance as shown in the following code:
    :end-before: end-insert-ann
    :dedent:
 
-The inserted document in MongoDB should resemble the following:
+The inserted document in MongoDB resembles the following:
 
 .. code-block:: json
    :copyable: false
@@ -204,9 +204,10 @@ code provides an example of a recursive data class design:
    :end-before: end-recur-class
    :dedent:
 
-You can perform read and write operations on recursively defined data classes the same
-way you would for other data classes. The following code shows how you can
-execute a find operation on a collection of ``DataClassTree`` types:
+You can perform read and write operations on recursively defined data
+classes the same way that you do for other data classes. The following
+code shows how you can execute a find operation on a collection of
+``DataClassTree`` types:
 
 .. io-code-block::
    :copyable: true
