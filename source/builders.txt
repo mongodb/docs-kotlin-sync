@@ -10,7 +10,9 @@ Use Builders Code Pattern
    :depth: 2
    :class: singlecol
 
-.. .. toctree::
+.. toctree::
+
+   Builders & Data Classes </builders/builders-data-classes>
 
 ..    /fundamentals/builders/aggregates
 ..    /fundamentals/builders/filters
@@ -53,7 +55,7 @@ The following data class models the documents in the ``users`` collection:
    :copyable:
    :dedent:
 
-The following data class models the results returned by our query:
+The following data class models the results returned by the query:
 
 .. literalinclude:: /includes/builders/builders.kt
    :start-after: start-result-class
@@ -87,8 +89,12 @@ query filter:
    :copyable:
    :dedent:
 
-Builders
-~~~~~~~~
+In this case, you might easily include an error when writing the
+``"\$gt"`` operator in the filter, but your IDE returns the relevant
+error only at runtime.
+
+Builders API
+~~~~~~~~~~~~
 
 The following example performs the query by using the builder helpers:
 
@@ -98,6 +104,14 @@ The following example performs the query by using the builder helpers:
    :language: kotlin
    :copyable:
    :dedent:
+
+Use Builders with Data Classes
+------------------------------
+
+The :ref:`kotlin-sync-builders-data-classes` guide provides examples on
+how to use the preceding builders classes directly with data class
+properties. This guide might help to make your application more type-safe
+and improve {+language+} interoperability.
 
 .. TODO: Uncomment as pages get built
 
