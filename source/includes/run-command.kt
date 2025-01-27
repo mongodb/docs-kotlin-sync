@@ -18,6 +18,6 @@ fun main() {
     //end-read-preference
 
     //start-build-info
-    println( db.runCommand( { buildInfo: 1 } ) );
+    println( database.runCommand( { buildInfo: 1 } ) );
     //end-build-info
 }
