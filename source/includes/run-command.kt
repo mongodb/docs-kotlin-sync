@@ -16,4 +16,8 @@ fun main() {
 
     val commandResult = database.runCommand(command, readPreference)
     //end-read-preference
+
+    //start-build-info
+    println( db.runCommand( { buildInfo: 1 } ) );
+    //end-build-info
 }

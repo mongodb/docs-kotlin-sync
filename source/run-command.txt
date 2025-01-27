@@ -72,7 +72,7 @@ For more information on read preference options, see :manual:`Read Preference
 
 .. note::
    
-   The ``command()`` method ignores the read preference setting you may have set 
+   The ``runCommand()`` method ignores the read preference setting you may have set 
    on your ``database`` object. If no read preference is specified, this method 
    uses the ``primary`` read preference.
 
@@ -124,10 +124,11 @@ The following code shows the general output format of the ``buildInfo`` command:
 
 .. io-code-block::
 
-   .. input::
+   .. input:: /includes/run-command.kt
+      :start-after: start-build-info
+      :end-before: end-build-info
       :language: kotlin
-      
-      db.runCommand( { buildInfo: 1 } );
+      :dedent:
 
    .. output::
       :visible: false
