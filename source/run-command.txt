@@ -37,8 +37,8 @@ To run a database command, specify the command and any relevant
 parameters in a document, then pass the document to the ``runCommand()`` method.
 
 The following code shows how you can use the ``runCommand()``
-method to run the ``explain`` command, which returns information about
-how the specified CRUD command would be executed:
+method to run the ``explain`` command, which returns a description of how the
+``find`` command will be executed if you call it:
 
 .. literalinclude:: /includes/run-command.kt
    :start-after: start-execute
