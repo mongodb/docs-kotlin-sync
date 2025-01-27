@@ -37,8 +37,8 @@ To run a database command, specify the command and any relevant
 parameters in a document, then pass the document to the ``runCommand()`` method.
 
 The following code shows how you can use the ``runCommand()``
-method to run the ``find`` command, which returns information about
-the current member's role in the replica set, on a database:
+method to run the ``explain`` command, which returns information about
+how the specified CRUD command would be executed:
 
 .. literalinclude:: /includes/run-command.kt
    :start-after: start-execute
@@ -155,9 +155,10 @@ Additional Information
 
 For more information about the concepts in this guide, see the following documentation:
 
-- Kotlin API
+- Kotlin Sync API
    - `runCommand() <{+api+}/com.mongodb.kotlin.client/-mongo-database/run-command.html>`__
 - Database
    - :manual:`Database Commands </reference/command/>`
+   - :manual:`explain Command </reference/command/explain/>`
    - :manual:`hello Command </reference/command/hello/>`
-   - :manual:`find Command </reference/command/find/>`
+   - :manual:`buildInfo Command </reference/command/buildInfo/#mongodb-dbcommand-dbcmd.buildInfo>`

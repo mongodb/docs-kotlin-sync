@@ -3,14 +3,11 @@ import org.bson.Document
 
 fun main() {
     //start-execute
-    val command = {
-        find: "restaurants",
-        filter: { cuisine: "Italian" },
-        projection: { name: 1, rating: 1, address: 1 },
-        sort: { name: 1 },
-        limit: 5
-      }
-    val commandResult = database.runCommand(command)
+    val explanation = database.runCommand({
+            explain: {
+                find: 'restaurants'
+            }
+        })
     //end-execute
 
     //start-read-preference
