@@ -13,7 +13,7 @@ Run a Command
 Overview
 --------
 
-In this guide, you can learn how to run a database command with the
+In this guide, you can learn how to run a database command by using the
 {+driver-short+}. You can use database commands to perform a variety of
 administrative and diagnostic tasks, such as fetching server statistics,
 initializing a replica set, or running an aggregation pipeline.
@@ -125,8 +125,8 @@ The following code shows the general output format of the ``buildInfo`` command:
 .. io-code-block::
 
    .. input:: /includes/run-command.kt
-      :start-after: start-build-info
-      :end-before: end-build-info
+      :start-after: start-full-example
+      :end-before: end-full-example
       :language: kotlin
       :dedent:
 
@@ -135,11 +135,10 @@ The following code shows the general output format of the ``buildInfo`` command:
         
       {
         version: '8.0.4',
-        <other command results>
-        storageEngines: [ ... ],
+         ...<other command results>...
         ok: 1,
         '$clusterTime': {
-            clusterTime: Timestamp({ t: 1737993450, i: 32 }),
+            clusterTime: Timestamp({ ... }),
             signature: {
                ...
             }
