@@ -1,6 +1,6 @@
-==================
-Cluster Monitoring
-==================
+==========
+Monitoring
+==========
 
 .. contents:: On this page
    :local:
@@ -12,23 +12,25 @@ Overview
 --------
 
 In this guide, you can learn how to set up and configure **monitoring** in the
-MongoDB Kotlin driver.
+{+driver-short+}.
 
 Monitoring is the process of getting information about the activities a running
 program performs for use in an application or an application performance
 management library.
 
-Monitoring the MongoDB Kotlin driver lets you understand the
-driver's resource usage and performance, and can help you make informed
-decisions when designing and debugging your application.
+Monitoring the {+driver-short+} to monitor cluster, driver command, and
+connection pool events. These features help you make informed decisions when
+designing and debugging your application.
 
 In this guide you will learn how to perform these tasks:
 
-- :ref:`Monitor different types of events in the MongoDB Kotlin driver <monitoring-monitor-events>`
+- :ref:`Monitor specific events by using the {+driver-short+} <monitoring-monitor-events>`
 - :ref:`Monitor connection pool events with Java Management Extensions (JMX) and JConsole <monitoring-jmx>`
 
-This guide shows how to use information about the meta activity of the driver.
-To learn how to record data transactions, see the :ref:`Monitoring Data Changes <kotlin-sync-change-streams>` page. 
+.. tip::
+
+   This guide shows how to use information about the meta activity of the driver.
+   To learn how to record data transactions, see the :ref:`Monitoring Data Changes <kotlin-sync-change-streams>` page. 
 
 .. _monitoring-monitor-events:
 
@@ -44,20 +46,17 @@ for listening to a subset of the events that occur when the driver is running.
 A listener is a class that performs some action when certain events occur.
 A listener's API defines the events it can respond to.
 
-Each method of a listener class represents a response to a certain event. Each
-method receives one argument: an object representing the event the method
-responds to.
+Each method of a listener class represents a response to a certain event, and
+accepts as an argument an event object representing the event.
 
-The MongoDB Kotlin driver organizes the events it defines into three categories:
+The {+driver-short+} organizes the events it defines into three categories:
 
-- Command Events
-- Server Discovery and Monitoring Events
-- Connection Pool Events
+- Command events
+- Server Discovery and Monitoring events
+- Connection Pool events
 
-The following sections show how to monitor each event category.
-
-For a full list of the events you can monitor,
-`see the event package of the MongoDB Kotlin driver <{+api+}/apidocs/mongodb-driver-core/com/mongodb/event/package-summary.html>`__.
+The following sections show how to monitor each event category. For a full list of the events you can monitor,
+`see the event package of the {+driver-short+} <{+api+}/com/mongodb/event/package-summary.html>`__.
 
 .. _command-events-kotlin:
 
