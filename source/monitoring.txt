@@ -56,7 +56,8 @@ The {+driver-short+} organizes the events it defines into three categories:
 - Connection Pool events
 
 The following sections show how to monitor each event category. For a full list of the events you can monitor,
-`see the event package of the {+driver-short+} <{+api+}/com/mongodb/event/package-summary.html>`__.
+`see the event package of the {+driver-short+}
+<{+core-api+}/com/mongodb/event/package-summary.html>`__.
 
 .. _command-events-kotlin:
 
@@ -121,12 +122,12 @@ The following code implements these steps:
 For more information on the classes and methods mentioned in this section, see
 the following API documentation:
 
-- `CommandListener <{+api+}/com/mongodb/event/CommandListener.html>`__
-- `MongoClientSettings <{+api+}/com/mongodb/MongoClientSettings.html>`__
-- `MongoClient <{+api+}/apidocs/mongodb-driver-kotlin-sync/mongodb-driver-kotlin-sync/com.mongodb.kotlin.client/-mongo-client/index.html>`__
-- `CommandStartedEvent <{+api+}/com/mongodb/event/CommandStartedEvent.html>`__
-- `CommandSucceededEvent <{+api+}/com/mongodb/event/CommandSucceededEvent.html>`__
-- `CommandFailedEvent <{+api+}/com/mongodb/event/CommandFailedEvent.html>`__
+- `CommandListener <{+core-api+}/com/mongodb/event/CommandListener.html>`__
+- `MongoClientSettings <{+core-api+}/com/mongodb/MongoClientSettings.html>`__
+- `MongoClient <{+api+}/com.mongodb.kotlin.client/-mongo-client/index.html>`__
+- `CommandStartedEvent <{+core-api+}/com/mongodb/event/CommandStartedEvent.html>`__
+- `CommandSucceededEvent <{+core-api+}/com/mongodb/event/CommandSucceededEvent.html>`__
+- `CommandFailedEvent <{+core-api+}/com/mongodb/event/CommandFailedEvent.html>`__
 
 Server Discovery and Monitoring Events
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -177,11 +178,11 @@ For more information on the classes and methods mentioned in this section, see
 the following API documentation:
 
 - `ClusterListener <{+core-api+}/com/mongodb/event/ClusterListener.html>`__
-- `ServerListener <{+api+}/com/mongodb/event/ServerListener.html>`__
-- `ServerMonitorListener <{+api+}/com/mongodb/event/ServerMonitorListener.html>`__
+- `ServerListener <{+core-api+}/com/mongodb/event/ServerListener.html>`__
+- `ServerMonitorListener <{+core-api+}/com/mongodb/event/ServerMonitorListener.html>`__
 - `MongoClientSettings <{+api+}/com/mongodb/MongoClientSettings.html>`__
 - `MongoClient <{+api+}/apidocs/mongodb-driver-kotlin-sync/mongodb-driver-kotlin-sync/com.mongodb.kotlin.client/-mongo-client/index.html>`__
-- `ClusterDescriptionChangedEvent <{+api+}/com/mongodb/event/ClusterDescriptionChangedEvent.html>`__
+- `ClusterDescriptionChangedEvent <{+core-api+}/com/mongodb/event/ClusterDescriptionChangedEvent.html>`__
 
 Connection Pool Events
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -224,11 +225,11 @@ The following code implements these steps:
 For more information on the classes and methods mentioned in this section, see
 the following API documentation:
 
-- `ConnectionPoolListener <{+api+}/com/mongodb/event/ConnectionPoolListener.html>`__
+- `ConnectionPoolListener <{+core-api+}/com/mongodb/event/ConnectionPoolListener.html>`__
 - `MongoClientSettings <{+api+}/com/mongodb/MongoClientSettings.html>`__
 - `MongoClient <{+api+}/apidocs/mongodb-driver-kotlin-sync/mongodb-driver-kotlin-sync/com.mongodb.kotlin.client/-mongo-client/index.html>`__
-- `ConnectionCheckedOutEvent <{+api+}/com/mongodb/event/ConnectionCheckedOutEvent.html>`__
-- `ConnectionCheckOutFailedEvent <{+api+}/com/mongodb/event/ConnectionCheckOutFailedEvent.html>`__
+- `ConnectionCheckedOutEvent <{+core-api+}/com/mongodb/event/ConnectionCheckedOutEvent.html>`__
+- `ConnectionCheckOutFailedEvent <{+core-api+}/com/mongodb/event/ConnectionCheckOutFailedEvent.html>`__
 
 .. _monitoring-jmx:
 
