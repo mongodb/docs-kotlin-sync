@@ -18,11 +18,11 @@ Monitoring is the process of getting information about the activities a running
 program performs for use in an application or an application performance
 management library.
 
-Monitoring the {+driver-short+} to monitor cluster, driver command, and
+You can use the {+driver-short+} to monitor cluster, driver command, and
 connection pool events. These features help you make informed decisions when
 designing and debugging your application.
 
-In this guide you will learn how to perform these tasks:
+This guide shows how to perform the following tasks:
 
 - :ref:`Monitor specific events by using the {+driver-short+} <monitoring-monitor-events>`
 - :ref:`Monitor connection pool events with Java Management Extensions (JMX) and JConsole <monitoring-jmx>`
@@ -56,7 +56,7 @@ The {+driver-short+} organizes the events it defines into three categories:
 - Connection Pool events
 
 The following sections show how to monitor each event category. For a full list of the events you can monitor,
-`see the event package of the {+language+} driver
+`see the Java event package
 <{+core-api+}/com/mongodb/event/package-summary.html>`__.
 
 .. _command-events-kotlin:
@@ -72,8 +72,9 @@ To monitor command events, create a class that implements the
 ``CommandListener`` interface and register an instance of that class with your
 ``MongoClient`` instance.
 
-For more information on MongoDB database commands, see the
-:manual:`MongoDB manual entry on database commands </reference/command/>`.
+For more information on MongoDB database commands, see the 
+:manual:`MongoDB manual entry on database commands </reference/command/>`in 
+the {+mdb-server+} manual.
 
 .. note:: Internal Commands
 
@@ -100,7 +101,7 @@ To make a counter, follow these steps:
 
 #. Make a class with counter functionality that implements the ``CommandListener`` interface.
 #. Add an instance of the new class to a ``MongoClientSettings`` object.
-#. Configure you ``MongoClient`` instance with the ``MongoClientSettings`` object.
+#. Configure your ``MongoClient`` instance with the ``MongoClientSettings`` object.
 
 The following code implements these steps:
 
@@ -138,9 +139,9 @@ in the state of the MongoDB instance or cluster you have connected the driver to
 The driver defines nine SDAM events and provides the following listener
 interfaces, which listen for three SDAM events each: 
 
-- ``ClusterListener``: topology-related events
-- ``ServerListener``: events related to ``mongod`` or ``mongos`` processes
-- ``ServerMonitorListener``: heartbeat related events
+- ``ClusterListener``: Listens for topology-related events
+- ``ServerListener``: Listens for events related to ``mongod`` or ``mongos`` processes
+- ``ServerMonitorListener``: Listens for heartbeat-related events
 
 To monitor a type of SDAM event, create a class that implements one of the three
 preceding interfaces and register an instance of that class with your
@@ -151,12 +152,12 @@ For a detailed description of each SDAM event, see the :spec:`MongoDB SDAM monit
 Example
 ^^^^^^^
 
-This example shows how to make a listener class that prints a message that lets
-you know if the driver can write to your MongoDB instance.
+This example shows how to make a listener class that prints a message about the write
+availability of your MongoDB instance.
 
-To make an event that reports write status: 
+To make an event that reports write status, perform the following tasks: 
 
-#. Make a class that tracks and checks cluster description changes, and
+#. Make a class that tracks cluster description changes, and
    implements the ``CommandListener`` interface. 
 #. Add an instance of the new class to a ``MongoClientSettings`` object.
 #. Configure your ``MongoClient`` instance with the ``MongoClientSettings`` object.
@@ -203,7 +204,7 @@ Example
 This example shows how to make a listener class that prints a message each time
 you check out a connection from your connection pool.
 
-To make an event that reports connection checkouts: 
+To make an event that reports connection checkouts, perform the following tasks: 
 
 #. Make a class that tracks checkouts and implements the ``CommandListener`` interface.
 #. Add an instance of the new class to a ``MongoClientSettings`` object.
@@ -328,7 +329,7 @@ navigate to JConsole and inspect your connection pools.
 
       Navigate to JConsole to see your connection pools...
 
-Once you have started your server, open JConsole in your terminal using the
+Once you have started your server, open JConsole in your terminal by using the
 following command:
 
 .. code-block:: shell
@@ -345,8 +346,8 @@ Once JConsole is open, perform the following actions in the GUI:
 When you no longer want to inspect your connection pools in JConsole, do the
 following:
 
-#. Exit JConsole by closing the JConsole window
-#. Stop the program running by the preceding code snippet
+#. Exit JConsole by closing the JConsole window.
+#. Stop the program running by the preceding code snippet.
 
 For more information on JMX and JConsole, see the following resources from
 Oracle:
@@ -367,25 +368,12 @@ tracks requests as they propagate throughout different services in a
 service-oriented architecture.
 
 If you use the driver in a `Spring Cloud <https://spring.io/projects/spring-cloud>`__
-application, use
-`Spring Cloud Sleuth <https://spring.io/projects/spring-cloud-sleuth>`__ to
-include MongoDB event data in the
-`Zipkin <https://zipkin.io/>`__ distributed tracing system.
+application, use to include MongoDB event data in the `Zipkin
+<https://zipkin.io/>`__ distributed tracing system. 
 
 If you do not use Spring Cloud or want to include driver event data in a distributed
 tracing system other than Zipkin, you must write a command event listener that
-manages `spans
-<https://docs.spring.io/spring-cloud-sleuth/docs/current-SNAPSHOT/reference/html/getting-started.html#getting-started-terminology>`__
-for your desired distributed tracing system. To see an implementation of such a
-listener, see the Java source code for the :github:`TraceMongoCommandListener <spring-cloud/spring-cloud-sleuth/blob/eb01d5952b2e736970efbe3fc7e9784d119eeae9/spring-cloud-sleuth-instrumentation/src/main/java/org/springframework/cloud/sleuth/instrument/mongodb/TraceMongoCommandListener.java>`
-class in the Spring Cloud Sleuth source code.
-
-To learn more about Spring Cloud Sleuth, see
-`Getting Started <https://docs.spring.io/spring-cloud-sleuth/docs/current-SNAPSHOT/reference/html/getting-started.html>`__
-in the Spring Cloud Sleuth documentation.
-
-To view a detailed description of a distributed tracing system, see
-`Dapper <https://research.google/pubs/pub36356/>`__ from Google Research.
+manages **spans** for your desired distributed tracing system.
 
 .. tip::
 
@@ -395,7 +383,9 @@ To view a detailed description of a distributed tracing system, see
    - `Spring Cloud <https://spring.io/projects/spring-cloud>`__
       - `Spring Cloud Sleuth <https://spring.io/projects/spring-cloud-sleuth>`__
       - `spans <https://docs.spring.io/spring-cloud-sleuth/docs/current-SNAPSHOT/reference/html/getting-started.html#getting-started-terminology>`__
-      - :github:`TraceMongoCommandListener <spring-cloud/spring-cloud-sleuth/blob/eb01d5952b2e736970efbe3fc7e9784d119eeae9/spring-cloud-sleuth-instrumentation/src/main/java/org/springframework/cloud/sleuth/instrument/mongodb/TraceMongoCommandListener.java>`
+      - :github:`TraceMongoCommandListener <spring-cloud/spring-cloud-sleuth/blob/eb01d5952b2e736970efbe3fc7e9784d119eeae9/spring-cloud-sleuth-instrumentation/src/main/java/org/springframework/cloud/sleuth/instrument/mongodb/TraceMongoCommandListener.java>` : An
+           implementation of an event listen than manages spans 
       - `Getting Started <https://docs.spring.io/spring-cloud-sleuth/docs/current-SNAPSHOT/reference/html/getting-started.html>`__
    - `Zipkin <https://zipkin.io/>`__
-   - `Dapper <https://research.google/pubs/pub36356/>`__
+   - `Dapper <https://research.google/pubs/pub36356/>`__ : A detailed
+     description of a distributed tracing system from Google Research
