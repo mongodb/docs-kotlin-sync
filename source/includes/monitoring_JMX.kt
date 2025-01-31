@@ -1,10 +1,7 @@
 import com.mongodb.kotlin.client.MongoClient
-import org.bson.json.JsonWriterSettings
-import com.mongodb.event.*
 import com.mongodb.MongoClientSettings
 import com.mongodb.ConnectionString
 import com.mongodb.management.JMXConnectionPoolListener
-
 
 fun main() {
     val uri = "<connection string uri>"
@@ -15,8 +12,11 @@ fun main() {
 // Include the listener in your client settings
     val settings = MongoClientSettings.builder()
         .applyConnectionString(ConnectionString(uri))
-        .addCommandListener(connectionPoolListener)
+        .applyToConnectionPoolSettings {
+            it.addConnectionPoolListener(connectionPoolListener)
+        }
         .build()
+    val mongoClient: MongoClient = MongoClient.create(settings)
 
 // Pause execution
     try {
