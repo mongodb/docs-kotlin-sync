@@ -1,4 +1,5 @@
 import com.mongodb.kotlin.client.MongoClient
+import org.bson.Document
 import com.mongodb.MongoClientSettings
 import com.mongodb.ConnectionString
 import com.mongodb.management.JMXConnectionPoolListener
@@ -16,15 +17,20 @@ fun main() {
             it.addConnectionPoolListener(connectionPoolListener)
         }
         .build()
-    val mongoClient: MongoClient = MongoClient.create(settings)
+
+    try {
+// Connect to your database
+        val mongoClient = MongoClient.create(settings)
+        val database = mongoClient.getDatabase("sample_mflix")
+        val collection = database.getCollection<Document>("movies")
+        collection.find().firstOrNull()
+        collection.find().firstOrNull()
+        println("Navigate to JConsole to see your connection pools...")
 
 // Pause execution
-    try {
-        println("Navigate to JConsole to see your connection pools...")
         Thread.sleep(Long.MAX_VALUE)
+        mongoClient.close()
     } catch (e: Exception) {
         e.printStackTrace()
     }
-
-    mongoClient.close()
 }

@@ -1,5 +1,5 @@
 import com.mongodb.kotlin.client.MongoClient
-import org.bson.json.JsonWriterSettings
+import org.bson.Document
 import com.mongodb.event.*
 import com.mongodb.MongoClientSettings
 import com.mongodb.ConnectionString
@@ -23,7 +23,9 @@ val cpListener = ConnectionPoolLibrarian()
 // Include the listener in your client settings
     val settings = MongoClientSettings.builder()
         .applyConnectionString(ConnectionString(uri))
-        .addCommandListener(cpListener)
+        .applyToConnectionPoolSettings({
+            it.addConnectionPoolListener(cpListener)
+            })
         .build()
 
 // Connect to your database        
