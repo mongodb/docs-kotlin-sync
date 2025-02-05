@@ -139,9 +139,9 @@ in the state of the MongoDB instance or cluster you have connected the driver to
 The driver defines nine SDAM events and provides the following listener
 interfaces, which listen for three SDAM events each: 
 
-- ``ClusterListener``: Listens for topology-related events
-- ``ServerListener``: Listens for events related to ``mongod`` or ``mongos`` processes
-- ``ServerMonitorListener``: Listens for heartbeat-related events
+- ` ``ClusterListener`` <{+core-api+}/com/mongodb/event/ClusterListener.html>`__ : Listens for topology-related events
+- ` ``ServerListener`` <{+core-api+}/com/mongodb/event/ServerListener.html>`__ : Listens for events related to ``mongod`` or ``mongos`` processes
+- ` ``ServerMonitorListener`` <{+core-api+}/com/mongodb/event/ServerMonitorListener.html>`__ : Listens for heartbeat-related events
 
 To monitor a type of SDAM event, create a class that implements one of the three
 preceding interfaces and register an instance of that class with your
@@ -158,7 +158,7 @@ availability of your MongoDB instance.
 To make an event that reports write status, perform the following tasks: 
 
 #. Make a class that tracks cluster description changes, and
-   implements the ``CommandListener`` interface. 
+   implements the ``ClusterListener`` interface. 
 #. Add an instance of the new class to a ``MongoClientSettings`` object.
 #. Configure your ``MongoClient`` instance with the ``MongoClientSettings`` object.
 
@@ -368,8 +368,8 @@ tracks requests as they propagate throughout different services in a
 service-oriented architecture.
 
 If you use the driver in a `Spring Cloud <https://spring.io/projects/spring-cloud>`__
-application, use to include MongoDB event data in the `Zipkin
-<https://zipkin.io/>`__ distributed tracing system. 
+application, use Spring Cloud Sleuth to include MongoDB event data in the
+`Zipkin <https://zipkin.io/>`__ distributed tracing system.  
 
 If you do not use Spring Cloud or want to include driver event data in a distributed
 tracing system other than Zipkin, you must write a command event listener that
