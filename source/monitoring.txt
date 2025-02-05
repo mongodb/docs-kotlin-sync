@@ -139,9 +139,9 @@ in the state of the MongoDB instance or cluster you have connected the driver to
 The driver defines nine SDAM events and provides the following listener
 interfaces, which listen for three SDAM events each: 
 
-- ` ``ClusterListener`` <{+core-api+}/com/mongodb/event/ClusterListener.html>`__ : Listens for topology-related events
-- ` ``ServerListener`` <{+core-api+}/com/mongodb/event/ServerListener.html>`__ : Listens for events related to ``mongod`` or ``mongos`` processes
-- ` ``ServerMonitorListener`` <{+core-api+}/com/mongodb/event/ServerMonitorListener.html>`__ : Listens for heartbeat-related events
+- `ClusterListener <{+core-api+}/com/mongodb/event/ClusterListener.html>`__ : Listens for topology-related events
+- `ServerListener <{+core-api+}/com/mongodb/event/ServerListener.html>`__ : Listens for events related to ``mongod`` or ``mongos`` processes
+- `ServerMonitorListener <{+core-api+}/com/mongodb/event/ServerMonitorListener.html>`__ : Listens for heartbeat-related events
 
 To monitor a type of SDAM event, create a class that implements one of the three
 preceding interfaces and register an instance of that class with your
