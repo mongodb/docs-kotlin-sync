@@ -1,0 +1,889 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "section",
+      "children": [
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "heading",
+          "id": "interface-dnsclient",
+          "children": [
+            {
+              "type": "text",
+              "value": "Interface DnsClient"
+            }
+          ]
+        },
+        {
+          "type": "directive",
+          "name": "contents",
+          "children": [],
+          "argument": [
+            {
+              "type": "text",
+              "value": "On this Page"
+            }
+          ],
+          "options": {
+            "local": true,
+            "backlinks": "none",
+            "depth": 2,
+            "class": "singlecol"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "@ThreadSafe"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/annotations/ThreadSafe"
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    },
+                    {
+                      "type": "text",
+                      "value": "public interface "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "DnsClient"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "An interface describing a DNS client."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "4.6"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Since:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "DnsClientProvider"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/spi/dns/DnsClientProvider"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MongoClientSettings.Builder.dnsClient(DnsClient)"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/MongoClientSettings.Builder#dnsClient(com.mongodb.spi.dns.DnsClient)"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "See Also:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "heading",
+              "id": "method-summary",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Method Summary"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "all-methods",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "All Methods"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
+                  "type": "directive",
+                  "name": "list-table",
+                  "argument": [],
+                  "children": [
+                    {
+                      "type": "list",
+                      "enumtype": "unordered",
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Modifier and Type"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Method"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Description"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "List"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "<"
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "String"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ">"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "getResourceRecordData"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/spi/dns/DnsClient#getResourceRecordData(java.lang.String,java.lang.String)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "String"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " name,\n "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "String"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " type)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Gets the resource record values for the given name and type."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "options": {
+                    "header-rows": "1"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "heading",
+              "id": "method-detail",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Method Details"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "List"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "String"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": ">"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "getResourceRecordData"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "String"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " name,\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "String"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " type)"
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n                            throws "
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Gets the resource record values for the given name and type.\n\n "
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "\n Implementations should throw "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "DnsWithResponseCodeException"
+                            }
+                          ]
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/spi/dns/DnsWithResponseCodeException"
+                    },
+                    {
+                      "type": "text",
+                      "value": " if the DNS response code is known.  Otherwise, the more generic\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "DnsException"
+                            }
+                          ]
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/spi/dns/DnsException"
+                    },
+                    {
+                      "type": "text",
+                      "value": " should be thrown.\n "
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "name"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the name of the resource to look up"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "type"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " - the resource record type, typically either "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\"SRV\""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " or "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\"TXT\""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "."
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the list of values for the requested resource, or the empty list if none exist"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "DnsException"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/spi/dns/DnsException"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the exception"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Throws:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "getResourceRecordData",
+            "id": "getResourceRecordData(java.lang.String,java.lang.String)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "type": "directive",
+      "name": "facet",
+      "children": [],
+      "argument": [],
+      "options": {
+        "name": "genre",
+        "values": "reference"
+      }
+    }
+  ],
+  "options": {},
+  "fileid": "api/core/com/mongodb/spi/dns/DnsClient.ast"
+}

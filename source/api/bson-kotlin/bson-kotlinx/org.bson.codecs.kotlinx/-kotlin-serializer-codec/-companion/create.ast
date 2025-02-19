@@ -1,0 +1,1291 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "text",
+      "value": "\n"
+    },
+    {
+      "type": "section",
+      "children": [
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "heading",
+          "id": "content",
+          "children": [
+            {
+              "type": "text",
+              "value": "create"
+            }
+          ]
+        },
+        {
+          "type": "directive",
+          "name": "contents",
+          "children": [],
+          "argument": [
+            {
+              "type": "text",
+              "value": "On this Page"
+            }
+          ],
+          "options": {
+            "local": true,
+            "backlinks": "none",
+            "depth": 2,
+            "class": "singlecol"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n    "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "inline "
+                    },
+                    {
+                      "type": "text",
+                      "value": "fun "
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-kotlin-serializer-codec/-companion/create"
+                    },
+                    {
+                      "type": "text",
+                      "value": " : "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Any"
+                        }
+                      ],
+                      "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "> "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "create"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-kotlin-serializer-codec/-companion/create"
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "text",
+                      "value": "serializersModule"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "text",
+                      "value": "SerializersModule"
+                    },
+                    {
+                      "type": "text",
+                      "value": " = "
+                    },
+                    {
+                      "type": "text",
+                      "value": "defaultSerializersModule"
+                    },
+                    {
+                      "type": "text",
+                      "value": ", "
+                    },
+                    {
+                      "type": "text",
+                      "value": "bsonConfiguration"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "BsonConfiguration"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration/"
+                    },
+                    {
+                      "type": "text",
+                      "value": " = "
+                    },
+                    {
+                      "type": "text",
+                      "value": "BsonConfiguration()"
+                    },
+                    {
+                      "type": "text",
+                      "value": ")"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "text",
+                      "value": "Codec"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-kotlin-serializer-codec/-companion/create"
+                    },
+                    {
+                      "type": "text",
+                      "value": ">"
+                    },
+                    {
+                      "type": "text",
+                      "value": "?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Creates a "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Codec<T>"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " for the kClass or returns null if there is no serializer available."
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "return",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Return"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "the codec"
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "parameters",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Parameters"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "directive",
+              "name": "list-table",
+              "argument": [],
+              "children": [
+                {
+                  "type": "list",
+                  "enumtype": "unordered",
+                  "children": [
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "T"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "The codec type"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "serializers"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Module"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "the serializiers module to use"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "bson"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Configuration"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "the bson configuration for serializing"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": {
+                "header-rows": "0"
+              }
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "fun "
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-kotlin-serializer-codec/-companion/create"
+                    },
+                    {
+                      "type": "text",
+                      "value": " : "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Any"
+                        }
+                      ],
+                      "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "> "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "create"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-kotlin-serializer-codec/-companion/create"
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "text",
+                      "value": "kClass"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "KClass"
+                        }
+                      ],
+                      "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-kotlin-serializer-codec/-companion/create"
+                    },
+                    {
+                      "type": "text",
+                      "value": ">"
+                    },
+                    {
+                      "type": "text",
+                      "value": ", "
+                    },
+                    {
+                      "type": "text",
+                      "value": "serializersModule"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "text",
+                      "value": "SerializersModule"
+                    },
+                    {
+                      "type": "text",
+                      "value": " = "
+                    },
+                    {
+                      "type": "text",
+                      "value": "defaultSerializersModule"
+                    },
+                    {
+                      "type": "text",
+                      "value": ", "
+                    },
+                    {
+                      "type": "text",
+                      "value": "bsonConfiguration"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "BsonConfiguration"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration/"
+                    },
+                    {
+                      "type": "text",
+                      "value": " = "
+                    },
+                    {
+                      "type": "text",
+                      "value": "BsonConfiguration()"
+                    },
+                    {
+                      "type": "text",
+                      "value": ")"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "text",
+                      "value": "Codec"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-kotlin-serializer-codec/-companion/create"
+                    },
+                    {
+                      "type": "text",
+                      "value": ">"
+                    },
+                    {
+                      "type": "text",
+                      "value": "?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Creates a "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Codec<T>"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " for the kClass or returns null if there is no serializer available."
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "return",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Return"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "the codec"
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "parameters",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Parameters"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "directive",
+              "name": "list-table",
+              "argument": [],
+              "children": [
+                {
+                  "type": "list",
+                  "enumtype": "unordered",
+                  "children": [
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "T"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "The codec type"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "k"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Class"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "the KClass for the codec"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "serializers"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Module"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "the serializiers module to use"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "bson"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Configuration"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "the bson configuration for serializing"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": {
+                "header-rows": "0"
+              }
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "fun "
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-kotlin-serializer-codec/-companion/create"
+                    },
+                    {
+                      "type": "text",
+                      "value": " : "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Any"
+                        }
+                      ],
+                      "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "> "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "create"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-kotlin-serializer-codec/-companion/create"
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "text",
+                      "value": "kClass"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "KClass"
+                        }
+                      ],
+                      "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-kotlin-serializer-codec/-companion/create"
+                    },
+                    {
+                      "type": "text",
+                      "value": ">"
+                    },
+                    {
+                      "type": "text",
+                      "value": ", "
+                    },
+                    {
+                      "type": "text",
+                      "value": "serializer"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "text",
+                      "value": "KSerializer"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-kotlin-serializer-codec/-companion/create"
+                    },
+                    {
+                      "type": "text",
+                      "value": ">"
+                    },
+                    {
+                      "type": "text",
+                      "value": ", "
+                    },
+                    {
+                      "type": "text",
+                      "value": "serializersModule"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "text",
+                      "value": "SerializersModule"
+                    },
+                    {
+                      "type": "text",
+                      "value": ", "
+                    },
+                    {
+                      "type": "text",
+                      "value": "bsonConfiguration"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "BsonConfiguration"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration/"
+                    },
+                    {
+                      "type": "text",
+                      "value": ")"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "text",
+                      "value": "Codec"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-kotlin-serializer-codec/-companion/create"
+                    },
+                    {
+                      "type": "text",
+                      "value": ">"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Creates a "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Codec<T>"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " for the kClass using the supplied serializer"
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "return",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Return"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "the codec"
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "parameters",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Parameters"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "directive",
+              "name": "list-table",
+              "argument": [],
+              "children": [
+                {
+                  "type": "list",
+                  "enumtype": "unordered",
+                  "children": [
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "T"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "The codec type"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "k"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Class"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "the KClass for the codec"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "serializer"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "the KSerializer to use"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "serializers"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Module"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "the serializiers module to use"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "bson"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Configuration"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "the bson configuration for serializing"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": {
+                "header-rows": "0"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "\n      "
+    },
+    {
+      "type": "text",
+      "value": "\n    "
+    },
+    {
+      "type": "directive",
+      "name": "facet",
+      "children": [],
+      "argument": [],
+      "options": {
+        "name": "genre",
+        "values": "reference"
+      }
+    }
+  ],
+  "options": {},
+  "fileid": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-kotlin-serializer-codec/-companion/create.ast"
+}

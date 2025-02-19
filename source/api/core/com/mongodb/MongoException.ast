@@ -1,0 +1,5157 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "section",
+      "children": [
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "heading",
+          "id": "class-mongoexception",
+          "children": [
+            {
+              "type": "text",
+              "value": "Class MongoException"
+            }
+          ]
+        },
+        {
+          "type": "directive",
+          "name": "contents",
+          "children": [],
+          "argument": [
+            {
+              "type": "text",
+              "value": "On this Page"
+            }
+          ],
+          "options": {
+            "local": true,
+            "backlinks": "none",
+            "depth": 2,
+            "class": "singlecol"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Serializable"
+                                }
+                              ],
+                              "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/Serializable.html"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "All Implemented Interfaces:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MongoChangeStreamException"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/MongoChangeStreamException"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": ", "
+                        },
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MongoClientException"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/MongoClientException"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": ", "
+                        },
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MongoExecutionTimeoutException"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/MongoExecutionTimeoutException"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": ", "
+                        },
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MongoGridFSException"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/MongoGridFSException"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": ", "
+                        },
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MongoIncompatibleDriverException"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/MongoIncompatibleDriverException"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": ", "
+                        },
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MongoInternalException"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/MongoInternalException"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": ", "
+                        },
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MongoInterruptedException"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/MongoInterruptedException"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": ", "
+                        },
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MongoServerException"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/MongoServerException"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": ", "
+                        },
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MongoSocketException"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/MongoSocketException"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Direct Known Subclasses:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "public class "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MongoException"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    },
+                    {
+                      "type": "text",
+                      "value": "extends "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "RuntimeException"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/RuntimeException.html"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Top level Exception for all Exceptions, server-side or client-side, that come from the driver."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "heading",
+              "id": "field-summary",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Field Summary"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "field-summary",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Fields"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "directive",
+              "name": "list-table",
+              "argument": [],
+              "children": [
+                {
+                  "type": "list",
+                  "enumtype": "unordered",
+                  "children": [
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Modifier and Type"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Field"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Description"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "static final "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "String"
+                                        }
+                                      ],
+                                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "TRANSIENT_TRANSACTION_ERROR_LABEL"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/MongoException#TRANSIENT_TRANSACTION_ERROR_LABEL"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "An error label indicating that the exception can be treated as a transient transaction error."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "static final "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "String"
+                                        }
+                                      ],
+                                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "UNKNOWN_TRANSACTION_COMMIT_RESULT_LABEL"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/MongoException#UNKNOWN_TRANSACTION_COMMIT_RESULT_LABEL"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "An error label indicating that the exception can be treated as an unknown transaction commit result."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": {
+                "header-rows": "1"
+              }
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "heading",
+              "id": "constructor-summary",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Constructor Summary"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "constructor-summary",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Constructors"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "directive",
+              "name": "list-table",
+              "argument": [],
+              "children": [
+                {
+                  "type": "list",
+                  "enumtype": "unordered",
+                  "children": [
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Constructor"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Description"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "MongoException"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/MongoException#%3Cinit%3E(int,java.lang.String)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "(int code,\n "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "String"
+                                        }
+                                      ],
+                                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " msg)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": " "
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "MongoException"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/MongoException#%3Cinit%3E(int,java.lang.String,java.lang.Throwable)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "(int code,\n "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "String"
+                                        }
+                                      ],
+                                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " msg,\n "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Throwable"
+                                        }
+                                      ],
+                                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " t)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": " "
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "MongoException"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/MongoException#%3Cinit%3E(int,java.lang.String,org.bson.BsonDocument)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "(int code,\n "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "String"
+                                        }
+                                      ],
+                                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " msg,\n "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "BsonDocument"
+                                        }
+                                      ],
+                                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonDocument.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " response)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": " "
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "MongoException"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/MongoException#%3Cinit%3E(java.lang.String)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "("
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "String"
+                                        }
+                                      ],
+                                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " msg)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": " "
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "MongoException"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/MongoException#%3Cinit%3E(java.lang.String,java.lang.Throwable)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "("
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "String"
+                                        }
+                                      ],
+                                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " msg,\n "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Throwable"
+                                        }
+                                      ],
+                                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " t)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": " "
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": {
+                "header-rows": "1"
+              }
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "heading",
+              "id": "method-summary",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Method Summary"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "all-methods",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "All Methods"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
+                  "type": "directive",
+                  "name": "list-table",
+                  "argument": [],
+                  "children": [
+                    {
+                      "type": "list",
+                      "enumtype": "unordered",
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Modifier and Type"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Method"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Description"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "void"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "addLabel"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/MongoException#addLabel(java.lang.String)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "String"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " errorLabel)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Adds the given error label to the exception."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "protected void"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "addLabels"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/MongoException#addLabels(java.util.Collection)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Collection"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Collection.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "<"
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "String"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "> labels)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Add labels."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "protected void"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "addLabels"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/MongoException#addLabels(org.bson.BsonArray)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "BsonArray"
+                                            }
+                                          ],
+                                          "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonArray.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " labels)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Add labels."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "static "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MongoException"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/MongoException"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "fromThrowable"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/MongoException#fromThrowable(java.lang.Throwable)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Throwable"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " t)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Static helper to create or cast a MongoException from a throwable"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "static "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MongoException"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/MongoException"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "fromThrowableNonNull"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/MongoException#fromThrowableNonNull(java.lang.Throwable)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Throwable"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " t)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Static helper to create or cast a MongoException from a throwable"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "int"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "getCode"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/MongoException#getCode()"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "()"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Gets the exception code"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Set"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Set.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "<"
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "String"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ">"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "getErrorLabels"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/MongoException#getErrorLabels()"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "()"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Gets the set of error labels associated with this exception."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "boolean"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "hasErrorLabel"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/MongoException#hasErrorLabel(java.lang.String)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "String"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " errorLabel)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Return true if the exception is labelled with the given error label, and false otherwise."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "void"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "removeLabel"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/MongoException#removeLabel(java.lang.String)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "String"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " errorLabel)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Removes the given error label from the exception."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "options": {
+                    "header-rows": "1"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "methods-inherited-from-class-java.lang.Throwable",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Methods inherited from class java.lang.Throwable"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "literal",
+              "children": [
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "addSuppressed"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html#addSuppressed(java.lang.Throwable)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "fillInStackTrace"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html#fillInStackTrace()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "getCause"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html#getCause()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "getLocalizedMessage"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html#getLocalizedMessage()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "getMessage"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html#getMessage()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "getStackTrace"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html#getStackTrace()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "getSuppressed"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html#getSuppressed()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "initCause"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html#initCause(java.lang.Throwable)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "printStackTrace"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html#printStackTrace()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "printStackTrace"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html#printStackTrace(java.io.PrintStream)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "printStackTrace"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html#printStackTrace(java.io.PrintWriter)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "setStackTrace"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html#setStackTrace(java.lang.StackTraceElement%5B%5D)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "toString"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html#toString()"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "methods-inherited-from-class-java.lang.Object",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Methods inherited from class java.lang.Object"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "literal",
+              "children": [
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "clone"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#clone()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "equals"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "finalize"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#finalize()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "getClass"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#getClass()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "hashCode"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#hashCode()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "notify"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notify()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "notifyAll"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notifyAll()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "wait"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "wait"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "wait"
+                    }
+                  ],
+                  "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long,int)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "heading",
+              "id": "field-detail",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Field Details"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "public static final"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "String"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "TRANSIENT_TRANSACTION_ERROR_LABEL"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "An error label indicating that the exception can be treated as a transient transaction error."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "3.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Since:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "hasErrorLabel(String)"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/MongoException#hasErrorLabel(java.lang.String)"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Constant Field Values"
+                            }
+                          ],
+                          "refuri": "api/core/constant-values#com.mongodb.MongoException.TRANSIENT_TRANSACTION_ERROR_LABEL"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "See Also:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "TRANSIENT_TRANSACTION_ERROR_LABEL",
+            "id": "TRANSIENT_TRANSACTION_ERROR_LABEL"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "public static final"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "String"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "UNKNOWN_TRANSACTION_COMMIT_RESULT_LABEL"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "An error label indicating that the exception can be treated as an unknown transaction commit result."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "3.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Since:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "hasErrorLabel(String)"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/MongoException#hasErrorLabel(java.lang.String)"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Constant Field Values"
+                            }
+                          ],
+                          "refuri": "api/core/constant-values#com.mongodb.MongoException.UNKNOWN_TRANSACTION_COMMIT_RESULT_LABEL"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "See Also:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "UNKNOWN_TRANSACTION_COMMIT_RESULT_LABEL",
+            "id": "UNKNOWN_TRANSACTION_COMMIT_RESULT_LABEL"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "heading",
+              "id": "constructor-detail",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Constructor Details"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "public"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MongoException"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "String"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " msg)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "msg"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the message"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "MongoException",
+            "id": "<init>(java.lang.String)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "public"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MongoException"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "(int code,\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "String"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " msg)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "code"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the error code"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "msg"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " - the message"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "MongoException",
+            "id": "<init>(int,java.lang.String)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "public"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MongoException"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "@Nullable"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/lang/Nullable"
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "String"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " msg,\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "@Nullable"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/lang/Nullable"
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Throwable"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " t)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "msg"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the message"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "t"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " - the throwable cause"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "MongoException",
+            "id": "<init>(java.lang.String,java.lang.Throwable)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "public"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MongoException"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "(int code,\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "String"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " msg,\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Throwable"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " t)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "code"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the error code"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "msg"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " - the message"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "t"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " - the throwable cause"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "MongoException",
+            "id": "<init>(int,java.lang.String,java.lang.Throwable)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "public"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MongoException"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "(int code,\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "String"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " msg,\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "BsonDocument"
+                        }
+                      ],
+                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonDocument.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " response)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "code"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the error code"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "msg"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " - the message"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "response"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " - the response"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "4.1"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Since:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "MongoException",
+            "id": "<init>(int,java.lang.String,org.bson.BsonDocument)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "heading",
+              "id": "method-detail",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Method Details"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "@Nullable"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/lang/Nullable"
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    },
+                    {
+                      "type": "text",
+                      "value": "public static"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MongoException"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/MongoException"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "fromThrowable"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "@Nullable"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/lang/Nullable"
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Throwable"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " t)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Static helper to create or cast a MongoException from a throwable"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "t"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - a throwable, which may be null"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "a MongoException"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "fromThrowable",
+            "id": "fromThrowable(java.lang.Throwable)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "public static"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MongoException"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/MongoException"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "fromThrowableNonNull"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Throwable"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Throwable.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " t)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Static helper to create or cast a MongoException from a throwable"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "t"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - a throwable, which may not be null"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "a MongoException"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "3.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Since:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "fromThrowableNonNull",
+            "id": "fromThrowableNonNull(java.lang.Throwable)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "public"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "text",
+                      "value": "int"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "getCode"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "()"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Gets the exception code"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the error code."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "getCode",
+            "id": "getCode()"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "public"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "text",
+                      "value": "void"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "addLabel"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "String"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " errorLabel)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Adds the given error label to the exception."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "errorLabel"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the non-null error label to add to the exception"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "3.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Since:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "addLabel",
+            "id": "addLabel(java.lang.String)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "public"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "text",
+                      "value": "void"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "removeLabel"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "String"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " errorLabel)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Removes the given error label from the exception."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "errorLabel"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the non-null error label to remove from the exception"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "3.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Since:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "removeLabel",
+            "id": "removeLabel(java.lang.String)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "public"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Set"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Set.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "String"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": ">"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "getErrorLabels"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "()"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Gets the set of error labels associated with this exception."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the error labels, which may not be null but may be empty"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "3.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Since:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "getErrorLabels",
+            "id": "getErrorLabels()"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "public"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "text",
+                      "value": "boolean"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "hasErrorLabel"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "String"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " errorLabel)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Return true if the exception is labelled with the given error label, and false otherwise."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "errorLabel"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the non-null error label"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "true if the exception is labelled with the given error label"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "3.8"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Since:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "hasErrorLabel",
+            "id": "hasErrorLabel(java.lang.String)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "protected"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "text",
+                      "value": "void"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "addLabels"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "BsonArray"
+                        }
+                      ],
+                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonArray.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " labels)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Add labels."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "labels"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the labels"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "addLabels",
+            "id": "addLabels(org.bson.BsonArray)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "protected"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "text",
+                      "value": "void"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "addLabels"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Collection"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Collection.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "String"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "> labels)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Add labels."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "labels"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the labels"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "addLabels",
+            "id": "addLabels(java.util.Collection)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "type": "directive",
+      "name": "facet",
+      "children": [],
+      "argument": [],
+      "options": {
+        "name": "genre",
+        "values": "reference"
+      }
+    }
+  ],
+  "options": {},
+  "fileid": "api/core/com/mongodb/MongoException.ast"
+}

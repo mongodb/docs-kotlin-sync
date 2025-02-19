@@ -1,0 +1,288 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "text",
+      "value": "\n"
+    },
+    {
+      "type": "section",
+      "children": [
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "heading",
+          "id": "content",
+          "children": [
+            {
+              "type": "text",
+              "value": "tryNext"
+            }
+          ]
+        },
+        {
+          "type": "directive",
+          "name": "contents",
+          "children": [],
+          "argument": [
+            {
+              "type": "text",
+              "value": "On this Page"
+            }
+          ],
+          "options": {
+            "local": true,
+            "backlinks": "none",
+            "depth": 2,
+            "class": "singlecol"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n    "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "abstract "
+                    },
+                    {
+                      "type": "text",
+                      "value": "fun "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "tryNext"
+                        }
+                      ],
+                      "refuri": "api/kotlin/-mongo-cursor/try-next"
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "text",
+                      "value": ")"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T"
+                        }
+                      ],
+                      "refuri": "api/kotlin/-mongo-cursor"
+                    },
+                    {
+                      "type": "text",
+                      "value": "?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A special "
+                },
+                {
+                  "type": "text",
+                  "value": "next"
+                },
+                {
+                  "type": "text",
+                  "value": " case that returns the next element in the iteration if available or null."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tailable cursors are an example where this is useful. A call to "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "tryNext"
+                    }
+                  ],
+                  "refuri": "api/kotlin/-mongo-cursor/try-next"
+                },
+                {
+                  "type": "text",
+                  "value": " may return null, ut in the future calling "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "tryNext"
+                    }
+                  ],
+                  "refuri": "api/kotlin/-mongo-cursor/try-next"
+                },
+                {
+                  "type": "text",
+                  "value": " would return a new element if a document had been added to the capped collection."
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "return",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Return"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "the next element in the iteration if available or null."
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "see-also",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "See also"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "directive",
+              "name": "list-table",
+              "argument": [],
+              "children": [
+                {
+                  "type": "list",
+                  "enumtype": "unordered",
+                  "children": [
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": []
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Tailable Cursor"
+                                        }
+                                      ],
+                                      "refuri": "https://www.mongodb.com/docs/manual/reference/glossary/#term-tailable-cursor"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": {
+                "header-rows": "0"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "\n      "
+    },
+    {
+      "type": "text",
+      "value": "\n    "
+    },
+    {
+      "type": "directive",
+      "name": "facet",
+      "children": [],
+      "argument": [],
+      "options": {
+        "name": "genre",
+        "values": "reference"
+      }
+    }
+  ],
+  "options": {},
+  "fileid": "api/kotlin/-mongo-cursor/try-next.ast"
+}

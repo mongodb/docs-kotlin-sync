@@ -1,0 +1,951 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "text",
+      "value": "\n"
+    },
+    {
+      "type": "section",
+      "children": [
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "heading",
+          "id": "content",
+          "children": [
+            {
+              "type": "text",
+              "value": "BsonConfiguration"
+            }
+          ]
+        },
+        {
+          "type": "directive",
+          "name": "contents",
+          "children": [],
+          "argument": [
+            {
+              "type": "text",
+              "value": "On this Page"
+            }
+          ],
+          "options": {
+            "local": true,
+            "backlinks": "none",
+            "depth": 2,
+            "class": "singlecol"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n    "
+        },
+        {
+          "type": "text",
+          "value": "\n    "
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "data "
+                    },
+                    {
+                      "type": "text",
+                      "value": "class "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "BsonConfiguration"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration"
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "text",
+                      "value": "val "
+                    },
+                    {
+                      "type": "text",
+                      "value": "encodeDefaults"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Boolean"
+                        }
+                      ],
+                      "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " = "
+                    },
+                    {
+                      "type": "text",
+                      "value": "true"
+                    },
+                    {
+                      "type": "text",
+                      "value": ", "
+                    },
+                    {
+                      "type": "text",
+                      "value": "val "
+                    },
+                    {
+                      "type": "text",
+                      "value": "explicitNulls"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Boolean"
+                        }
+                      ],
+                      "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " = "
+                    },
+                    {
+                      "type": "text",
+                      "value": "false"
+                    },
+                    {
+                      "type": "text",
+                      "value": ", "
+                    },
+                    {
+                      "type": "text",
+                      "value": "val "
+                    },
+                    {
+                      "type": "text",
+                      "value": "classDiscriminator"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "String"
+                        }
+                      ],
+                      "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " = "
+                    },
+                    {
+                      "type": "text",
+                      "value": "\"_t\""
+                    },
+                    {
+                      "type": "text",
+                      "value": ")"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Bson Configuration for serialization"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Usage example with codecs:"
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "lang": "kotlin",
+              "copyable": true,
+              "emphasize_lines": [],
+              "value": "val codec = KotlinSerializerCodec.create(mykClass, bsonConfiguration = BsonConfiguration(encodeDefaults = false))",
+              "linenos": false
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "directive",
+          "name": "tabs",
+          "argument": [],
+          "children": [
+            {
+              "type": "directive",
+              "name": "tab",
+              "argument": [
+                {
+                  "type": "text",
+                  "value": "Members"
+                }
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n        "
+                },
+                {
+                  "type": "section",
+                  "children": [
+                    {
+                      "type": "heading",
+                      "id": "constructors",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Constructors"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n        "
+                },
+                {
+                  "type": "directive",
+                  "name": "list-table",
+                  "argument": [],
+                  "children": [
+                    {
+                      "type": "list",
+                      "enumtype": "unordered",
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Bson"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "Configuration"
+                                        }
+                                      ],
+                                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration/-bson-configuration"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                    "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "section",
+                                      "children": [
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "literal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "constructor"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "("
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "encodeDefaults"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "Boolean"
+                                                    }
+                                                  ],
+                                                  "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": " = "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "true"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ", "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "explicitNulls"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "Boolean"
+                                                    }
+                                                  ],
+                                                  "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": " = "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "false"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ", "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "classDiscriminator"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "String"
+                                                    }
+                                                  ],
+                                                  "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": " = "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "\"_t\""
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ")"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n              "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "options": {
+                    "header-rows": "0"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": "\n      "
+                },
+                {
+                  "type": "text",
+                  "value": "\n            "
+                },
+                {
+                  "type": "text",
+                  "value": "\n          "
+                },
+                {
+                  "type": "text",
+                  "value": "\n        "
+                },
+                {
+                  "type": "section",
+                  "children": [
+                    {
+                      "type": "heading",
+                      "id": "properties",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Properties"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n        "
+                },
+                {
+                  "type": "directive",
+                  "name": "list-table",
+                  "argument": [],
+                  "children": [
+                    {
+                      "type": "list",
+                      "enumtype": "unordered",
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "class"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "Discriminator"
+                                        }
+                                      ],
+                                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration/class-discriminator"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                    "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "section",
+                                      "children": [
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "literal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "val "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "classDiscriminator"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration/class-discriminator"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "String"
+                                                    }
+                                                  ],
+                                                  "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "class discriminator to use when encoding polymorphic types"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n              "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "encode"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "Defaults"
+                                        }
+                                      ],
+                                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration/encode-defaults"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                    "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "section",
+                                      "children": [
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "literal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "val "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "encodeDefaults"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration/encode-defaults"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "Boolean"
+                                                    }
+                                                  ],
+                                                  "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": " = "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "true"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "encode default values, defaults to true"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n              "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "explicit"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "Nulls"
+                                        }
+                                      ],
+                                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration/explicit-nulls"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                    "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "section",
+                                      "children": [
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "literal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "val "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "explicitNulls"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration/explicit-nulls"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "Boolean"
+                                                    }
+                                                  ],
+                                                  "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": " = "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "false"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "encode null values, defaults to false"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n              "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "options": {
+                    "header-rows": "0"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": "\n      "
+                }
+              ],
+              "options": {
+                "tabid": "members"
+              }
+            }
+          ],
+          "options": {}
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "\n      "
+    },
+    {
+      "type": "text",
+      "value": "\n    "
+    },
+    {
+      "type": "directive",
+      "name": "facet",
+      "children": [],
+      "argument": [],
+      "options": {
+        "name": "genre",
+        "values": "reference"
+      }
+    },
+    {
+      "type": "directive",
+      "name": "toctree",
+      "argument": [],
+      "options": {
+        "osiris_parent": true
+      },
+      "children": [],
+      "entries": [
+        {
+          "title": "BsonConfiguration",
+          "slug": "/api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration/-bson-configuration"
+        },
+        {
+          "title": "classDiscriminator",
+          "slug": "/api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration/class-discriminator"
+        },
+        {
+          "title": "encodeDefaults",
+          "slug": "/api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration/encode-defaults"
+        },
+        {
+          "title": "explicitNulls",
+          "slug": "/api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration/explicit-nulls"
+        }
+      ]
+    }
+  ],
+  "options": {},
+  "fileid": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration.ast"
+}

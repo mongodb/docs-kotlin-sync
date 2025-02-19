@@ -1,0 +1,4918 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "section",
+      "children": [
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "heading",
+          "id": "interface-mqlinteger",
+          "children": [
+            {
+              "type": "text",
+              "value": "Interface MqlInteger"
+            }
+          ]
+        },
+        {
+          "type": "directive",
+          "name": "contents",
+          "children": [],
+          "argument": [
+            {
+              "type": "text",
+              "value": "On this Page"
+            }
+          ],
+          "options": {
+            "local": true,
+            "backlinks": "none",
+            "depth": 2,
+            "class": "singlecol"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MqlNumber"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": ", "
+                        },
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MqlValue"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/client/model/mql/MqlValue"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "All Superinterfaces:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "@Sealed"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/annotations/Sealed"
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "@Beta"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/annotations/Beta"
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "CLIENT"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/annotations/Reason#CLIENT"
+                    },
+                    {
+                      "type": "text",
+                      "value": ")\n"
+                    },
+                    {
+                      "type": "text",
+                      "value": "public interface "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\nextends "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlNumber"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "An integer "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "value"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue"
+                },
+                {
+                  "type": "text",
+                  "value": " in the context of the MongoDB Query\n Language (MQL). Integers are a subset of "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "numbers"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber"
+                },
+                {
+                  "type": "text",
+                  "value": ",\n and so, for example, the integer 0 and the number 0 are\n "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "equal"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#eq(com.mongodb.client.model.mql.MqlValue)"
+                },
+                {
+                  "type": "text",
+                  "value": "."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "4.9.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Since:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "heading",
+              "id": "method-summary",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Method Summary"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "all-methods",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "All Methods"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
+                  "type": "directive",
+                  "name": "list-table",
+                  "argument": [],
+                  "children": [
+                    {
+                      "type": "list",
+                      "enumtype": "unordered",
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Modifier and Type"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Method"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Description"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "abs"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger#abs()"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "()"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The absolute value of "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " value."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "default "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "add"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger#add(int)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "(int other)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The sum of adding "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " and the "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "other"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " value."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "add"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger#add(com.mongodb.client.model.mql.MqlInteger)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " other)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The sum of adding "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " and the "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "other"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " value."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "max"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger#max(com.mongodb.client.model.mql.MqlInteger)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " other)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "larger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#gt(com.mongodb.client.model.mql.MqlValue)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " value of "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "\n and the "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "other"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " value."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlDate"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "millisecondsAsDate"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger#millisecondsAsDate()"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "()"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "date"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " corresponding to "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " value\n when taken to be the number of milliseconds since the Unix epoch."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "min"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger#min(com.mongodb.client.model.mql.MqlInteger)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " other)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "smaller"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#lt(com.mongodb.client.model.mql.MqlValue)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " value of "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "\n and the "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "other"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " value."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "default "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "multiply"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger#multiply(int)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "(int other)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The product of multiplying "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " and the "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "other"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " value."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "multiply"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger#multiply(com.mongodb.client.model.mql.MqlInteger)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " other)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The product of multiplying "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " and the "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "other"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " value."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "<R extends "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlValue"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlValue"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ">"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "R"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "passIntegerTo"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger#passIntegerTo(java.util.function.Function)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Function"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "<? super "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ","
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "? extends R> f)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The result of passing "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " value to the provided function."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "default "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "subtract"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger#subtract(int)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "(int other)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The difference of subtracting the "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "other"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " value from "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "subtract"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger#subtract(com.mongodb.client.model.mql.MqlInteger)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " other)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The difference of subtracting the "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "other"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " value from "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "<R extends "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlValue"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlValue"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ">"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "R"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "switchIntegerOn"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger#switchIntegerOn(java.util.function.Function)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Function"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "<"
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Branches"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/Branches"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "<"
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ">,"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "? extends "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "BranchesTerminal"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/BranchesTerminal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "<"
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ","
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "? extends R>> mapping)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The result of applying the provided switch mapping to "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " value."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "options": {
+                    "header-rows": "1"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "methods-inherited-from-class-com.mongodb.client.model.mql.MqlNumber",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Methods inherited from interface com.mongodb.client.model.mql.MqlNumber"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "literal",
+              "children": [
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "add"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber#add(com.mongodb.client.model.mql.MqlNumber)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "add"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber#add(java.lang.Number)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "divide"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber#divide(com.mongodb.client.model.mql.MqlNumber)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "divide"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber#divide(java.lang.Number)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "max"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber#max(com.mongodb.client.model.mql.MqlNumber)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "min"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber#min(com.mongodb.client.model.mql.MqlNumber)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "multiply"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber#multiply(com.mongodb.client.model.mql.MqlNumber)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "multiply"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber#multiply(java.lang.Number)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "passNumberTo"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber#passNumberTo(java.util.function.Function)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "round"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber#round()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "round"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber#round(com.mongodb.client.model.mql.MqlInteger)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "subtract"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber#subtract(com.mongodb.client.model.mql.MqlNumber)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "subtract"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber#subtract(java.lang.Number)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "switchNumberOn"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber#switchNumberOn(java.util.function.Function)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "methods-inherited-from-class-com.mongodb.client.model.mql.MqlValue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Methods inherited from interface com.mongodb.client.model.mql.MqlValue"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "literal",
+              "children": [
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "asString"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#asString()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "eq"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#eq(com.mongodb.client.model.mql.MqlValue)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "equals"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#equals(java.lang.Object)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "gt"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#gt(com.mongodb.client.model.mql.MqlValue)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "gte"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#gte(com.mongodb.client.model.mql.MqlValue)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "isArrayOr"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#isArrayOr(com.mongodb.client.model.mql.MqlArray)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "isBooleanOr"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#isBooleanOr(com.mongodb.client.model.mql.MqlBoolean)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "isDateOr"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#isDateOr(com.mongodb.client.model.mql.MqlDate)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "isDocumentOr"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#isDocumentOr(T)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "isIntegerOr"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#isIntegerOr(com.mongodb.client.model.mql.MqlInteger)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "isMapOr"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#isMapOr(com.mongodb.client.model.mql.MqlMap)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "isNumberOr"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#isNumberOr(com.mongodb.client.model.mql.MqlNumber)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "isStringOr"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#isStringOr(com.mongodb.client.model.mql.MqlString)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "lt"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#lt(com.mongodb.client.model.mql.MqlValue)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "lte"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#lte(com.mongodb.client.model.mql.MqlValue)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "ne"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#ne(com.mongodb.client.model.mql.MqlValue)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "passTo"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#passTo(java.util.function.Function)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "switchOn"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#switchOn(java.util.function.Function)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "heading",
+              "id": "method-detail",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Method Details"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "multiply"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " other)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The product of multiplying "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " and the "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "other"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " value."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "other"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the other value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "multiply",
+            "id": "multiply(com.mongodb.client.model.mql.MqlInteger)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "default"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "multiply"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "(int other)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The product of multiplying "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " and the "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "other"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " value."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "other"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the other value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "multiply",
+            "id": "multiply(int)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "add"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " other)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The sum of adding "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " and the "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "other"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " value."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "other"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the other value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "add",
+            "id": "add(com.mongodb.client.model.mql.MqlInteger)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "default"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "add"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "(int other)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The sum of adding "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " and the "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "other"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " value."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "other"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the other value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "add",
+            "id": "add(int)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "subtract"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " other)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The difference of subtracting the "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "other"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " value from "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "other"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the other value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "subtract",
+            "id": "subtract(com.mongodb.client.model.mql.MqlInteger)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "default"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "subtract"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "(int other)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The difference of subtracting the "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "other"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " value from "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "other"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the other value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "subtract",
+            "id": "subtract(int)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "max"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " other)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "larger"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#gt(com.mongodb.client.model.mql.MqlValue)"
+                },
+                {
+                  "type": "text",
+                  "value": " value of "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n and the "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "other"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " value."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "other"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the other value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "max",
+            "id": "max(com.mongodb.client.model.mql.MqlInteger)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "min"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " other)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "smaller"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#lt(com.mongodb.client.model.mql.MqlValue)"
+                },
+                {
+                  "type": "text",
+                  "value": " value of "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n and the "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "other"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " value."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "other"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the other value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "min",
+            "id": "min(com.mongodb.client.model.mql.MqlInteger)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "abs"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "()"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The absolute value of "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " value."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "abs"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber#abs()"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " in interface "
+                        },
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MqlNumber"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/client/model/mql/MqlNumber"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Specified by:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "abs",
+            "id": "abs()"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlDate"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlDate"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "millisecondsAsDate"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "()"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "date"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlDate"
+                },
+                {
+                  "type": "text",
+                  "value": " corresponding to "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " value\n when taken to be the number of milliseconds since the Unix epoch."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionList",
+                  "children": [
+                    {
+                      "type": "definitionListItem",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "4.0"
+                                }
+                              ],
+                              "refuri": "https://www.mongodb.com/docs/manual/release-notes/4.0"
+                            }
+                          ]
+                        }
+                      ],
+                      "term": [
+                        {
+                          "type": "text",
+                          "value": "Since server release"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "millisecondsAsDate",
+            "id": "millisecondsAsDate()"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "<R extends "
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "MqlValue"
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/mql/MqlValue"
+                        },
+                        {
+                          "type": "text",
+                          "value": ">"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "text",
+                      "value": "R"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "passIntegerTo"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Function"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<? super "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": ","
+                    },
+                    {
+                      "type": "text",
+                      "value": "? extends R> f)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The result of passing "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " value to the provided function.\n Equivalent to "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "f.apply(this)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", and allows lambdas and static,\n user-defined functions to use the chaining syntax."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "R"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the type of the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Type Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "f"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the function to apply."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MqlValue.passTo(java.util.function.Function<? super com.mongodb.client.model.mql.MqlValue, ? extends R>)"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#passTo(java.util.function.Function)"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "See Also:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "passIntegerTo",
+            "id": "passIntegerTo(java.util.function.Function)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "<R extends "
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "MqlValue"
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/mql/MqlValue"
+                        },
+                        {
+                          "type": "text",
+                          "value": ">"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "text",
+                      "value": "R"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "switchIntegerOn"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Function"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Branches"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/Branches"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": ">,"
+                    },
+                    {
+                      "type": "text",
+                      "value": "? extends "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "BranchesTerminal"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/BranchesTerminal"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": ","
+                    },
+                    {
+                      "type": "text",
+                      "value": "? extends R>> mapping)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The result of applying the provided switch mapping to "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " value."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "R"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the type of the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Type Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "mapping"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the switch mapping."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MqlValue.switchOn(java.util.function.Function<com.mongodb.client.model.mql.Branches<com.mongodb.client.model.mql.MqlValue>, ? extends com.mongodb.client.model.mql.BranchesTerminal<com.mongodb.client.model.mql.MqlValue, ? extends R>>)"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#switchOn(java.util.function.Function)"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "See Also:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "switchIntegerOn",
+            "id": "switchIntegerOn(java.util.function.Function)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "type": "directive",
+      "name": "facet",
+      "children": [],
+      "argument": [],
+      "options": {
+        "name": "genre",
+        "values": "reference"
+      }
+    }
+  ],
+  "options": {},
+  "fileid": "api/core/com/mongodb/client/model/mql/MqlInteger.ast"
+}

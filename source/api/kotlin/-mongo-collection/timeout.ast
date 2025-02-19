@@ -1,0 +1,520 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "text",
+      "value": "\n"
+    },
+    {
+      "type": "section",
+      "children": [
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "heading",
+          "id": "content",
+          "children": [
+            {
+              "type": "text",
+              "value": "timeout"
+            }
+          ]
+        },
+        {
+          "type": "directive",
+          "name": "contents",
+          "children": [],
+          "argument": [
+            {
+              "type": "text",
+              "value": "On this Page"
+            }
+          ],
+          "options": {
+            "local": true,
+            "backlinks": "none",
+            "depth": 2,
+            "class": "singlecol"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n    "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "fun "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "timeout"
+                        }
+                      ],
+                      "refuri": "api/kotlin/-mongo-collection/timeout"
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "text",
+                      "value": "timeUnit"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "TimeUnit"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/TimeUnit.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " = "
+                    },
+                    {
+                      "type": "text",
+                      "value": "TimeUnit.MILLISECONDS"
+                    },
+                    {
+                      "type": "text",
+                      "value": ")"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Long"
+                        }
+                      ],
+                      "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "?"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The time limit for the full execution of an operation."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "If not null the following deprecated options will be ignored: "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "waitQueueTimeoutMS"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "socketTimeoutMS"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "wTimeoutMS"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "maxTimeMS"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " and "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "maxCommitTimeMS"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "."
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "enumtype": "unordered",
+              "children": [
+                {
+                  "type": "listItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "null"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " means that the timeout mechanism for operations will defer to using:"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "enumtype": "unordered",
+                  "children": [
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "waitQueueTimeoutMS"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "value": ": The maximum wait time in milliseconds that a thread may wait for a connection to       become available"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "socketTimeoutMS"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "value": ": How long a send or receive on a socket can take before timing out."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "wTimeoutMS"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "value": ": How long the server will wait for the write concern to be fulfilled before timing out."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "maxTimeMS"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "value": ": The time limit for processing operations on a cursor. See:       "
+                            },
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "cursor.maxTimeMS"
+                                }
+                              ],
+                              "refuri": "https://docs.mongodb.com/manual/reference/method/cursor.maxTimeMS\""
+                            },
+                            {
+                              "type": "text",
+                              "value": "."
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "maxCommitTimeMS"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "value": ": The maximum amount of time to allow a single "
+                            },
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "commitTransaction"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "value": " command to execute."
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " means infinite timeout."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "> 0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " The time limit to use for the full execution of an operation."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "return",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Return"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "the optional timeout duration"
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "since",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Since"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "5.2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "\n      "
+    },
+    {
+      "type": "text",
+      "value": "\n    "
+    },
+    {
+      "type": "directive",
+      "name": "facet",
+      "children": [],
+      "argument": [],
+      "options": {
+        "name": "genre",
+        "values": "reference"
+      }
+    }
+  ],
+  "options": {},
+  "fileid": "api/kotlin/-mongo-collection/timeout.ast"
+}

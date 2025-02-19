@@ -1,0 +1,5108 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "section",
+      "children": [
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "heading",
+          "id": "interface-mqldate",
+          "children": [
+            {
+              "type": "text",
+              "value": "Interface MqlDate"
+            }
+          ]
+        },
+        {
+          "type": "directive",
+          "name": "contents",
+          "children": [],
+          "argument": [
+            {
+              "type": "text",
+              "value": "On this Page"
+            }
+          ],
+          "options": {
+            "local": true,
+            "backlinks": "none",
+            "depth": 2,
+            "class": "singlecol"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MqlValue"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/client/model/mql/MqlValue"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "All Superinterfaces:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "@Sealed"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/annotations/Sealed"
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "@Beta"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/annotations/Beta"
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "CLIENT"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/annotations/Reason#CLIENT"
+                    },
+                    {
+                      "type": "text",
+                      "value": ")\n"
+                    },
+                    {
+                      "type": "text",
+                      "value": "public interface "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlDate"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\nextends "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlValue"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlValue"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A UTC date-time "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "value"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue"
+                },
+                {
+                  "type": "text",
+                  "value": " in the context\n of the MongoDB Query Language (MQL). Tracks the number of\n milliseconds since the Unix epoch, and does not track the timezone."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "4.9.0"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Since:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionList",
+                  "children": [
+                    {
+                      "type": "definitionListItem",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Format Specifiers, UTC Offset, and Olson Timezone Identifier"
+                                }
+                              ],
+                              "refuri": "https://www.mongodb.com/docs/manual/reference/operator/aggregation/dateToString/"
+                            }
+                          ]
+                        }
+                      ],
+                      "term": [
+                        {
+                          "type": "text",
+                          "value": "MongoDB documentation"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "heading",
+              "id": "method-summary",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Method Summary"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "all-methods",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "All Methods"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
+                  "type": "directive",
+                  "name": "list-table",
+                  "argument": [],
+                  "children": [
+                    {
+                      "type": "list",
+                      "enumtype": "unordered",
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Modifier and Type"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Method"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Description"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlString"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "asString"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate#asString(com.mongodb.client.model.mql.MqlString,com.mongodb.client.model.mql.MqlString)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlString"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " timezone,\n "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlString"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " format)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The string representation of "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " date as determined by the\n provided "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "timezone"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ", and formatted according to the "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "format"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "dayOfMonth"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate#dayOfMonth(com.mongodb.client.model.mql.MqlString)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlString"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " timezone)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The day of the month of "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " date as determined by the provided\n "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "timezone"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ", as an integer between 1 and 31."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "dayOfWeek"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate#dayOfWeek(com.mongodb.client.model.mql.MqlString)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlString"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " timezone)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The day of the week of "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " date as determined by the provided\n "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "timezone"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ", as an integer between 1 (Sunday) and 7 (Saturday)."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "dayOfYear"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate#dayOfYear(com.mongodb.client.model.mql.MqlString)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlString"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " timezone)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The day of the year of "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " date as determined by the provided\n "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "timezone"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ", as an integer between 1 and 366."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "hour"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate#hour(com.mongodb.client.model.mql.MqlString)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlString"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " timezone)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The hour of "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " date as determined by the provided\n "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "timezone"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ", as an integer between 0 and 23."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "millisecond"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate#millisecond(com.mongodb.client.model.mql.MqlString)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlString"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " timezone)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The millisecond part of "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " date as determined by the provided\n "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "timezone"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ", as an integer between 0 and 999."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "minute"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate#minute(com.mongodb.client.model.mql.MqlString)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlString"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " timezone)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The minute of "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " date as determined by the provided\n "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "timezone"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ", as an integer between 0 and 59."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "month"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate#month(com.mongodb.client.model.mql.MqlString)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlString"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " timezone)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The month of "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " date as determined by the provided\n "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "timezone"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ", as an integer between 1 and 12."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "<R extends "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlValue"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlValue"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ">"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "R"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "passDateTo"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate#passDateTo(java.util.function.Function)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Function"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "<? super "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlDate"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ","
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "? extends R> f)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The result of passing "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " value to the provided function."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "second"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate#second(com.mongodb.client.model.mql.MqlString)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlString"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " timezone)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The second of "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " date as determined by the provided\n "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "timezone"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ", as an integer between 0 and 59, and 60 in the case\n of a leap second."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "<R extends "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlValue"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlValue"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ">"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "R"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "switchDateOn"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate#switchDateOn(java.util.function.Function)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Function"
+                                            }
+                                          ],
+                                          "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "<"
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Branches"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/Branches"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "<"
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlDate"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ">,"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "? extends "
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "BranchesTerminal"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/BranchesTerminal"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "<"
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlDate"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ","
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "? extends R>> mapping)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The result of applying the provided switch mapping to "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " value."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "week"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate#week(com.mongodb.client.model.mql.MqlString)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlString"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " timezone)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The week of the year of "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " date as determined by the provided\n "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "timezone"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": ", as an integer between 0 and 53."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlInteger"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "literal",
+                                      "children": [
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "year"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlDate#year(com.mongodb.client.model.mql.MqlString)"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "("
+                                        },
+                                        {
+                                          "type": "reference",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "MqlString"
+                                            }
+                                          ],
+                                          "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " timezone)"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "The year of "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "this"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": " date as determined by the provided\n "
+                                        },
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "timezone"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "."
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "options": {
+                    "header-rows": "1"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "methods-inherited-from-class-com.mongodb.client.model.mql.MqlValue",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Methods inherited from interface com.mongodb.client.model.mql.MqlValue"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "literal",
+              "children": [
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "asString"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#asString()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "eq"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#eq(com.mongodb.client.model.mql.MqlValue)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "equals"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#equals(java.lang.Object)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "gt"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#gt(com.mongodb.client.model.mql.MqlValue)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "gte"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#gte(com.mongodb.client.model.mql.MqlValue)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "isArrayOr"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#isArrayOr(com.mongodb.client.model.mql.MqlArray)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "isBooleanOr"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#isBooleanOr(com.mongodb.client.model.mql.MqlBoolean)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "isDateOr"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#isDateOr(com.mongodb.client.model.mql.MqlDate)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "isDocumentOr"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#isDocumentOr(T)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "isIntegerOr"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#isIntegerOr(com.mongodb.client.model.mql.MqlInteger)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "isMapOr"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#isMapOr(com.mongodb.client.model.mql.MqlMap)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "isNumberOr"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#isNumberOr(com.mongodb.client.model.mql.MqlNumber)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "isStringOr"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#isStringOr(com.mongodb.client.model.mql.MqlString)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "lt"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#lt(com.mongodb.client.model.mql.MqlValue)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "lte"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#lte(com.mongodb.client.model.mql.MqlValue)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "ne"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#ne(com.mongodb.client.model.mql.MqlValue)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "passTo"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#passTo(java.util.function.Function)"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "switchOn"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#switchOn(java.util.function.Function)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "heading",
+              "id": "method-detail",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Method Details"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "year"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlString"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                    },
+                    {
+                      "type": "text",
+                      "value": " timezone)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The year of "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " date as determined by the provided\n "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "timezone"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "timezone"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the UTC Offset or Olson Timezone Identifier."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "year",
+            "id": "year(com.mongodb.client.model.mql.MqlString)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "month"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlString"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                    },
+                    {
+                      "type": "text",
+                      "value": " timezone)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The month of "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " date as determined by the provided\n "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "timezone"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", as an integer between 1 and 12."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "timezone"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the UTC Offset or Olson Timezone Identifier."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "month",
+            "id": "month(com.mongodb.client.model.mql.MqlString)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "dayOfMonth"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlString"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                    },
+                    {
+                      "type": "text",
+                      "value": " timezone)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The day of the month of "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " date as determined by the provided\n "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "timezone"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", as an integer between 1 and 31."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "timezone"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the UTC Offset or Olson Timezone Identifier."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "dayOfMonth",
+            "id": "dayOfMonth(com.mongodb.client.model.mql.MqlString)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "dayOfWeek"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlString"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                    },
+                    {
+                      "type": "text",
+                      "value": " timezone)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The day of the week of "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " date as determined by the provided\n "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "timezone"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", as an integer between 1 (Sunday) and 7 (Saturday)."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "timezone"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the UTC Offset or Olson Timezone Identifier."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "dayOfWeek",
+            "id": "dayOfWeek(com.mongodb.client.model.mql.MqlString)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "dayOfYear"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlString"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                    },
+                    {
+                      "type": "text",
+                      "value": " timezone)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The day of the year of "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " date as determined by the provided\n "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "timezone"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", as an integer between 1 and 366."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "timezone"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the UTC Offset or Olson Timezone Identifier."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "dayOfYear",
+            "id": "dayOfYear(com.mongodb.client.model.mql.MqlString)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "hour"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlString"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                    },
+                    {
+                      "type": "text",
+                      "value": " timezone)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The hour of "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " date as determined by the provided\n "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "timezone"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", as an integer between 0 and 23."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "timezone"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the UTC Offset or Olson Timezone Identifier."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "hour",
+            "id": "hour(com.mongodb.client.model.mql.MqlString)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "minute"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlString"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                    },
+                    {
+                      "type": "text",
+                      "value": " timezone)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The minute of "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " date as determined by the provided\n "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "timezone"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", as an integer between 0 and 59."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "timezone"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the UTC Offset or Olson Timezone Identifier."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "minute",
+            "id": "minute(com.mongodb.client.model.mql.MqlString)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "second"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlString"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                    },
+                    {
+                      "type": "text",
+                      "value": " timezone)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The second of "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " date as determined by the provided\n "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "timezone"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", as an integer between 0 and 59, and 60 in the case\n of a leap second."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "timezone"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the UTC Offset or Olson Timezone Identifier."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "second",
+            "id": "second(com.mongodb.client.model.mql.MqlString)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "week"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlString"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                    },
+                    {
+                      "type": "text",
+                      "value": " timezone)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The week of the year of "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " date as determined by the provided\n "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "timezone"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", as an integer between 0 and 53.\n\n "
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Weeks begin on Sundays, and week 1 begins with the first Sunday of the\n year. Days preceding the first Sunday of the year are in week 0."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "timezone"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the UTC Offset or Olson Timezone Identifier."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "week",
+            "id": "week(com.mongodb.client.model.mql.MqlString)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlInteger"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlInteger"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "millisecond"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlString"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                    },
+                    {
+                      "type": "text",
+                      "value": " timezone)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The millisecond part of "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " date as determined by the provided\n "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "timezone"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", as an integer between 0 and 999."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "timezone"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the UTC Offset or Olson Timezone Identifier."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "millisecond",
+            "id": "millisecond(com.mongodb.client.model.mql.MqlString)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlString"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "asString"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlString"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                    },
+                    {
+                      "type": "text",
+                      "value": " timezone,\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlString"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlString"
+                    },
+                    {
+                      "type": "text",
+                      "value": " format)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The string representation of "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " date as determined by the\n provided "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "timezone"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", and formatted according to the "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "format"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "timezone"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the UTC Offset or Olson Timezone Identifier."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "format"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " - the format specifier."
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "asString",
+            "id": "asString(com.mongodb.client.model.mql.MqlString,com.mongodb.client.model.mql.MqlString)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "<R extends "
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "MqlValue"
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/mql/MqlValue"
+                        },
+                        {
+                          "type": "text",
+                          "value": ">"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "text",
+                      "value": "R"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "passDateTo"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Function"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<? super "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlDate"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlDate"
+                    },
+                    {
+                      "type": "text",
+                      "value": ","
+                    },
+                    {
+                      "type": "text",
+                      "value": "? extends R> f)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The result of passing "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " value to the provided function.\n Equivalent to "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "f.apply(this)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", and allows lambdas and static,\n user-defined functions to use the chaining syntax."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "R"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the type of the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Type Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "f"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the function to apply."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MqlValue.passTo(java.util.function.Function<? super com.mongodb.client.model.mql.MqlValue, ? extends R>)"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#passTo(java.util.function.Function)"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "See Also:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "passDateTo",
+            "id": "passDateTo(java.util.function.Function)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "<R extends "
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "MqlValue"
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/mql/MqlValue"
+                        },
+                        {
+                          "type": "text",
+                          "value": ">"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "text",
+                      "value": "R"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "switchDateOn"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Function"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Branches"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/Branches"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlDate"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlDate"
+                    },
+                    {
+                      "type": "text",
+                      "value": ">,"
+                    },
+                    {
+                      "type": "text",
+                      "value": "? extends "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "BranchesTerminal"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/BranchesTerminal"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MqlDate"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/mql/MqlDate"
+                    },
+                    {
+                      "type": "text",
+                      "value": ","
+                    },
+                    {
+                      "type": "text",
+                      "value": "? extends R>> mapping)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The result of applying the provided switch mapping to "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "this"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " value."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "R"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the type of the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Type Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "mapping"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - the switch mapping."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the resulting value."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "MqlValue.switchOn(java.util.function.Function<com.mongodb.client.model.mql.Branches<com.mongodb.client.model.mql.MqlValue>, ? extends com.mongodb.client.model.mql.BranchesTerminal<com.mongodb.client.model.mql.MqlValue, ? extends R>>)"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/mql/MqlValue#switchOn(java.util.function.Function)"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "See Also:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "switchDateOn",
+            "id": "switchDateOn(java.util.function.Function)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "type": "directive",
+      "name": "facet",
+      "children": [],
+      "argument": [],
+      "options": {
+        "name": "genre",
+        "values": "reference"
+      }
+    }
+  ],
+  "options": {},
+  "fileid": "api/core/com/mongodb/client/model/mql/MqlDate.ast"
+}

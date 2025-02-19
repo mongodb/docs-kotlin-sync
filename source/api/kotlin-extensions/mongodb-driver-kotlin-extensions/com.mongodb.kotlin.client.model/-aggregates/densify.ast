@@ -1,0 +1,650 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "text",
+      "value": "\n"
+    },
+    {
+      "type": "section",
+      "children": [
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "heading",
+          "id": "content",
+          "children": [
+            {
+              "type": "text",
+              "value": "densify"
+            }
+          ]
+        },
+        {
+          "type": "directive",
+          "name": "contents",
+          "children": [],
+          "argument": [
+            {
+              "type": "text",
+              "value": "On this Page"
+            }
+          ],
+          "options": {
+            "local": true,
+            "backlinks": "none",
+            "depth": 2,
+            "class": "singlecol"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n    "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "fun "
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T"
+                        }
+                      ],
+                      "refuri": "api/kotlin-extensions/mongodb-driver-kotlin-extensions/com.mongodb.kotlin.client.model/-aggregates/densify"
+                    },
+                    {
+                      "type": "text",
+                      "value": "> "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "densify"
+                        }
+                      ],
+                      "refuri": "api/kotlin-extensions/mongodb-driver-kotlin-extensions/com.mongodb.kotlin.client.model/-aggregates/densify"
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "text",
+                      "value": "property"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "KProperty"
+                        }
+                      ],
+                      "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T"
+                        }
+                      ],
+                      "refuri": "api/kotlin-extensions/mongodb-driver-kotlin-extensions/com.mongodb.kotlin.client.model/-aggregates/densify"
+                    },
+                    {
+                      "type": "text",
+                      "value": ">"
+                    },
+                    {
+                      "type": "text",
+                      "value": ", "
+                    },
+                    {
+                      "type": "text",
+                      "value": "range"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "text",
+                      "value": "DensifyRange"
+                    },
+                    {
+                      "type": "text",
+                      "value": ")"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "text",
+                      "value": "Bson"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Creates a "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "$densify"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " pipeline stage, which adds documents to a sequence of documents where certain values in the "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "field"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " are missing."
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "return",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Return"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The requested pipeline stage. @mongodb.driver.manual reference/operator/aggregation/densify/ $densify @mongodb.driver.manual core/document/#dot-notation Dot notation @mongodb.server.release 5.1"
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "parameters",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Parameters"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "directive",
+              "name": "list-table",
+              "argument": [],
+              "children": [
+                {
+                  "type": "list",
+                  "enumtype": "unordered",
+                  "children": [
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "field"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "The field to densify."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "range"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "The range."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": {
+                "header-rows": "0"
+              }
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "fun "
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T"
+                        }
+                      ],
+                      "refuri": "api/kotlin-extensions/mongodb-driver-kotlin-extensions/com.mongodb.kotlin.client.model/-aggregates/densify"
+                    },
+                    {
+                      "type": "text",
+                      "value": "> "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "densify"
+                        }
+                      ],
+                      "refuri": "api/kotlin-extensions/mongodb-driver-kotlin-extensions/com.mongodb.kotlin.client.model/-aggregates/densify"
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "text",
+                      "value": "property"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "KProperty"
+                        }
+                      ],
+                      "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T"
+                        }
+                      ],
+                      "refuri": "api/kotlin-extensions/mongodb-driver-kotlin-extensions/com.mongodb.kotlin.client.model/-aggregates/densify"
+                    },
+                    {
+                      "type": "text",
+                      "value": ">"
+                    },
+                    {
+                      "type": "text",
+                      "value": ", "
+                    },
+                    {
+                      "type": "text",
+                      "value": "range"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "text",
+                      "value": "DensifyRange"
+                    },
+                    {
+                      "type": "text",
+                      "value": ", "
+                    },
+                    {
+                      "type": "text",
+                      "value": "options"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "text",
+                      "value": "DensifyOptions"
+                    },
+                    {
+                      "type": "text",
+                      "value": ")"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "text",
+                      "value": "Bson"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Creates a {@code $densify} pipeline stage, which adds documents to a sequence of documents where certain values in the {@code field} are missing."
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "return",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Return"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The requested pipeline stage. @mongodb.driver.manual reference/operator/aggregation/densify/ $densify @mongodb.driver.manual core/document/#dot-notation Dot notation @mongodb.server.release 5.1"
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "parameters",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Parameters"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "directive",
+              "name": "list-table",
+              "argument": [],
+              "children": [
+                {
+                  "type": "list",
+                  "enumtype": "unordered",
+                  "children": [
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "field"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "The field to densify."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "range"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "The range."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "options"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "The densify options. Specifying {@link DensifyOptions#densifyOptions()} is equivalent to calling {@link #densify(String, DensifyRange)}."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": {
+                "header-rows": "0"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "\n      "
+    },
+    {
+      "type": "text",
+      "value": "\n    "
+    },
+    {
+      "type": "directive",
+      "name": "facet",
+      "children": [],
+      "argument": [],
+      "options": {
+        "name": "genre",
+        "values": "reference"
+      }
+    }
+  ],
+  "options": {},
+  "fileid": "api/kotlin-extensions/mongodb-driver-kotlin-extensions/com.mongodb.kotlin.client.model/-aggregates/densify.ast"
+}

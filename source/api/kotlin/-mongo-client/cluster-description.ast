@@ -1,0 +1,344 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "text",
+      "value": "\n"
+    },
+    {
+      "type": "section",
+      "children": [
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "heading",
+          "id": "content",
+          "children": [
+            {
+              "type": "text",
+              "value": "clusterDescription"
+            }
+          ]
+        },
+        {
+          "type": "directive",
+          "name": "contents",
+          "children": [],
+          "argument": [
+            {
+              "type": "text",
+              "value": "On this Page"
+            }
+          ],
+          "options": {
+            "local": true,
+            "backlinks": "none",
+            "depth": 2,
+            "class": "singlecol"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n    "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "val "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "clusterDescription"
+                        }
+                      ],
+                      "refuri": "api/kotlin/-mongo-client/cluster-description"
+                    },
+                    {
+                      "type": "text",
+                      "value": ": "
+                    },
+                    {
+                      "type": "text",
+                      "value": "ClusterDescription"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Gets the current cluster description."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "This method will not block, meaning that it may return a "
+                },
+                {
+                  "type": "text",
+                  "value": "ClusterDescription"
+                },
+                {
+                  "type": "text",
+                  "value": " whose "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "clusterType"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " is unknown and whose "
+                },
+                {
+                  "type": "text",
+                  "value": "com.mongodb.connection.ServerDescription"
+                },
+                {
+                  "type": "text",
+                  "value": "s are all in the connecting state. If the application requires notifications after the driver has connected to a member of the cluster, it should register a "
+                },
+                {
+                  "type": "text",
+                  "value": "com.mongodb.event.ClusterListener"
+                },
+                {
+                  "type": "text",
+                  "value": " via the "
+                },
+                {
+                  "type": "text",
+                  "value": "com.mongodb.connection.ClusterSettings"
+                },
+                {
+                  "type": "text",
+                  "value": " in "
+                },
+                {
+                  "type": "text",
+                  "value": "com.mongodb.MongoClientSettings"
+                },
+                {
+                  "type": "text",
+                  "value": "."
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "return",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Return"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "the current cluster description"
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "see-also",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "See also"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "directive",
+              "name": "list-table",
+              "argument": [],
+              "children": [
+                {
+                  "type": "list",
+                  "enumtype": "unordered",
+                  "children": [
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Cluster"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Settings."
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Builder."
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "add"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Cluster"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Listener"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Mongo"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Client"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Settings."
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Builder."
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "apply"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "To"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Cluster"
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "Settings"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": {
+                "header-rows": "0"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "\n      "
+    },
+    {
+      "type": "text",
+      "value": "\n    "
+    },
+    {
+      "type": "directive",
+      "name": "facet",
+      "children": [],
+      "argument": [],
+      "options": {
+        "name": "genre",
+        "values": "reference"
+      }
+    }
+  ],
+  "options": {},
+  "fileid": "api/kotlin/-mongo-client/cluster-description.ast"
+}

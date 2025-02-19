@@ -1,0 +1,677 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "section",
+      "children": [
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "heading",
+          "id": "package-com.mongodb.spi.dns",
+          "children": [
+            {
+              "type": "text",
+              "value": "Package com.mongodb.spi.dns"
+            }
+          ]
+        },
+        {
+          "type": "directive",
+          "name": "contents",
+          "children": [],
+          "argument": [
+            {
+              "type": "text",
+              "value": "On this Page"
+            }
+          ],
+          "options": {
+            "local": true,
+            "backlinks": "none",
+            "depth": 2,
+            "class": "singlecol"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "line_block",
+          "children": [
+            {
+              "type": "line",
+              "children": [
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "@NonNullApi"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/lang/NonNullApi"
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
+                  "type": "text",
+                  "value": "package "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "com.mongodb.spi.dns"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "This package defines the Service Provider Interface (SPI) for a DNS provider.  By default the driver will use the\n JNDI support from com.sun.jndi.dns.DnsContextFactory, but this can be replaced using the JDK's ServiceLoader capabilities."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "definitionList",
+          "children": [
+            {
+              "type": "definitionListItem",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "4.6"
+                    }
+                  ]
+                }
+              ],
+              "term": [
+                {
+                  "type": "text",
+                  "value": "Since:"
+                }
+              ]
+            },
+            {
+              "type": "definitionListItem",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "ServiceLoader"
+                            }
+                          ]
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ServiceLoader.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ]
+                }
+              ],
+              "term": [
+                {
+                  "type": "text",
+                  "value": "See Also:"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "heading",
+              "id": "all-classes-and-interfaces",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "All Classes and Interfaces"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "directive",
+              "name": "list-table",
+              "argument": [],
+              "children": [
+                {
+                  "type": "list",
+                  "enumtype": "unordered",
+                  "children": [
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Class"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Description"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "reference",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "DnsClient"
+                                    }
+                                  ],
+                                  "refuri": "api/core/com/mongodb/spi/dns/DnsClient"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "An interface describing a DNS client."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "reference",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "DnsClientProvider"
+                                    }
+                                  ],
+                                  "refuri": "api/core/com/mongodb/spi/dns/DnsClientProvider"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Service-provider class for "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "DnsClient"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/spi/dns/DnsClient"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "reference",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "DnsException"
+                                    }
+                                  ],
+                                  "refuri": "api/core/com/mongodb/spi/dns/DnsException"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "An exception indicating a DNS error;"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "reference",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "DnsWithResponseCodeException"
+                                    }
+                                  ],
+                                  "refuri": "api/core/com/mongodb/spi/dns/DnsWithResponseCodeException"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "An exception indicating a DNS error that includes a response code."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "reference",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "InetAddressResolver"
+                                    }
+                                  ],
+                                  "refuri": "api/core/com/mongodb/spi/dns/InetAddressResolver"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "This interface defines operations for looking up host names."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "reference",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "InetAddressResolverProvider"
+                                    }
+                                  ],
+                                  "refuri": "api/core/com/mongodb/spi/dns/InetAddressResolverProvider"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Service-provider class for "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "InetAddressResolver"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/spi/dns/InetAddressResolver"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": {
+                "header-rows": "1"
+              }
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "type": "directive",
+      "name": "facet",
+      "children": [],
+      "argument": [],
+      "options": {
+        "name": "genre",
+        "values": "reference"
+      }
+    },
+    {
+      "type": "directive",
+      "name": "toctree",
+      "argument": [],
+      "options": {
+        "osiris_parent": true
+      },
+      "children": [],
+      "entries": [
+        {
+          "title": "Interface DnsClient",
+          "slug": "/api/core/com/mongodb/spi/dns/DnsClient"
+        },
+        {
+          "title": "Interface DnsClientProvider",
+          "slug": "/api/core/com/mongodb/spi/dns/DnsClientProvider"
+        },
+        {
+          "title": "Class DnsException",
+          "slug": "/api/core/com/mongodb/spi/dns/DnsException"
+        },
+        {
+          "title": "Class DnsWithResponseCodeException",
+          "slug": "/api/core/com/mongodb/spi/dns/DnsWithResponseCodeException"
+        },
+        {
+          "title": "Interface InetAddressResolver",
+          "slug": "/api/core/com/mongodb/spi/dns/InetAddressResolver"
+        },
+        {
+          "title": "Interface InetAddressResolverProvider",
+          "slug": "/api/core/com/mongodb/spi/dns/InetAddressResolverProvider"
+        },
+        {
+          "title": "Hierarchy For Package com.mongodb.spi.dns",
+          "slug": "/api/core/com/mongodb/spi/dns/package-tree"
+        }
+      ]
+    }
+  ],
+  "options": {},
+  "fileid": "api/core/com/mongodb/spi/dns/package-summary.ast"
+}

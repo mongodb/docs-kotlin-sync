@@ -1,0 +1,3900 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "section",
+      "children": [
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "heading",
+          "id": "interface-densifyrange",
+          "children": [
+            {
+              "type": "text",
+              "value": "Interface DensifyRange"
+            }
+          ]
+        },
+        {
+          "type": "directive",
+          "name": "contents",
+          "children": [],
+          "argument": [
+            {
+              "type": "text",
+              "value": "On this Page"
+            }
+          ],
+          "options": {
+            "local": true,
+            "backlinks": "none",
+            "depth": 2,
+            "class": "singlecol"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Bson"
+                                }
+                              ],
+                              "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/conversions/Bson.html"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "All Superinterfaces:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "DateDensifyRange"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/client/model/densify/DateDensifyRange"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": ", "
+                        },
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "NumberDensifyRange"
+                                }
+                              ],
+                              "refuri": "api/core/com/mongodb/client/model/densify/NumberDensifyRange"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "All Known Subinterfaces:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "@Evolving"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/annotations/Evolving"
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    },
+                    {
+                      "type": "text",
+                      "value": "public interface "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "DensifyRange"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\nextends "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Bson"
+                        }
+                      ],
+                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/conversions/Bson.html"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A specification of how to compute the missing "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "field"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/Aggregates#densify(java.lang.String,com.mongodb.client.model.densify.DensifyRange,com.mongodb.client.model.densify.DensifyOptions)"
+                },
+                {
+                  "type": "text",
+                  "value": " values\n for which new documents must be added. It specifies a half-closed interval of values with the lower bound being inclusive, and a step.\n The first potentially missing value within each interval is its lower bound, other values are computed by adding the step\n multiple times, until the result is out of the interval. Each time the step is added, the result is a potentially missing value for\n which a new document must be added if the sequence of documents that is being densified does not have a document\n with equal value of the field."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "4.7"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Since:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Aggregates.densify(String, DensifyRange, DensifyOptions)"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/Aggregates#densify(java.lang.String,com.mongodb.client.model.densify.DensifyRange,com.mongodb.client.model.densify.DensifyOptions)"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Aggregates.densify(String, DensifyRange)"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/Aggregates#densify(java.lang.String,com.mongodb.client.model.densify.DensifyRange)"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "See Also:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionList",
+                  "children": [
+                    {
+                      "type": "definitionListItem",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "reference",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "5.1"
+                                }
+                              ],
+                              "refuri": "https://www.mongodb.com/docs/manual/release-notes/5.1"
+                            }
+                          ]
+                        }
+                      ],
+                      "term": [
+                        {
+                          "type": "text",
+                          "value": "Since server release"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "heading",
+              "id": "field-summary",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Field Summary"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "fields-inherited-from-class-org.bson.conversions.Bson",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Fields inherited from interface org.bson.conversions.Bson"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "literal",
+              "children": [
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "DEFAULT_CODEC_REGISTRY"
+                    }
+                  ],
+                  "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/conversions/Bson.html#DEFAULT_CODEC_REGISTRY"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "heading",
+              "id": "method-summary",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Method Summary"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "method-summary-table",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Static Methods"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "directive",
+              "name": "list-table",
+              "argument": [],
+              "children": [
+                {
+                  "type": "list",
+                  "enumtype": "unordered",
+                  "children": [
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Modifier and Type"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Method"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Description"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "static "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "DateDensifyRange"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DateDensifyRange"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "fullRangeWithStep"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange#fullRangeWithStep(long,com.mongodb.client.model.MongoTimeUnit)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "(long step,\n "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "MongoTimeUnit"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/MongoTimeUnit"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " unit)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Returns a "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "DensifyRange"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " that represents an interval with the smallest BSON "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Date"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#DATE_TIME"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " value\n of the "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "field"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/Aggregates#densify(java.lang.String,com.mongodb.client.model.densify.DensifyRange,com.mongodb.client.model.densify.DensifyOptions)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n in the sequence of documents being its lower bound, and the largest value being the upper bound."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "static "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "NumberDensifyRange"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/NumberDensifyRange"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "fullRangeWithStep"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange#fullRangeWithStep(java.lang.Number)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "("
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Number"
+                                        }
+                                      ],
+                                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Number.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " step)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Returns a "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "DensifyRange"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " that represents an interval with the smallest\n BSON "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "32-bit integer"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#INT32"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " / "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "64-bit integer"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#INT64"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " / "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Double"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#DOUBLE"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " /\n "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Decimal128"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#DECIMAL128"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " value of the "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "field"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/Aggregates#densify(java.lang.String,com.mongodb.client.model.densify.DensifyRange,com.mongodb.client.model.densify.DensifyOptions)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n in the sequence of documents being its lower bound, and the largest value being the upper bound."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "static "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "DensifyRange"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "of"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange#of(org.bson.conversions.Bson)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "("
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Bson"
+                                        }
+                                      ],
+                                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/conversions/Bson.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " range)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Creates a "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "DensifyRange"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " from a "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Bson"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/conversions/Bson.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " in situations when there is no builder method that better satisfies your needs."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "static "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "DateDensifyRange"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DateDensifyRange"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "partitionRangeWithStep"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange#partitionRangeWithStep(long,com.mongodb.client.model.MongoTimeUnit)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "(long step,\n "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "MongoTimeUnit"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/MongoTimeUnit"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " unit)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Returns a "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "DensifyRange"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " that represents an interval with the smallest BSON "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Date"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#DATE_TIME"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " value\n of the "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "field"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/Aggregates#densify(java.lang.String,com.mongodb.client.model.densify.DensifyRange,com.mongodb.client.model.densify.DensifyOptions)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n in the "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "partition"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyOptions#partitionByFields(java.lang.Iterable)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " of documents being its lower bound,\n and the largest value being the upper bound."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "static "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "NumberDensifyRange"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/NumberDensifyRange"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "partitionRangeWithStep"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange#partitionRangeWithStep(java.lang.Number)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "("
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Number"
+                                        }
+                                      ],
+                                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Number.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " step)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Returns a "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "DensifyRange"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " that represents an interval with the smallest\n BSON "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "32-bit integer"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#INT32"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " / "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "64-bit integer"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#INT64"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " / "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Double"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#DOUBLE"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " /\n "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Decimal128"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#DECIMAL128"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " value of the "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "field"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/Aggregates#densify(java.lang.String,com.mongodb.client.model.densify.DensifyRange,com.mongodb.client.model.densify.DensifyOptions)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n in the "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "partition"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyOptions#partitionByFields(java.lang.Iterable)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " of documents being its lower bound,\n and the largest value being the upper bound."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "static "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "NumberDensifyRange"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/NumberDensifyRange"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "rangeWithStep"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange#rangeWithStep(java.lang.Number,java.lang.Number,java.lang.Number)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "("
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Number"
+                                        }
+                                      ],
+                                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Number.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " l,\n "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Number"
+                                        }
+                                      ],
+                                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Number.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " u,\n "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Number"
+                                        }
+                                      ],
+                                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Number.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " step)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Returns a "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "DensifyRange"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " that represents a single interval [l, u)."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "static "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "DateDensifyRange"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DateDensifyRange"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "literal",
+                                  "children": [
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "rangeWithStep"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange#rangeWithStep(java.time.Instant,java.time.Instant,long,com.mongodb.client.model.MongoTimeUnit)"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "("
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Instant"
+                                        }
+                                      ],
+                                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/Instant.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " l,\n "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Instant"
+                                        }
+                                      ],
+                                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/Instant.html"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " u,\n long step,\n "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "MongoTimeUnit"
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/MongoTimeUnit"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " unit)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                },
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Returns a "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "literal",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "DensifyRange"
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": " that represents a single interval [l, u)."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "text",
+                                  "value": "\n"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": {
+                "header-rows": "1"
+              }
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "methods-inherited-from-class-org.bson.conversions.Bson",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Methods inherited from interface org.bson.conversions.Bson"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "literal",
+              "children": [
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "toBsonDocument"
+                    }
+                  ],
+                  "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/conversions/Bson.html#toBsonDocument()"
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "toBsonDocument"
+                    }
+                  ],
+                  "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/conversions/Bson.html#toBsonDocument(java.lang.Class,org.bson.codecs.configuration.CodecRegistry)"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "heading",
+              "id": "method-detail",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Method Details"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "static"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "NumberDensifyRange"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/densify/NumberDensifyRange"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "fullRangeWithStep"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Number"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Number.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " step)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Returns a "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "DensifyRange"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                },
+                {
+                  "type": "text",
+                  "value": " that represents an interval with the smallest\n BSON "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "32-bit integer"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#INT32"
+                },
+                {
+                  "type": "text",
+                  "value": " / "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "64-bit integer"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#INT64"
+                },
+                {
+                  "type": "text",
+                  "value": " / "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Double"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#DOUBLE"
+                },
+                {
+                  "type": "text",
+                  "value": " /\n "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Decimal128"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#DECIMAL128"
+                },
+                {
+                  "type": "text",
+                  "value": " value of the "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "field"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/Aggregates#densify(java.lang.String,com.mongodb.client.model.densify.DensifyRange,com.mongodb.client.model.densify.DensifyOptions)"
+                },
+                {
+                  "type": "text",
+                  "value": "\n in the sequence of documents being its lower bound, and the largest value being the upper bound."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "step"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - The step."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The requested "
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "DensifyRange"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                        },
+                        {
+                          "type": "text",
+                          "value": "."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "fullRangeWithStep",
+            "id": "fullRangeWithStep(java.lang.Number)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "static"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "NumberDensifyRange"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/densify/NumberDensifyRange"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "partitionRangeWithStep"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Number"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Number.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " step)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Returns a "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "DensifyRange"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                },
+                {
+                  "type": "text",
+                  "value": " that represents an interval with the smallest\n BSON "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "32-bit integer"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#INT32"
+                },
+                {
+                  "type": "text",
+                  "value": " / "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "64-bit integer"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#INT64"
+                },
+                {
+                  "type": "text",
+                  "value": " / "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Double"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#DOUBLE"
+                },
+                {
+                  "type": "text",
+                  "value": " /\n "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Decimal128"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#DECIMAL128"
+                },
+                {
+                  "type": "text",
+                  "value": " value of the "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "field"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/Aggregates#densify(java.lang.String,com.mongodb.client.model.densify.DensifyRange,com.mongodb.client.model.densify.DensifyOptions)"
+                },
+                {
+                  "type": "text",
+                  "value": "\n in the "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "partition"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/densify/DensifyOptions#partitionByFields(java.lang.Iterable)"
+                },
+                {
+                  "type": "text",
+                  "value": " of documents being its lower bound,\n and the largest value being the upper bound."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "step"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - The step."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The requested "
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "DensifyRange"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                        },
+                        {
+                          "type": "text",
+                          "value": "."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "partitionRangeWithStep",
+            "id": "partitionRangeWithStep(java.lang.Number)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "static"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "NumberDensifyRange"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/densify/NumberDensifyRange"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "rangeWithStep"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Number"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Number.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " l,\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Number"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Number.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " u,\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Number"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Number.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " step)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Returns a "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "DensifyRange"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                },
+                {
+                  "type": "text",
+                  "value": " that represents a single interval [l, u)."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "l"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - The lower bound."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "u"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " - The upper bound."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "step"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " - The step."
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The requested "
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "DensifyRange"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                        },
+                        {
+                          "type": "text",
+                          "value": "."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "rangeWithStep",
+            "id": "rangeWithStep(java.lang.Number,java.lang.Number,java.lang.Number)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "static"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "DateDensifyRange"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/densify/DateDensifyRange"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "fullRangeWithStep"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "(long step,\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MongoTimeUnit"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/MongoTimeUnit"
+                    },
+                    {
+                      "type": "text",
+                      "value": " unit)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Returns a "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "DensifyRange"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                },
+                {
+                  "type": "text",
+                  "value": " that represents an interval with the smallest BSON "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Date"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#DATE_TIME"
+                },
+                {
+                  "type": "text",
+                  "value": " value\n of the "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "field"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/Aggregates#densify(java.lang.String,com.mongodb.client.model.densify.DensifyRange,com.mongodb.client.model.densify.DensifyOptions)"
+                },
+                {
+                  "type": "text",
+                  "value": "\n in the sequence of documents being its lower bound, and the largest value being the upper bound."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "step"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - The step."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "unit"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " - The unit in which the "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "step"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " is specified."
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The requested "
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "DensifyRange"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                        },
+                        {
+                          "type": "text",
+                          "value": "."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "fullRangeWithStep",
+            "id": "fullRangeWithStep(long,com.mongodb.client.model.MongoTimeUnit)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "static"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "DateDensifyRange"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/densify/DateDensifyRange"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "partitionRangeWithStep"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "(long step,\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MongoTimeUnit"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/MongoTimeUnit"
+                    },
+                    {
+                      "type": "text",
+                      "value": " unit)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Returns a "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "DensifyRange"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                },
+                {
+                  "type": "text",
+                  "value": " that represents an interval with the smallest BSON "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Date"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/BsonType.html#DATE_TIME"
+                },
+                {
+                  "type": "text",
+                  "value": " value\n of the "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "field"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/Aggregates#densify(java.lang.String,com.mongodb.client.model.densify.DensifyRange,com.mongodb.client.model.densify.DensifyOptions)"
+                },
+                {
+                  "type": "text",
+                  "value": "\n in the "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "partition"
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/densify/DensifyOptions#partitionByFields(java.lang.Iterable)"
+                },
+                {
+                  "type": "text",
+                  "value": " of documents being its lower bound,\n and the largest value being the upper bound."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "step"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - The step."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "unit"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " - The unit in which the "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "step"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " is specified."
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The requested "
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "DensifyRange"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                        },
+                        {
+                          "type": "text",
+                          "value": "."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "partitionRangeWithStep",
+            "id": "partitionRangeWithStep(long,com.mongodb.client.model.MongoTimeUnit)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "static"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "DateDensifyRange"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/densify/DateDensifyRange"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "rangeWithStep"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Instant"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/Instant.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " l,\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Instant"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/Instant.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " u,\n long step,\n "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MongoTimeUnit"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/MongoTimeUnit"
+                    },
+                    {
+                      "type": "text",
+                      "value": " unit)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Returns a "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "DensifyRange"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                },
+                {
+                  "type": "text",
+                  "value": " that represents a single interval [l, u)."
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "l"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - The lower bound."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "u"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " - The upper bound."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "step"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " - The step."
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "unit"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " - The unit in which the "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "step"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " is specified."
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The requested "
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "DensifyRange"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                        },
+                        {
+                          "type": "text",
+                          "value": "."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "rangeWithStep",
+            "id": "rangeWithStep(java.time.Instant,java.time.Instant,long,com.mongodb.client.model.MongoTimeUnit)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "directive",
+          "name": "collapsible",
+          "children": [
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "line_block",
+              "children": [
+                {
+                  "type": "line",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "static"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "DensifyRange"
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "of"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "("
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Bson"
+                        }
+                      ],
+                      "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/conversions/Bson.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": " range)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Creates a "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "DensifyRange"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                },
+                {
+                  "type": "text",
+                  "value": " from a "
+                },
+                {
+                  "type": "reference",
+                  "children": [
+                    {
+                      "type": "literal",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Bson"
+                        }
+                      ]
+                    }
+                  ],
+                  "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/conversions/Bson.html"
+                },
+                {
+                  "type": "text",
+                  "value": " in situations when there is no builder method that better satisfies your needs.\n This method cannot be used to validate the syntax.\n "
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "\n "
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n The following code creates two functionally equivalent "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "DensifyRange"
+                            }
+                          ]
+                        }
+                      ],
+                      "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                    },
+                    {
+                      "type": "text",
+                      "value": "s,\n though they may not be "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "equal"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)"
+                    },
+                    {
+                      "type": "text",
+                      "value": ".\n "
+                    }
+                  ]
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "\n  DensifyRange range1 = DensifyRange.partitionRangeWithStep(\n          1, MongoTimeUnit.MINUTE);\n  DensifyRange range2 = DensifyRange.of(new Document(\"bounds\", \"partition\")\n          .append(\"step\", 1).append(\"unit\", MongoTimeUnit.MINUTE.value()));\n "
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            },
+            {
+              "type": "definitionList",
+              "children": [
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "literal",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "range"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " - A "
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Bson"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "http://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson/org/bson/conversions/Bson.html"
+                        },
+                        {
+                          "type": "text",
+                          "value": " representing the required "
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "DensifyRange"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                        },
+                        {
+                          "type": "text",
+                          "value": "."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Parameters:"
+                    }
+                  ]
+                },
+                {
+                  "type": "definitionListItem",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The requested "
+                        },
+                        {
+                          "type": "reference",
+                          "children": [
+                            {
+                              "type": "literal",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "DensifyRange"
+                                }
+                              ]
+                            }
+                          ],
+                          "refuri": "api/core/com/mongodb/client/model/densify/DensifyRange"
+                        },
+                        {
+                          "type": "text",
+                          "value": "."
+                        }
+                      ]
+                    }
+                  ],
+                  "term": [
+                    {
+                      "type": "text",
+                      "value": "Returns:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "\n"
+            }
+          ],
+          "argument": [],
+          "options": {
+            "heading": "of",
+            "id": "of(org.bson.conversions.Bson)"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "type": "directive",
+      "name": "facet",
+      "children": [],
+      "argument": [],
+      "options": {
+        "name": "genre",
+        "values": "reference"
+      }
+    }
+  ],
+  "options": {},
+  "fileid": "api/core/com/mongodb/client/model/densify/DensifyRange.ast"
+}

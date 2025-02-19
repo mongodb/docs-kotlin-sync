@@ -1,0 +1,849 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "text",
+      "value": "\n"
+    },
+    {
+      "type": "section",
+      "children": [
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "heading",
+          "id": "content",
+          "children": [
+            {
+              "type": "text",
+              "value": "LocalTimeAsBsonDateTime"
+            }
+          ]
+        },
+        {
+          "type": "directive",
+          "name": "contents",
+          "children": [],
+          "argument": [
+            {
+              "type": "text",
+              "value": "On this Page"
+            }
+          ],
+          "options": {
+            "local": true,
+            "backlinks": "none",
+            "depth": 2,
+            "class": "singlecol"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n    "
+        },
+        {
+          "type": "text",
+          "value": "\n    "
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "object "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "LocalTimeAsBsonDateTime"
+                        }
+                      ],
+                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-local-time-as-bson-date-time"
+                    },
+                    {
+                      "type": "text",
+                      "value": "KSerializer"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "text",
+                      "value": "LocalTime"
+                    },
+                    {
+                      "type": "text",
+                      "value": "> "
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "LocalTime KSerializer."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Encodes and decodes "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "LocalTime"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " objects to and from "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "BsonDateTime"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". Data is stored to millisecond accuracy."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Converts the "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "LocalTime"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " values to and from EpochDay at "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "UTC"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "."
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "since",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Since"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "5.2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "directive",
+          "name": "tabs",
+          "argument": [],
+          "children": [
+            {
+              "type": "directive",
+              "name": "tab",
+              "argument": [
+                {
+                  "type": "text",
+                  "value": "Members"
+                }
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n        "
+                },
+                {
+                  "type": "section",
+                  "children": [
+                    {
+                      "type": "heading",
+                      "id": "functions",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Functions"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n        "
+                },
+                {
+                  "type": "directive",
+                  "name": "list-table",
+                  "argument": [],
+                  "children": [
+                    {
+                      "type": "list",
+                      "enumtype": "unordered",
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "deserialize"
+                                        }
+                                      ],
+                                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-local-time-as-bson-date-time/deserialize"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                    "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "section",
+                                      "children": [
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "literal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "open "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "override "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "fun "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "deserialize"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-local-time-as-bson-date-time/deserialize"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "("
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "decoder"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "Decoder"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ")"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "LocalTime"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n              "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "serialize"
+                                        }
+                                      ],
+                                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-local-time-as-bson-date-time/serialize"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                    "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "section",
+                                      "children": [
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "literal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "open "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "override "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "fun "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "serialize"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-local-time-as-bson-date-time/serialize"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "("
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "encoder"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "Encoder"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ", "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "value"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "LocalTime"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ")"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n              "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "options": {
+                    "header-rows": "0"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": "\n      "
+                },
+                {
+                  "type": "text",
+                  "value": "\n        "
+                },
+                {
+                  "type": "section",
+                  "children": [
+                    {
+                      "type": "heading",
+                      "id": "properties",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Properties"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n        "
+                },
+                {
+                  "type": "directive",
+                  "name": "list-table",
+                  "argument": [],
+                  "children": [
+                    {
+                      "type": "list",
+                      "enumtype": "unordered",
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "descriptor"
+                                        }
+                                      ],
+                                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-local-time-as-bson-date-time/descriptor"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                    "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "section",
+                                      "children": [
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "literal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "open "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "override "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "val "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "descriptor"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-local-time-as-bson-date-time/descriptor"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "SerialDescriptor"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n              "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "serializers"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "Module"
+                                        }
+                                      ],
+                                      "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-local-time-as-bson-date-time/serializers-module"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                    "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "section",
+                                      "children": [
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "literal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "val "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "serializersModule"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-local-time-as-bson-date-time/serializers-module"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "SerializersModule"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n              "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "options": {
+                    "header-rows": "0"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": "\n      "
+                }
+              ],
+              "options": {
+                "tabid": "members"
+              }
+            }
+          ],
+          "options": {}
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "\n      "
+    },
+    {
+      "type": "text",
+      "value": "\n    "
+    },
+    {
+      "type": "directive",
+      "name": "facet",
+      "children": [],
+      "argument": [],
+      "options": {
+        "name": "genre",
+        "values": "reference"
+      }
+    },
+    {
+      "type": "directive",
+      "name": "toctree",
+      "argument": [],
+      "options": {
+        "osiris_parent": true
+      },
+      "children": [],
+      "entries": [
+        {
+          "title": "descriptor",
+          "slug": "/api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-local-time-as-bson-date-time/descriptor"
+        },
+        {
+          "title": "deserialize",
+          "slug": "/api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-local-time-as-bson-date-time/deserialize"
+        },
+        {
+          "title": "serialize",
+          "slug": "/api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-local-time-as-bson-date-time/serialize"
+        },
+        {
+          "title": "serializersModule",
+          "slug": "/api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-local-time-as-bson-date-time/serializers-module"
+        }
+      ]
+    }
+  ],
+  "options": {},
+  "fileid": "api/bson-kotlin/bson-kotlinx/org.bson.codecs.kotlinx/-local-time-as-bson-date-time.ast"
+}

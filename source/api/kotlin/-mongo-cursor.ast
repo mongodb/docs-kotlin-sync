@@ -1,0 +1,1465 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "text",
+      "value": "\n"
+    },
+    {
+      "type": "section",
+      "children": [
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "heading",
+          "id": "content",
+          "children": [
+            {
+              "type": "text",
+              "value": "MongoCursor"
+            }
+          ]
+        },
+        {
+          "type": "directive",
+          "name": "contents",
+          "children": [],
+          "argument": [
+            {
+              "type": "text",
+              "value": "On this Page"
+            }
+          ],
+          "options": {
+            "local": true,
+            "backlinks": "none",
+            "depth": 2,
+            "class": "singlecol"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n    "
+        },
+        {
+          "type": "text",
+          "value": "\n    "
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "interface "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "MongoCursor"
+                        }
+                      ],
+                      "refuri": "api/kotlin/-mongo-cursor"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T"
+                        }
+                      ],
+                      "refuri": "api/kotlin/-mongo-cursor"
+                    },
+                    {
+                      "type": "text",
+                      "value": ">"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Iterator"
+                        }
+                      ],
+                      "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html"
+                    },
+                    {
+                      "type": "text",
+                      "value": "<"
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T"
+                        }
+                      ],
+                      "refuri": "api/kotlin/-mongo-cursor"
+                    },
+                    {
+                      "type": "text",
+                      "value": "> "
+                    },
+                    {
+                      "type": "reference",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Closeable"
+                        }
+                      ],
+                      "refuri": "https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The Mongo Cursor interface implementing the iterator protocol."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "An application should ensure that a cursor is closed in all circumstances, e.g. using a "
+                },
+                {
+                  "type": "literal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "use"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " statement:"
+                }
+              ]
+            },
+            {
+              "type": "code",
+              "lang": "kotlin",
+              "copyable": true,
+              "emphasize_lines": [],
+              "value": "collection.find().cursor().use { c ->\n    while (c.hasNext()) {\n        println(c.next())\n    }\n}",
+              "linenos": false
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "parameters",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Parameters"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "directive",
+              "name": "list-table",
+              "argument": [],
+              "children": [
+                {
+                  "type": "list",
+                  "enumtype": "unordered",
+                  "children": [
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "T"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "paragraph",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "The type of documents the cursor contains"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": {
+                "header-rows": "0"
+              }
+            },
+            {
+              "type": "section",
+              "children": [
+                {
+                  "type": "heading",
+                  "id": "inheritors",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Inheritors"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "directive",
+              "name": "list-table",
+              "argument": [],
+              "children": [
+                {
+                  "type": "list",
+                  "enumtype": "unordered",
+                  "children": [
+                    {
+                      "type": "listItem",
+                      "children": [
+                        {
+                          "type": "list",
+                          "enumtype": "unordered",
+                          "children": [
+                            {
+                              "type": "listItem",
+                              "children": [
+                                {
+                                  "type": "reference",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "MongoChangeStreamCursor"
+                                    }
+                                  ],
+                                  "refuri": "api/kotlin/-mongo-change-stream-cursor/"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "listItem",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "options": {
+                "header-rows": "0"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        },
+        {
+          "type": "directive",
+          "name": "tabs",
+          "argument": [],
+          "children": [
+            {
+              "type": "directive",
+              "name": "tab",
+              "argument": [
+                {
+                  "type": "text",
+                  "value": "Members"
+                }
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "value": "\n        "
+                },
+                {
+                  "type": "section",
+                  "children": [
+                    {
+                      "type": "heading",
+                      "id": "functions",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Functions"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n        "
+                },
+                {
+                  "type": "directive",
+                  "name": "list-table",
+                  "argument": [],
+                  "children": [
+                    {
+                      "type": "list",
+                      "enumtype": "unordered",
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "close"
+                                        }
+                                      ],
+                                      "refuri": "api/kotlin/-mongo-change-stream-cursor/#358956095%2FFunctions%2F305748649"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                    "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "section",
+                                      "children": [
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "literal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "abstract "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "override "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "fun "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "close"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/kotlin/-mongo-change-stream-cursor/#358956095%2FFunctions%2F305748649"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "("
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ")"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n              "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "for"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "Each"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "Remaining"
+                                        }
+                                      ],
+                                      "refuri": "api/kotlin/-mongo-cursor/#-511368593%2FFunctions%2F305748649"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                    "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "section",
+                                      "children": [
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "literal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "open "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "fun "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "forEachRemaining"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/kotlin/-mongo-cursor/#-511368593%2FFunctions%2F305748649"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "("
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "p0"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "Consumer"
+                                                    }
+                                                  ],
+                                                  "refuri": "https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "<"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "in "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "T"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/kotlin/-mongo-cursor"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ">"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ")"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n              "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "has"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "Next"
+                                        }
+                                      ],
+                                      "refuri": "api/kotlin/-mongo-change-stream-cursor/#1993246698%2FFunctions%2F305748649"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                    "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "section",
+                                      "children": [
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "literal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "abstract "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "operator "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "fun "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "hasNext"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/kotlin/-mongo-change-stream-cursor/#1993246698%2FFunctions%2F305748649"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "("
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ")"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "Boolean"
+                                                    }
+                                                  ],
+                                                  "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n              "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "next"
+                                        }
+                                      ],
+                                      "refuri": "api/kotlin/-mongo-change-stream-cursor/#-1014084048%2FFunctions%2F305748649"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                    "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "section",
+                                      "children": [
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "literal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "abstract "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "operator "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "fun "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "next"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/kotlin/-mongo-change-stream-cursor/#-1014084048%2FFunctions%2F305748649"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "("
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ")"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "T"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/kotlin/-mongo-cursor"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n              "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "try"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "Next"
+                                        }
+                                      ],
+                                      "refuri": "api/kotlin/-mongo-cursor/try-next"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                    "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "section",
+                                      "children": [
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "literal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "abstract "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "fun "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "tryNext"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/kotlin/-mongo-cursor/try-next"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "("
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ")"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "T"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/kotlin/-mongo-cursor"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "?"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "A special "
+                                            },
+                                            {
+                                              "type": "text",
+                                              "value": "next"
+                                            },
+                                            {
+                                              "type": "text",
+                                              "value": " case that returns the next element in the iteration if available or null."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n              "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "options": {
+                    "header-rows": "0"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": "\n      "
+                },
+                {
+                  "type": "text",
+                  "value": "\n        "
+                },
+                {
+                  "type": "section",
+                  "children": [
+                    {
+                      "type": "heading",
+                      "id": "properties",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Properties"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n        "
+                },
+                {
+                  "type": "directive",
+                  "name": "list-table",
+                  "argument": [],
+                  "children": [
+                    {
+                      "type": "list",
+                      "enumtype": "unordered",
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "available"
+                                        }
+                                      ],
+                                      "refuri": "api/kotlin/-mongo-cursor/available"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                    "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "section",
+                                      "children": [
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "literal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "abstract "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "val "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "available"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/kotlin/-mongo-cursor/available"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "Int"
+                                                    }
+                                                  ],
+                                                  "refuri": "https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "Gets the number of results available locally without blocking, which may be 0."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n              "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "server"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "Address"
+                                        }
+                                      ],
+                                      "refuri": "api/kotlin/-mongo-cursor/server-address"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                    "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "section",
+                                      "children": [
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "literal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "abstract "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "val "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "serverAddress"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/kotlin/-mongo-cursor/server-address"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "ServerAddress"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n              "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "children": [
+                            {
+                              "type": "list",
+                              "enumtype": "unordered",
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "reference",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "server"
+                                        },
+                                        {
+                                          "type": "text",
+                                          "value": "Cursor"
+                                        }
+                                      ],
+                                      "refuri": "api/kotlin/-mongo-cursor/server-cursor"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                    "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                  "
+                                    },
+                                    {
+                                      "type": "section",
+                                      "children": [
+                                        {
+                                          "type": "paragraph",
+                                          "children": [
+                                            {
+                                              "type": "literal",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "abstract "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "val "
+                                                },
+                                                {
+                                                  "type": "reference",
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "serverCursor"
+                                                    }
+                                                  ],
+                                                  "refuri": "api/kotlin/-mongo-cursor/server-cursor"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": ": "
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "ServerCursor"
+                                                },
+                                                {
+                                                  "type": "text",
+                                                  "value": "?"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n                "
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n              "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "options": {
+                    "header-rows": "0"
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": "\n      "
+                }
+              ],
+              "options": {
+                "tabid": "members"
+              }
+            }
+          ],
+          "options": {}
+        },
+        {
+          "type": "text",
+          "value": "\n"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": "\n      "
+    },
+    {
+      "type": "text",
+      "value": "\n    "
+    },
+    {
+      "type": "directive",
+      "name": "facet",
+      "children": [],
+      "argument": [],
+      "options": {
+        "name": "genre",
+        "values": "reference"
+      }
+    },
+    {
+      "type": "directive",
+      "name": "toctree",
+      "argument": [],
+      "options": {
+        "osiris_parent": true
+      },
+      "children": [],
+      "entries": [
+        {
+          "title": "available",
+          "slug": "/api/kotlin/-mongo-cursor/available"
+        },
+        {
+          "title": "serverAddress",
+          "slug": "/api/kotlin/-mongo-cursor/server-address"
+        },
+        {
+          "title": "serverCursor",
+          "slug": "/api/kotlin/-mongo-cursor/server-cursor"
+        },
+        {
+          "title": "tryNext",
+          "slug": "/api/kotlin/-mongo-cursor/try-next"
+        }
+      ]
+    }
+  ],
+  "options": {},
+  "fileid": "api/kotlin/-mongo-cursor.ast"
+}

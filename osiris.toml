@@ -1,0 +1,39 @@
+[[sites]]
+name = "core"
+url = "https://mongodb.github.io/mongo-java-driver/5.3/apidocs/mongodb-driver-core/index.html"
+site_type = "java"
+source_dir = "source"
+output = "api/core"
+
+[sites.href_mapping]
+"*//mongodb.github.io/mongo-java-driver/*/apidocs/mongodb-driver-core/" = "/api/core/"
+
+[[sites]]
+name = "bson-kotlin"
+url = "https://mongodb.github.io/mongo-java-driver/5.3/apidocs/bson-kotlinx/index.html"
+site_type = "kotlin"
+source_dir = "source"
+output = "api/bson-kotlin"
+
+[sites.href_mapping]
+"*//mongodb.github.io/mongo-java-driver/*/apidocs/bson-kotlinx/" = "api/bson-kotlin"
+
+[[sites]]
+name = "kotlin-extensions"
+url = "https://mongodb.github.io/mongo-java-driver/5.3/apidocs/mongodb-driver-kotlin-extensions/index.html"
+site_type = "kotlin"
+source_dir = "source"
+output = "api/kotlin-extensions"
+
+[sites.href_mapping]
+"*//mongodb.github.io/mongo-java-driver/*/apidocs/mongodb-driver-kotlin-extensions/" = "api/kotlin-extensions"
+
+[[sites]]
+name = "kotlin"
+url = "https://mongodb.github.io/mongo-java-driver/5.3/apidocs/mongodb-driver-kotlin-sync/mongodb-driver-kotlin-sync/com.mongodb.kotlin.client/index.html"
+site_type = "kotlin"
+source_dir = "source"
+output = "api/kotlin"
+
+[sites.href_mapping]
+"*//mongodb.github.io/mongo-java-driver/*/apidocs/mongodb-driver-kotlin-sync/mongodb-driver-kotlin-sync/com.mongodb.kotlin.client/" = "/api/kotlin/"
