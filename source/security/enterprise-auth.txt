@@ -369,6 +369,62 @@ see the corresponding syntax.
          :start-after: start-oidc-azure-mongo-cred
          :end-before: end-oidc-azure-mongo-cred
 
+.. _kotlin-sync-auth-kubernetes:
+
+Kubernetes
+~~~~~~~~~~
+
+If your application runs on a Kubernetes cluster, you can authenticate
+to MongoDB by using the {+driver-short+}'s built-in Kubernetes support.
+
+Select from the :guilabel:`Connection String` or
+:guilabel:`MongoCredential` tabs to see the corresponding syntax.
+
+.. tabs::
+
+   .. tab:: Connection String
+      :tabid: mongodb-kubernetes-connection-string
+
+      To specify Kubernetes OIDC as the authentication mechanism, set the following 
+      options in your connection string:
+
+      - ``authMechanism``: Set to ``MONGODB-OIDC``.
+      - ``authMechanismProperties``: Set to ``ENVIRONMENT:k8s``. 
+
+      Replace the ``<percent-encoded audience>`` placeholder in the
+      following code with the percent-encoded value of the audience server
+      parameter configured on your MongoDB deployment.
+
+      .. code-block:: kotlin
+      
+         val connectionString = ConnectionString(
+             "mongodb://<OIDC principal>@<hostname>:<port>/?" +
+                     "authMechanism=MONGODB-OIDC" +
+                     "&authMechanismProperties=ENVIRONMENT:k8s,TOKEN_RESOURCE:<percent-encoded audience>")
+         val mongoClient = MongoClient.create(connectionString)
+
+   .. tab:: MongoCredential
+      :tabid: mongodb-kubernetes-mongo-credential
+
+      Replace the ``hostname`` and ``port`` with the network address and port 
+      number of your MongoDB deployment. Also, replace the
+      ``<audience>`` placeholder with the value of the ``audience``
+      server parameter configured on your MongoDB deployment.
+
+      .. code-block:: kotlin
+      
+         val credential = MongoCredential.createOidcCredential("<OIDC principal>")
+             .withMechanismProperty("ENVIRONMENT", "k8s")
+             .withMechanismProperty("TOKEN_RESOURCE", "<audience>")
+         
+         val mongoClient = MongoClient.create(
+             MongoClientSettings.builder()
+                 .applyToClusterSettings { builder ->
+                     builder.hosts(listOf(ServerAddress("<hostname>", <port>)))
+                 }
+                 .credential(credential)
+                 .build())
+
 .. _kotlin-mongodb-oidc-gcp-imds:
 
 GCP IMDS
