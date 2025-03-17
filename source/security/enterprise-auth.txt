@@ -445,13 +445,11 @@ Select from the :guilabel:`Connection String` or
       following code with the percent-encoded value of the audience server
       parameter configured on your MongoDB deployment.
 
-      .. code-block:: kotlin
-      
-         val connectionString = ConnectionString(
-             "mongodb://<OIDC principal>@<hostname>:<port>/?" +
-                     "authMechanism=MONGODB-OIDC" +
-                     "&authMechanismProperties=ENVIRONMENT:k8s,TOKEN_RESOURCE:<percent-encoded audience>")
-         val mongoClient = MongoClient.create(connectionString)
+      .. literalinclude:: /includes/security/enterprise-auth.kt
+         :language: kotlin
+         :dedent:
+         :start-after: start-oidc-k8s-connect-str
+         :end-before: end-oidc-k8s-connect-str
 
    .. tab:: MongoCredential
       :tabid: mongodb-kubernetes-mongo-credential
@@ -461,19 +459,11 @@ Select from the :guilabel:`Connection String` or
       ``<audience>`` placeholder with the value of the ``audience``
       server parameter configured on your MongoDB deployment.
 
-      .. code-block:: kotlin
-      
-         val credential = MongoCredential.createOidcCredential("<OIDC principal>")
-             .withMechanismProperty("ENVIRONMENT", "k8s")
-             .withMechanismProperty("TOKEN_RESOURCE", "<audience>")
-         
-         val mongoClient = MongoClient.create(
-             MongoClientSettings.builder()
-                 .applyToClusterSettings { builder ->
-                     builder.hosts(listOf(ServerAddress("<hostname>", <port>)))
-                 }
-                 .credential(credential)
-                 .build())
+      .. literalinclude:: /includes/security/enterprise-auth.kt
+         :language: kotlin
+         :dedent:
+         :start-after: start-oidc-k8s-mongo-cred
+         :end-before: end-oidc-k8s-mongo-cred
 
 Custom Callback
 ~~~~~~~~~~~~~~~
