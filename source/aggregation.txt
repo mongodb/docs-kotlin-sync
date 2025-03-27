@@ -9,7 +9,7 @@ Transform Your Data with Aggregation
    :values: reference
  
 .. meta::
-   :keywords: code example, transform, computed, pipeline
+   :keywords: code example, transform, computed, pipeline, Atlas Search
    :description: Learn how to use the Kotlin Sync driver to perform aggregation operations.
 
 .. contents:: On this page
@@ -79,6 +79,37 @@ The following limitations apply when using aggregation operations:
    The :manual:`$graphLookup
    </reference/operator/aggregation/graphLookup/>` stage has a strict
    memory limit of 100 megabytes and ignores the ``allowDiskUse`` option.
+
+.. _kotlin-sync-atlas-search-stage:
+
+Building Pipelines Stages for Atlas Search
+------------------------------------------
+
+Atlas Search queries take the form of an aggregation pipeline stage. Atlas
+Search provides ``$search`` and ``$searchMeta`` stages, both of which must be the first
+stage in any query pipeline. For more information about Atlas pipeline stages, see the :atlas:`Choose the
+Aggregation Pipeline Stage </atlas-search/query-syntax/>`__ page in the Atlas
+manual. 
+
+.. sharedinclude:: dbx/jvm/atlas-search-operator-helpers.rst
+
+   .. replacement:: atlas-query-operators-example
+
+    .. code-block:: kotlin
+
+        Bson searchStageFilters = Aggregates.search(
+            SearchOperator.compound()
+                .filter(
+                    List.of(
+                        SearchOperator.text(fieldPath("genres"), "Drama"),
+                        SearchOperator.phrase(fieldPath("cast"), "sylvester stallone"),
+                        SearchOperator.numberRange(fieldPath("year")).gtLt(1980, 1989),
+                        SearchOperator.wildcard(fieldPath("title"),"Rocky *")
+                        )));
+
+   .. replacement:: searchoperator-interface-api-docs
+
+    the `SearchOperator Interface API documentation <{+core-api+}/com/mongodb/client/model/search/SearchOperator.html>`__
 
 Aggregation Example
 -------------------
