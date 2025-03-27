@@ -98,15 +98,17 @@ manual.
 
     .. code-block:: kotlin
 
-        Bson searchStageFilters = Aggregates.search(
+        val searchStage: Bson = Aggregates.search(
             SearchOperator.compound()
                 .filter(
-                    List.of(
+                    listOf(
                         SearchOperator.text(fieldPath("genres"), "Drama"),
                         SearchOperator.phrase(fieldPath("cast"), "sylvester stallone"),
                         SearchOperator.numberRange(fieldPath("year")).gtLt(1980, 1989),
-                        SearchOperator.wildcard(fieldPath("title"),"Rocky *")
-                        )));
+                        SearchOperator.wildcard(fieldPath("title"), "Rocky *")
+                    )
+                )
+        )
 
    .. replacement:: searchoperator-interface-api-docs
 
