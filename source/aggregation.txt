@@ -230,6 +230,10 @@ You can build a Atlas Search pipeline stage using search operators.
                         )
                )
 
+               val projection = Projections.fields(
+                  Projections.include("title", "year", "genres", "cast")
+               )
+
                val aggregatePipelineStages: List<Bson> = listOf(searchStage, Aggregates.project(projection))
                val results = collection.aggregate<Document>(aggregatePipelineStages)
                
