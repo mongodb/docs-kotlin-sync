@@ -42,5 +42,28 @@ fun main() {
     // start-aggregation-explain
     print(collection.aggregate(pipeline).explain())
     // end-aggregation-explain
+
+    // start-atlas-searchoperator-helpers
+    val searchStage: Bson = Aggregates.search(
+            SearchOperator.compound()
+                .filter(
+                listOf(
+                        SearchOperator.text(fieldPath("genres"), "Drama"),
+                        SearchOperator.phrase(fieldPath("cast"), "sylvester stallone"),
+                        SearchOperator.numberRange(fieldPath("year")).gtLt(1980, 1989),
+                        SearchOperator.wildcard(fieldPath("title"), "Rocky *")
+                )
+                )
+    )
+
+    val projection = Projections.fields(
+        Projections.include("title", "year", "genres", "cast")
+    )
+
+    val aggregatePipelineStages: List<Bson> = listOf(searchStage, Aggregates.project(projection))
+    val results = collection.aggregate<Document>(aggregatePipelineStages)
+    
+    results.forEach { result -> println(result) }
+    // end-atlas-searchoperator-helpers
 }
 
