@@ -215,29 +215,11 @@ You can build a Atlas Search pipeline stage using search operators.
 
       .. io-code-block::
 
-         .. input:: 
+         .. input:: /includes/aggregation/aggregation.kt
             :language: kotlin
-
-            val searchStage: Bson = Aggregates.search(
-                  SearchOperator.compound()
-                     .filter(
-                        listOf(
-                              SearchOperator.text(fieldPath("genres"), "Drama"),
-                              SearchOperator.phrase(fieldPath("cast"), "sylvester stallone"),
-                              SearchOperator.numberRange(fieldPath("year")).gtLt(1980, 1989),
-                              SearchOperator.wildcard(fieldPath("title"), "Rocky *")
-                        )
-                     )
-            )
-
-            val projection = Projections.fields(
-               Projections.include("title", "year", "genres", "cast")
-            )
-
-            val aggregatePipelineStages: List<Bson> = listOf(searchStage, Aggregates.project(projection))
-            val results = collection.aggregate<Document>(aggregatePipelineStages)
-            
-            results.forEach { result -> println(result) }
+            :start-after: // start-atlas-searchoperator-helpers
+            :end-before: // end-atlas-searchoperator-helpers
+            :dedent:
 
          .. output::
             :language: console
