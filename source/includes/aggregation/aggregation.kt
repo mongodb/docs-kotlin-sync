@@ -51,19 +51,19 @@ fun main() {
         SearchOperator.compound()
             .filter(
                 listOf(
-                    SearchOperator.text(fieldPath("genres"), "Drama"),
-                    SearchOperator.phrase(fieldPath("cast"), "sylvester stallone"),
-                    SearchOperator.numberRange(fieldPath("year")).gtLt(1980, 1989),
-                    SearchOperator.wildcard(fieldPath("title"), "Rocky *")
+                    SearchOperator.`in`(fieldPath("genres"), listOf("Comedy")),
+                    SearchOperator.phrase(fieldPath("fullplot"), "new york"),
+                    SearchOperator.numberRange(fieldPath("year")).gtLt(1950, 2000),
+                    SearchOperator.wildcard(fieldPath("title"), "Love *")
                 )
             )
     )
 
     val projectStage = Aggregates.project(
-        Projections.include("title", "year", "genres", "cast"))
+        Projections.include("title", "year", "genres"))
 
-    val aggregatePipelineStages = listOf(searchStage, projectStage)
-    val results = collection.aggregate(aggregatePipelineStages)
+    val pipeline = listOf(searchStage, projectStage)
+    val results = collection.aggregate(pipeline)
 
     results.forEach { result -> println(result) }
     // end-atlas-searchoperator-helpers

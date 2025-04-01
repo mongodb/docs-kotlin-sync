@@ -230,8 +230,8 @@ by using Search operators.
             :language: console
             :visible: false
 
-            Document{{_id=573a1397f29313caabce86db, genres=[Drama, Sport], cast=[Sylvester Stallone, Talia Shire, Burt Young, Carl Weathers], title=Rocky III, year=1982}}
-            Document{{_id=573a1398f29313caabce9af0, genres=[Drama, Sport], cast=[Sylvester Stallone, Talia Shire, Burt Young, Carl Weathers], title=Rocky IV, year=1985}}
+            Document{{_id=..., genres=[Comedy, Romance], title=Love at First Bite, year=1979}}
+            Document{{_id=..., genres=[Comedy, Drama], title=Love Affair, year=1994}}
 
 Additional Information
 ----------------------
@@ -263,3 +263,6 @@ see the following API documentation:
 
 - `aggregate() <{+driver-api+}/-mongo-collection/aggregate.html>`__
 - `AggregateIterable <{+driver-api+}/-aggregate-iterable/index.html>`__
+- `Aggregates <{+core-api+}/client/model/Aggregates>`__
+- `search() <{+core-api+}/client/model/Aggregates#search(com.mongodb.client.model.search.SearchOperator)>`__
+- `project() <{+core-api+}/client/model/Aggregates#project(org.bson.conversions.Bson)>`__
