@@ -4,6 +4,9 @@ import com.mongodb.client.model.Accumulators
 import com.mongodb.client.model.Aggregates
 import com.mongodb.client.model.Filters
 import com.mongodb.kotlin.client.MongoClient
+import com.mongodb.client.model.Projections
+import com.mongodb.client.model.search.SearchOperator
+import com.mongodb.client.model.search.SearchPath.fieldPath
 import org.bson.Document
 
 // start-data-class
@@ -44,25 +47,24 @@ fun main() {
     // end-aggregation-explain
 
     // start-atlas-searchoperator-helpers
-    val searchStage: Bson = Aggregates.search(
-            SearchOperator.compound()
-                .filter(
+    val searchStage = Aggregates.search(
+        SearchOperator.compound()
+            .filter(
                 listOf(
-                        SearchOperator.text(fieldPath("genres"), "Drama"),
-                        SearchOperator.phrase(fieldPath("cast"), "sylvester stallone"),
-                        SearchOperator.numberRange(fieldPath("year")).gtLt(1980, 1989),
-                        SearchOperator.wildcard(fieldPath("title"), "Rocky *")
+                    SearchOperator.text(fieldPath("genres"), "Drama"),
+                    SearchOperator.phrase(fieldPath("cast"), "sylvester stallone"),
+                    SearchOperator.numberRange(fieldPath("year")).gtLt(1980, 1989),
+                    SearchOperator.wildcard(fieldPath("title"), "Rocky *")
                 )
-                )
+            )
     )
 
-    val projection = Projections.fields(
-        Projections.include("title", "year", "genres", "cast")
-    )
+    val projectStage = Aggregates.project(
+        Projections.include("title", "year", "genres", "cast"))
 
-    val aggregatePipelineStages: List<Bson> = listOf(searchStage, Aggregates.project(projection))
-    val results = collection.aggregate<Document>(aggregatePipelineStages)
-    
+    val aggregatePipelineStages = listOf(searchStage, projectStage)
+    val results = collection.aggregate(aggregatePipelineStages)
+
     results.forEach { result -> println(result) }
     // end-atlas-searchoperator-helpers
 }
