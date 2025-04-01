@@ -194,20 +194,21 @@ and adds the ``$explain`` stage to output the operation details:
 Atlas Search
 ------------
 
-You can perform an :atlas:`Atlas Search </atlas-search>` query by creating an aggregation pipeline
-that contains one of the following pipeline stages: 
+You can perform an :atlas:`Atlas Search </atlas-search>` query by creating and running
+an aggregation pipeline that contains one of the following pipeline stages: 
 
 - ``$search``
 - ``$searchMeta``
 
-For more information about Atlas pipeline stages, see the :atlas:`Choose the
-Aggregation Pipeline Stage </atlas-search/query-syntax/>` page in the Atlas
+To learn more about Atlas Search pipeline stages, see :atlas:`Choose the
+Aggregation Pipeline Stage </atlas-search/query-syntax/>` in the Atlas
 documentation.
 
 Create a Pipeline Search Stage
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can build a Atlas Search pipeline stage using search operators.
+You can create the search criteria in your Atlas Search pipeline stage
+by using Search operators.
 
 .. sharedinclude:: dbx/jvm/atlas-search-operator-helpers.rst
 
@@ -227,10 +228,6 @@ You can build a Atlas Search pipeline stage using search operators.
 
             Document{{_id=573a1397f29313caabce86db, genres=[Drama, Sport], cast=[Sylvester Stallone, Talia Shire, Burt Young, Carl Weathers], title=Rocky III, year=1982}}
             Document{{_id=573a1398f29313caabce9af0, genres=[Drama, Sport], cast=[Sylvester Stallone, Talia Shire, Burt Young, Carl Weathers], title=Rocky IV, year=1985}}
-
-   .. replacement:: searchoperator-interface-api-docs
-
-      the `SearchOperator Interface API documentation <{+core-api+}/client/model/search/SearchOperator.html>`__
 
 Additional Information
 ----------------------
