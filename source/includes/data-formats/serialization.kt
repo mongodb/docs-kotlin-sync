@@ -101,6 +101,12 @@ fun main() {
     )
     // end-codec
 
+    // start-snake-case
+    val myCustomCodec = KotlinSerializerCodec.create<PaintOrder>(
+        bsonConfiguration = BsonConfiguration(bsonNamingStrategy = BsonNamingStrategy.SNAKE_CASE)
+    )
+    // end-snake-case
+
     // start-poly-operations
     val collection = database.getCollection<Person>("school")
 

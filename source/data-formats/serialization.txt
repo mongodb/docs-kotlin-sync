@@ -227,6 +227,22 @@ encode defaults:
    :end-before: end-codec
    :dedent:
 
+Enforcing Snake Case Naming Example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following example shows how to convert field names from their data class
+fields into snake case by setting the ``bsonNamingStrategy`` parameter:
+
+.. literalinclude:: /includes/data-formats/serialization.kt
+   :language: kotlin
+   :start-after: start-snake-case
+   :end-before: end-snake-case
+   :dedent:
+
+.. note::
+
+   The ``bsonNamingStrategy`` parameter is available for {+driver-short+} v5.4 and later.
+
 To learn more about the methods and classes mentioned in this section,
 see the following API documentation:
 
@@ -238,6 +254,8 @@ see the following API documentation:
 
 - `BsonConfiguration
   <{+api-root+}/bson-kotlinx/bson-kotlinx/org.bson.codecs.kotlinx/-bson-configuration/index.html>`__
+
+- `BsonNamingStrategy <{+api-root+}/bson-kotlinx/bson-kotlinx/org.bson.codecs.kotlinx/-bson-naming-strategy/index.html>`__
  
 .. _kotlin-sync-polymorphic:
 
