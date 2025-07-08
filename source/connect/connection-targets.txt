@@ -122,3 +122,14 @@ The following examples show how to connect to a MongoDB replica set running on p
 .. note:: Replica Set in Docker
 
    .. sharedinclude:: dbx/docker-replica-set.rst
+
+DNS Service Discovery
+---------------------
+
+.. sharedinclude:: dbx/srv-polling.rst
+
+   .. replacement:: srv-uri
+
+      .. code-block:: kotlin
+      
+         val uri = "mongodb+srv://<hostname>/"
