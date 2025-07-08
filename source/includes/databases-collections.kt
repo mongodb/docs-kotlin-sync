@@ -17,23 +17,21 @@ fun main() {
         .retryWrites(true)
         .build()
 
-    val mongoClient = MongoClient.create(settings)
-    val database = mongoClient.getDatabase("sample_restaurants")
-    val collection = database.getCollection<Restaurant>("restaurants")
+    val client = MongoClient.create(settings)
 
     // Accesses the "test_database" database
     // start-access-database
-    val db: MongoDatabase = client.getDatabase("test_database")
+    val db = client.getDatabase("test_database")
     // end-access-database
 
     // Accesses the "test_collection" collection
     // start-access-collection
-    val collection: MongoCollection<Document> = client.getDatabase("test_database").getCollection("test_collection")
+    val collection = db.getCollection<Document>("test_collection")
     // end-access-collection
 
     // Explicitly creates the "example_collection" collection
     // start-create-collection
-    client.getDatabase("test_database").createCollection("example_collection")
+    db.createCollection("example_collection")
     // end-create-collection
 
     // Lists the collections in the "test_database" database
@@ -46,6 +44,6 @@ fun main() {
 
     // Deletes the "test_collection" collection
     // start-drop-collection
-    client.getDatabase("test_database").getCollection("test_collection").drop()
+    db.getCollection<Document>("test_collection").drop()
     // end-drop-collection
 }
