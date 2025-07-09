@@ -53,6 +53,36 @@ collection.
 
 To learn more about query filters, see the :ref:`kotlin-sync-specify-query` guide.
 
+Find One Document Example
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following example chains the ``first()`` method to the ``find()`` method call to find
+the first document in which the value of the ``cuisine`` field is ``"Spanish"``:
+
+.. literalinclude:: /includes/read/retrieve.kt
+   :start-after: start-find-one
+   :end-before: end-find-one
+   :language: kotlin
+   :copyable:
+   :dedent:
+
+The ``find()`` operation in the preceding example returns a MongoDB document
+which you can print, as shown in the following example:
+
+.. io-code-block::
+   :copyable: true
+
+   .. input:: /includes/read/retrieve.kt
+      :start-after: start-find-iterate
+      :end-before: end-find-iterate
+      :language: kotlin
+      :dedent:
+   
+   .. output::
+      :visible: false
+
+      Restaurant(name=Tropicoso Club, cuisine=Spanish)
+
 Find Documents Example
 ~~~~~~~~~~~~~~~~~~~~~~
 
