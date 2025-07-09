@@ -27,7 +27,7 @@ fun main() {
     // end-find
 
     // start-find-one
-    val results = collection.find(eq(Restaurant::cuisine.name, "Spanish")).firstOrNull()
+    val results = collection.find(eq(Restaurant::cuisine.name, "Spanish")).first()
     // end-find-one
 
     // start-find-iterate
@@ -38,7 +38,7 @@ fun main() {
     // end-find-iterate
 
     // start-find-one-print
-    val results = collection.find(eq(Restaurant::cuisine.name, "Spanish"))
+    val results = collection.find(eq(Restaurant::cuisine.name, "Spanish")).first()
     println(results)
     // end-find-one-print
 
