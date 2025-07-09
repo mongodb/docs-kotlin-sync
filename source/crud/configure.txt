@@ -203,7 +203,7 @@ includes the following components:
   To learn more about sharded clusters, see :manual:`Sharding </sharding/>`
   in the {+mdb-server+} manual.
 
-When reading from the replica set shards, mongos applies your specified read
+When reading from the replica set shards, ``mongos`` applies your specified read
 preference. The read preference is re-evaluated for each operation.
 
 The following example shows how to connect to a sharded cluster and specify a
@@ -256,11 +256,11 @@ When connecting to a sharded cluster or a replica set, the {+driver-short+} uses
 distribute these requests across multiple servers, which avoids overwhelming
 any one server and ensures optimal performance.
 
-When connecting to a sharded cluster, the {+driver-short+} determines the closest mongos
+When connecting to a sharded cluster, the {+driver-short+} determines the closest ``mongos``
 instance by calculating which one has the lowest network round-trip time. Then, the driver
-determines the latency window by adding this mongos's average round-trip time to the
+determines the latency window by adding this ``mongos``'s average round-trip time to the
 :ref:`localThresholdMS value <kotlin-sync-local-threshold>`. The driver load balances requests
-across up to two random mongos instances that fall within the latency window. For each request,
+across up to two random ``mongos`` instances that fall within the latency window. For each request,
 the driver chooses the server with the lower operation load by determining its ``operationCount``
 value.
 
@@ -284,7 +284,7 @@ The {+driver-short+} uses the local threshold value to calculate the
 latency window for server selection. This value determines the servers
 that are eligible to receive read and write requests.
 
-By default, the driver uses only mongos instances or replica set members whose
+By default, the driver uses only ``mongos`` instances or replica set members whose
 ping times are within 15 milliseconds of the nearest server. To
 distribute reads among servers with higher latencies, set the ``localThreshold``
 option in a ``MongoClientSettings`` instance or the ``localThresholdMS`` option
@@ -292,7 +292,7 @@ in your connection URI.
 
 .. note::
   
-   When selecting replica set members from a single mongos instance, the
+   When selecting replica set members from a single ``mongos`` instance, the
    {+driver-short+} ignores the ``localThresholdMS`` option. In this case, use the
    :manual:`localThreshold </reference/program/mongos/#std-option-mongos.--localThreshold>`
    command-line option.
