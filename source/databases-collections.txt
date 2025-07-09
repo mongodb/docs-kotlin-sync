@@ -112,20 +112,25 @@ and :ref:`kotlin-sync-db-coll-create-collection` examples:
    .. output::
 
       {
-        "name": "october2024",
-        "type": "timeseries",
-        "options": {
-          "timeseries": {
-            "timeField": "temperature",
-            "granularity": "seconds",
-            "bucketMaxSpanSeconds": 3600
-          }
-        },
-        "info": {
-          "readOnly": false
-        }
-     }
-     ...
+         "name": "example_collection",
+         "type": "collection",
+         "options": {},
+         "info": {
+            "readOnly": false,
+            ...
+         },
+         "idIndex": { ... }
+      }
+      {
+         "name": "test_collection",
+         "type": "collection",
+         "options": {},
+         "info": {
+            "readOnly": false,
+            ...
+         },
+         "idIndex": { ... }
+      }
 
 Delete a Collection
 -------------------

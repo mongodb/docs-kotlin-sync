@@ -1,13 +1,8 @@
 import com.mongodb.ConnectionString
 import com.mongodb.MongoClientSettings
-import com.mongodb.ReadConcern
-import com.mongodb.ReadPreference
-import com.mongodb.WriteConcern
-import com.mongodb.client.MongoClient
-import com.mongodb.client.MongoClients
-import com.mongodb.client.MongoCollection
-import com.mongodb.client.MongoDatabase
+import com.mongodb.kotlin.client.MongoClient
 import org.bson.Document
+import org.bson.json.JsonWriterSettings
 
 fun main() {
     val uri = "<connection string URI>"
@@ -36,8 +31,11 @@ fun main() {
 
     // Lists the collections in the "test_database" database
     // start-find-collections
-    for (collectionInfo in client.getDatabase("test_database").listCollections()) {
-        println(collectionInfo.toJson())
+    val results = db.listCollections()
+    val jsonSettings = JsonWriterSettings.builder().indent(true).build()
+
+    results.forEach { result ->
+        println(result.toJson(jsonSettings))
     }
     // end-find-collections
 
