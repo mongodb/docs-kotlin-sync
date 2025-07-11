@@ -15,11 +15,6 @@ Overview
 
 In this guide, you can learn how to set up and configure a logger in the {+driver-short+}.
 
-You will learn how to:
-
-- Set up a logger by using Simple Logging Facade for Java (SLF4J)
-- Configure the log level
-
 This guide shows how to record events in the driver. If you want to learn how to
 use information about the activity of the driver in code, see the :ref:`kotlin-sync-monitoring`
 guide.
@@ -35,7 +30,7 @@ your project:
 
 - The ``slf4j-api`` artifact in your classpath
 - A logging framework
-- A  **binding** 
+- A  **binding** that connects the ``slf4j-api`` artifact to a logging framework
 
 If the driver can't find the ``slf4j-api`` artifact in your classpath, the driver outputs
 the following warning and disables all further logging:
@@ -43,8 +38,6 @@ the following warning and disables all further logging:
 .. code-block::
 
    WARNING: SLF4J not found on the classpath.  Logging is disabled for the 'org.mongodb.driver' component
-
-A binding is a piece of code that connects the ``slf4j-api`` artifact to a logging framework.
 
 Logger Setup Example
 ~~~~~~~~~~~~~~~~~~~~
@@ -58,7 +51,7 @@ The following example shows how to set up a logger. Select the :guilabel:`Logbac
       :tabid: Logback-binding
 
       Select the :guilabel:`Maven` or :guilabel:`Gradle` tab to learn about how to set up
-      Logback with your project's dependency management tool.
+      Logback with your project's dependency management tool:
 
       .. tabs::
 
@@ -96,9 +89,6 @@ The following example shows how to set up a logger. Select the :guilabel:`Logbac
          The default log level of Logback is DEBUG. To learn how to change your
          Logback logger's log level, see the
          :ref:`Configure Log Level <kotlin-sync-configure-log-level>` section of this page.
-
-      For more information about Logback, see the
-      `Logback manual <https://logback.qos.ch/manual/>`__.
 
    .. tab:: Log4j2
       :tabid: Log4j2-binding
@@ -290,31 +280,31 @@ The {+driver-short+} defines the following logger names to organize different lo
    * - Logger Name
      - Description
 
-   * - org.mongodb.driver.authenticator
+   * - ``org.mongodb.driver.authenticator``
      - Logs authentication events
 
-   * - org.mongodb.driver.client
+   * - ``org.mongodb.driver.client``
      - Logs events related to MongoClient instances
 
-   * - org.mongodb.driver.cluster
+   * - ``org.mongodb.driver.cluster``
      - Logs events related to monitoring of MongoDB deployments
 
-   * - org.mongodb.driver.connection
+   * - ``org.mongodb.driver.connection``
      - Logs connections and connection pools
 
-   * - org.mongodb.driver.connection.tls
+   * - ``org.mongodb.driver.connection.tls``
      - Logs TLS events
 
-   * - org.mongodb.driver.operation
+   * - ``org.mongodb.driver.operation``
      - Logs operations, including logging related to automatic retries
 
-   * - org.mongodb.driver.protocol
+   * - ``org.mongodb.driver.protocol``
      - Logs commands sent to and replies received from MongoDB deployments
 
-   * - org.mongodb.driver.uri
+   * - ``org.mongodb.driver.uri``
      - Logs connection string parsing events
 
-   * - org.mongodb.driver.management
+   * - ``org.mongodb.driver.management``
      - Logs Java Management Extensions (JMX) events
 
 Logger Name Example
@@ -404,7 +394,7 @@ Select the :guilabel:`Logback` or :guilabel:`Log4j2` tab to see the correspondin
 Additional Information
 ----------------------
 
-To learn more about MongoDB's logging capabilities, see :manual:`log-messages` in the {+mdb-server+}
+To learn more about MongoDB's logging capabilities, see :manual:`</log-messages>` in the {+mdb-server+}
 manual.
 
 For complete information about the logging frameworks discussed in this guide, see the
