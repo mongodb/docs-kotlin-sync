@@ -22,8 +22,9 @@ guide.
 Set Up a Logger
 ---------------
 
-The {+driver-short+} uses SLF4J to allow you to specify your logging framework of choice.
-For mroe information about SLF4J, see the `SLF4J documentation <https://www.slf4j.org/>`__.
+The {+driver-short+} uses Simple Logging Facade For Java (SLF4J) to allow you to specify
+your logging framework of choice. For more information about SLF4J, see the `SLF4J documentation
+<https://www.slf4j.org/>`__.
 
 Setting up a logger is optional. To set up a logger, you must include the following in
 your project:
@@ -135,7 +136,7 @@ The following example shows how to set up a logger. Select the :guilabel:`Logbac
       .. note:: Default Log Level
 
          The default log level of Log4J2 is ERROR. This means that running
-         standard operations in the MongoDB Java driver will not produce output
+         standard operations in the {+driver-short+} will not produce output
          from Log4J2 without configuration. To learn how to change your Log4J2
          logger's log level, see the
          :ref:`Configure Log Level <kotlin-sync-configure-log-level>` section of this page.
@@ -261,14 +262,14 @@ Logger Names
 Your logger uses logger names to help organize different logging events. Logger names
 are strings that form a hierarchy. A logger is an ancestor of another logger if its
 name followed by a ``"."`` is a prefix of the other logger's name. For example,
-``"grandparent"`` is an ancestor of ``"grandparent.parent"`` which is an ancestor of
+``"grandparent"`` is an ancestor of ``"grandparent.parent"``, which is an ancestor of
 ``"grandparent.parent.child"``. A logger inherits the properties of its ancestor logger and
-can define its own.
+can also define its own properties.
 
 The {+driver-short+} defines the following logger names to organize different logging events:
 
 .. list-table::
-   :widths: 25 75
+   :widths: 40 60
    :header-rows: 1
 
    * - Logger Name
