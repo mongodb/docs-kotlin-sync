@@ -36,12 +36,13 @@ fun main() {
     """.trimIndent()
 
     val jsonReader = JsonReader(string)
-
     jsonReader.readStartDocument()
 
+    // Reads the "_id" field value
     jsonReader.readName("_id")
     val id = jsonReader.readObjectId()
 
+    // Reads the "myNumber" field value 
     jsonReader.readName("myNumber")
     val myNumber = jsonReader.readInt64()
 
@@ -54,9 +55,10 @@ fun main() {
     // end-read-bson
 
     // start-write-doc
-    val myDoc = Document()
+    val doc = Document()
         .append("_id", ObjectId("507f1f77bcf86cd799439012"))
-        .append("myNumber", 11223344)
+        .append("createdAt", Date.from(Instant.ofEpochMilli(1601499609000L)))
+        .append("myNumber", 4794261)
 
     val settings = JsonWriterSettings.builder()
         .outputMode(JsonMode.RELAXED)
@@ -82,7 +84,7 @@ fun main() {
     // end-write-bson
 
     // start-custom-conversion
-        val settings = JsonWriterSettings.builder()
+    val settings = JsonWriterSettings.builder()
         .outputMode(JsonMode.RELAXED)
         .objectIdConverter { value, writer ->
             writer.writeString(value.toHexString())

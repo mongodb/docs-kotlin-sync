@@ -121,14 +121,14 @@ JSON:
    .. output::
       :visible: false
 
-      {"_id": {"$oid": "507f1f77bcf86cd799439012"}, "myNumber": 11223344}
+      {"_id": {"$oid": "507f1f77bcf86cd799439012"}, "createdAt": {"$date": "2020-09-30T21:00:09Z"}, "myNumber": 4794261}
 
 .. _kotlin-sync-write-ejson-jsonwriter:
 
 Use the JsonWriter Class
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-To output an Extended JSON string from data stored in {+language+} objects, use
+To output an Extended JSON string from data stored in {+language+} objects, you can use
 the BSON library's ``JsonWriter`` class. To construct a ``JsonWriter`` object,
 pass a subclass of a Java ``Writer`` to specify how you want to output the Extended
 JSON. Optionally, you can pass a ``JsonWriterSettings`` instance to specify options,
@@ -161,7 +161,8 @@ can further customize the output by adding converters to your
 ``JsonWriterSettings`` object. These converter methods specify logic
 for handling different data types during the conversion process.
 
-The following example defines the ``objectIdConverter()`` and ``dateTimeConverter()``
+The following example converts the same document as the :ref:`kotlin-sync-write-ejson-doc`
+example. However, this example defines the ``objectIdConverter()`` and ``dateTimeConverter()``
 converter methods in a ``JsonWriterSettings`` object to simplify the Relaxed mode
 Extended JSON output:
 
