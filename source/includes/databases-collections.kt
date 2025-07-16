@@ -21,7 +21,7 @@ fun main() {
 
     // Accesses the "test_collection" collection
     // start-access-collection
-    val collection = db.getCollection<Document>("test_collection")
+    val collection = db.getCollection("test_collection")
     // end-access-collection
 
     // Explicitly creates the "example_collection" collection
@@ -42,6 +42,6 @@ fun main() {
 
     // Deletes the "test_collection" collection
     // start-drop-collection
-    db.getCollection<Document>("test_collection").drop()
+    db.getCollection("test_collection").drop()
     // end-drop-collection
 }
