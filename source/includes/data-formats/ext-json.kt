@@ -64,7 +64,7 @@ fun main() {
         .outputMode(JsonMode.RELAXED)
         .build()
 
-    println(myDoc.toJson(settings))
+    println(doc.toJson(settings))
     // end-write-doc
 
     // start-write-bson
