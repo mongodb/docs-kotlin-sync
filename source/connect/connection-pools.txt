@@ -32,17 +32,24 @@ creates new connections.
 Create a Connection Pool
 ------------------------
 
-Every ``MongoClient`` instance has a built-in connection pool for each server 
-in your MongoDB topology. Connection pools open sockets on demand to support 
-concurrent MongoDB operations in your multi-threaded application.
+Each ``MongoClient`` instance has a built-in connection pool for each server in your
+MongoDB topology. If you do not configure the ``minPoolSize`` option, connection
+pools open sockets on demand. These sockets support concurrent MongoDB
+operations in your application.
 
-The ``maxPoolSize`` option sets the maximum size of each connection pool, which 
-defaults to 100. If the number of in-use connections to a server reaches the 
-value of ``maxPoolSize``, the next request to that server waits until a 
-connection becomes available.
+When you instantiate a new ``MongoClient``, the client opens two sockets per server
+in your MongoDB topology to monitor the server's state.
 
-Each ``MongoClient`` instance opens two more sockets per server in your MongoDB 
-topology to monitor the server's state.
+For example, a client connected to a three-node replica set opens six monitoring
+sockets. If the application uses the default setting for ``maxPoolSize`` and
+only queries the primary node, there can be at most ``106`` open
+sockets and ``100`` connections in the connection pool. If the application uses
+a :ref:`read preference <kotlin-sync-configure>` to query the secondary nodes, there
+can be ``306`` total connections.
+
+For efficiency, create a client once for each process and reuse it for all
+operations. Avoid creating a new client for each request because this will
+increase latency.
 
 Configure a Connection Pool
 ---------------------------
