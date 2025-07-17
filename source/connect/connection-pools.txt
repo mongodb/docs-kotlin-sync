@@ -124,10 +124,12 @@ see the corresponding syntax:
     :tabid: MongoClient
      
     To specify connection pool settings in a ``MongoClientSettings`` object,
-    chain the ``applyToConnectionPoolSettings()`` method to the ``MongoClientSettings`` builder.  
+    chain the ``applyToConnectionPoolSettings()`` method to the ``MongoClientSettings`` builder.
+    Pass a ``ConnectionPoolSettings.Builder`` block as a parameter to the
+    ``applyToConnectionPoolSettings()`` method.
      
-    The following table describes the setter methods you can use inside ``applyToConnectionPoolSettings()``
-    to configure the connection pool:
+    The following table describes the setter methods you can use in a
+    ``ConnectionPoolSettings.Builder`` block to configure the connection pool:
 
     .. list-table::
         :widths: 40 60
@@ -175,8 +177,8 @@ see the corresponding syntax:
             
             *Default*: ``0``
 
-    To learn more about these methods, see the `applyToConnectionPoolSettings()
-    <{+core-api+}/MongoClientSettings.Builder.html#applyToConnectionPoolSettings(com.mongodb.Block)>`__
+    To learn more about these methods, see the `ConnectionPoolSettings.Builder
+    <{+core-api+}/connection/ConnectionPoolSettings.Builder.html>`__
     API documentation.
 
 Example
