@@ -47,6 +47,35 @@ creating a new client each time.
    ``ClientSession`` with a different ``MongoClient`` results in operation
    errors.
 
+Causal Consistency
+~~~~~~~~~~~~~~~~~~
+
+.. sharedinclude:: dbx/causal-consistency.rst
+
+   .. replacement:: insert-one-method
+
+      ``insertOne()``
+
+   .. replacement:: update-one-method
+
+      ``updateOne()``
+
+   .. replacement:: find-one-method
+
+      ``find()``
+
+   .. replacement:: delete-one-method
+
+      ``deleteOne()``
+
+   .. replacement:: majority-rc
+
+      ``ReadConcern.MAJORITY``
+
+   .. replacement:: majority-wc
+
+      ``WriteConcern.MAJORITY``
+
 Sample Data
 ~~~~~~~~~~~
 
