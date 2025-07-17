@@ -1,9 +1,6 @@
 import com.mongodb.ConnectionString
-import com.mongodb.MongoClientSettings
-import com.mongodb.ServerAddress
-import com.mongodb.ServerApi
-import com.mongodb.ServerApiVersion
 import com.mongodb.kotlin.client.MongoClient
+import com.mongodb.MongoClientSettings
 
 fun main() {
     // start-uri-option
