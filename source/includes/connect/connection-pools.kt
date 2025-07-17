@@ -11,7 +11,7 @@ fun main() {
     // start-client-settings
     val mongoClient = MongoClient.create(
         MongoClientSettings.builder()
-            .applyConnectionString(ConnectionString("<connection string>"))
+            .applyConnectionString(ConnectionString("mongodb://<host>:<port>/"))
             .applyToConnectionPoolSettings { builder -> 
                 builder.maxSize(50) 
             }
