@@ -33,7 +33,7 @@ fun main() {
     // Specifies the path of the field to search
     val fieldSearchPath: FieldSearchPath = fieldPath("plot_embedding")
 
-    // Creates the vector search pipeline stage with numCandidates and limit
+    // Creates the vector search pipeline stage with a limit and numCandidates
     val pipeline: List<Bson> = listOf(
         vectorSearch(
             fieldSearchPath,
@@ -63,7 +63,7 @@ fun main() {
             fieldSearchPath,
             queryVector,
             indexName,
-            5L, // limit parameter
+            5L,
             approximateVectorSearchOptions(150)
         ),
         project(
@@ -78,7 +78,6 @@ fun main() {
     val results = collection.aggregate(pipeline)
 
     results.forEach { doc ->
-        val score = doc.getDouble("vectorSearchScore")
         println("Title: ${doc.getString("title")}, Score: ${doc.getDouble("score")}")
     }
     // end-vs-score
