@@ -15,7 +15,7 @@ Customize Server Selection
    :values: reference
 
 .. meta::
-   :keywords: read preference, write
+   :keywords: read preference, write, server selection
 
 Overview
 --------
@@ -37,26 +37,26 @@ in order, to select a MongoDB deployment:
 
 1. Selects all servers that match the active read preference from the list of known servers.
 
-#. If at least one readable server exists, the driver calls the user-defined
-   server-selector function and passes in the list from the previous step.
+#. If at least one readable server exists, calls the user-defined
+   server-selector function and passes in the list from the previous step
 
 #. Applies the ``localThreshold`` connection setting to the list of
-   servers returned from the function.
+   servers returned from the function
 
 #. Selects a server at random from the servers still on the list and
-   executes the operation against this server.
+   executes the operation against this server
 
 When the {+driver-short+} executes a write operation, it begins by selecting all writeable
-servers, not just those that match the active read preference. The remaining steps are
-identical.
+servers from the list of known servers, not just those that match the active read preference.
+The remaining steps are identical to the preceding list.
 
 To learn more about the default server selection algorithm, which the driver follows
 when you don't specify any custom server selection logic, see
 :manual:`Server Selection Algorithm </core/read-preference-mechanics/>` in the
 {+mdb-server+} manual.
 
-Implementing Custom Server Selection Logic
-------------------------------------------
+Implement Custom Server Selection Logic
+---------------------------------------
 
 You can implement your own custom server selection logic by creating a class that
 implements the ``ServerSelector`` interface and overrides the ``select()`` method. The following
@@ -69,9 +69,9 @@ value of ``ServerType.REPLICA_SET_SECONDARY``:
    :start-after: // start-custom-selector
    :end-before: // end-custom-selector
 
-You can then pass an instance of this class to your ``MongoClientSettings`` object by
-using the ``applyToClusterSettings()`` method. The following example shows how to create
-a ``MongoClient`` with an instance of the custom server selector from the preceding example:
+Use the ``applyToClusterSettings()`` method to pass an instance of this class to your
+``MongoClientSettings``. The following example shows how to create
+a ``MongoClient`` with an instance of the custom server selector class from the preceding example:
 
 .. literalinclude:: /includes/connect/ServerSelection.kt
    :language: kotlin
@@ -79,8 +79,8 @@ a ``MongoClient`` with an instance of the custom server selector from the preced
    :start-after: // start-selector
    :end-before: // end-selector
 
-Using Settings to Configure Server Selection
---------------------------------------------
+Use Settings to Configure Server Selection
+------------------------------------------
 
 You can specify the following server selection settings in your ``MongoClient`` object or
 in your connection URI:
@@ -119,7 +119,7 @@ in your connection URI:
    * - ``serverSelectionTimeout``
      - | The length of time the driver tries to select a server before timing out.
        |
-       | **Data Type**: ``long``
+       | **Data Type**: ``Long``
        | **Default**: 30 seconds
        | **Connection URI Example**: ``serverSelectionTimeoutMS=15000``
 
