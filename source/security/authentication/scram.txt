@@ -22,22 +22,22 @@ Overview
 
 **Salted Challenge Response Authentication Mechanism (SCRAM)** is a family of
 authentication mechanisms that use a challenge-response mechanism to authenticate
-the user. SCRAM-SHA-256, which uses the SHA-256 algorithm to hash your password, is the
+the user. ``SCRAM-SHA-256``, which uses the ``SHA-256`` algorithm to hash your password, is the
 default authentication mechanism in {+mdb-server+} version 4.0
-and later. SCRAM-SHA-1, which uses the SHA-1 algorithm instead, is the default
+and later. ``SCRAM-SHA-1``, which uses the ``SHA-1`` algorithm, is the default
 authentication mechanism in {+mdb-server+} versions earlier than 4.0.
 
-You can use SCRAM to authenticate to MongoDB Atlas, MongoDB
+You can use ``SCRAM`` to authenticate to MongoDB Atlas, MongoDB
 Enterprise Advanced, and MongoDB Community Edition.
 
 .. tip:: SCRAM Mechanisms
 
-   To learn more about the SCRAM family of authentication mechanisms, see
+   To learn more about the ``SCRAM`` family of authentication mechanisms, see
    `RFC 5802 <https://tools.ietf.org/html/rfc5802>`__ and
    :wikipedia:`Salted Challenge Response Authentication Mechanism <Salted_Challenge_Response_Authentication_Mechanism>`
    on Wikipedia.
 
-   For more information about the MongoDB implementation of SCRAM, see
+   For more information about the MongoDB implementation of ``SCRAM``, see
    :manual:`SCRAM </core/security-scram>` in the {+mdb-server+} manual.
 
 .. _kotlin-sync-auth-default:
