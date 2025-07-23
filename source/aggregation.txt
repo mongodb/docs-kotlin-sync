@@ -204,36 +204,8 @@ an aggregation pipeline that contains one of the following pipeline stages:
 
 To learn more about Atlas Search pipeline stages, see :atlas:`Choose the
 Aggregation Pipeline Stage </atlas-search/query-syntax/>` in the Atlas
-documentation.
-
-Create a Pipeline Search Stage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-You can create the search criteria in your Atlas Search pipeline stage
-by using Search operators.
-
-.. sharedinclude:: dbx/jvm/atlas-search-operator-helpers.rst
-
-   .. replacement:: as-idx-link
-
-      the :ref:`kotlin-sync-atlas-search-index` guide
-
-   .. replacement:: atlas-query-operators-example
-
-      .. io-code-block::
-
-         .. input:: /includes/aggregation/aggregation.kt
-            :language: kotlin
-            :start-after: // start-atlas-searchoperator-helpers
-            :end-before: // end-atlas-searchoperator-helpers
-            :dedent:
-
-         .. output::
-            :language: console
-            :visible: false
-
-            Document{{_id=..., genres=[Comedy, Romance], title=Love at First Bite, year=1979}}
-            Document{{_id=..., genres=[Comedy, Drama], title=Love Affair, year=1994}}
+documentation. To view examples of Atlas Search pipeline search stages using the
+{+driver-short+}, see the :ref:`kotlin-sync-atlas-search` guide.
 
 Additional Information
 ----------------------
