@@ -81,9 +81,10 @@ The following example shows how to set up a logger. Select the :guilabel:`Logbac
          :copyable: false
 
          ...
-         12:14:55.853 [main] DEBUG org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:3}] to <MongoDB hostname>
-         12:14:55.861 [main] DEBUG org.mongodb.driver.protocol.command - Command "find" started on database <database> using a connection with driver-generated ID 3 and server-generated ID 3 to <MongoDB hostname>. The request ID is 5. Command: {"find": "<collection>", "filter": {}, "limit": 1, "singleBatch": true, "$db": "<database>", "lsid": {"id": {"$binary": {"base64": "<_id>", "subType": "04"}}}, "$readPreference": {"mode": "primaryPreferred"}}
-         12:14:55.864 [main] DEBUG org.mongodb.driver.protocol.command - Command "find" succeeded in 4.34 ms using a connection with driver-generated ID 3 and server-generated ID 3 to <MongoDB hostname. The request ID is 5. Command reply: {"cursor": {"id": 0, "ns": "<database>.<collection>", "firstBatch": []}, "ok": 1.0, "$clusterTime": {"clusterTime": {"$timestamp": {"t": 1673778535, "i": 1}}, "signature": {"hash": {"$binary": {"base64": "<_id>", "subType": "00"}}, "keyId": 0}}, "operationTime": {"$timestamp": {"t": 1673778535, "i": 1}}}
+         12:14:55.833 [main] DEBUG org.mongodb.driver.connection - Checkout started for connection to <MongoDB hostname>
+         12:14:55.834 [main] DEBUG org.mongodb.driver.connection - Connection created: address=<MongoDB hostname>, driver-generated ID=3
+         12:14:55.836 [main] DEBUG org.mongodb.driver.connection - Connection ready: address=<MongoDB hostname>, driver-generated ID=3, established in=4 ms
+         12:14:55.843 [main] DEBUG org.mongodb.driver.connection - Connection checked out: address=<MongoDB hostname>, driver-generated ID=3, duration=9 ms
 
       .. note:: Default Log Level
 
@@ -202,15 +203,8 @@ The following example configures the log level to ``INFO``. Select the :guilabel
          :copyable: false
 
          ...
-         13:21:29.164 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|kotlin", "version": "5.6.0-alpha0-20-g222541cd92-dirty"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "aarch64", "version": "15.5"}, "platform": "Java/JetBrains s.r.o./17.0.9+8-b1166.2|kotlin/1.8.10"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@63a12c68, com.mongodb.Jep395RecordCodecProvider@28f3b248, com.mongodb.KotlinCodecProvider@1b1426f4]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-         13:21:29.213 [main] DEBUG org.mongodb.driver.connection - Connection created: address=localhost:27017, driver-generated ID=3
-         13:21:29.218 [main] DEBUG org.mongodb.driver.connection - Connection ready: address=localhost:27017, driver-generated ID=3, established in=5 ms
-         13:21:29.219 [main] DEBUG org.mongodb.driver.connection - Connection checked out: address=localhost:27017, driver-generated ID=3, duration=10 ms
-         13:21:29.237 [main] DEBUG org.mongodb.driver.protocol.command - Command "find" started on database "test" using a connection with driver-generated ID 3 and server-generated ID 516757 to localhost:27017. The request ID is 5 and the operation ID is 5. Command: {"find": "test", "filter": {}, "limit": 1, "singleBatch": true, "$db": "test", "lsid": {"id": {"$binary": {"base64": "Bw3a3QK7QAGob8VghbJguw==", "subType": "04"}}}}
-         13:21:29.244 [main] DEBUG org.mongodb.driver.protocol.command - Command "find" succeeded on database "test" in 8.823416 ms using a connection with driver-generated ID 3 and server-generated ID 516757 to localhost:27017. The request ID is 5 and the operation ID is 5. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "6876d15f70164c1e5a47be02"}, "advance": "$clusterTime"}], "id": 0, "ns": "test.test"}, "ok": 1.0, "$clusterTime": {"clusterTime": {"$timestamp": {"t": 1753129287, "i": 1}}, "signature": {"hash": {"$binary": {"base64": "AAAAAAAAAAAAAAAAAAAAAAAAAAA=", "subType": "00"}}, "keyId": 0}}, "operationTime": {"$timestamp": {"t": 1753129283, "i": 1}}}
-         13:21:29.249 [main] DEBUG org.mongodb.driver.operation - Received batch of 1 documents with cursorId 0 from server localhost:27017
-
-      .. tabs::
+         317  [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "<driver-name>", "version": "<driver-version>"}, "os": {"type": "<os-type>", "name": "<os-name>", "architecture": "<architecture>", "version": "<os-version>"}, "platform": "<platform-info>"} created with settings <MongoClientSettings>
+         345  [cluster-ClusterId{value='<cluster-id>', description='null'}-<MongoDB hostname>] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=<MongoDB hostname>, type=<server-type>, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=<max-wire-version>, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=<round-trip-nanos>, minRoundTripTimeNanos=<min-round-trip-nanos}
 
    .. tab:: Log4j2
       :tabid: Log4j2-binding
@@ -258,7 +252,8 @@ The following example configures the log level to ``INFO``. Select the :guilabel
          :copyable: false
 
          ...
-
+         21:19:25.696 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "<driver-name>", "version": "<driver-version>"}, "os": {"type": "<os-type>", "name": "<os-name>", "architecture": "<architecture>", "version": "<os-version>"}, "platform": "<platform-info>"} created with settings <MongoClientSettings>
+         21:19:25.710 [cluster-ClusterId{value='<cluster-id>', description='null'}-<MongoDB hostname>] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=<MongoDB hostname>, type=<server-type>, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=<max-wire-version>, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=<round-trip-nanos>, minRoundTripTimeNanos=<min-round-trip-nanos}
 
 Logger Names
 ------------
@@ -333,7 +328,7 @@ Select the :guilabel:`Logback` or :guilabel:`Log4j2` tab to see the correspondin
                   </pattern>
                </encoder>
             </appender>
-            <logger name="org.mongodb.driver.connection" level="INFO" additivity="true"/>
+            <logger name="org.mongodb.driver.connection" level="DEBUG" additivity="true"/>
             <root level="OFF">
                <appender-ref ref="CONSOLE" />
             </root>
@@ -350,8 +345,13 @@ Select the :guilabel:`Logback` or :guilabel:`Log4j2` tab to see the correspondin
          :copyable: false
 
          ...
-         829  [cluster-rtt-ClusterId{value='<some value>', description='null'}-<your connection URI>] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:<your server value>}] to <your connection uri>
-         977  [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:7, serverValue:<your server value>}] to <your connection uri>
+         255  [main] DEBUG org.mongodb.driver.connection - Connection pool created for <MongoDB hostname> using options <connection-pool-options>  
+         301  [cluster-ClusterId{value='<cluster-id>', description='null'}-<MongoDB hostname>] DEBUG org.mongodb.driver.connection - Connection pool ready for <MongoDB hostname>  
+         321  [main] DEBUG org.mongodb.driver.connection - Checkout started for connection to <MongoDB hostname>  
+         323  [main] DEBUG org.mongodb.driver.connection - Connection created: address=<MongoDB hostname>, driver-generated ID=3  
+         335  [main] DEBUG org.mongodb.driver.connection - Connection ready: address=<MongoDB hostname>, driver-generated ID=3, established in=<connect-duration> ms  
+         336  [main] DEBUG org.mongodb.driver.connection - Connection checked out: address=<MongoDB hostname>, driver-generated ID=3, duration=<checkout-duration> ms  
+         363  [main] DEBUG org.mongodb.driver.connection - Connection checked in: address=<MongoDB hostname>, driver-generated ID=3 
 
    .. tab:: Log4j2
       :tabid: Log4j2-binding
@@ -369,7 +369,7 @@ Select the :guilabel:`Logback` or :guilabel:`Log4j2` tab to see the correspondin
                </Console>
             </Appenders>
             <Loggers>
-               <Logger name="org.mongodb.driver.connection" level="INFO"/>
+               <Logger name="org.mongodb.driver.connection" level="DEBUG"/>
                <Root level="OFF">
                      <AppenderRef ref="Console"/>
                </Root>
@@ -387,8 +387,13 @@ Select the :guilabel:`Logback` or :guilabel:`Log4j2` tab to see the correspondin
          :copyable: false
 
          ...
-         15:40:23.005 [cluster-ClusterId{value='<some value>', description='null'}-<your connection uri>] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:3, serverValue:<your server value>}] to <your connection uri>
-         15:40:23.159 [main] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:7, serverValue:<your server value>}] to <your connection uri>
+         21:27:17.035  [main] DEBUG org.mongodb.driver.connection - Connection pool created for <MongoDB hostname> using options <connection-pool-options>  
+         21:27:17.058  [cluster-ClusterId{value='<cluster-id>', description='null'}-<MongoDB hostname>] DEBUG org.mongodb.driver.connection - Connection pool ready for <MongoDB hostname>  
+         21:27:17.064  [main] DEBUG org.mongodb.driver.connection - Checkout started for connection to <MongoDB hostname>  
+         21:27:17.069  [main] DEBUG org.mongodb.driver.connection - Connection created: address=<MongoDB hostname>, driver-generated ID=3  
+         21:27:17.075  [main] DEBUG org.mongodb.driver.connection - Connection ready: address=<MongoDB hostname>, driver-generated ID=3, established in=<connect-duration> ms  
+         21:27:17.075  [main] DEBUG org.mongodb.driver.connection - Connection checked out: address=<MongoDB hostname>, driver-generated ID=3, duration=<checkout-duration> ms  
+         21:27:17.086  [main] DEBUG org.mongodb.driver.connection - Connection checked in: address=<MongoDB hostname>, driver-generated ID=3 
 
 Additional Information
 ----------------------
