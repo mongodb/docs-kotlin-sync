@@ -49,7 +49,7 @@ parameter.
 
    This aggregation pipeline operator is only available for collections hosted
    on :atlas:`MongoDB Atlas </>` clusters running v4.2 or later that are
-   covered by an :atlas:`Atlas search index </reference/atlas-search/index-definitions/>`.
+   covered by an :atlas:`Atlas Search index </reference/atlas-search/index-definitions/>`.
    Learn more about the required setup and the functionality of this operator
    from the :atlas:`Atlas Search </atlas-search/>` documentation.
 
@@ -99,11 +99,9 @@ only the metadata from of the Atlas full-text search results.
 .. tip:: Only Available on Atlas for MongoDB v4.4.11 and later
 
    This aggregation pipeline operator is available only
-   on :atlas:`MongoDB Atlas </>` clusters running v4.4.11 and later. For a
-   detailed list of version availability, see the MongoDB Atlas documentation
-   on :atlas:`$searchMeta </atlas-search/query-syntax/#-searchmeta>`.
+   on :atlas:`MongoDB Atlas </>` clusters running v4.4.11 and later.
 
-The following example shows the ``near`` metadata for an Atlas search
+The following example shows the ``near`` metadata for an Atlas Search
 aggregation stage:
 
 .. literalinclude:: /includes/aggregation/search-meta-agg.kt
