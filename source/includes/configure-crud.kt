@@ -106,6 +106,23 @@ fun main() {
     val latencyClient2 = MongoClient.create(latencySettings)
     // end-local-threshold-settings
 
+    // Disable retryable reads and writes using MongoClientSettings builder
+    // start-retryable-reads-writes
+    val retrySettings = MongoClientSettings.builder()
+        .applyConnectionString(ConnectionString("mongodb://localhost:27017/"))
+        .retryReads(false)  // Disables automatic retries of read operations
+        .retryWrites(false) // Disables automatic retries of write operations
+        .build()
+
+    val retryClient = MongoClient.create(retrySettings)
+
+    // end-retryable-reads-writes
+
+    // start-retryable-reads-writes-uri
+    val retryUri = "mongodb://localhost:27017/?retryReads=false&retryWrites=false"
+    val retryUriClient = MongoClient.create(retryUri)
+    // end-retryable-reads-writes-uri
+
     // Close the MongoClient connection
     mongoClient.close()
 }
