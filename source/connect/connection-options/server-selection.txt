@@ -87,9 +87,8 @@ a ``MongoClient`` with an instance of the custom server selector class from the 
 Use Settings to Configure Server Selection
 ------------------------------------------
 
-You can specify the following server selection settings in your connection URI,
-a ``MongoClientSettings`` object (for the ``localThreshold`` setting), or a ``ClusterSettings`` object
-(for the ``readPreference`` and ``serverSelectionTimeout`` settings):
+You can specify the following server selection settings in your ``MongoClient`` object or
+in your connection URI:
 
 .. list-table::
    :widths: 30 70
@@ -101,7 +100,8 @@ a ``MongoClientSettings`` object (for the ``localThreshold`` setting), or a ``Cl
    * - ``localThreshold``
      - | The latency window for server eligibility. If a server's round trip takes longer
        | than the fastest server's round-trip time plus this value, the server isn't
-       | eligible for selection.
+       | eligible for selection. You can specify this setting to a ``MongoClientSettings`` object
+         in addition to the connection URI.
        |
        | **Data Type**: ``Integer``
        | **Default**: 15 milliseconds
@@ -109,7 +109,9 @@ a ``MongoClientSettings`` object (for the ``localThreshold`` setting), or a ``Cl
        
    * - ``readPreference``
      - | The client's default read-preference settings. For more information on read preference
-         options, see :manual:`Read Preference </core/read-preference/>` in the {+mdb-server+} manual. 
+         options, see :manual:`Read Preference </core/read-preference/>` in the {+mdb-server+} manual.
+         You can specify this setting to a ``ClusterSettings`` object in addition to the
+         connection URI.
        |
        | **Data Type**: `ReadPreference <{+core-api+}/ReadPreference.html>`__
        | **Default**: ``ReadPreference.primary()``
@@ -124,6 +126,8 @@ a ``MongoClientSettings`` object (for the ``localThreshold`` setting), or a ``Cl
 
    * - ``serverSelectionTimeout``
      - | The length of time the driver tries to select a server before timing out.
+         You can specify this setting to a ``ClusterSettings`` object in addition to the 
+         connection URI.
        |
        | **Data Type**: ``Long``
        | **Default**: 30 seconds
