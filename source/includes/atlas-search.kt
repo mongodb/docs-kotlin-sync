@@ -25,7 +25,6 @@ fun main() {
     val database = mongoClient.getDatabase("sample_mflix")
     val collection = database.getCollection<Document>("movies")
     
-    // Queries for documents that have a "title" value containing the word "Alabama"
     // begin-atlas-search
     val pipeline: List<Bson> = listOf(
         search(SearchOperator.text(

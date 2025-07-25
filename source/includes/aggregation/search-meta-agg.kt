@@ -9,8 +9,6 @@ import com.mongodb.client.model.search.SearchPath.fieldPath
 import com.mongodb.kotlin.client.MongoCollection
 import org.bson.Document
 
-private const val CONNECTION_URI = "<connection URI>"
-
 fun runAtlasTextSearchMeta(collection: MongoCollection<Document>) {
     val textSearchMeta =
         // begin atlasSearchMeta
@@ -28,7 +26,7 @@ fun runAtlasTextSearchMeta(collection: MongoCollection<Document>) {
 }
 
 fun main() {
-    val uri = CONNECTION_URI
+    val uri = "<connection string>"
 
     val settings = MongoClientSettings.builder()
         .applyConnectionString(ConnectionString(uri))
@@ -39,7 +37,6 @@ fun main() {
         val database = mongoClient.getDatabase("sample_mflix")
         val collection = database.getCollection<Document>("movies")
 
-        // Uncomment the methods that correspond to what you're testing
-        // runAtlasTextSearchMeta(collection)
+        runAtlasTextSearchMeta(collection)
     }
 }
