@@ -327,14 +327,14 @@ within 35 milliseconds of the closest member's ping time.
 Retryable Reads and Writes
 --------------------------
 
-{+driver-short+} automatically retries certain read and write operations a single time
+The {+driver-short+} automatically retries certain read and write operations a single time
 if they fail due to a network or server error.
 
 You can explicitly disable retryable reads or retryable writes by setting the ``retryReads`` or
-``retryWrites`` option to ``False`` in a ``MongoClientSettings`` instance. You can also
+``retryWrites`` option to ``false`` in a ``MongoClientSettings`` instance. You can also
 set the ``retryReads`` or ``retryWrites`` options in your connection URI.
 
-The following example sets both retryable reads and retryable writes to ``False``. Select the :guilabel:`MongoClientSettings` or :guilabel:`Connection URI`
+The following example sets both retryable reads and retryable writes to ``false``. Select the :guilabel:`MongoClientSettings` or :guilabel:`Connection URI`
 tab to see corresponding code for each approach:
 
 .. tabs::
