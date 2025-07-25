@@ -50,7 +50,7 @@ The breaking changes in this section are categorized by the driver version that
 introduced them. When upgrading driver versions, address all the breaking
 changes between the current and upgrade versions. For example, if you
 are upgrading the driver from v5.0 to v5.5, address all breaking changes from
-the version after v5.0 including any listed for v5.5.
+the versions after v5.0 including any listed for v5.5.
 
 .. _kotlin-sync-breaking-changes-v5.5:
 
@@ -73,7 +73,7 @@ This driver version introduces the following breaking changes:
 
 - Revises the `mongodb-crypt <https://mvnrepository.com/artifact/org.mongodb/mongodb-crypt>`__
   dependency versioning to match the versioning for the JVM drivers. Future versions of
-  ``mongodb-crypt`` will be released alongside the driver and will share the same version number.
+  ``mongodb-crypt`` are released alongside the driver and share the same version number.
   You must upgrade your ``mongodb-crypt`` dependency to v5.2.0 when upgrading your driver for
   this release.
 
@@ -84,9 +84,10 @@ Version 5.1 Breaking Changes
 
 This driver version introduces the following breaking changes:
 
-- When using the ``MONGODB-OIDC`` authentication mechanism, you must
-  not include comma characters in the ``authMechanismProperties`` connection
-  string value.
+- When using the ``MONGODB-OIDC`` authentication mechanism, you cannot
+  include comma characters in the ``authMechanismProperties`` connection
+  string value. If your ``authMechanismProperties`` value includes a comma,
+  pass the value as a connection option in a ``MongoClientSettings`` instance.
 
 .. _kotlin-sync-breaking-changes-v5.0:
 
@@ -361,7 +362,7 @@ Server Version 8.1 Support Changes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You cannot use a 3.x version of the {+driver-short+} to connect to a
-MongoDB deployment running {+mdb-server+} v8.1. Starting in {+mdb-server+} v8.1,
+MongoDB deployment running {+mdb-server+} v8.1 or later. Starting in {+mdb-server+} v8.1,
 the ``buildinfo`` command requires authentication, causing an
 incompatibility with the v3.x driver.
 
