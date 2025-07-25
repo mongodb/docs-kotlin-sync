@@ -29,29 +29,33 @@ customize this algorithm to choose the server that works best for your applicati
    Customizing the server selection algorithm might have unintended consequences,
    such as degraded read or write performance.
 
-Default Algorithm
------------------
+Server Selection Algorithm
+--------------------------
 
 When the {+driver-short+} executes a read operation, it performs the following steps,
 in order, to select a MongoDB deployment:
 
-1. Selects all servers that match the active read preference from the list of known servers.
+1. Selects all servers from the list of known servers suitable for the requested
+   operation, barring those that the driver considers unavailable or problematic
 
-#. If at least one readable server exists, calls the user-defined
-   server-selector function and passes in the list from the previous step
+   1. For reads, selects all servers that match the active read preference
+
+   #. For writes, selects all writeable servers
+
+#. Calls the user-defined server-selector function, if the user provides one, and passes in
+   the list from the previous step
 
 #. Applies the ``localThreshold`` connection setting to the list of
    servers returned from the function
 
-#. Selects a server at random from the servers still on the list and
-   executes the operation against this server
+#. Selects at most two random servers from the list of servers that match the
+   preceding criteria, then selects the server with fewer outstanding concurrent operations
 
 When the {+driver-short+} executes a write operation, it begins by selecting all writeable
 servers from the list of known servers, not just those that match the active read preference.
 The remaining steps are identical to the preceding list.
 
-To learn more about the default server selection algorithm, which the driver follows
-when you don't specify any custom server selection logic, see
+To learn more about the MongoDB server selection algorithm, see
 :manual:`Server Selection Algorithm </core/read-preference-mechanics/>` in the
 {+mdb-server+} manual.
 
@@ -59,7 +63,7 @@ Implement Custom Server Selection Logic
 ---------------------------------------
 
 You can implement your own custom server selection logic by creating a class that
-implements the ``ServerSelector`` interface and overrides the ``select()`` method. The following
+implements the ``ServerSelector`` interface. The following
 example shows a simple custom server selection class that selects servers with a ``type``
 value of ``ServerType.REPLICA_SET_SECONDARY``:
 
