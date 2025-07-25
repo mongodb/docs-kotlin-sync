@@ -100,7 +100,7 @@ in your connection URI:
    * - ``localThreshold``
      - | The latency window for server eligibility. If a server's round trip takes longer
        | than the fastest server's round-trip time plus this value, the server isn't
-       | eligible for selection. You can specify this setting to a ``MongoClientSettings`` object
+       | eligible for selection. You can specify this setting to a ``ClusterSettings`` object
          in addition to the connection URI.
        |
        | **Data Type**: ``Integer``
@@ -110,7 +110,7 @@ in your connection URI:
    * - ``readPreference``
      - | The client's default read-preference settings. For more information on read preference
          options, see :manual:`Read Preference </core/read-preference/>` in the {+mdb-server+} manual.
-         You can specify this setting to a ``ClusterSettings`` object in addition to the
+         You can specify this setting to a ``MongoClientSettings`` object in addition to the
          connection URI.
        |
        | **Data Type**: `ReadPreference <{+core-api+}/ReadPreference.html>`__
