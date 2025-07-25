@@ -49,8 +49,8 @@ working properly if not addressed before upgrading.
 The breaking changes in this section are categorized by the driver version that
 introduced them. When upgrading driver versions, address all the breaking
 changes between the current and upgrade versions. For example, if you
-are upgrading the driver from v4.0 to v4.7, address all breaking changes from
-the version after v4.0 including any listed for v4.7.
+are upgrading the driver from v5.0 to v5.5, address all breaking changes from
+the version after v5.0 including any listed for v5.5.
 
 .. _kotlin-sync-breaking-changes-v5.5:
 
@@ -337,7 +337,7 @@ This driver version introduces the following breaking changes:
 .. tip::
 
    To view breaking changes for earlier driver versions, see the
-   :github:`Release Notes </mongodb/mongo-java-driver/releases>` in the 
+   :github:`Release Notes <mongodb/mongo-java-driver/releases>` in the 
    ``mongo-java-driver`` GitHub repository.
 
 .. _kotlin-sync-server-release-changes:
@@ -355,16 +355,6 @@ end-of-life (EOL).
 To learn more about the MongoDB support for EOL products,
 see the `Legacy Support Policy <https://www.mongodb.com/support-policy/legacy>`__.
 
-.. _kotlin-sync-server-release-change-v5.5:
-
-Driver Version 5.5 Server Support Changes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The v5.5 driver drops support for {+mdb-server+} 4.0.
-To use the v5.5 driver, you must connect to {+mdb-server+} 4.2 or later. To
-learn how to upgrade your {+mdb-server+} deployment, see
-:manual:`Release Notes </release-notes>` in the {+mdb-server+} manual.
-
 .. _kotlin-sync-server-8.1-incompatibility:
 
 Server Version 8.1 Support Changes
@@ -374,6 +364,16 @@ You cannot use a 3.x version of the {+driver-short+} to connect to a
 MongoDB deployment running {+mdb-server+} v8.1. Starting in {+mdb-server+} v8.1,
 the ``buildinfo`` command requires authentication, causing an
 incompatibility with the v3.x driver.
+
+.. _kotlin-sync-server-release-change-v5.5:
+
+Driver Version 5.5 Server Support Changes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The v5.5 driver drops support for {+mdb-server+} 4.0.
+To use the v5.5 driver, you must connect to {+mdb-server+} 4.2 or later. To
+learn how to upgrade your {+mdb-server+} deployment, see
+:manual:`Release Notes </release-notes>` in the {+mdb-server+} manual.
 
 .. _kotlin-sync-server-release-change-v5.2:
 
@@ -392,7 +392,5 @@ Driver Version 4.8 Server Support Changes
 
 The v4.8 driver drops support for {+mdb-server+} 3.4 and earlier.
 To use the v4.8 driver, you must connect to {+mdb-server+} 3.6 or later. To learn
-how to upgrade your {+mdb-server+} deployment, see :manual:`Release
-Notes </release-notes>` in the {+mdb-server+} manual.
 how to upgrade your {+mdb-server+} deployment, see :manual:`Release
 Notes </release-notes>` in the {+mdb-server+} manual.
